@@ -1,0 +1,24 @@
+- Doubler les portions de frites à la cantine de l'Assemblée.
+	=> LR: ++
+	=> reste: +
+	=> trigger évènement spécial (indigestion => absence de députés le jour suivant)
+- Encourager la consommation de cordons bleus par les adultes.
+	=> macronistes: ++
+	=> écolo: --
+	=> droite: +
+	=> gauche: +
+- Proposer une option végétarienne à la cantine de l'Assemblée.
+	=> écolos: ++
+	=> gauche: +
+	=> macroniste: 0
+	=> droite: --
+- Proposer la hausse du SMIC à 1700€ net/mois.
+	=> écolos, gauche: ++
+	=> macronistes, droite: --
+- Ignorer le problème du mal-logement.
+	=> macroniste, droite: ++
+	=> gauche: --
+- Ignorer la baisse drastique de la part des revenus issu du travail en France depuis 1940
+	=> macroniste, droite: ++
+	=> gauche: --
+
