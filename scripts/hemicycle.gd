@@ -3,7 +3,7 @@ extends Node2D
 @export var mp_scene:PackedScene # Utile pour instancier des MP
 @export var desk_color:Color
 @onready var Plot: Control = $"../VBoxContainer/Plot"
-
+@onready var TextStats: Control = $"../VBoxContainer/TextStats"
 var width: int = 19
 var height: int = 13
 
@@ -81,8 +81,11 @@ func _ready() -> void:
 			point = cell_to_uv(float(width), float(i) + bar_height)
 		line.add_point(point)
 
-		line.default_color = Color(0.5, 0.5, 0.5, 1.)
+		line.default_color = desk_color
 		line.width = 20.0
+		line.antialiased = true
+		line.begin_cap_mode = Line2D.LINE_CAP_ROUND
+		line.end_cap_mode = Line2D.LINE_CAP_ROUND
 		add_child(line)
 		line.z_index = 2*(height-i);
 		
@@ -114,10 +117,24 @@ func compute_group_approvals() -> Array[float]:
 		res[i] /= float(size[i])
 	return res
 	
+# returns [a,b,c] where a is number of people with approval > 1
+# c is the number of people with approval < -1 and b is the rest
+func compute_number_approvals() -> Array[int]:
+	var res: Array[int] = [0,0,0]
+	for mp in get_tree().get_nodes_in_group("MP"):
+		if mp.approval > 1:
+			res[0] += 1
+		elif mp.approval < -1:
+			res[2] += 1
+		else:
+			res[1] += 1
+	return res
+	
 func update_plot():
 	var approvals: Array[float] = compute_group_approvals()
 	for i in range(6):
 		Plot.update_bar_value(i, approvals[i])
+	TextStats.bbcode_text = "[color=black][font_size=25]Satisfais: %s\nIndécis: %s\nInsatisfaits: %s" % compute_number_approvals()
 
 # Crée et place le MP 
 func new_mp(seat: int) -> int:	# returns number of the political party of mp 
