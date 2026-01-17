@@ -16,6 +16,7 @@ class_name Histogram
 @export var hover_scale = 1.1
 @export var hover_color_brightness = 1.3
 @export var min_bar_height = 10
+@onready var Hemicycle: Node2D = $"../../Hemicycle"
 
 var bar_rects: Array[Rect2] = []
 var hovered_index: int = -1
@@ -88,6 +89,7 @@ func _on_mouse_exited():
 
 func _on_bar_hovered(index: int):
 	print("Bar %d hovered! Value: %.2f" % [index, bar_values[index]])
+	Hemicycle.highlight(index);
 	# TODO: highlight the political group
 
 func update_bar_value(index: int, new_value: float):

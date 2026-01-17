@@ -4,6 +4,7 @@ extends Node2D
 @export var desk_color:Color
 @onready var Plot: Control = $"../VBoxContainer/Plot"
 @onready var TextStats: Control = $"../VBoxContainer/TextStats"
+
 var width: int = 19
 var height: int = 13
 
@@ -19,7 +20,7 @@ var sum_group_repartition: int = 0 # Computed at _init()
 
 var default_approval: Array[float] = [-3.0, -2.5, -1.5, 3.0, 1.0, -2.5]
 
-var party_colors: Array[Vector3] = [
+var party_colors: PackedVector3Array = [
 	Vector3(255., 116., 116.)/256.,
 	Vector3(59., 163., 137.)/256.,
 	Vector3(253., 128., 188.)/256.,
@@ -27,6 +28,8 @@ var party_colors: Array[Vector3] = [
 	Vector3(160., 169., 243.)/256.,
 	Vector3(163., 105., 80.)/256.
 ]
+
+var party_array: PackedInt32Array = PackedInt32Array()
 
 # inverse of the shader code
 func cell_to_uv(cellx: float, celly: float) -> Vector2:
@@ -50,14 +53,11 @@ func _init() -> void:
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var mat: ShaderMaterial = $TextureRect.material
-
-	var vec3_color_array: PackedVector3Array = PackedVector3Array()
-	vec3_color_array.resize(width*height)
+	party_array.resize(width*height)
 	
 	for i in range(width*height):
 		var party = new_mp(i)
-		vec3_color_array[i] = party_colors[party]
+		party_array[i] = party
 		
 	# bars
 	for i in range(height):
@@ -88,8 +88,11 @@ func _ready() -> void:
 		line.end_cap_mode = Line2D.LINE_CAP_ROUND
 		add_child(line)
 		line.z_index = 2*(height-i);
-		
-	mat.set_shader_parameter("color_values", vec3_color_array)
+	
+	var mat: ShaderMaterial = $TextureRect.material
+	
+	mat.set_shader_parameter("party_values", party_array)
+	mat.set_shader_parameter("party_colors", party_colors)
 	
 	update_plot()
 
@@ -135,6 +138,11 @@ func update_plot():
 	for i in range(6):
 		Plot.update_bar_value(i, approvals[i])
 	TextStats.bbcode_text = "[color=black][font_size=25]Satisfaits : %s\nIndécis : %s\nInsatisfaits : %s" % compute_number_approvals()
+
+func highlight(index: int):
+	party_colors[index] *= 2
+	var mat: ShaderMaterial = $TextureRect.material
+	mat.set_shader_parameter("party_colors", party_colors)
 
 # Crée et place le MP 
 func new_mp(seat: int) -> int:	# returns number of the political party of mp 

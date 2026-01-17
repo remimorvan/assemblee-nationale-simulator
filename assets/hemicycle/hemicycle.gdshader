@@ -3,7 +3,8 @@ const int WIDTH = 19;
 const int HEIGHT = 13;
 const vec2 cycle_center = vec2(0.5,1.7);
 
-uniform vec3 color_values[WIDTH*HEIGHT];
+uniform vec3 party_colors[6];
+uniform int party_values[WIDTH*HEIGHT];
 
 void vertex() {
 	// Called for every vertex the material is visible on.
@@ -31,16 +32,17 @@ void fragment() {
 
 	int cellx = int(projectedx*float(WIDTH));
 
+	vec3 color = party_colors[party_values[celly+HEIGHT*cellx]];
 	if (projectedx>=0. && projectedy>=0. && projectedy<=1. && projectedx<=1.)
 	{
-		COLOR = vec4(color_values[celly+HEIGHT*cellx],1.0)+vec4(0.2f);
+		COLOR = vec4(color,1.0)+vec4(0.2f);
 	}
 
 	if (projectedx>=-0.01/float(WIDTH) && projectedy>=-0.02/float(HEIGHT) &&
 		projectedy<=0.999 && projectedx<=1.+0.02/float(HEIGHT) &&
 		(around_integer(projectedx*float(WIDTH),0.01) || around_integer(r*float(HEIGHT),0.02)))
 	{
-		COLOR = vec4((vec3(0.,0.,0.)+ 4.*color_values[celly+HEIGHT*cellx])/5.,1.);
+		COLOR = vec4((vec3(0.,0.,0.)+ 4.*color)/5.,1.);
 	}
 }
 
