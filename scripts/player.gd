@@ -11,7 +11,6 @@ func _ready() -> void:
 		var card: Area2D = Deck.get_new_card()
 		hand.append(card)
 		add_child(card)
-		card.scale = Vector2(0.75, 0.75)
 	print_hand()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -19,10 +18,10 @@ func _process(delta: float) -> void:
 	pass
 
 func print_hand() -> void:
-	var nb_card: int = 0;
+	var card_nb: int = 0;
 	var viewport_size: Vector2i = get_viewport().get_visible_rect().size
 	for card in hand:
 		var card_size = card.get_node("Sprite2D").texture.get_size()
-		card.position.x = viewport_size[0]/2 + (nb_card - (len(hand)-1)/2.0)*card_size[0]
+		card.position.x = viewport_size[0]/2 + (card_nb - (len(hand)-1)/2.0)*(card_size[0]*1.2)
 		card.position.y = 1000 
-		nb_card+=1
+		card_nb+=1
