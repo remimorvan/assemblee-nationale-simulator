@@ -82,7 +82,7 @@ func _ready() -> void:
 		line.add_point(point)
 
 		line.default_color = desk_color
-		line.width = 20.0
+		line.width = 14.0
 		line.antialiased = true
 		line.begin_cap_mode = Line2D.LINE_CAP_ROUND
 		line.end_cap_mode = Line2D.LINE_CAP_ROUND

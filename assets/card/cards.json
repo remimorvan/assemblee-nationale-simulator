@@ -66,7 +66,7 @@
 		"quote": ""
 	},
 	{
-		"text": "Ignorer la baisse drastique de la part des revenus issu du travail en France depuis 1940",
+		"text": "Alléger la fiscalité des revenus issus des capitaux.",
 		"effects": {
 			"lfi": [-1, 0.2],
 			"eco": [-1, 0.2],
@@ -391,14 +391,14 @@
 		"quote": ""
 	},
 	{
-		"text": "Proposer une convention citoyenne pour le climat",
+		"text": "Proposer une convention citoyenne pour le climat.",
 		"effects": {
-			"lfi": [-0.5, 0.2],
-			"eco": [-0.5, 0.2],
-			"soc": [-0.5, 0.4],
+			"lfi": [0.5, 0.2],
+			"eco": [0.5, 0.2],
+			"soc": [0.5, 0.4],
 			"macron": [1, 0.1],
-			"lr": [-0.5, 0.2],
-			"rn": [-0.5, 0.2]
+			"lr": [0.4, 0.2],
+			"rn": [0.4, 0.2]
 		},
 		"image_path": "basic.png",
 		"quote": "",
@@ -418,7 +418,7 @@
 		"quote": ""
 	},
 	{
-		"text": "Adopter un moratoire sur les méga-bassines",
+		"text": "Adopter un moratoire sur les méga-bassines.",
 		"effects": {
 			"lfi": [1, 0.1],
 			"eco": [1, 0.1],
