@@ -5,6 +5,7 @@ var effect_mean: Dictionary[String, float] # political group -> mean effect
 var effect_std: Dictionary[String, float] # political group -> standard deviation of effect
 var image_path: String # Text of the card
 var rng: RandomNumberGenerator
+var hovered: bool
 
 # Called when the node enters the scene tree for the first time.
 func _init() -> void:
@@ -32,3 +33,15 @@ func get_approval_change(political_group: String) -> float:
 	assert(political_group in effect_mean)
 	assert(political_group in effect_std)
 	return rng.randfn(effect_mean[political_group], effect_std[political_group]) 
+
+
+func _on_mouse_entered() -> void:
+	hovered = true
+
+
+func _on_mouse_exited() -> void:
+	hovered = false
+
+func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
+		print("Click " + text)

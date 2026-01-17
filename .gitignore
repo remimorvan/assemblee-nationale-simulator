@@ -18,4 +18,3 @@ mono_crash.*.json
 **/*.import
 **/*.png~
 **/*.kra~
-**/*.uid

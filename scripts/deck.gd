@@ -26,11 +26,16 @@ func _ready() -> void:
 				var image_path = data_card["image_path"]
 				new_card.setup(text, effects_mean, effects_std, image_path)
 				all_cards.append(new_card)
+			all_cards.shuffle()
 		else:
 			print("Expected array")
 	else:
 		print("JSON Parse Error: ", json.get_error_message(), " in cards.json at line ", json.get_error_line())
 
+func get_new_card() -> Node2D:
+	assert (not all_cards.is_empty())
+	return all_cards.pop_front()
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
