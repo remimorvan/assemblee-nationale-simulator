@@ -17,7 +17,7 @@ var group_repartition: Array[int] = [
 ]
 var sum_group_repartition: int = 0 # Computed at _init()
 
-var default_approval: Array[float] = [-5.0, -4.0, -2.0, 5.0, 0.3, -4.0]
+var default_approval: Array[float] = [-3.0, -2.5, -1.5, 3.0, 1.0, -2.5]
 
 var party_colors: Array[Vector3] = [
 	Vector3(255., 116., 116.)/256.,
@@ -81,8 +81,11 @@ func _ready() -> void:
 			point = cell_to_uv(float(width), float(i) + bar_height)
 		line.add_point(point)
 
-		line.default_color = Color(0.5, 0.5, 0.5, 1.)
+		line.default_color = desk_color
 		line.width = 20.0
+		line.antialiased = true
+		line.begin_cap_mode = Line2D.LINE_CAP_ROUND
+		line.end_cap_mode = Line2D.LINE_CAP_ROUND
 		add_child(line)
 		line.z_index = 2*(height-i);
 		

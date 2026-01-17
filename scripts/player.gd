@@ -8,6 +8,7 @@ var total_nb_card_played: int = 0
 var transition_between_days: bool = false
 var rng = RandomNumberGenerator.new() 
 var special_event # string or null
+var declared_special_event_this_turn: bool = false
 
 func has_special_card_in_hand() -> bool:
 	for card in hand:
@@ -19,7 +20,7 @@ func has_special_card_in_hand() -> bool:
 func _ready() -> void:
 	rng.randomize()
 	for i in range(3):
-		var card: Area2D = Deck.get_new_card(has_special_card_in_hand())
+		var card: Area2D = Deck.get_new_card(has_special_card_in_hand() or declared_special_event_this_turn)
 		hand.append(card)
 		add_child(card)
 	print_hand()
@@ -57,7 +58,7 @@ func change_random_card(other_card: int) -> void:
 	add_card_to_hand(removed_card_pos)
 
 func add_card_to_hand(card_pos: int) -> void:
-	var new_card: Area2D = Deck.get_new_card(has_special_card_in_hand())
+	var new_card: Area2D = Deck.get_new_card(has_special_card_in_hand() or declared_special_event_this_turn)
 	add_child(new_card)
 	hand.insert(card_pos, new_card)
 	print_hand()
@@ -79,6 +80,7 @@ func incr_nb_card_played() -> void:
 
 func declare_special_event(event: String) -> void:
 	special_event = event
+	declared_special_event_this_turn = true
 	
 func trigger_special_event(event: String) -> void:
 	print("Special event : " + event)
@@ -87,4 +89,5 @@ func trigger_journal() -> void:
 	if special_event:
 		trigger_special_event(special_event)
 		special_event = null
+		declared_special_event_this_turn = false
 	print("TODO: JOURNAL")
