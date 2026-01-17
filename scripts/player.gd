@@ -7,12 +7,19 @@ var hand: Array[Area2D] = [] # Cards in hand
 var total_nb_card_played: int = 0
 var transition_between_days: bool = false
 var rng = RandomNumberGenerator.new() 
+var special_event # string or null
 
+func has_special_card_in_hand() -> bool:
+	for card in hand:
+		if card.special_event:
+			return true
+	return false
+	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	rng.randomize()
 	for i in range(3):
-		var card: Area2D = Deck.get_new_card()
+		var card: Area2D = Deck.get_new_card(has_special_card_in_hand())
 		hand.append(card)
 		add_child(card)
 	print_hand()
@@ -51,7 +58,7 @@ func change_random_card(other_card: int) -> void:
 	
 	
 func add_card_to_hand(card_pos: int) -> void:
-	var new_card: Area2D = Deck.get_new_card()
+	var new_card: Area2D = Deck.get_new_card(has_special_card_in_hand())
 	add_child(new_card)
 	hand.insert(card_pos, new_card)
 	print_hand()
@@ -72,7 +79,13 @@ func incr_nb_card_played() -> void:
 		trigger_journal()
 
 func declare_special_event(event: String) -> void:
-	print("Special event: " + event)
+	special_event = event
+	
+func trigger_special_event(event: String) -> void:
+	print("Special event : " + event)
 	
 func trigger_journal() -> void:
+	if special_event:
+		trigger_special_event(special_event)
+		special_event = null
 	print("TODO: JOURNAL")
