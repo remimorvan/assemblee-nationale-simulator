@@ -82,7 +82,7 @@ func _ready() -> void:
 		line.add_point(point)
 
 		line.default_color = desk_color
-		line.width = 20.0
+		line.width = 14.0
 		line.antialiased = true
 		line.begin_cap_mode = Line2D.LINE_CAP_ROUND
 		line.end_cap_mode = Line2D.LINE_CAP_ROUND
@@ -137,7 +137,7 @@ func update_plot():
 	var approvals: Array[float] = compute_group_approvals()
 	for i in range(6):
 		Plot.update_bar_value(i, approvals[i])
-	TextStats.bbcode_text = "[color=black][font_size=25]Satisfais: %s\nIndécis: %s\nInsatisfaits: %s" % compute_number_approvals()
+	TextStats.bbcode_text = "[color=black][font_size=25]Satisfaits : %s\nIndécis : %s\nInsatisfaits : %s" % compute_number_approvals()
 
 func highlight(index: int):
 	party_colors[index] *= 2
