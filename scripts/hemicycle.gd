@@ -84,7 +84,6 @@ func _ready() -> void:
 		add_child(line)
 		line.z_index = 2*(height-i);
 		
-		
 	mat.set_shader_parameter("color_values", vec3_color_array)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -98,6 +97,18 @@ func get_political_group(seat_id: int) -> int:
 		group_id += 1
 		sum_seats += group_repartition[group_id]
 	return group_id
+	
+func compute_group_approvals() -> Array[float]:
+	var res: Array[float] = [0., 0., 0., 0., 0., 0.]
+	var size: Array[int] = [0, 0, 0, 0, 0, 0]
+	for mp in get_tree().get_nodes_in_group("MP"):
+		var pol_group = mp.group_id
+		size[pol_group] += 1
+		if mp.approval >= 0:
+			res[pol_group] += 1.
+	for i in range(6):
+		res[i] /= float(size[i])
+	return res
 	
 # Crée et place le MP 
 func new_mp(seat: int) -> int:	# returns number of the political party of mp 
