@@ -35,8 +35,6 @@ func setup(_text: String, _effect_mean: Dictionary[String, float], _effect_std: 
 	var CardLabel = $"Label"
 	CardLabel.text = text
 	
-	
-	
 # Returns the effect (delta on MP's approval's rate) of the card based on
 # an MP's political group.
 func get_approval_change(political_group: String) -> float:
