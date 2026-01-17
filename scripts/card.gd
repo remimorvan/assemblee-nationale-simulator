@@ -18,7 +18,7 @@ func _init() -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -30,7 +30,9 @@ func setup(_text: String, _effect_mean: Dictionary[String, float], _effect_std: 
 	effect_std = _effect_std
 	image_path = _image_path
 	rng = RandomNumberGenerator.new()
-	rng.randomize() 
+	rng.randomize()
+	var CardLabel = $"Label"
+	CardLabel.text = text
 	
 # Returns the effect (delta on MP's approval's rate) of the card based on
 # an MP's political group.
@@ -48,7 +50,6 @@ func _on_mouse_exited() -> void:
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
-		print("Click " + text)
 		for mp in get_tree().get_nodes_in_group("MP"):
 			mp.approval += get_approval_change(PoliticalGroup[mp.group_id])
 		# Remove card from hand
