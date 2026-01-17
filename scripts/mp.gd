@@ -25,8 +25,8 @@ func setup(_seat_id: int, _group_id: int, _approval: float) -> void:
 	seat_id = _seat_id
 	group_id = _group_id
 	approval = _approval
-	var body_color = party_colors[group_id]/1.3
-	$Sprites/body.modulate = Color(body_color.x, body_color.y, body_color.z, 1.)
+	var body_color = party_colors[group_id]
+	$Sprites/body.modulate = Color(body_color.x, body_color.y, body_color.z, 0.5)+Color(0.1,0.1,0.1,0.1);
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -34,12 +34,10 @@ func _ready() -> void:
 
 func change_approval(qty: float) -> void:
 	approval += qty
-	if $Sprites/AnimationPlayer.is_playing():
-		$Sprites/AnimationPlayer.play("RESET")
 	if qty > 0:
-		$Sprites/AnimationPlayer.play("happy")
+		$Sprites/AnimationPlayer.queue("happy")
 	else:
-		$Sprites/AnimationPlayer.play("unhappy")
+		$Sprites/AnimationPlayer.queue("unhappy")
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
