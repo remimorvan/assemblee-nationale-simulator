@@ -2,6 +2,7 @@ extends Node2D
 
 @export var mp_scene:PackedScene # Utile pour instancier des MP
 @export var desk_color:Color
+@onready var Plot: Control = $"../VBoxContainer/Plot"
 
 var width: int = 19
 var height: int = 13
@@ -89,6 +90,8 @@ func _ready() -> void:
 		line.z_index = 2*(height-i);
 		
 	mat.set_shader_parameter("color_values", vec3_color_array)
+	
+	update_plot()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -114,6 +117,11 @@ func compute_group_approvals() -> Array[float]:
 		res[i] /= float(size[i])
 	return res
 	
+func update_plot():
+	var approvals: Array[float] = compute_group_approvals()
+	for i in range(6):
+		Plot.update_bar_value(i, approvals[i])
+
 # Crée et place le MP 
 func new_mp(seat: int) -> int:	# returns number of the political party of mp 
 	var x = seat%height
