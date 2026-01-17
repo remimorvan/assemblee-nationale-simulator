@@ -5,6 +5,10 @@ var group_id: int # Polotical group number
 #var affinity: Dictionary[String, float] # like social, french fries, economy
 var belief: float # [0,1]
 
+@export var happy_color = Color(0.2,0.8,0.2,1.)
+@export var indifferent_color = Color(1.,1.,1.,1.)
+@export var angry_color = Color(0.8,0.2,0.2,1.)
+
 # Accès aux sprites de visages, pour mettre celle qu'il faut quand il faut
 #@onready var face_sprite = [$Sprites/face_neutral, $Sprites/face_happy, $Sprites/face_unhappy]
 
@@ -21,4 +25,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	var t = abs(belief-0.5)
+	var other_color = happy_color
+	if belief < 0.5:
+		other_color = angry_color
+	$Sprites/head.modulate = other_color*t+indifferent_color*(1-t)

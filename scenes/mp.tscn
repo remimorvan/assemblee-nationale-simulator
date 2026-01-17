@@ -43,7 +43,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0.617857, 0.410714)]
+"values": [Vector2(1, 1)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -79,8 +79,8 @@ tracks/0/path = NodePath("head:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.233333, 0.466667, 0.633333, 0.933333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.3, 0.5, 0.7, 0.933333),
+"transitions": PackedFloat32Array(1, 1, 1, 0.287175, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(0, 10), Vector2(0, -20), Vector2(0, 5), Vector2(0, 0)]
 }
@@ -91,8 +91,8 @@ tracks/1/path = NodePath("body:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.333333, 0.766667, 1),
-"transitions": PackedFloat32Array(1, 2.2974, 0.170755, 1),
+"times": PackedFloat32Array(0, 0.2, 0.733333, 1),
+"transitions": PackedFloat32Array(1, 2.2974, 2.37841, 1),
 "update": 0,
 "values": [Vector2(1, 1), Vector2(1.27, 1), Vector2(0.875, 1), Vector2(1, 1)]
 }
@@ -137,8 +137,7 @@ script = ExtResource("1_ct13o")
 scale = Vector2(0.519999, 0.519999)
 
 [node name="body" type="Sprite2D" parent="Sprites"]
-position = Vector2(0, 107.692)
-scale = Vector2(0.617857, 0.410714)
+position = Vector2(3.84616, 107.693)
 texture = ExtResource("2_0tc44")
 
 [node name="head" type="Sprite2D" parent="Sprites"]
@@ -150,10 +149,10 @@ visible = false
 texture = ExtResource("6_adhds")
 
 [node name="face_happy" type="Sprite2D" parent="Sprites/head"]
-visible = false
 texture = ExtResource("4_5chnr")
 
 [node name="face_unhappy" type="Sprite2D" parent="Sprites/head"]
+visible = false
 position = Vector2(-1.92308, 9.53674e-07)
 texture = ExtResource("5_qn7e5")
 
