@@ -2,8 +2,8 @@ extends Node2D
 
 @export var mp_scene:PackedScene # Utile pour instancier des MP
 
-var width: int = 10
-var height: int = 10
+var width: int = 19
+var height: int = 13
 
 var party_colors: Array[Vector3] = [
 	Vector3(255., 116., 116.)/256.,
@@ -50,8 +50,8 @@ func _process(delta: float) -> void:
 
 # Crée et place le MP 
 func new_mp(seat: int) -> int:	# returns number of the political party of mp 
-	var x = seat%width
-	var y = seat/width
+	var x = seat%height
+	var y = seat/height
 	
 	# Crée nouveau noeud MP
 	var mp = mp_scene.instantiate()
@@ -66,14 +66,17 @@ func new_mp(seat: int) -> int:	# returns number of the political party of mp
 	# ajoute le mp dans l'arbre. (nécessaire pour qu'il soit dans le jeu
 	add_child(mp)
 	
+	mp.z_index = height-x;
+	
 	var viewport_size: Vector2i = get_viewport().get_visible_rect().size
 	var center = Vector2(viewport_size)/2.
 	
 	# modify position so that it is on a grid
 	if (x % 2 == 1):
-		mp.global_position = cell_to_uv(y+1, x+0.5)
+		mp.position = cell_to_uv(y+1, float(x)+0.5)
 	else:
-		mp.global_position = cell_to_uv(float(y) + 0.5, float(x) + 0.5)
+		mp.position = cell_to_uv(float(y) + 0.5, float(x) + 0.5)
+	#mp.position = cell_to_uv(float(y) + 0.5,float(x) + 0.5)
 	mp.scale.x = 0.7
 	mp.scale.y = 0.7
 	
