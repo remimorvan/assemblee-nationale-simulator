@@ -25,7 +25,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var t = min(abs(approval),10)/10
+	var t = min(sqrt(abs(approval)),3)/3
 	var other_color = happy_color
 	if approval < 0:
 		other_color = angry_color
