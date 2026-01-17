@@ -1,0 +1,339 @@
+[
+	{
+		"text": "Doubler les portions de frites à la cantine de l'Assemblée.",
+		"effects": {
+			"lfi": [0.4, 0.4],
+			"eco": [0.3, 0.3],
+			"soc": [0.5, 0.4],
+			"macron": [0.6, 0.3],
+			"lr": [1, 0.4],
+			"facho": [0, 6, 0.2]
+		},
+		"image_path": "basic.png",
+		"quote":""
+	},
+	{
+		"text": "Proposer la hausse du SMIC à 1700€ net par mois.",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [0.9, 0.1],
+			"soc": [0.9, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.9, 0.3],
+			"facho": [-0.5, 0.4]
+		},
+		"image_path": "basic.png",
+		"quote":""
+	},
+	{
+		"text": "Encourager la consommation de cordons bleus par les adultes.",
+		"effects": {
+			"lfi": [0.5, 0.4],
+			"eco": [-1, 0.1],
+			"soc": [0.9, 0.3],
+			"macron": [1, 0.1],
+			"lr": [0.9, 0.3],
+			"facho": [-0.5, 0.4]
+		},
+		"image_path": "basic.png",
+		"quote":""
+	},
+	{
+		"text": "Proposer une option végétarienne à la cantine de l'Assemblée.",
+		"effects": {
+			"lfi": [0.7, 0.2],
+			"eco": [1, 0.1],
+			"soc": [0.5, 0.4],
+			"macron": [0, 0],
+			"lr": [-0.7, 0.2],
+			"facho": [-0.9, 0.1]
+		},
+		"image_path": "basic.png",
+		"quote":""
+	},
+	{
+		"text": "Ignorer le problème du mal-logement.",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [0.9, 0.1],
+			"soc": [0.9, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.9, 0.3],
+			"facho": [-0.5, 0.4]
+		},
+		"image_path": "basic.png",
+		"quote":""
+	},
+	{
+		"text": "Ignorer la baisse drastique de la part des revenus issu du travail en France depuis 1940",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [0.9, 0.1],
+			"soc": [0.9, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.9, 0.3],
+			"facho": [-0.5, 0.4]
+		},
+		"image_path": "basic.png",
+		"quote":""
+	},
+	{
+		"text": "Proposer l'interdiction de la possession de téléphones portables pour lutter contre la recrudescence de vol de portables à l'arraché.",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [0.9, 0.1],
+			"soc": [0.9, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.9, 0.3],
+			"facho": [-0.5, 0.4]
+		},
+		"image_path": "basic.png",
+		"quote":"On a une recrudescence de violence… par exemple le vol des portables à l’arraché. Ca n’existait pas avant que les portables existent"
+	},
+	{
+		"text": "Annoncer à l'Assemblée que vous avez un cœur qui bat à sa cadence et qui est le votre. Vous n'avez pas le monopole du cœur !",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [0.9, 0.1],
+			"soc": [0.9, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.9, 0.3],
+			"facho": [-0.5, 0.4]
+		},
+		"image_path": "basic.png"
+	},
+	{
+		"text": "Annoncer à l'Assemblée que ce qui compte ce n’est pas le vote, c’est comment on compte les votes.",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [0.9, 0.1],
+			"soc": [0.9, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.9, 0.3],
+			"facho": [-0.5, 0.4]
+		},
+		"image_path": "basic.png",
+		"quote":"- Staline"
+	},
+	{
+		"text": "Déclarer que la démocratie ce n’est pas la loi de la majorité mais la protection de la minorité.",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [0.9, 0.1],
+			"soc": [0.9, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.9, 0.3],
+			"facho": [-0.5, 0.4]
+		},
+		"image_path": "basic.png",
+		"quote":"La démocratie, ce n’est pas la loi de la majorité mais la protection de la minorité - Albert Camus"
+	},
+	{
+		"text": "Rendre obligatoire l'affichage du Nutri-Score.",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [0.9, 0.1],
+			"soc": [0.9, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.9, 0.3],
+			"facho": [-0.5, 0.4]
+		},
+		"image_path": "basic.png",
+		"quote":"Amendement du 03/12/2025"
+	},
+	{
+		"text": "Geler l'ensemble des prestations sociales.",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [0.9, 0.1],
+			"soc": [0.9, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.9, 0.3],
+			"facho": [-0.5, 0.4]
+		},
+		"image_path": "basic.png",
+		"quote":"Amendement du 12/11/2025"
+	},
+	{
+		"text": "Changer l'impôt sur la fortune immobilière en impôt sur la fortune improductive.",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [0.9, 0.1],
+			"soc": [0.9, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.9, 0.3],
+			"facho": [-0.5, 0.4]
+		},
+		"image_path": "basic.png",
+		"quote":"Amendement du 31/10/2025, scrutin 3314"
+	},
+	{
+		"text": "Sacrifier les intérêts de la France pour négocier le maintien de la liaison aérienne Orly-Pau",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [0.9, 0.1],
+			"soc": [0.9, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.9, 0.3],
+			"facho": [-0.5, 0.4]
+		},
+		"image_path": "basic.png",
+		"quote":""
+	},
+	{
+		"text": "Nommer un ministre de l'Éducation Nationale dont les enfants sont scolarisés dans le privé.",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [0.9, 0.1],
+			"soc": [0.9, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.9, 0.3],
+			"facho": [-0.5, 0.4]
+		},
+		"image_path": "basic.png",
+		"quote":""
+	},
+	{
+		"text": "Facilier les expulsions et destructions d'habitats informels à Mayotte.",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [0.9, 0.1],
+			"soc": [0.9, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.9, 0.3],
+			"facho": [-0.5, 0.4]
+		},
+		"image_path": "basic.png",
+		"quote":"Amendement du 25/06/2025"
+	},
+	{
+		"text": "Relancer le nucléaire.",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [0.9, 0.1],
+			"soc": [0.9, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.9, 0.3],
+			"facho": [-0.5, 0.4]
+		},
+		"image_path": "basic.png",
+		"quote":"Amendement du 18/06/2025"
+	},
+	{
+		"text": "Reconnaître et rembourser les dettes d'anciennes colonies.",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [0.9, 0.1],
+			"soc": [0.9, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.9, 0.3],
+			"facho": [-0.5, 0.4]
+		},
+		"image_path": "basic.png",
+		"quote":"Amendement du 18/06/2025"
+	},
+	{
+		"text": "Abroger la réforme des retraites.",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [0.9, 0.1],
+			"soc": [0.9, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.9, 0.3],
+			"facho": [-0.5, 0.4]
+		},
+		"image_path": "basic.png",
+		"quote":"Résolution 05/06/2025 "
+	},
+	{
+		"text": "Supprimer les zones à faible émissions.",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [0.9, 0.1],
+			"soc": [0.9, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.9, 0.3],
+			"facho": [-0.5, 0.4]
+		},
+		"image_path": "basic.png",
+		"quote":"28/05/2025"
+	},
+	{
+		"text": "Travailler plus pour gagner plus.",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [0.9, 0.1],
+			"soc": [0.9, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.9, 0.3],
+			"facho": [-0.5, 0.4]
+		},
+		"image_path": "basic.png",
+		"quote":"Sarkozy"
+	},
+	{
+		"text": "Donner une interview dans un média d'extrême-droite détenu par le milliardaire Mincent Billoré.",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [0.9, 0.1],
+			"soc": [0.9, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.9, 0.3],
+			"facho": [-0.5, 0.4]
+		},
+		"image_path": "basic.png",
+		"quote":"Oops"
+	},
+	{
+		"text": "Constater en France que les veuves vivent plus longtemps que leurs maris",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [0.9, 0.1],
+			"soc": [0.9, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.9, 0.3],
+			"facho": [-0.5, 0.4]
+		},
+		"image_path": "basic.png",
+		"quote":"Raffarin"
+	},
+	{
+		"text": "Construire plus de logements sociaux pour loger ceux qui sont expulsés de leurs logements sociaux.",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [0.9, 0.1],
+			"soc": [0.9, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.9, 0.3],
+			"facho": [-0.5, 0.4]
+		},
+		"image_path": "basic.png",
+		"quote":"Sébastien Delogu"
+	},
+	{
+		"text": "Mentir et annoncer un déficit à 4,4% du PIB quand il est en réalité de 6,1%.",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [0.9, 0.1],
+			"soc": [0.9, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.9, 0.3],
+			"facho": [-0.5, 0.4]
+		},
+		"image_path": "basic.png",
+		"quote":"Bruno Le Maire"
+	},
+	{
+		"text": "Inscrire le droit à l'interruption volontaire de grossesse dans la constitution.",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [0.9, 0.1],
+			"soc": [0.9, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.9, 0.3],
+			"facho": [-0.5, 0.4]
+		},
+		"image_path": "basic.png",
+		"quote":""
+	}
+]

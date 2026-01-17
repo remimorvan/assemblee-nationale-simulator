@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://velnx8vw6r6u"]
+[gd_scene load_steps=4 format=3 uid="uid://velnx8vw6r6u"]
 
 [ext_resource type="PackedScene" uid="uid://bf3fndiyasfyq" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://d1voxmvhe7xmt" path="res://scenes/hemicycle.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" path="res://scenes/deck.tscn" id="3_lnu2h"]
 
 [node name="Game" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_uwrxv")]
+[node name="Deck" parent="." instance=ExtResource("3_lnu2h")]
 
 [node name="Hemicycle" parent="." instance=ExtResource("2_yqjtg")]
+
+[node name="Player" parent="." instance=ExtResource("1_uwrxv")]

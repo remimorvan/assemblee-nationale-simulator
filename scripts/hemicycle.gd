@@ -48,7 +48,7 @@ func cell_to_uv(cellx: int, celly: int) -> Vector2:
 func _process(delta: float) -> void:
 	pass
 
-# Exemple de comment on fait un nouveau noeud au run time
+# Crée et place le MP 
 func new_mp(seat: int) -> int:	# returns number of the political party of mp 
 	var x = seat%width
 	var y = seat/width
@@ -71,7 +71,7 @@ func new_mp(seat: int) -> int:	# returns number of the political party of mp
 	var center = Vector2(viewport_size)/2.
 	
 	# modify position so that it is on a grid
-	mp.global_position = cell_to_uv(x, y)
+	mp.global_position = Vector2(center.x+float(x-width/2)*50.,center.y+float(y-height/2)*70.)
 	mp.scale.x = 0.5
 	mp.scale.y = 0.5
 	
