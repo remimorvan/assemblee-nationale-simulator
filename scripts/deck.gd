@@ -44,9 +44,9 @@ func _ready() -> void:
 	else:
 		print("JSON Parse Error: ", json.get_error_message(), " in cards.json at line ", json.get_error_line())
 
-func get_new_card(has_special_card: bool) -> Node2D:
+func get_new_card(ignore_special: bool) -> Node2D:
 	var index: int = 0 
-	while (index < len(all_cards) and has_special_card and all_cards[index].special_event):
+	while (index < len(all_cards) and ignore_special and all_cards[index].special_event):
 		index += 1
 	assert(index < len(all_cards))
 	return all_cards.pop_at(index)
