@@ -134,7 +134,7 @@ func update_plot():
 	var approvals: Array[float] = compute_group_approvals()
 	for i in range(6):
 		Plot.update_bar_value(i, approvals[i])
-	TextStats.bbcode_text = "[color=black][font_size=25]Satisfais: %s\nIndécis: %s\nInsatisfaits: %s" % compute_number_approvals()
+	TextStats.bbcode_text = "[color=black][font_size=25]Satisfaits : %s\nIndécis : %s\nInsatisfaits : %s" % compute_number_approvals()
 
 # Crée et place le MP 
 func new_mp(seat: int) -> int:	# returns number of the political party of mp 
