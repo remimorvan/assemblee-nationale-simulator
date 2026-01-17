@@ -5,6 +5,18 @@ extends Node2D
 var width: int = 19
 var height: int = 13
 
+var group_repartition: Array[int] = [
+	81,
+	47,
+	71,
+	179,
+	53,
+	132
+]
+var sum_group_repartition: int = 0 # Computed at _init()
+
+var default_approval: Array[float] = [-5.0, -4.0, -2.0, 5.0, 0.3, -4.0]
+
 var party_colors: Array[Vector3] = [
 	Vector3(255., 116., 116.)/256.,
 	Vector3(59., 163., 137.)/256.,
@@ -30,6 +42,10 @@ func cell_to_uv(cellx: float, celly: float) -> Vector2:
 	#return UV*100. + viewport_size/2.
 	return Vector2(UV.x * viewport_size.x, UV.y * viewport_size.y)
 
+func _init() -> void:
+	for n in group_repartition:
+		sum_group_repartition += n
+	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var mat: ShaderMaterial = $TextureRect.material
@@ -75,6 +91,14 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+func get_political_group(seat_id: int) -> int:
+	var sum_seats: int = 0
+	var group_id: int = -1
+	while group_id < 6 and float(seat_id)/float(width*height) >= float(sum_seats)/float(sum_group_repartition):
+		group_id += 1
+		sum_seats += group_repartition[group_id]
+	return group_id
+	
 # Crée et place le MP 
 func new_mp(seat: int) -> int:	# returns number of the political party of mp 
 	var x = seat%height
@@ -84,9 +108,8 @@ func new_mp(seat: int) -> int:	# returns number of the political party of mp
 	var mp = mp_scene.instantiate()
 	
 	var seat_id = seat
-	
-	var group_id: int = floor((seat*6)/float(width*height))
-	var approval = 0.
+	var group_id: int = get_political_group(seat_id)
+	var approval: float = default_approval[group_id]
 
 	mp.setup(seat_id, group_id, approval)
 	
