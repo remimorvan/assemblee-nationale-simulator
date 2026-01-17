@@ -6,7 +6,7 @@ var effect_std: Dictionary[String, float] # political group -> standard deviatio
 var image_path: String # Text of the card
 
 # Called when the node enters the scene tree for the first time.
-func _init(_text: String, _effect_mean: Dictionary[String, float], _effect_std: Dictionary[String, float] _image_path: String) -> void:
+func _init(_text: String, _effect_mean: Dictionary[String, float], _effect_std: Dictionary[String, float], _image_path: String) -> void:
 	text = _text
 	effect_mean = _effect_mean
 	effect_std = _effect_std
