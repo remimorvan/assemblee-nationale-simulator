@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuemgi5ynsxra"]
+
+[ext_resource type="Script" uid="uid://bmafpymoftg2i" path="res://scripts/mp.gd" id="1_ct13o"]
+
+[node name="MP" type="Node2D"]
+script = ExtResource("1_ct13o")
