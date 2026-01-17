@@ -80,8 +80,11 @@ func _ready() -> void:
 			point = cell_to_uv(float(width), float(i) + bar_height)
 		line.add_point(point)
 
-		line.default_color = Color(0.5, 0.5, 0.5, 1.)
+		line.default_color = desk_color
 		line.width = 20.0
+		line.antialiased = true
+		line.begin_cap_mode = Line2D.LINE_CAP_ROUND
+		line.end_cap_mode = Line2D.LINE_CAP_ROUND
 		add_child(line)
 		line.z_index = 2*(height-i);
 		
