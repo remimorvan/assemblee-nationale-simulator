@@ -34,6 +34,8 @@ func _ready() -> void:
 
 func change_approval(qty: float) -> void:
 	approval += qty
+	if $Sprites/AnimationPlayer.is_playing():
+		$Sprites/AnimationPlayer.play("RESET")
 	if qty > 0:
 		$Sprites/AnimationPlayer.play("happy")
 	else:
