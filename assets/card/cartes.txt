@@ -77,7 +77,7 @@
 	/* Résolution 05/06/2025 */
 	=> gauche, ed: +
 	=> centre, droite: -
-- Supprimer les zones à faible émissions:
+- Supprimer les zones à faible émissions.
 	/* 28/05/2025 */
 	=> éco, soc: -
 	=> centre, ed, lfi: +
@@ -89,7 +89,7 @@
 	=> gauche: --
 	=> centre: +
 	=> droite, ed: ++
-- Constater en France que les veuves vivent plus longtemps que leurs maris
+- Constater en France que les veuves vivent plus longtemps que leurs maris.
 	/* Raffarin : https://web.archive.org/web/*/http://ftp.support-fr.org/raffarin.pdf */
 	=> tout le monde: ???
 - Construire plus de logements sociaux pour loger ceux qui sont expulsés de leurs logements sociaux. 
@@ -101,5 +101,4 @@
 	/* Bruno Le Maire */
 	=> tout le monde : +
 	=> trigger un évènement spécial
-- Inscrire le droit à l'interruption volontaire de grossesse dans la constitution.
  

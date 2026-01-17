@@ -7,7 +7,7 @@ var hand: Array[Area2D] = [] # Cards in hand
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for i in range(2):
+	for i in range(3):
 		var card: Area2D = Deck.get_new_card()
 		hand.append(card)
 		add_child(card)

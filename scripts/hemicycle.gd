@@ -25,9 +25,9 @@ func new_mp(seat: int):
 	
 	var seat_id = seat
 	var group_id = x/2
-	var belief = 0.
+	var approval = 0.
 
-	mp.setup(seat_id, group_id, belief)
+	mp.setup(seat_id, group_id, approval)
 	
 	# ajoute le mp dans l'arbre. (nécessaire pour qu'il soit dans le jeu
 	add_child(mp)
