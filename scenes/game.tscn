@@ -6,9 +6,9 @@
 
 [node name="Game" type="Node2D"]
 
-[node name="Deck" parent="." instance=ExtResource("3_lnu2h")]
-
 [node name="Hemicycle" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(0, -100)
+
+[node name="Deck" parent="." instance=ExtResource("3_lnu2h")]
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
