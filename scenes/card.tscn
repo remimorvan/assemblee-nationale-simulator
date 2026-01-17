@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://ddn50b8k2q78u" path="res://scripts/card.gd" id="1_d81rb"]
 [ext_resource type="Texture2D" uid="uid://cvxibmrjc5ly3" path="res://assets/card/card_mockup.png" id="2_6u4wf"]
 [ext_resource type="Shader" uid="uid://cdf3y6rge0qjs" path="res://assets/shader/card.gdshader" id="2_xjciw"]
-<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://o7q6j4sxiami" path="res://assets/card/logos/lfi_back.png" id="3_42b55"]
 [ext_resource type="Texture2D" uid="uid://c2wefqcb2f2ua" path="res://assets/card/logos/lfi_line.png" id="4_xjciw"]
 [ext_resource type="Texture2D" uid="uid://2givsr6ka0vp" path="res://assets/card/logos/eco_back.png" id="5_54seb"]
