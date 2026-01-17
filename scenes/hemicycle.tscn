@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://d1voxmvhe7xmt"]
+[gd_scene load_steps=5 format=3 uid="uid://d1voxmvhe7xmt"]
 
 [ext_resource type="Script" uid="uid://ca4vviiiv0rox" path="res://scripts/hemicycle.gd" id="1_22fab"]
 [ext_resource type="PackedScene" uid="uid://cuemgi5ynsxra" path="res://scenes/mp.tscn" id="2_8igwf"]
@@ -8,14 +8,12 @@
 shader = ExtResource("3_8igwf")
 shader_parameter/color_values = PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_8igwf"]
-
 [node name="Hemicycle" type="Node2D"]
 script = ExtResource("1_22fab")
 mp_scene = ExtResource("2_8igwf")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_hw2pa")
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = SubResource("CanvasTexture_8igwf")
+color = Color(1, 1, 1, 0)
