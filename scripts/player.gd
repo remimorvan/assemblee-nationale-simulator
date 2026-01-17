@@ -5,6 +5,7 @@ extends Node2D
 
 var hand: Array[Area2D] = [] # Cards in hand
 var total_nb_card_played: int = 0
+var transition_between_days: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -46,6 +47,17 @@ func add_card_to_hand(card_pos: int) -> void:
 func get_current_day() -> int:
 	return total_nb_card_played/3
 	
+func is_new_day() -> int:
+	return total_nb_card_played % 3 == 0
+	
 func incr_nb_card_played() -> void:
 	total_nb_card_played += 1
-	print("Day " + str(get_current_day()))
+	if is_new_day():
+		print("Day " + str(get_current_day()))
+		transition_between_days = true
+		await get_tree().create_timer(1).timeout
+		transition_between_days = false
+		trigger_journal()
+
+func trigger_journal() -> void:
+	print("TODO: JOURNAL")
