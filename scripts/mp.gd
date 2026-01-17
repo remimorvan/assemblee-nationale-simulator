@@ -9,7 +9,7 @@ var belief: float # [0,1]
 @onready var face_sprite = [$Sprites/face_neutral, $Sprites/face_happy, $Sprites/face_unhappy]
 
 # Called when the node enters the scene tree for the first time.
-func _init(_seat_id: int, _group_id: int, _belief: float, _affinity : Dictionary[String, float]) -> void:
+func setup(_seat_id: int, _group_id: int, _belief: float, _affinity : Dictionary[String, float]) -> void:
 	seat_id = _seat_id
 	group_id = _group_id
 	belief = _belief
