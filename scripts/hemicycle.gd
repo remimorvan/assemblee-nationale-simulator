@@ -15,7 +15,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-# Exemple de comment on fait un nouveau noeud au run time
+# Crée et place le MP 
 func new_mp(seat: int):
 	var x = seat%width
 	var y = seat/width
@@ -37,8 +37,8 @@ func new_mp(seat: int):
 	
 	# modify position so that it is on a grid
 	mp.global_position = Vector2(center.x+float(x-width/2)*50.,center.y+float(y-height/2)*70.)
-	mp.scale.x = 0.5
-	mp.scale.y = 0.5
+	#mp.scale.x = 0.5
+	#mp.scale.y = 0.5
 	
 	# et pour suprimer :
 	#mp.queue_free()
