@@ -7,7 +7,7 @@
 			"soc": [0.5, 0.4],
 			"macron": [0.6, 0.3],
 			"lr": [1, 0.4],
-			"facho": [0.6, 0.2]
+			"rn": [0.6, 0.2]
 		},
 		"image_path": "basic.png",
 		"quote": "",
@@ -21,7 +21,7 @@
 			"soc": [0.8, 0.2],
 			"macron": [-1, 0.2],
 			"lr": [-1, 0.2],
-			"facho": [-0.6, 0.3]
+			"rn": [-0.6, 0.3]
 		},
 		"image_path": "basic.png",
 		"quote": ""
@@ -34,7 +34,7 @@
 			"soc": [0, 0.1],
 			"macron": [1, 0.2],
 			"lr": [0, 0.1],
-			"facho": [0, 0.1]
+			"rn": [0, 0.1]
 		},
 		"image_path": "basic.png",
 		"quote": ""
@@ -47,7 +47,7 @@
 			"soc": [0.8, 0.2],
 			"macron": [0.5, 0.3],
 			"lr": [-0.8, 0.2],
-			"facho": [-0.7, 0.4]
+			"rn": [-0.7, 0.4]
 		},
 		"image_path": "basic.png",
 		"quote": ""
@@ -60,7 +60,7 @@
 			"soc": [-1, 0.2],
 			"macron": [0.7, 0.3],
 			"lr": [0.6, 0.3],
-			"facho": [0.6, 0.3]
+			"rn": [0.6, 0.3]
 		},
 		"image_path": "basic.png",
 		"quote": ""
@@ -73,7 +73,7 @@
 			"soc": [-1, 0.2],
 			"macron": [0.7, 0.3],
 			"lr": [0.6, 0.3],
-			"facho": [0.6, 0.3]
+			"rn": [0.6, 0.3]
 		},
 		"image_path": "basic.png",
 		"quote": ""
@@ -86,7 +86,7 @@
 			"soc": [-1, 0.2],
 			"macron": [0, 0.1],
 			"lr": [1, 0.1],
-			"facho": [0.6, 0.1]
+			"rn": [0.6, 0.1]
 		},
 		"image_path": "basic.png",
 		"quote": "On a une recrudescence de violence… par exemple le vol des portables à l’arraché. Ca n’existait pas avant que les portables existent. - Nadine Morano"
@@ -99,7 +99,7 @@
 			"soc": [-0.3, 0.1],
 			"macron": [0.4, 0.1],
 			"lr": [0, 0.1],
-			"facho": [0, 0.1]
+			"rn": [0, 0.1]
 		},
 		"image_path": "basic.png"
 	},
@@ -111,7 +111,7 @@
 			"soc": [-0.2, 0.1],
 			"macron": [-0.2, 0.1],
 			"lr": [-0.2, 0.1],
-			"facho": [0, 0.1]
+			"rn": [0, 0.1]
 		},
 		"image_path": "basic.png",
 		"quote": "- Staline"
@@ -124,7 +124,7 @@
 			"soc": [0.8, 0.2],
 			"macron": [0, 0.2],
 			"lr": [-0.9, 0.2],
-			"facho": [-0.9, 0.2]
+			"rn": [-0.9, 0.2]
 		},
 		"image_path": "basic.png",
 		"quote": "La démocratie, ce n’est pas la loi de la majorité mais la protection de la minorité - Albert Camus"
@@ -137,7 +137,7 @@
 			"soc": [0.7, 0.2],
 			"macron": [0, 0.3],
 			"lr": [-0.7, 0.3],
-			"facho": [-0.8, 0.3]
+			"rn": [-0.8, 0.3]
 		},
 		"image_path": "basic.png",
 		"quote": "Amendement du 03/12/2025"
@@ -150,7 +150,7 @@
 			"soc": [-0.9, 0.3],
 			"macron": [0.7, 0.2],
 			"lr": [-0.5, 0.2],
-			"facho": [-0.6, 0.2]
+			"rn": [-0.6, 0.2]
 		},
 		"image_path": "basic.png",
 		"quote": "Amendement du 12/11/2025"
@@ -163,7 +163,7 @@
 			"soc": [0.7, 0.2],
 			"macron": [0, 0.3],
 			"lr": [-0.6, 0.2],
-			"facho": [0.5, 0.2]
+			"rn": [0.5, 0.2]
 		},
 		"image_path": "basic.png",
 		"quote": "Amendement du 31/10/2025, scrutin 3314"
@@ -176,7 +176,7 @@
 			"soc": [-0.7, 0.2],
 			"macron": [0.6, 0.4],
 			"lr": [0.2, 0.1],
-			"facho": [0, 0.1]
+			"rn": [0, 0.1]
 		},
 		"image_path": "basic.png",
 		"quote": ""
@@ -189,7 +189,7 @@
 			"soc": [-0.5, 0.2],
 			"macron": [0, 0.2],
 			"lr": [1, 0.2],
-			"facho": [0.6, 0.2]
+			"rn": [0.6, 0.2]
 		},
 		"image_path": "basic.png",
 		"quote": ""
@@ -202,7 +202,7 @@
 			"soc": [0, 0.2],
 			"macron": [0.8, 0.2],
 			"lr": [0.8, 0.2],
-			"facho": [0.8, 0.2]
+			"rn": [0.8, 0.2]
 		},
 		"image_path": "basic.png",
 		"quote": "Amendement du 25/06/2025"
@@ -215,7 +215,7 @@
 			"soc": [-0.5, 0.3],
 			"macron": [1, 0.1],
 			"lr": [1, 0.1],
-			"facho": [0.5, 0.2]
+			"rn": [0.5, 0.2]
 		},
 		"image_path": "basic.png",
 		"quote": "Amendement du 18/06/2025"
@@ -228,7 +228,7 @@
 			"soc": [0.8, 0.2],
 			"macron": [0.8, 0.2],
 			"lr": [-0.8, 0.2],
-			"facho": [-0.8, 0.2]
+			"rn": [-0.8, 0.2]
 		},
 		"image_path": "basic.png",
 		"quote": "Amendement du 18/06/2025"
@@ -241,7 +241,7 @@
 			"soc": [1, 0.1],
 			"macron": [-1, 0.1],
 			"lr": [-0.8, 0.2],
-			"facho": [0, 0.3]
+			"rn": [0, 0.3]
 		},
 		"image_path": "basic.png",
 		"quote": "Résolution 05/06/2025 / 29/10/2024"
@@ -254,7 +254,7 @@
 			"soc": [-1, 0.1],
 			"macron": [0.6, 0.2],
 			"lr": [1, 0.1],
-			"facho": [0.5, 0.1]
+			"rn": [0.5, 0.1]
 		},
 		"image_path": "basic.png",
 		"quote": "28/05/2025"
@@ -267,7 +267,7 @@
 			"soc": [-0.7, 0.2],
 			"macron": [0.7, 0.2],
 			"lr": [1, 0.1],
-			"facho": [0, 0.2]
+			"rn": [0, 0.2]
 		},
 		"image_path": "basic.png",
 		"quote": "- Sarkozy"
@@ -280,7 +280,7 @@
 			"soc": [-1, 0.2],
 			"macron": [0.7, 0.3],
 			"lr": [0.7, 0.1],
-			"facho": [0.6, 0.1]
+			"rn": [0.6, 0.1]
 		},
 		"image_path": "basic.png",
 		"quote": "Oops"
@@ -293,7 +293,7 @@
 			"soc": [0, 0.1],
 			"macron": [0, 0.1],
 			"lr": [0.3, 0.1],
-			"facho": [0, 0.1]
+			"rn": [0, 0.1]
 		},
 		"image_path": "basic.png",
 		"quote": "Raffarin"
@@ -306,7 +306,7 @@
 			"soc": [0.8, 0.2],
 			"macron": [0, 0.3],
 			"lr": [-0.8, 0.2],
-			"facho": [-0.8, 0.2]
+			"rn": [-0.8, 0.2]
 		},
 		"image_path": "basic.png",
 		"quote": "Sébastien Delogu"
@@ -319,7 +319,7 @@
 			"soc": [0.5, 0.1],
 			"macron": [1, 0.1],
 			"lr": [0.5, 0.1],
-			"facho": [0.5, 0.1]
+			"rn": [0.5, 0.1]
 		},
 		"image_path": "basic.png",
 		"quote": "Bruno Le Maire",
@@ -333,7 +333,7 @@
 			"soc": [0.7, 0.3],
 			"macron": [-0.7, 0.3],
 			"lr": [-1, 0.1],
-			"facho": [-1, 0.1]
+			"rn": [-1, 0.1]
 		},
 		"image_path": "basic.png",
 		"quote": ""
@@ -346,7 +346,7 @@
 			"soc": [-0.8, 0.2],
 			"macron": [0, 0.3],
 			"lr": [1, 0.2],
-			"facho": [-0.5, 0.3]
+			"rn": [-0.5, 0.3]
 		},
 		"image_path": "basic.png",
 		"quote": ""
@@ -359,7 +359,7 @@
 			"soc": [0.7, 0.2],
 			"macron": [1, 0.1],
 			"lr": [0.7, 0.2],
-			"facho": [0, 0.2]
+			"rn": [0, 0.2]
 		},
 		"image_path": "basic.png",
 		"quote": ""
@@ -372,7 +372,7 @@
 			"soc": [0.8, 0.2],
 			"macron": [-0.6, 0.2],
 			"lr": [-0.8, 0.2],
-			"facho": [-0.8, 0.2]
+			"rn": [-0.8, 0.2]
 		},
 		"image_path": "basic.png",
 		"quote": ""
@@ -385,7 +385,7 @@
 			"soc": [0.8, 0.2],
 			"macron": [-1, 0.1],
 			"lr": [0.6, 0.2],
-			"facho": [0.6, 0.2]
+			"rn": [0.6, 0.2]
 		},
 		"image_path": "basic.png",
 		"quote": ""
@@ -398,10 +398,49 @@
 			"soc": [-0.5, 0.4],
 			"macron": [1, 0.1],
 			"lr": [-0.5, 0.2],
-			"facho": [-0.5, 0.2]
+			"rn": [-0.5, 0.2]
 		},
 		"image_path": "basic.png",
 		"quote": "",
 		"special_event": "convention_citoyenne"
+	},
+	{
+		"text": "Augmenter les APL de 10%",
+		"effects": {
+			"lfi": [0.8, 0.2],
+			"eco": [0.8, 0.2],
+			"soc": [0.8, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.7, 0.2],
+			"rn": [-0.7, 0.2]
+		},
+		"image_path": "basic.png",
+		"quote": ""
+	},
+	{
+		"text": "Adopter un moratoire sur les méga-bassines",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [1, 0.1],
+			"soc": [0.9, 0.1],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.9, 0.1],
+			"rn": [-0.9, 0.1]
+		},
+		"image_path": "basic.png",
+		"quote": ""
+	},
+	{
+		"text": "Réautoriser un insecticide néonicotinoïde.",
+		"effects": {
+			"lfi": [-0.9, 0.1],
+			"eco": [-0.8, 0.1],
+			"soc": [-0.7, 0.1],
+			"macron": [0.9, 0.2],
+			"lr": [0.7, 0.1],
+			"rn": [0.8, 0.1]
+		},
+		"image_path": "basic.png",
+		"quote": ""
 	}
 ]

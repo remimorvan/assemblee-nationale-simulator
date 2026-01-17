@@ -13,7 +13,7 @@ var rng: RandomNumberGenerator
 var hovered: bool
 var tween: Tween
 
-var PoliticalGroup: Array[String] = ["lfi", "eco", "soc", "macron", "lr", "facho"]
+var PoliticalGroup: Array[String] = ["lfi", "eco", "soc", "macron", "lr", "rn"]
 
 # Called when the node enters the scene tree for the first time.
 func _init() -> void:

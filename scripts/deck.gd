@@ -4,7 +4,7 @@ extends Node2D
 @onready var Hemicycle: Node2D = $"../Hemicycle"
 
 var all_cards: Array[Node2D] = []
-var PoliticalGroup: Array[String] = ["lfi", "eco", "soc", "macron", "lr", "facho"]
+var PoliticalGroup: Array[String] = ["lfi", "eco", "soc", "macron", "lr", "rn"]
 
 # Called when the node enters the scene tree for the first time.
 func _init() -> void:

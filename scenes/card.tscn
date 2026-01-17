@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=3 uid="uid://b7jidntt07fi4"]
 
 [ext_resource type="Script" uid="uid://ddn50b8k2q78u" path="res://scripts/card.gd" id="1_d81rb"]
-[ext_resource type="Texture2D" uid="uid://dmccpgsxbcxdg" path="res://assets/card/card_mockup.png" id="2_6u4wf"]
+[ext_resource type="Texture2D" uid="uid://cvxibmrjc5ly3" path="res://assets/card/card_mockup.png" id="2_6u4wf"]
 [ext_resource type="Shader" uid="uid://cdf3y6rge0qjs" path="res://assets/shader/card.gdshader" id="2_xjciw"]
 [ext_resource type="Texture2D" uid="uid://bfv1ubu5a6adk" path="res://assets/card/logos/lfi_back.png" id="3_42b55"]
 [ext_resource type="Texture2D" uid="uid://cmds766v1s54w" path="res://assets/card/logos/lfi_line.png" id="4_xjciw"]
@@ -107,12 +107,12 @@ material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 0
 texture = ExtResource("12_b834i")
 
-[node name="fachos" type="TextureRect" parent="Sprite2D/Logos" groups=["card_asset"]]
+[node name="rn" type="TextureRect" parent="Sprite2D/Logos" groups=["card_asset"]]
 material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 2
 texture = ExtResource("13_07urr")
 
-[node name="fachos" type="TextureRect" parent="Sprite2D/Logos/fachos" groups=["card_asset"]]
+[node name="rn" type="TextureRect" parent="Sprite2D/Logos/rn" groups=["card_asset"]]
 material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 0
 texture = ExtResource("14_l85n3")
