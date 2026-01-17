@@ -52,7 +52,8 @@ func _process(delta: float) -> void:
 	else:
 		$Sprites/head/face_neutral.visible = true
 	
-	var t = min(sqrt(abs(approval)),3)/3
+	# var t = min(sqrt(abs(approval)),3)/3
+	var t = min(abs(approval),9)/9
 	var other_color = happy_color
 	if approval < 0:
 		other_color = angry_color

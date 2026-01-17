@@ -86,7 +86,7 @@
 			"soc": [-1, 0.2],
 			"macron": [0, 0.1],
 			"lr": [1, 0.1],
-			"facho": [1, 0.1]
+			"facho": [0.6, 0.1]
 		},
 		"image_path": "basic.png",
 		"quote": "On a une recrudescence de violence… par exemple le vol des portables à l’arraché. Ca n’existait pas avant que les portables existent. - Nadine Morano"
@@ -111,7 +111,7 @@
 			"soc": [-0.2, 0.1],
 			"macron": [-0.2, 0.1],
 			"lr": [-0.2, 0.1],
-			"facho": [0.2, 0.1]
+			"facho": [0, 0.1]
 		},
 		"image_path": "basic.png",
 		"quote": "- Staline"
@@ -137,7 +137,7 @@
 			"soc": [0.7, 0.2],
 			"macron": [0, 0.3],
 			"lr": [-0.7, 0.3],
-			"facho": [-0.7, 0.3]
+			"facho": [-0.8, 0.3]
 		},
 		"image_path": "basic.png",
 		"quote": "Amendement du 03/12/2025"
@@ -150,7 +150,7 @@
 			"soc": [-0.9, 0.3],
 			"macron": [0.7, 0.2],
 			"lr": [-0.5, 0.2],
-			"facho": [-0.5, 0.2]
+			"facho": [-0.6, 0.2]
 		},
 		"image_path": "basic.png",
 		"quote": "Amendement du 12/11/2025"
@@ -163,7 +163,7 @@
 			"soc": [0.7, 0.2],
 			"macron": [0, 0.3],
 			"lr": [-0.6, 0.2],
-			"facho": [0.6, 0.2]
+			"facho": [0.5, 0.2]
 		},
 		"image_path": "basic.png",
 		"quote": "Amendement du 31/10/2025, scrutin 3314"
@@ -176,7 +176,7 @@
 			"soc": [-0.7, 0.2],
 			"macron": [0.6, 0.4],
 			"lr": [0.2, 0.1],
-			"facho": [0.2, 0.1]
+			"facho": [0, 0.1]
 		},
 		"image_path": "basic.png",
 		"quote": ""
@@ -189,7 +189,7 @@
 			"soc": [-0.5, 0.2],
 			"macron": [0, 0.2],
 			"lr": [1, 0.2],
-			"facho": [1, 0.2]
+			"facho": [0.6, 0.2]
 		},
 		"image_path": "basic.png",
 		"quote": ""
@@ -215,7 +215,7 @@
 			"soc": [-0.5, 0.3],
 			"macron": [1, 0.1],
 			"lr": [1, 0.1],
-			"facho": [0.7, 0.2]
+			"facho": [0.5, 0.2]
 		},
 		"image_path": "basic.png",
 		"quote": "Amendement du 18/06/2025"
@@ -241,10 +241,10 @@
 			"soc": [1, 0.1],
 			"macron": [-1, 0.1],
 			"lr": [-0.8, 0.2],
-			"facho": [0.7, 0.2]
+			"facho": [0, 0.3]
 		},
 		"image_path": "basic.png",
-		"quote": "Résolution 05/06/2025 "
+		"quote": "Résolution 05/06/2025 / 29/10/2024"
 	},
 	{
 		"text": "Supprimer les zones à faible émissions.",
@@ -254,7 +254,7 @@
 			"soc": [-1, 0.1],
 			"macron": [0.6, 0.2],
 			"lr": [1, 0.1],
-			"facho": [1, 0.1]
+			"facho": [0.5, 0.1]
 		},
 		"image_path": "basic.png",
 		"quote": "28/05/2025"
@@ -267,7 +267,7 @@
 			"soc": [-0.7, 0.2],
 			"macron": [0.7, 0.2],
 			"lr": [1, 0.1],
-			"facho": [0.7, 0.2]
+			"facho": [0, 0.2]
 		},
 		"image_path": "basic.png",
 		"quote": "- Sarkozy"
@@ -279,8 +279,8 @@
 			"eco": [-1, 0.2],
 			"soc": [-1, 0.2],
 			"macron": [0.7, 0.3],
-			"lr": [0.9, 0.1],
-			"facho": [0.9, 0.1]
+			"lr": [0.7, 0.1],
+			"facho": [0.6, 0.1]
 		},
 		"image_path": "basic.png",
 		"quote": "Oops"
@@ -324,5 +324,84 @@
 		"image_path": "basic.png",
 		"quote": "Bruno Le Maire",
 		"special_event": "deficit"
+	},
+	{
+		"text": "Inclure dans les formations délivrées dans l'enseignement supérieur la lutte contre l'islamophobie",
+		"effects": {
+			"lfi": [0.7, 0.3],
+			"eco": [0.7, 0.3],
+			"soc": [0.7, 0.3],
+			"macron": [-0.7, 0.3],
+			"lr": [-1, 0.1],
+			"facho": [-1, 0.1]
+		},
+		"image_path": "basic.png",
+		"quote": ""
+	},
+	{
+		"text": "Mettre en place une backdoor dans les messageries cryptées.",
+		"effects": {
+			"lfi": [-0.8, 0.2],
+			"eco": [-0.8, 0.2],
+			"soc": [-0.8, 0.2],
+			"macron": [0, 0.3],
+			"lr": [1, 0.2],
+			"facho": [-0.5, 0.3]
+		},
+		"image_path": "basic.png",
+		"quote": ""
+	},
+	{
+		"text": "Appeler l'Union européenne à renforcer le soutien à l'Ukraine.",
+		"effects": {
+			"lfi": [-0.8, 0.2],
+			"eco": [0.7, 0.2],
+			"soc": [0.7, 0.2],
+			"macron": [1, 0.1],
+			"lr": [0.7, 0.2],
+			"facho": [0, 0.2]
+		},
+		"image_path": "basic.png",
+		"quote": ""
+	},
+	{
+		"text": "Allonger la durée du congé salarié en cas de maladie grave de son enfant",
+		"effects": {
+			"lfi": [0.8, 0.2],
+			"eco": [0.8, 0.2],
+			"soc": [0.8, 0.2],
+			"macron": [-0.6, 0.2],
+			"lr": [-0.8, 0.2],
+			"facho": [-0.8, 0.2]
+		},
+		"image_path": "basic.png",
+		"quote": ""
+	},
+	{
+		"text": "Augmenter la taxe sur les GAFAM",
+		"effects": {
+			"lfi": [0.8, 0.2],
+			"eco": [0.8, 0.2],
+			"soc": [0.8, 0.2],
+			"macron": [-1, 0.1],
+			"lr": [0.6, 0.2],
+			"facho": [0.6, 0.2]
+		},
+		"image_path": "basic.png",
+		"quote": ""
+	},
+	{
+		"text": "Proposer une convention citoyenne pour le climat",
+		"effects": {
+			"lfi": [-0.5, 0.2],
+			"eco": [-0.5, 0.2],
+			"soc": [-0.5, 0.4],
+			"macron": [1, 0.1],
+			"lr": [-0.5, 0.2],
+			"facho": [-0.5, 0.2]
+		},
+		"image_path": "basic.png",
+		"quote": "",
+		"special_event": "convention_citoyenne"
 	}
 ]
