@@ -16,4 +16,5 @@ mp_scene = ExtResource("2_8igwf")
 material = SubResource("ShaderMaterial_hw2pa")
 offset_right = 1920.0
 offset_bottom = 1080.0
+mouse_filter = 2
 color = Color(1, 1, 1, 0)
