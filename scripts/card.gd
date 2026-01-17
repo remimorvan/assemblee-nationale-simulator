@@ -2,6 +2,8 @@ extends Node2D
 
 @onready var Player: Node2D = $"../../Player"
 @onready var Deck: Node2D = $"../../Deck"
+@onready var Hemicycle: Node2D = $"../../Hemicycle"
+@onready var Plot: Control = $"../../VBoxContainer/Plot"
 
 var text: String # Text of the card
 var effect_mean: Dictionary[String, float] # political group -> mean effect
@@ -53,6 +55,12 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		for mp in get_tree().get_nodes_in_group("MP"):
 			mp.change_approval(get_approval_change(PoliticalGroup[mp.group_id]))
 		Player.incr_nb_card_played()
+		
+		# Update plot
+		var approvals: Array[float] = Hemicycle.compute_group_approvals()
+		for i in range(6):
+			Plot.update_bar_value(i, approvals[i])
+		
 		# Remove card from hand
 		var card_pos: int = Player.remove_card_from_hand(self)
 		Player.add_card_to_hand(card_pos)
