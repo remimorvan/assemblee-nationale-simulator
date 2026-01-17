@@ -18,3 +18,4 @@ z_index = -1
 z_as_relative = false
 offset_right = 1920.0
 offset_bottom = 1080.0
+mouse_filter = 1
