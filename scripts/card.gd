@@ -41,7 +41,6 @@ func get_approval_change(political_group: String) -> float:
 	assert(political_group in effect_std)
 	return rng.randfn(effect_mean[political_group], effect_std[political_group]) 
 
-
 func _on_mouse_entered() -> void:
 	hovered = true
 

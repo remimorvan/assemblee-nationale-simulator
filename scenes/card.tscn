@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://b7jidntt07fi4"]
+[gd_scene load_steps=20 format=3 uid="uid://b7jidntt07fi4"]
 
 [ext_resource type="Script" uid="uid://ddn50b8k2q78u" path="res://scripts/card.gd" id="1_d81rb"]
 [ext_resource type="Texture2D" uid="uid://bpgwpo35t1t1b" path="res://assets/card/card_mockup.png" id="2_6u4wf"]
+[ext_resource type="Shader" uid="uid://cdf3y6rge0qjs" path="res://assets/shader/card.gdshader" id="2_xjciw"]
 [ext_resource type="Texture2D" uid="uid://o7q6j4sxiami" path="res://assets/card/logos/lfi_back.png" id="3_42b55"]
 [ext_resource type="Texture2D" uid="uid://c2wefqcb2f2ua" path="res://assets/card/logos/lfi_line.png" id="4_xjciw"]
 [ext_resource type="Texture2D" uid="uid://2givsr6ka0vp" path="res://assets/card/logos/eco_back.png" id="5_54seb"]
@@ -15,6 +16,23 @@
 [ext_resource type="Texture2D" uid="uid://cm5thuavdro24" path="res://assets/card/logos/facho_back.png" id="13_07urr"]
 [ext_resource type="Texture2D" uid="uid://r81rgy07crw3" path="res://assets/card/logos/facho_line.png" id="14_l85n3"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_54seb"]
+shader = ExtResource("2_xjciw")
+shader_parameter/fov = 90.0
+shader_parameter/cull_back = true
+shader_parameter/y_rot = 0.0
+shader_parameter/x_rot = 0.0
+shader_parameter/inset = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xjciw"]
+resource_local_to_scene = true
+shader = ExtResource("2_xjciw")
+shader_parameter/fov = 90.0
+shader_parameter/cull_back = true
+shader_parameter/y_rot = 0.0
+shader_parameter/x_rot = 0.0
+shader_parameter/inset = 0.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6u4wf"]
 size = Vector2(498, 648)
 
@@ -25,61 +43,74 @@ font_color = Color(0, 0, 0, 1)
 [node name="Card" type="Area2D"]
 script = ExtResource("1_d81rb")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["card_asset"]]
+material = SubResource("ShaderMaterial_54seb")
 texture = ExtResource("2_6u4wf")
 
-[node name="Logos" type="VBoxContainer" parent="."]
+[node name="Logos" type="VBoxContainer" parent="Sprite2D"]
 offset_left = -236.0
 offset_top = -310.0
 offset_right = 34.0
 offset_bottom = 1971.0
 scale = Vector2(0.27, 0.27)
 
-[node name="lfi" type="TextureRect" parent="Logos"]
+[node name="lfi" type="TextureRect" parent="Sprite2D/Logos" groups=["card_asset"]]
+material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 2
 texture = ExtResource("3_42b55")
 
-[node name="lfi" type="TextureRect" parent="Logos/lfi"]
+[node name="lfi" type="TextureRect" parent="Sprite2D/Logos/lfi" groups=["card_asset"]]
+material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 0
 texture = ExtResource("4_xjciw")
 
-[node name="eco" type="TextureRect" parent="Logos"]
+[node name="eco" type="TextureRect" parent="Sprite2D/Logos" groups=["card_asset"]]
+material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 2
 texture = ExtResource("5_54seb")
 
-[node name="eco" type="TextureRect" parent="Logos/eco"]
+[node name="eco" type="TextureRect" parent="Sprite2D/Logos/eco" groups=["card_asset"]]
+material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 0
 texture = ExtResource("6_v23hl")
 
-[node name="soc" type="TextureRect" parent="Logos"]
+[node name="soc" type="TextureRect" parent="Sprite2D/Logos" groups=["card_asset"]]
+material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 2
 texture = ExtResource("7_3ydx5")
 
-[node name="soc" type="TextureRect" parent="Logos/soc"]
+[node name="soc" type="TextureRect" parent="Sprite2D/Logos/soc" groups=["card_asset"]]
+material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 0
 texture = ExtResource("8_xuy1i")
 
-[node name="macron" type="TextureRect" parent="Logos"]
+[node name="macron" type="TextureRect" parent="Sprite2D/Logos" groups=["card_asset"]]
+material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 2
 texture = ExtResource("9_rywyy")
 
-[node name="macron" type="TextureRect" parent="Logos/macron"]
+[node name="macron" type="TextureRect" parent="Sprite2D/Logos/macron" groups=["card_asset"]]
+material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 0
 texture = ExtResource("10_le4ky")
 
-[node name="lr" type="TextureRect" parent="Logos"]
+[node name="lr" type="TextureRect" parent="Sprite2D/Logos" groups=["card_asset"]]
+material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 2
 texture = ExtResource("11_125j1")
 
-[node name="lr" type="TextureRect" parent="Logos/lr"]
+[node name="lr" type="TextureRect" parent="Sprite2D/Logos/lr" groups=["card_asset"]]
+material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 0
 texture = ExtResource("12_b834i")
 
-[node name="fachos" type="TextureRect" parent="Logos"]
+[node name="fachos" type="TextureRect" parent="Sprite2D/Logos" groups=["card_asset"]]
+material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 2
 texture = ExtResource("13_07urr")
 
-[node name="fachos" type="TextureRect" parent="Logos/fachos"]
+[node name="fachos" type="TextureRect" parent="Sprite2D/Logos/fachos" groups=["card_asset"]]
+material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 0
 texture = ExtResource("14_l85n3")
 
