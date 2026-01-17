@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var mp_scene:PackedScene # Utile pour instancier des MP
+@export var desk_color:Color
 
 var width: int = 19
 var height: int = 13
