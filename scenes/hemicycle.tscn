@@ -11,6 +11,7 @@ shader_parameter/color_values = PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 [node name="Hemicycle" type="Node2D"]
 script = ExtResource("1_22fab")
 mp_scene = ExtResource("2_8igwf")
+desk_color = Color(0.6646, 0.455872, 0.433702, 1)
 
 [node name="TextureRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_hw2pa")
