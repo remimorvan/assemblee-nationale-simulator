@@ -16,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://cm5thuavdro24" path="res://assets/card/logos/facho_back.png" id="13_07urr"]
 [ext_resource type="Texture2D" uid="uid://r81rgy07crw3" path="res://assets/card/logos/facho_line.png" id="14_l85n3"]
 [ext_resource type="FontFile" uid="uid://cewqm3af8k8sr" path="res://assets/card/BadComic-Regular.ttf" id="16_54seb"]
-=======
 [ext_resource type="Texture2D" uid="uid://bfv1ubu5a6adk" path="res://assets/card/logos/lfi_back.png" id="3_42b55"]
 [ext_resource type="Texture2D" uid="uid://cmds766v1s54w" path="res://assets/card/logos/lfi_line.png" id="4_xjciw"]
 [ext_resource type="Texture2D" uid="uid://cfk324721xw5c" path="res://assets/card/logos/eco_back.png" id="5_54seb"]
@@ -29,7 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://dvsad4nsywnwg" path="res://assets/card/logos/lr_line.png" id="12_b834i"]
 [ext_resource type="Texture2D" uid="uid://djphcib3846dy" path="res://assets/card/logos/facho_back.png" id="13_07urr"]
 [ext_resource type="Texture2D" uid="uid://ggp34647sin6" path="res://assets/card/logos/facho_line.png" id="14_l85n3"]
->>>>>>> 1bd5442e9bd685843831dc4fa9ee2a913f1ce0c6
+
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_54seb"]
 resource_local_to_scene = true
