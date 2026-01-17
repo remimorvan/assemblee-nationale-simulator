@@ -24,7 +24,7 @@ func print_hand() -> void:
 	var viewport_size: Vector2i = get_viewport().get_visible_rect().size
 	for card in hand:
 		var card_size = card.get_node("Sprite2D").texture.get_size()
-		card.position.x = viewport_size[0]/2 + (card_nb - (len(hand)-1)/2.0)*(card_size[0]*1.2)
+		card.position.x = viewport_size[0]/2.0 + (card_nb - (len(hand)-1)/2.0)*(card_size[0]*1.2)
 		card.position.y = 1000 
 		card_nb+=1
 
