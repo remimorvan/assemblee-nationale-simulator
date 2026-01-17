@@ -4,6 +4,7 @@ extends Node2D
 ## Ici c'est pour mettre les actions du joueur
 
 var hand: Array[Area2D] = [] # Cards in hand
+var total_nb_card_played: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -41,3 +42,10 @@ func add_card_to_hand(card_pos: int) -> void:
 	add_child(new_card)
 	hand.insert(card_pos, new_card)
 	print_hand()
+
+func get_current_day() -> int:
+	return total_nb_card_played/3
+	
+func incr_nb_card_played() -> void:
+	total_nb_card_played += 1
+	print("Day " + str(get_current_day()))
