@@ -6,9 +6,11 @@ extends Node2D
 var hand: Array[Area2D] = [] # Cards in hand
 var total_nb_card_played: int = 0
 var transition_between_days: bool = false
+var rng = RandomNumberGenerator.new() 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	rng.randomize()
 	for i in range(3):
 		var card: Area2D = Deck.get_new_card()
 		hand.append(card)
@@ -24,7 +26,7 @@ func print_hand() -> void:
 	var viewport_size: Vector2i = get_viewport().get_visible_rect().size
 	for card in hand:
 		var card_size = card.get_node("Sprite2D").texture.get_size()
-		card.position.x = viewport_size[0]/2 + (card_nb - (len(hand)-1)/2.0)*(card_size[0]*1.2)
+		card.position.x = viewport_size[0]/2.0 + (card_nb - (len(hand)-1)/2.0)*(card_size[0]*1.2)
 		card.position.y = 1000 
 		card_nb+=1
 
@@ -38,6 +40,16 @@ func remove_card_from_hand(card: Area2D) -> int:
 	remove_child(card)
 	return card_nb
 
+func change_random_card(other_card: int) -> void:
+	# Randomly choose an integer in [0,1,2] distinct from other_card
+	var removed_card_pos: int = rng.randi_range(0,1)
+	var arr = [0,1,2]
+	arr.pop_at(other_card)
+	removed_card_pos = arr[removed_card_pos]
+	remove_card_from_hand(hand[removed_card_pos])
+	add_card_to_hand(removed_card_pos)
+	
+	
 func add_card_to_hand(card_pos: int) -> void:
 	var new_card: Area2D = Deck.get_new_card()
 	add_child(new_card)

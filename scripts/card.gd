@@ -70,3 +70,4 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		# Remove card from hand
 		var card_pos: int = Player.remove_card_from_hand(self)
 		Player.add_card_to_hand(card_pos)
+		Player.change_random_card(card_pos)

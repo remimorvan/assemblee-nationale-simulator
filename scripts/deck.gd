@@ -1,7 +1,10 @@
 extends Node2D
 
 @export var card:PackedScene # Utile pour instancier des MP
+@onready var Hemicycle: Node2D = $"../Hemicycle"
+
 var all_cards: Array[Node2D] = []
+var PoliticalGroup: Array[String] = ["lfi", "eco", "soc", "macron", "lr", "facho"]
 
 # Called when the node enters the scene tree for the first time.
 func _init() -> void:
@@ -14,6 +17,7 @@ func _ready() -> void:
 	if json.parse(file.get_as_text()) == OK:
 		var data_received = json.data
 		if typeof(data_received) == TYPE_ARRAY:
+			var total_card_effects: float = 0.0
 			for data_card in data_received:
 				var new_card = card.instantiate()
 				var text: String = data_card["text"]
@@ -26,7 +30,13 @@ func _ready() -> void:
 				var image_path = data_card["image_path"]
 				new_card.setup(text, effects_mean, effects_std, image_path)
 				all_cards.append(new_card)
+				var card_mean_effect: float = 0.0
+				for group_id in range(len(Hemicycle.group_repartition)):
+					var group_weight: float = float(Hemicycle.group_repartition[group_id])/Hemicycle.sum_group_repartition
+					card_mean_effect += group_weight * effects_mean[PoliticalGroup[group_id]]
+				total_card_effects += card_mean_effect
 			print("Nombre de cartes : " + str(len(all_cards)))
+			print("Effet moyen des cartes : " + str(total_card_effects/len(all_cards)))
 			all_cards.shuffle()
 		else:
 			print("Expected array")
