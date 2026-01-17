@@ -14,11 +14,92 @@
 	=> droite: --
 - Proposer la hausse du SMIC à 1700€ net/mois.
 	=> écolos, gauche: ++
-	=> macronistes, droite: --
+	=> macronistes, droite, ed: --
 - Ignorer le problème du mal-logement.
 	=> macroniste, droite: ++
 	=> gauche: --
 - Ignorer la baisse drastique de la part des revenus issu du travail en France depuis 1940
 	=> macroniste, droite: ++
 	=> gauche: --
-
+- Proposer l'interdiction de la possession de téléphones portables pour lutter contre la 
+	recrudescence de vol de portables à l'arraché.
+	=> droite: +
+	=> gauche: -
+	/* On a une recrudescence de violence… par exemple le vol des portables à l’arraché. Ca n’existait pas avant que les portables existent */
+- Annoncer à l'Assemblée que vous avez un cœur qui bat à sa cadence et qui est le votre. Vous n'avez pas le monopole du cœur !
+	=> centre: +
+	=> gauche: -
+- Annoncer à l'Assemblée que ce qui compte ce n’est pas le vote,
+	c’est comment on compte les votes. /* Staline */
+	=> communistes: ++
+	=> reste: -
+- Déclarer que la démocratie ce n’est pas la loi de la majorité mais la protection de la minorité.
+	=> gauche: ++
+	=> macroniste: 0
+	=> droite: --
+	/* La démocratie, ce n’est pas la loi de la majorité mais la protection de la minorité - Albert Camus */
+- Rendre obligatoire l'affichage du Nutri-Score.
+	/* Amendement du 03/12/2025 */
+	=> gauche: +
+	=> macroniste: 0
+	=> droite: -
+- Geler l'ensemble des prestations sociales.
+	/* Amendement du 12/11/2025 */
+	=> gauche, droite: -
+	=> centre: +
+- Changer l'impôt sur la fortune immobilière en impôt sur la fortune improductive.
+	/* Amendement 31/10/2025, scrutin 3314 */
+	=> éco, lfi, droite : -
+	=> soc, extrème droite: +
+	=> centre: 0
+- Sacrifier les intérêts de la France pour négocier le maintien de la liaison aérienne Orly-Pau
+	/* https://www.mediapart.fr/journal/ecologie/220125/pour-sauver-son-aeroport-de-pau-le-chantage-de-bayrou-aux-depens-de-la-sante-de-milliers-de-franciliens */
+	=> centre: +
+	=> gauche: -
+- Nommer un ministre de l'Éducation Nationale dont les enfants sont scolarisés dans le privé.
+	=> centre: 0,
+	=> droite: +
+	=> gauche: -
+- Facilier les expulsions et destructions d'habitats informels à Mayotte.
+	/* 25/06/2025 */
+	=> eco, lfi: -
+	=> ps: 0
+	=> centre, droite, fachos: +
+- Relancer le nucléaire :
+	/* 18/06/2025 */
+	=> gauche, éco: -
+	=> centre, droite: +
+- Reconnaître et rembourser les dettes d'anciennes colonies.
+	=> gauche, centre: +
+	=> droite, ed: -
+	/* 05/06/2025 */
+- Abroger la réforme des retraites
+	/* Résolution 05/06/2025 */
+	=> gauche, ed: +
+	=> centre, droite: -
+- Supprimer les zones à faible émissions:
+	/* 28/05/2025 */
+	=> éco, soc: -
+	=> centre, ed, lfi: +
+- Travailler plus pour gagner plus.
+	/* Sarkozy */
+	=> gauche: -
+	=> centre, droite : +
+- Donner une interview dans un média d'extrème-droite détenu par le milliardaire Mincent Billoré.
+	=> gauche: --
+	=> centre: +
+	=> droite, ed: ++
+- Constater en France que les veuves vivent plus longtemps que leurs maris
+	/* Raffarin : https://web.archive.org/web/*/http://ftp.support-fr.org/raffarin.pdf */
+	=> tout le monde: ???
+- Construire plus de logements sociaux pour loger ceux qui sont expulsés de leurs logements sociaux. 
+	/* Sébastien Delogu */
+	=> lfi: ++
+	=> gauche: +
+	=> centre, droite, ed : -
+- Mentir et annoncer un déficit à 4,4% du PIB quand il est en réalité de 6,1%.
+	/* Bruno Le Maire */
+	=> tout le monde : +
+	=> trigger un évènement spécial
+- Inscrire le droit à l'interruption volontaire de grossesse dans la constitution.
+ 

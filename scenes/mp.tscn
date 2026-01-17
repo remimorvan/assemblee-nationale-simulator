@@ -1,6 +1,166 @@
-[gd_scene load_steps=2 format=3 uid="uid://cuemgi5ynsxra"]
+[gd_scene load_steps=11 format=3 uid="uid://cuemgi5ynsxra"]
 
 [ext_resource type="Script" uid="uid://bmafpymoftg2i" path="res://scripts/mp.gd" id="1_ct13o"]
+[ext_resource type="Texture2D" uid="uid://dqt3a20fdegmx" path="res://assets/MP/MP_body.png" id="2_0tc44"]
+[ext_resource type="Texture2D" uid="uid://d200mm6wj6a2g" path="res://assets/MP/MP_head.png" id="3_fvh1l"]
+[ext_resource type="Texture2D" uid="uid://bsd2ep8d27gs4" path="res://assets/MP/MP_face_2.png" id="4_5chnr"]
+[ext_resource type="Texture2D" uid="uid://bwhr3ycsbf35c" path="res://assets/MP/MP_face_1.png" id="5_qn7e5"]
+[ext_resource type="Texture2D" uid="uid://cs10gh3k4ls22" path="res://assets/MP/MP_face_0.png" id="6_adhds"]
+
+[sub_resource type="Animation" id="Animation_j8m2g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("head:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, -53)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("body:skew")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("body:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.617857, 0.410714)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("head:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("head:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_pu06k"]
+resource_name = "MP_animations"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("head:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.466667, 0.633333, 0.933333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 10), Vector2(0, -20), Vector2(0, 5), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("body:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.766667, 1),
+"transitions": PackedFloat32Array(1, 2.2974, 0.170755, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.27, 1), Vector2(0.875, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_fvuhw"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("head:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.266667, 0.5, 0.733333, 1),
+"transitions": PackedFloat32Array(1, 2.73208, 1.68179, 6.72717, 1),
+"update": 0,
+"values": [0.0, -7.69232, 25.0, 25.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("head:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.51, 1),
+"transitions": PackedFloat32Array(1, 1, 2.82843, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.874127, 0.939106), Vector2(1, 0.685278), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b5mkm"]
+_data = {
+&"RESET": SubResource("Animation_j8m2g"),
+&"happy": SubResource("Animation_pu06k"),
+&"unhappy": SubResource("Animation_fvuhw")
+}
 
 [node name="MP" type="Node2D"]
 script = ExtResource("1_ct13o")
+
+[node name="Sprites" type="Node2D" parent="."]
+scale = Vector2(0.519999, 0.519999)
+
+[node name="body" type="Sprite2D" parent="Sprites"]
+position = Vector2(0, 107.692)
+scale = Vector2(0.617857, 0.410714)
+texture = ExtResource("2_0tc44")
+
+[node name="head" type="Sprite2D" parent="Sprites"]
+position = Vector2(-1, 0)
+texture = ExtResource("3_fvh1l")
+
+[node name="face_neutral" type="Sprite2D" parent="Sprites/head"]
+visible = false
+scale = Vector2(1, 1)
+texture = ExtResource("6_adhds")
+
+[node name="face_happy" type="Sprite2D" parent="Sprites/head"]
+visible = false
+scale = Vector2(1, 1)
+texture = ExtResource("4_5chnr")
+
+[node name="face_unhappy" type="Sprite2D" parent="Sprites/head"]
+position = Vector2(-1.92308, 9.53674e-07)
+scale = Vector2(1, 1)
+texture = ExtResource("5_qn7e5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprites"]
+libraries = {
+&"": SubResource("AnimationLibrary_b5mkm")
+}
