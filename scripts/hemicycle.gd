@@ -71,7 +71,7 @@ func new_mp(seat: int) -> int:	# returns number of the political party of mp
 	var center = Vector2(viewport_size)/2.
 	
 	# modify position so that it is on a grid
-	mp.global_position = Vector2(center.x+float(x-width/2)*50.,center.y+float(y-height/2)*70.)
+	mp.global_position = cell_to_uv(x, y)
 	mp.scale.x = 0.5
 	mp.scale.y = 0.5
 	
