@@ -49,7 +49,7 @@ func _on_mouse_exited() -> void:
 	hovered = false
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
+	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT and not Player.transition_between_days:
 		for mp in get_tree().get_nodes_in_group("MP"):
 			mp.change_approval(get_approval_change(PoliticalGroup[mp.group_id]))
 		Player.incr_nb_card_played()
