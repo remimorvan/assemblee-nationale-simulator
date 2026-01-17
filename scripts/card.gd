@@ -53,13 +53,5 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		for mp in get_tree().get_nodes_in_group("MP"):
 			mp.approval += get_approval_change(PoliticalGroup[mp.group_id])
 		# Remove card from hand
-		var card_nb: int = 0
-		for card in Player.hand:
-			if card == self:
-				Player.hand.pop_at(card_nb)
-			card_nb += 1
-		Player.remove_child(self)
-		var new_card: Area2D = Deck.get_new_card()
-		Player.add_child(new_card)
-		Player.hand.append(new_card)
-		Player.print_hand()
+		var card_pos: int = Player.remove_card_from_hand(self)
+		Player.add_card_to_hand(card_pos)

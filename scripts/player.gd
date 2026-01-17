@@ -25,3 +25,19 @@ func print_hand() -> void:
 		card.position.x = viewport_size[0]/2 + (card_nb - (len(hand)-1)/2.0)*(card_size[0]*1.2)
 		card.position.y = 1000 
 		card_nb+=1
+
+func remove_card_from_hand(card: Area2D) -> int:
+	var card_nb: int = 0
+	for other_card in hand:
+		if other_card == card:
+			hand.pop_at(card_nb)
+			break
+		card_nb += 1
+	remove_child(card)
+	return card_nb
+
+func add_card_to_hand(card_pos: int) -> void:
+	var new_card: Area2D = Deck.get_new_card()
+	add_child(new_card)
+	hand.insert(card_pos, new_card)
+	print_hand()
