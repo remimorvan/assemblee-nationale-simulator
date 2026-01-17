@@ -1,11 +1,11 @@
 [gd_scene load_steps=11 format=3 uid="uid://cuemgi5ynsxra"]
 
 [ext_resource type="Script" uid="uid://bmafpymoftg2i" path="res://scripts/mp.gd" id="1_ct13o"]
-[ext_resource type="Texture2D" uid="uid://bg4jav1xk1e42" path="res://assets/MP/MP_body.png" id="2_0tc44"]
-[ext_resource type="Texture2D" uid="uid://cmd3lulfuitlo" path="res://assets/MP/MP_head.png" id="3_fvh1l"]
-[ext_resource type="Texture2D" uid="uid://chww6mvugwfct" path="res://assets/MP/MP_face_2.png" id="4_5chnr"]
-[ext_resource type="Texture2D" uid="uid://bndx3xk0a5lc" path="res://assets/MP/MP_face_1.png" id="5_qn7e5"]
-[ext_resource type="Texture2D" uid="uid://lhh6wjkmx3kw" path="res://assets/MP/MP_face_0.png" id="6_adhds"]
+[ext_resource type="Texture2D" uid="uid://dqt3a20fdegmx" path="res://assets/MP/MP_body.png" id="2_0tc44"]
+[ext_resource type="Texture2D" uid="uid://d200mm6wj6a2g" path="res://assets/MP/MP_head.png" id="3_fvh1l"]
+[ext_resource type="Texture2D" uid="uid://bsd2ep8d27gs4" path="res://assets/MP/MP_face_2.png" id="4_5chnr"]
+[ext_resource type="Texture2D" uid="uid://bwhr3ycsbf35c" path="res://assets/MP/MP_face_1.png" id="5_qn7e5"]
+[ext_resource type="Texture2D" uid="uid://cs10gh3k4ls22" path="res://assets/MP/MP_face_0.png" id="6_adhds"]
 
 [sub_resource type="Animation" id="Animation_j8m2g"]
 length = 0.001
