@@ -58,11 +58,10 @@ func new_mp(seat: int) -> int:	# returns number of the political party of mp
 	
 	var seat_id = seat
 	
-	var group_id:int = floor((seat*6)/float(width*height))
-	
-	var belief = 0.
+	var group_id: int = floor((seat*6)/float(width*height))
+	var approval = 0.
 
-	mp.setup(seat_id, group_id, belief)
+	mp.setup(seat_id, group_id, approval)
 	
 	# ajoute le mp dans l'arbre. (nécessaire pour qu'il soit dans le jeu
 	add_child(mp)
