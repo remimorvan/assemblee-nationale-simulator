@@ -20,11 +20,18 @@ void fragment() {
 	vec2 diff = UV - cycle_center;
 	float angle = atan(diff.y, diff.x);
 	float r = length(diff)/0.5;
-	float projectedx = ((angle/PI + 1.)/2. - 0.2)/0.1;
+
 	float projectedy = r-2.;
+	float projectedx = ((angle/PI + 1.)/2. - 0.2)/0.1;
+
+	int celly = int(projectedy*float(HEIGHT));
+
+	if (celly%2 == 1)
+	{
+		projectedx -= 0.5/float(WIDTH);
+	}
 
 	int cellx = int(projectedx*float(WIDTH));
-	int celly = int(projectedy*float(HEIGHT));
 
 	if (projectedx>=0. && projectedy>=0. && projectedy<=1. && projectedx<=1.)
 	{
@@ -35,7 +42,7 @@ void fragment() {
 		projectedy<=1.+0.01/float(WIDTH) && projectedx<=1.+0.02/float(HEIGHT) &&
 		(around_integer(projectedx*float(WIDTH),0.01) || around_integer(r*float(HEIGHT),0.02)))
 	{
-		COLOR = vec4(0.,0.,0.,1.);
+		COLOR = vec4((vec3(0.,0.,0.)+ 4.*color_values[celly+WIDTH*cellx])/5.,1.);
 	}
 }
 

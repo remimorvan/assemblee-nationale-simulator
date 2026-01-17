@@ -134,7 +134,7 @@ _data = {
 script = ExtResource("1_ct13o")
 
 [node name="Sprites" type="Node2D" parent="."]
-position = Vector2(0, -40)
+position = Vector2(0, -50)
 scale = Vector2(0.519999, 0.519999)
 
 [node name="body" type="Sprite2D" parent="Sprites"]

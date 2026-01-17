@@ -29,11 +29,11 @@ func _ready() -> void:
 	mat.set_shader_parameter("color_values", vec3_color_array)
 
 # inverse of the shader code
-func cell_to_uv(cellx: int, celly: int) -> Vector2:
+func cell_to_uv(cellx: float, celly: float) -> Vector2:
 	var cycle_center = Vector2(0.5,1.7)
 
-	var projectedx: float = (float(cellx)  + 0.5) / float(width)
-	var projectedy: float = (float(celly)  + 0.5) / float(height)
+	var projectedx: float = float(cellx) / float(width)
+	var projectedy: float = float(celly) / float(height)
 	
 	var r = (projectedy + 2.) * 0.5
 	var angle = ((projectedx*0.1 + 0.2) * 2. - 1.) * PI
@@ -71,9 +71,12 @@ func new_mp(seat: int) -> int:	# returns number of the political party of mp
 	var center = Vector2(viewport_size)/2.
 	
 	# modify position so that it is on a grid
-	mp.global_position = cell_to_uv(x, y)
-	mp.scale.x = 0.5
-	mp.scale.y = 0.5
+	if (x % 2 == 1):
+		mp.global_position = cell_to_uv(y+1, x+0.5)
+	else:
+		mp.global_position = cell_to_uv(float(y) + 0.5, float(x) + 0.5)
+	mp.scale.x = 0.7
+	mp.scale.y = 0.7
 	
 	return group_id
 	# et pour suprimer :
