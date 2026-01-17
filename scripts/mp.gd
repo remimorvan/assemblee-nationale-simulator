@@ -4,6 +4,7 @@ var seat_id: int # Seat number
 var group_id: int # Polotical group number
 #var affinity: Dictionary[String, float] # like social, french fries, economy
 var approval: float
+var present: bool = true
 
 @export var happy_color = Color(0.2,0.8,0.2,1.)
 @export var indifferent_color = Color(1.,1.,1.,1.)

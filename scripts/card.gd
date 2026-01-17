@@ -66,7 +66,8 @@ func _on_mouse_exited() -> void:
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT and not Player.transition_between_days:
 		for mp in get_tree().get_nodes_in_group("MP"):
-			mp.change_approval(get_approval_change(PoliticalGroup[mp.group_id]))
+			if mp.present:
+				mp.change_approval(get_approval_change(PoliticalGroup[mp.group_id]))
 		if special_event:
 			Player.declare_special_event(special_event)
 		Player.incr_nb_card_played()
