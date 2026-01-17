@@ -32,6 +32,8 @@ func setup(_seat_id: int, _group_id: int, _approval: float) -> void:
 func _ready() -> void:
 	pass # Replace with function body.
 
+func change_approval(qty: float) -> void:
+	approval += qty
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

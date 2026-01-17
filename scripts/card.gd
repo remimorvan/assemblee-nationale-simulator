@@ -52,7 +52,7 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
 		print("CLICK!")
 		for mp in get_tree().get_nodes_in_group("MP"):
-			mp.approval += get_approval_change(PoliticalGroup[mp.group_id])
+			mp.change_approval(get_approval_change(PoliticalGroup[mp.group_id]))
 		# Remove card from hand
 		var card_pos: int = Player.remove_card_from_hand(self)
 		Player.add_card_to_hand(card_pos)
