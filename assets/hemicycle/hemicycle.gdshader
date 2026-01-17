@@ -15,8 +15,6 @@ bool around_integer(float x, float eps) {
 }
 
 void fragment() {
-	COLOR = vec4(1.,1.,1.,1.);
-
 	vec2 diff = UV - cycle_center;
 	float angle = atan(diff.y, diff.x);
 	float r = length(diff)/0.5;
@@ -39,7 +37,7 @@ void fragment() {
 	}
 
 	if (projectedx>=-0.01/float(WIDTH) && projectedy>=-0.02/float(HEIGHT) &&
-		projectedy<=1.+0.01/float(WIDTH) && projectedx<=1.+0.02/float(HEIGHT) &&
+		projectedy<=0.999 && projectedx<=1.+0.02/float(HEIGHT) &&
 		(around_integer(projectedx*float(WIDTH),0.01) || around_integer(r*float(HEIGHT),0.02)))
 	{
 		COLOR = vec4((vec3(0.,0.,0.)+ 4.*color_values[celly+HEIGHT*cellx])/5.,1.);
