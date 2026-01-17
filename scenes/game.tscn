@@ -15,6 +15,7 @@ position = Vector2(0, -150)
 [node name="Deck" parent="." instance=ExtResource("3_lnu2h")]
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
+z_as_relative = false
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
@@ -63,3 +64,13 @@ layout_mode = 2
 bar_spacing = 5
 bar_width = 30
 min_bar_height = 20
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="TextStats" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "Test"
+fit_content = true
