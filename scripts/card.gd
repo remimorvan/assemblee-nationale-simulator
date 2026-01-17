@@ -1,7 +1,5 @@
 extends Node2D
 
-@onready var Hemicycle: Node2D = $"../../Hemicycle"
-
 var text: String # Text of the card
 var effect_mean: Dictionary[String, float] # political group -> mean effect
 var effect_std: Dictionary[String, float] # political group -> standard deviation of effect
@@ -48,5 +46,5 @@ func _on_mouse_exited() -> void:
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
 		print("Click " + text)
-		for mp in Hemicycle.get_children():
+		for mp in get_tree().get_nodes_in_group("MP"):
 			mp.approval += get_approval_change(PoliticalGroup[mp.group_id])

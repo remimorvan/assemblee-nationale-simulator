@@ -130,10 +130,11 @@ _data = {
 &"unhappy": SubResource("Animation_fvuhw")
 }
 
-[node name="MP" type="Node2D"]
+[node name="MP" type="Node2D" groups=["MP"]]
 script = ExtResource("1_ct13o")
 
 [node name="Sprites" type="Node2D" parent="."]
+position = Vector2(0, -40)
 scale = Vector2(0.519999, 0.519999)
 
 [node name="body" type="Sprite2D" parent="Sprites"]
