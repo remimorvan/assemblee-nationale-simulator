@@ -1,0 +1,26 @@
+[
+	{
+		"text": "Doubler les portions de frites à la cantine de l'Assemblée.",
+		"effects": {
+			"lfi": [0.4, 0.4],
+			"eco": [0.3, 0.3],
+			"soc": [0.5, 0.4],
+			"macron": [0.6, 0.3],
+			"lr": [1, 0.4],
+			"facho": [0, 6, 0.2]
+		},
+		"image_path": "basic.png"
+	},
+	{
+		"text": "Proposer la hausse du SMIC à 1700€ net par mois.",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [0.9, 0.1],
+			"soc": [0.9, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.9, 0.3],
+			"facho": [-0.5, 0.4]
+		},
+		"image_path": "basic.png"
+	}
+]
