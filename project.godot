@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Assemblée Nationale Simulator"
+run/main_scene="uid://velnx8vw6r6u"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
