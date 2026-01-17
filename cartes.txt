@@ -52,7 +52,7 @@
 	=> éco, lfi, droite : -
 	=> soc, extrème droite: +
 	=> centre: 0
-- Sacrifier les intérêts de la France pour négocier le maintien de la liaison aérienne
+- Sacrifier les intérêts de la France pour négocier le maintien de la liaison aérienne Orly-Pau
 	/* https://www.mediapart.fr/journal/ecologie/220125/pour-sauver-son-aeroport-de-pau-le-chantage-de-bayrou-aux-depens-de-la-sante-de-milliers-de-franciliens */
 	=> centre: +
 	=> gauche: -
@@ -101,4 +101,5 @@
 	/* Bruno Le Maire */
 	=> tout le monde : +
 	=> trigger un évènement spécial
-- 
+- Inscrire le droit à l'interruption volontaire de grossesse dans la constitution.
+ 
