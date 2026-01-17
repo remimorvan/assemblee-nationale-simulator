@@ -55,8 +55,7 @@ func change_random_card(other_card: int) -> void:
 	removed_card_pos = arr[removed_card_pos]
 	remove_card_from_hand(hand[removed_card_pos])
 	add_card_to_hand(removed_card_pos)
-	
-	
+
 func add_card_to_hand(card_pos: int) -> void:
 	var new_card: Area2D = Deck.get_new_card(has_special_card_in_hand())
 	add_child(new_card)
