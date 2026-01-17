@@ -14,20 +14,6 @@ var party_colors: Array[Vector3] = [
 	Vector3(163., 105., 80.)/256.
 ]
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	var mat: ShaderMaterial = $TextureRect.material
-
-	var vec3_color_array: PackedVector3Array = PackedVector3Array()
-	vec3_color_array.resize(width*height)
-	
-	for i in range(width*height):
-		var party = new_mp(i)
-		vec3_color_array[i] = party_colors[party]
-		
-	mat.set_shader_parameter("color_values", vec3_color_array)
-
 # inverse of the shader code
 func cell_to_uv(cellx: float, celly: float) -> Vector2:
 	var cycle_center = Vector2(0.5,1.7)
@@ -43,6 +29,47 @@ func cell_to_uv(cellx: float, celly: float) -> Vector2:
 	var UV = Vector2(cos(angle), sin(angle)) * r + cycle_center
 	#return UV*100. + viewport_size/2.
 	return Vector2(UV.x * viewport_size.x, UV.y * viewport_size.y)
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	var mat: ShaderMaterial = $TextureRect.material
+
+	var vec3_color_array: PackedVector3Array = PackedVector3Array()
+	vec3_color_array.resize(width*height)
+	
+	for i in range(width*height):
+		var party = new_mp(i)
+		vec3_color_array[i] = party_colors[party]
+		
+	# bars
+	for i in range(height):
+		# create bar for row i
+		var line = Line2D.new()
+		
+		const bar_height = 0.15
+		for j in range(width):
+			var point: Vector2
+			if (i % 2 == 1):
+				point = cell_to_uv(float(j)+0.5, float(i) + bar_height)
+			else:
+				point = cell_to_uv(float(j), float(i) + bar_height)
+			line.add_point(point)
+			
+		# last bar
+		var point: Vector2
+		if (i % 2 == 1):
+			point = cell_to_uv(float(width)+0.5, float(i) + bar_height)
+		else:
+			point = cell_to_uv(float(width), float(i) + bar_height)
+		line.add_point(point)
+
+		line.default_color = Color(0.5, 0.5, 0.5, 1.)
+		line.width = 20.0
+		add_child(line)
+		line.z_index = 2*(height-i);
+		
+		
+	mat.set_shader_parameter("color_values", vec3_color_array)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -66,7 +93,7 @@ func new_mp(seat: int) -> int:	# returns number of the political party of mp
 	# ajoute le mp dans l'arbre. (nécessaire pour qu'il soit dans le jeu
 	add_child(mp)
 	
-	mp.z_index = height-x;
+	mp.z_index = 2*(height-x);
 	
 	var viewport_size: Vector2i = get_viewport().get_visible_rect().size
 	var center = Vector2(viewport_size)/2.
