@@ -71,5 +71,8 @@ func incr_nb_card_played() -> void:
 		transition_between_days = false
 		trigger_journal()
 
+func declare_special_event(event: String) -> void:
+	print("Special event: " + event)
+	
 func trigger_journal() -> void:
 	print("TODO: JOURNAL")
