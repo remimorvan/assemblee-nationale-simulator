@@ -9,6 +9,7 @@ var effect_std: Dictionary[String, float] # political group -> standard deviatio
 var image_path: String # Text of the card
 var rng: RandomNumberGenerator
 var hovered: bool
+var tween:Tween
 
 var PoliticalGroup: Array[String] = ["lfi", "eco", "soc", "macron", "lr", "facho"]
 
@@ -34,6 +35,8 @@ func setup(_text: String, _effect_mean: Dictionary[String, float], _effect_std: 
 	var CardLabel = $"Label"
 	CardLabel.text = text
 	
+	
+	
 # Returns the effect (delta on MP's approval's rate) of the card based on
 # an MP's political group.
 func get_approval_change(political_group: String) -> float:
@@ -43,9 +46,21 @@ func get_approval_change(political_group: String) -> float:
 
 func _on_mouse_entered() -> void:
 	hovered = true
+	if tween:
+		tween.kill()
+	tween = create_tween()
+	tween.set_trans(Tween.TRANS_CUBIC)
+	tween.set_ease(Tween.EASE_OUT)
+	tween.parallel().tween_property(self, "scale", Vector2(1.2,1.2), .25)
 
 func _on_mouse_exited() -> void:
 	hovered = false
+	if tween:
+		tween.kill()
+	tween = create_tween()
+	tween.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CIRC)
+	tween.parallel().tween_property(self, "scale", Vector2(1.,1.), .25)
+	
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT and not Player.transition_between_days:
