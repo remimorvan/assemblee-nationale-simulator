@@ -32,8 +32,13 @@ func new_mp(seat: int):
 	# ajoute le mp dans l'arbre. (nécessaire pour qu'il soit dans le jeu
 	add_child(mp)
 	
+	var viewport_size: Vector2i = get_viewport().get_visible_rect().size
+	var center = Vector2(viewport_size)/2.
+	
 	# modify position so that it is on a grid
-	mp.global_position = Vector2(float(x),float(y))
+	mp.global_position = Vector2(center.x+float(x-width/2)*50.,center.y+float(y-height/2)*70.)
+	mp.scale.x = 0.5
+	mp.scale.y = 0.5
 	
 	# et pour suprimer :
-	mp.queue_free()
+	#mp.queue_free()

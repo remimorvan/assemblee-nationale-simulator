@@ -2,18 +2,17 @@ extends Node2D
 
 var seat_id: int # Seat number
 var group_id: int # Polotical group number
-var affinity: Dictionary[String, float] # like social, french fries, economy
+#var affinity: Dictionary[String, float] # like social, french fries, economy
 var belief: float # [0,1]
 
 # Accès aux sprites de visages, pour mettre celle qu'il faut quand il faut
-@onready var face_sprite = [$Sprites/face_neutral, $Sprites/face_happy, $Sprites/face_unhappy]
+#@onready var face_sprite = [$Sprites/face_neutral, $Sprites/face_happy, $Sprites/face_unhappy]
 
 # Called when the node enters the scene tree for the first time.
-func setup(_seat_id: int, _group_id: int, _belief: float, _affinity : Dictionary[String, float]) -> void:
+func setup(_seat_id: int, _group_id: int, _belief: float) -> void:
 	seat_id = _seat_id
 	group_id = _group_id
 	belief = _belief
-	affinity = _affinity
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
