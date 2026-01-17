@@ -26,6 +26,7 @@ func _ready() -> void:
 				var image_path = data_card["image_path"]
 				new_card.setup(text, effects_mean, effects_std, image_path)
 				all_cards.append(new_card)
+			print("Nombre de cartes : " + str(len(all_cards)))
 			all_cards.shuffle()
 		else:
 			print("Expected array")

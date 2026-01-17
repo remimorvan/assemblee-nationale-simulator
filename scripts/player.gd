@@ -45,7 +45,7 @@ func add_card_to_hand(card_pos: int) -> void:
 	print_hand()
 
 func get_current_day() -> int:
-	return total_nb_card_played/3
+	return total_nb_card_played/3 + 1
 	
 func is_new_day() -> int:
 	return total_nb_card_played % 3 == 0
