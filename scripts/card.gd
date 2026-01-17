@@ -5,7 +5,7 @@ var effect: Dictionary[String, float] # like social, french fries, economy
 var image_path: String # Text of the card
 
 # Called when the node enters the scene tree for the first time.
-func _init(_text: String, _effect: Dictionary[String, float], _image_path: String) -> void:
+func setup(_text: String, _effect: Dictionary[String, float], _image_path: String) -> void:
 	text = _text
 	effect = _effect
 	image_path = _image_path

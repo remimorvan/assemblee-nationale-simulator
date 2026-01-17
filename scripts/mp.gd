@@ -6,7 +6,7 @@ var affinity: Dictionary[String, float] # like social, french fries, economy
 var belief: float # [0,1]
 
 # Called when the node enters the scene tree for the first time.
-func _init(_seat_id: int, _group_id: int, _belief: float, _affinity : Dictionary[String, float]) -> void:
+func setup(_seat_id: int, _group_id: int, _belief: float, _affinity : Dictionary[String, float]) -> void:
 	seat_id = _seat_id
 	group_id = _group_id
 	belief = _belief
