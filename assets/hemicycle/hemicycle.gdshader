@@ -33,7 +33,7 @@ void fragment() {
 
 	if (projectedx>=0. && projectedy>=0. && projectedy<=1. && projectedx<=1.)
 	{
-		COLOR = vec4(color_values[celly+HEIGHT*cellx],1.0);
+		COLOR = vec4(color_values[celly+HEIGHT*cellx],1.0)+vec4(0.2f);
 	}
 
 	if (projectedx>=-0.01/float(WIDTH) && projectedy>=-0.02/float(HEIGHT) &&
