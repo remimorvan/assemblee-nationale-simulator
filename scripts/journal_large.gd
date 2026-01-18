@@ -2,7 +2,7 @@ extends Area2D
 
 @onready var Title: Label = $title
 @onready var Content: Label = $content
-@onready var Date: Label = $content
+@onready var Date: Label = $date
 @onready var Illustration: TextureRect = $image
 
 func update(title: String, desc: String, image_name: String, day: int):
