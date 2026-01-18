@@ -1,0 +1,85 @@
+[gd_scene load_steps=10 format=3 uid="uid://cpdinrv8yds4b"]
+
+[ext_resource type="FontFile" uid="uid://usk4ucaxtgwp" path="res://assets/card/Monicacomic.ttf" id="2_ha22r"]
+[ext_resource type="FontFile" uid="uid://0pyo548st5e1" path="res://assets/card/BadComic-Regular.ttf" id="3_hlh6y"]
+
+[sub_resource type="GDScript" id="GDScript_qysr8"]
+script/source = "extends Node2D
+
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t4w66"]
+size = Vector2(594, 420)
+
+[sub_resource type="Gradient" id="Gradient_iyd0d"]
+colors = PackedColorArray(0.929412, 0.882353, 0.901961, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_41jfq"]
+gradient = SubResource("Gradient_iyd0d")
+fill_from = Vector2(0.600427, 0.944444)
+fill_to = Vector2(0.307692, 0.162393)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ovxar"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fiay6"]
+line_spacing = 0.0
+font = ExtResource("2_ha22r")
+font_size = 38
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qqwlt"]
+line_spacing = 2.0
+font = ExtResource("3_hlh6y")
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[node name="JournalLarge" type="Area2D"]
+rotation = -0.122173
+script = SubResource("GDScript_qysr8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_t4w66")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -297.0
+offset_top = -210.0
+offset_right = 298.0
+offset_bottom = 209.0
+texture = SubResource("GradientTexture2D_41jfq")
+
+[node name="image" type="TextureRect" parent="."]
+offset_left = -270.67
+offset_top = -68.4969
+offset_right = -84.0029
+offset_bottom = 91.5031
+texture = SubResource("ViewportTexture_ovxar")
+
+[node name="title" type="Label" parent="."]
+offset_left = -282.0
+offset_top = -167.0
+offset_right = 288.0
+offset_bottom = -78.0
+text = "Journal title"
+label_settings = SubResource("LabelSettings_fiay6")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="content" type="Label" parent="."]
+offset_left = -61.0
+offset_top = -73.0
+offset_right = 278.0
+offset_bottom = 192.0
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in venenatis enim. Nam a velit a metus mattis faucibus a quis leo. Suspendisse potenti. Praesent semper laoreet aliquet. Donec ex velit, mattis et gravida vehicula, dapibus et lacus. Suspendisse ut finibus orci. Pellentesque consequat congue tristique."
+label_settings = SubResource("LabelSettings_qqwlt")
+autowrap_mode = 3
+
+[node name="date" type="Label" parent="."]
+offset_left = 131.731
+offset_top = -197.955
+offset_right = 280.731
+offset_bottom = -172.955
+text = "01 janvier 2026"
+label_settings = SubResource("LabelSettings_qqwlt")
+horizontal_alignment = 2
+autowrap_mode = 3

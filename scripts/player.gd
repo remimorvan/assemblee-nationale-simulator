@@ -3,6 +3,7 @@ extends Node2D
 @onready var Journal: Control = $"../HBoxContainer/VBoxContainer/Journal"
 @onready var CalendarText: Control = $"../HBoxContainer/VBoxContainer/CalendarLabel"
 @onready var Hemicycle: Control = $"../HBoxContainer/Hemicycle"
+@onready var JournalLarge: Node2D = $"../JournalLarge"
 @export var card: PackedScene
 
 
@@ -10,7 +11,6 @@ extends Node2D
 
 var hand: Array[Area2D] = [] # Cards in hand
 var total_nb_card_played: int = 0
-var transition_between_days: bool = false
 var rng = RandomNumberGenerator.new() 
 var special_event # string or null
 var declared_special_event_this_turn: bool = false
@@ -43,7 +43,7 @@ func print_hand() -> void:
 		var card = hand[i]
 		var card_size = card.get_node("Sprite2D").texture.get_size()*card.scale.x
 		card.position.x = viewport_size[0]/2.0 + (i - (len(hand)-1)/2.0)*(card_size[0]*1.2)
-		card.position.y = 830
+		card.position.y = 830 if i == 1 else 860
 		card.rotation_degrees = (i-1)*5
 		card.z_index = i+100
 
@@ -97,10 +97,6 @@ func is_new_day() -> int:
 func incr_nb_card_played() -> void:
 	total_nb_card_played += 1
 	if is_new_day():
-		print("Day " + str(get_current_day()))
-		transition_between_days = true
-		await get_tree().create_timer(1).timeout
-		transition_between_days = false
 		trigger_journal()
 
 func declare_special_event(event: String, event_description: String, event_title: String, image_path: String) -> void:
@@ -172,6 +168,8 @@ func trigger_journal() -> void:
 [font_size=30]janvier 2026"%str(get_current_day())
 	if special_event:
 		Journal.update(special_event["title"],special_event["description"],"")
+		JournalLarge.update(special_event["title"],special_event["description"],special_event["image"],get_current_day())
+		JournalLarge.visible = true
 		trigger_special_event(special_event["id"])
 		special_event = null
 		declared_special_event_this_turn = false

@@ -82,6 +82,7 @@ func _on_mouse_entered() -> void:
 	tween.set_trans(Tween.TRANS_CUBIC)
 	tween.set_ease(Tween.EASE_OUT)
 	tween.parallel().tween_property(self, "scale", Vector2(1.,1.), .25)
+	tween.parallel().tween_property(self, "position:y", self.position.y - 100, .25)
 
 func _on_mouse_exited() -> void:
 	# restore z_index
@@ -93,10 +94,11 @@ func _on_mouse_exited() -> void:
 	tween = create_tween()
 	tween.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CIRC)
 	tween.parallel().tween_property(self, "scale", Vector2(.7,.7), .25)
+	tween.parallel().tween_property(self, "position:y", self.position.y + 100, .25)
 	
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT and not Player.transition_between_days:
+	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
 		for mp in get_tree().get_nodes_in_group("MP"):
 			if mp.present:
 				mp.change_approval(get_approval_change(PoliticalGroup[mp.group_id]))
