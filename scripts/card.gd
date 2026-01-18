@@ -14,6 +14,7 @@ var special_event_description # Same
 var rng: RandomNumberGenerator
 var hovered: bool
 var tween: Tween
+var old_z_index = -1
 
 var PoliticalGroup: Array[String] = ["lfi", "eco", "soc", "macron", "lr", "rn"]
 
@@ -42,11 +43,26 @@ func setup(_text: String, _effect_mean: Dictionary[String, float], _effect_std: 
 	var CardLabel = $"Label"
 	CardLabel.text = text
 	if ResourceLoader.exists(image_path):
-		$Image.texture = load(image_path)
+		#$Image.texture = load(image_path)
+		print("TODO")
 	else:
 		print("Texture not found: " + image_path)
-
 	
+	for pol_group in PoliticalGroup:
+		var val = effect_mean[pol_group]
+		var logo = self.find_child(pol_group)
+		var plus1 = logo.find_child("plus1")
+		var plus2 = logo.find_child("plus2")
+		var minus1 = logo.find_child("minus1")
+		var minus2 = logo.find_child("minus2")
+		if val >= 0.3:
+			plus1.visible = true
+			if val >= 0.7:
+				plus2.visible = true
+		if val <= -0.3:
+			minus1.visible = true
+			if val <= -0.7:
+				minus2.visible = true
 	
 # Returns the effect (delta on MP's approval's rate) of the card based on
 # an MP's political group.
@@ -56,21 +72,28 @@ func get_approval_change(political_group: String) -> float:
 	return rng.randfn(effect_mean[political_group], effect_std[political_group]) 
 
 func _on_mouse_entered() -> void:
+	# put in front
+	old_z_index = self.z_index
+	self.z_index = 1000
+	
 	hovered = true
 	if tween:
 		tween.kill()
 	tween = create_tween()
 	tween.set_trans(Tween.TRANS_CUBIC)
 	tween.set_ease(Tween.EASE_OUT)
-	tween.parallel().tween_property(self, "scale", Vector2(1.2,1.2), .25)
+	tween.parallel().tween_property(self, "scale", Vector2(1.,1.), .25)
 
 func _on_mouse_exited() -> void:
+	# restore z_index
+	self.z_index = old_z_index
+	
 	hovered = false
 	if tween:
 		tween.kill()
 	tween = create_tween()
 	tween.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CIRC)
-	tween.parallel().tween_property(self, "scale", Vector2(1.,1.), .25)
+	tween.parallel().tween_property(self, "scale", Vector2(.7,.7), .25)
 	
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
