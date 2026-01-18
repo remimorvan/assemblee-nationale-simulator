@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://bf3fndiyasfyq"]
+[gd_scene load_steps=8 format=3 uid="uid://bf3fndiyasfyq"]
 
 [ext_resource type="Script" uid="uid://cxd4eq1rg0n2d" path="res://scripts/player.gd" id="1_3vyb7"]
 [ext_resource type="PackedScene" uid="uid://b7jidntt07fi4" path="res://scenes/card.tscn" id="2_g2els"]
-[ext_resource type="AudioStream" uid="uid://dqfrvufd05k11" path="res://assets/sounds/JDSherbert - Tabletop Games SFX Pack - Deck Deal - 1.mp3" id="3_qlg0r"]
-[ext_resource type="AudioStream" uid="uid://ddfou57i7tbrf" path="res://assets/sounds/JDSherbert - Tabletop Games SFX Pack - Deck Deal - 2.mp3" id="4_tuyoq"]
-[ext_resource type="AudioStream" uid="uid://d1gcbde8n2j17" path="res://assets/sounds/rooster-crowing-364473.mp3" id="6_tuyoq"]
+[ext_resource type="AudioStream" uid="uid://dm16q62k0fb33" path="res://assets/sounds/JDSherbert - Tabletop Games SFX Pack - Deck Deal - 1.mp3" id="3_qlg0r"]
+[ext_resource type="AudioStream" uid="uid://btdnh5s7xeksj" path="res://assets/sounds/JDSherbert - Tabletop Games SFX Pack - Deck Deal - 2.mp3" id="4_tuyoq"]
+[ext_resource type="AudioStream" uid="uid://b2ta8y7agqk76" path="res://assets/sounds/win.mp3" id="6_fjrip"]
+[ext_resource type="AudioStream" uid="uid://cpngwixgr5ne6" path="res://assets/sounds/rooster-crowing-364473.mp3" id="6_tuyoq"]
+[ext_resource type="AudioStream" uid="uid://csqb02ngqmiow" path="res://assets/sounds/lose.mp3" id="7_smehm"]
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_3vyb7")
@@ -14,9 +16,19 @@ card = ExtResource("2_g2els")
 
 [node name="Deal1" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_qlg0r")
+volume_db = -5.571
 
 [node name="Deal2" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_tuyoq")
+volume_db = -5.571
 
 [node name="NewDaySound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_tuyoq")
+
+[node name="WinSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_fjrip")
+volume_db = 5.0
+
+[node name="LoseSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_smehm")
+volume_db = 5.0

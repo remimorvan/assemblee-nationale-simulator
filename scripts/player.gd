@@ -150,6 +150,7 @@ func trigger_special_event(event: String) -> void:
 			for mp in get_tree().get_nodes_in_group("MP"):
 				votes[mp.get_final_vote()+1] += 1
 				await mp.do_final_animation(mp.get_final_vote())
+			defeat()
 			print("DÉFAITE !")
 		"barrage":
 			put_card_back_in_hand()
@@ -196,6 +197,15 @@ func trigger_final_vote() -> void:
 		await mp.do_final_animation(mp.get_final_vote())
 	# votes[0] : disapproval, votes[1] : abstention, votes[2] : approval
 	if (votes[2] >= votes[0]):
+		victory()
 		print("VICTOIRE !")
 	else:
+		defeat()
 		print("DÉFAITE !")
+
+func defeat():
+	$LoseSound.play()
+
+func victory():
+	$WinSound.play()
+	
