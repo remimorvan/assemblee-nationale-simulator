@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://dnadrrcp5ix6d" path="res://assets/card/logos/lr_line.png" id="12_b834i"]
 [ext_resource type="Texture2D" uid="uid://donf4a7r825i3" path="res://assets/card/logos/facho_back.png" id="13_07urr"]
 [ext_resource type="Texture2D" uid="uid://cm2evyhf53cxp" path="res://assets/card/logos/facho_line.png" id="14_l85n3"]
-[ext_resource type="FontFile" uid="uid://ci1ffpjq1k6tn" path="res://assets/card/BadComic-Regular.ttf" id="16_54seb"]
+[ext_resource type="FontFile" uid="uid://foful8cuop6y" path="res://assets/card/Monicacomic.ttf" id="18_3ydx5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_54seb"]
 resource_local_to_scene = true
@@ -41,7 +41,7 @@ shader_parameter/inset = 0.0
 size = Vector2(498, 648)
 
 [sub_resource type="LabelSettings" id="LabelSettings_6u4wf"]
-font = ExtResource("16_54seb")
+font = ExtResource("18_3ydx5")
 font_size = 32
 font_color = Color(0, 0, 0, 1)
 
