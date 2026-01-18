@@ -33,7 +33,7 @@ func setup(_text: String, _effect_mean: Dictionary[String, float], _effect_std: 
 	text = _text
 	effect_mean = _effect_mean
 	effect_std = _effect_std
-	image_path = _image_path
+	image_path =  "res://assets/card/illustrations/"+_image_path
 	special_event = _special_event
 	special_event_title = _special_event_title
 	special_event_description = _special_event_description
@@ -41,6 +41,12 @@ func setup(_text: String, _effect_mean: Dictionary[String, float], _effect_std: 
 	rng.randomize()
 	var CardLabel = $"Label"
 	CardLabel.text = text
+	if ResourceLoader.exists(image_path):
+		$Image.texture = load(image_path)
+	else:
+		print("Texture not found: " + image_path)
+
+	
 	
 # Returns the effect (delta on MP's approval's rate) of the card based on
 # an MP's political group.

@@ -38,12 +38,14 @@ func _process(delta: float) -> void:
 
 func print_hand() -> void:
 	var card_nb: int = 0;
-	var viewport_size: Vector2i = get_viewport().get_visible_rect().size
-	for card in hand:
+	var viewport_size: Vector2i = $"../HBoxContainer/Hemicycle".get_size()
+	for i in range(len(hand)):
+		var card = hand[i]
 		var card_size = card.get_node("Sprite2D").texture.get_size()
-		card.position.x = viewport_size[0]/2.0 + (card_nb - (len(hand)-1)/2.0)*(card_size[0]*1.2)
-		card.position.y = 1000 
-		card_nb+=1
+		card.position.x = viewport_size[0]/2.0 + (i - (len(hand)-1)/2.0)*(card_size[0]*1.05)
+		card.position.y = 1000
+		card.rotation_degrees = (i-1)*5
+		card.z_index = i+100
 
 func remove_card_from_hand(card: Area2D) -> int:
 	var card_nb: int = 0
@@ -131,7 +133,7 @@ func trigger_special_event(event: String) -> void:
 		"convention_citoyenne":
 			put_card_back_in_hand()
 			add_custom_card_to_hand(
-				"Ignorer les propositions de la convention citoyenne sur le climat.",
+				"Ignorer les propositions de la convention citoyenne sur le climat",
 				{"lfi": -1.5, "eco": -2, "soc": -1.5, "macron": 0, "lr": 0, "rn": 0},
 				{"lfi": 0.1, "eco": 0.1, "soc": 0.1, "macron": 0.2, "lr": 0.2, "rn": 0.2},
 				"ecology.png"

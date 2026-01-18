@@ -2,6 +2,7 @@ shader_type canvas_item;
 const int WIDTH = 19;
 const int HEIGHT = 13;
 const vec2 cycle_center = vec2(0.5,1.7);
+const float yoffset = .6;
 
 uniform int highlighted_color = -1;
 const vec3 party_colors[6] = {
@@ -24,7 +25,7 @@ bool around_integer(float x, float eps) {
 }
 
 void fragment() {
-	vec2 diff = UV - cycle_center;
+	vec2 diff = UV - cycle_center + vec2(0.,.1);
 	float angle = atan(diff.y, diff.x);
 	float r = length(diff)/0.5;
 
