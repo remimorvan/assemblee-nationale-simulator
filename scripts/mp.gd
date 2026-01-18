@@ -7,6 +7,7 @@ var default_shirt_color
 var approval: float
 var present: bool = true
 const threshold_vote: float = 1.5 # Threshold above which you're sure of your vote
+var rng = RandomNumberGenerator.new() 
 
 @export var happy_color = Color(0.2,0.8,0.2,1.)
 @export var indifferent_color = Color(1.,1.,1.,1.)
@@ -39,7 +40,7 @@ func set_shirt_color(clr):
 		
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	rng.randomize()
 
 func change_approval(qty: float) -> void:
 	approval += qty
@@ -47,6 +48,22 @@ func change_approval(qty: float) -> void:
 		$Sprites/AnimationPlayer.queue("happy")
 	elif qty < -.4:
 		$Sprites/AnimationPlayer.queue("unhappy")
+
+func get_final_vote() -> int:
+	"""Returns the final vote (+1 for approval, -1 disapproval, 0 for abstention)
+	of the MP. If its approval is higher than a threshold, the vote is deterministic,
+	otheriwe we add some randomness."""
+	if approval >= threshold_vote:
+		return 1
+	elif approval <= - threshold_vote:
+		return -1
+	var new_approval: float = approval + rng.randfn(0,0.75)
+	if approval >= threshold_vote - 0.5:
+		return 1
+	elif approval <= - threshold_vote + 0.5:
+		return -1
+	else:
+		return 0
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

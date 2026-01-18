@@ -125,16 +125,16 @@ func compute_group_approvals() -> Array[float]:
 		res[i] /= float(size[i])
 	return res
 	
-# returns [a,b,c] where a is number of people with approval > 1
-# c is the number of people with approval < -1 and b is the rest
+# returns [a,b,c] where a is number of people with approval > threshold
+# c is the number of people with approval < - threshold and b is the rest
 func compute_number_approvals() -> Array[int]:
 	var res: Array[int] = [0,0,0]
 	for mp in get_tree().get_nodes_in_group("MP"):
 		if not mp.present:
 			continue
-		if mp.approval > 1:
+		if mp.approval > mp.threshold_vote:
 			res[0] += 1
-		elif mp.approval < -1:
+		elif mp.approval < -mp.threshold_vote:
 			res[2] += 1
 		else:
 			res[1] += 1
