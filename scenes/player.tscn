@@ -24,3 +24,4 @@ stream = ExtResource("5_fjrip")
 
 [node name="NewDaySound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_tuyoq")
+bus = &"Reverb"
