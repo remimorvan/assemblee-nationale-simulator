@@ -43,7 +43,7 @@ func print_hand() -> void:
 		var card = hand[i]
 		var card_size = card.get_node("Sprite2D").texture.get_size()*card.scale.x
 		card.position.x = viewport_size[0]/2.0 + (i - (len(hand)-1)/2.0)*(card_size[0]*1.2)
-		card.position.y = 830
+		card.position.y = 852 if i == 1 else 872
 		card.rotation_degrees = (i-1)*5
 		card.z_index = i+100
 
