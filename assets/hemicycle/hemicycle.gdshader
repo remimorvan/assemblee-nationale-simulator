@@ -3,7 +3,15 @@ const int WIDTH = 19;
 const int HEIGHT = 13;
 const vec2 cycle_center = vec2(0.5,1.7);
 
-uniform vec3 party_colors[6];
+uniform int highlighted_color = -1;
+const vec3 party_colors[6] = {
+	vec3(255., 116., 116.)/256.,
+	vec3(59., 163., 137.)/256.,
+	vec3(253., 128., 188.)/256.,
+	vec3(243., 186., 45.)/256.,
+	vec3(160., 169., 243.)/256.,
+	vec3(163., 105., 80.)/256.
+};
 uniform int party_values[WIDTH*HEIGHT];
 
 void vertex() {
@@ -32,18 +40,19 @@ void fragment() {
 
 	int cellx = int(projectedx*float(WIDTH));
 
-	vec3 color = party_colors[party_values[celly+HEIGHT*cellx]];
-	if (projectedx>=0. && projectedy>=0. && projectedy<=1. && projectedx<=1.)
+	int party = party_values[celly+HEIGHT*cellx];
+	vec3 color = party_colors[party];
+	if (projectedx>=0. && projectedy>=0. && projectedy<=1. && projectedx<=1. && party==highlighted_color)
 	{
-		COLOR = vec4(color,1.0)+vec4(0.2f);
+		COLOR = vec4(color,1.0);
 	}
 
-	if (projectedx>=-0.01/float(WIDTH) && projectedy>=-0.02/float(HEIGHT) &&
+	/*if (projectedx>=-0.01/float(WIDTH) && projectedy>=-0.02/float(HEIGHT) &&
 		projectedy<=0.999 && projectedx<=1.+0.02/float(HEIGHT) &&
 		(around_integer(projectedx*float(WIDTH),0.01) || around_integer(r*float(HEIGHT),0.02)))
 	{
 		COLOR = vec4((vec3(0.,0.,0.)+ 4.*color)/5.,1.);
-	}
+	}*/
 }
 
 //void light() {

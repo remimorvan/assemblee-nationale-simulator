@@ -144,9 +144,12 @@ func update_plot():
 	TextStats.bbcode_text = "[color=black][font_size=25]Satisfaits : %s\nIndécis : %s\nInsatisfaits : %s" % compute_number_approvals()
 
 func highlight(index: int):
-	party_colors[index] *= 2
 	var mat: ShaderMaterial = $TextureRect.material
-	mat.set_shader_parameter("party_colors", party_colors)
+	mat.set_shader_parameter("highlighted_color", index)
+
+func unhighlight():
+	var mat: ShaderMaterial = $TextureRect.material
+	mat.set_shader_parameter("highlighted_color", -1)
 
 # Crée et place le MP 
 func new_mp(seat: int) -> int:	# returns number of the political party of mp 
