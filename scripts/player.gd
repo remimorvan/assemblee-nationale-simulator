@@ -163,28 +163,38 @@ func trigger_special_event(event: String) -> void:
 			print("TODO special event : " + event)
 	
 func trigger_journal() -> void:
-	# Reset present
+	self.is_journal_showed = true # Prevents clicks
 	$"NewDaySound".attenuation = 4
 	$"NewDaySound".play()
 	await get_tree().create_timer(0.5).timeout
+	# Reset present
 	for mp in get_tree().get_nodes_in_group("MP"):
 		mp.present = true
 		mp.visible = true
 	Hemicycle.update_plot()
+	# Show journal and apply special event
 	if special_event:
 		Journal.update(special_event["title"],special_event["description"],special_event["image"],get_current_day())
-		Journal.show_journal()
+	else:
+		Journal.update_with_basic(get_current_day())
+	Journal.show_journal()
+	if special_event:
+		while is_journal_showed:
+			await get_tree().create_timer(0.05).timeout
 		trigger_special_event(special_event["id"])
 		special_event = null
 		declared_special_event_this_turn = false
 		Hemicycle.update_plot()
 	if get_current_day() == nb_days_before_vote:
-		var votes: Array[int] = [0, 0, 0];
-		for mp in get_tree().get_nodes_in_group("MP"):
-			votes[mp.get_final_vote()+1] += 1
-			await mp.do_final_animation(mp.get_final_vote())
-		# votes[0] : approval, votes[1] : abstention, votes[2] : disapproval
-		if (votes[0] >= votes[2]):
-			print("VICTOIRE !")
-		else:
-			print("DÉFAITE !")
+		trigger_final_vote()
+
+func trigger_final_vote() -> void:
+	var votes: Array[int] = [0, 0, 0];
+	for mp in get_tree().get_nodes_in_group("MP"):
+		votes[mp.get_final_vote()+1] += 1
+		await mp.do_final_animation(mp.get_final_vote())
+	# votes[0] : approval, votes[1] : abstention, votes[2] : disapproval
+	if (votes[0] >= votes[2]):
+		print("VICTOIRE !")
+	else:
+		print("DÉFAITE !")
