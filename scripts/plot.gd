@@ -31,15 +31,20 @@ func calculate_bar_positions():
 	bar_rects.clear()
 	var total_width = bar_width * 6 + bar_spacing * 5
 	var start_x = (size.x - total_width) / 2.0
+	var middle_y = size.y/2.
 	
 	for i in range(6):
 		var x = start_x + i * (bar_width + bar_spacing)
-		var bar_height = (bar_values[i] * size.y + min_bar_height)/(1. + min_bar_height/size.y) 
-		var y = size.y - bar_height
-		bar_rects.append(Rect2(x, y, bar_width, bar_height))
+		var bar_height = bar_values[i] * middle_y
+		if (bar_height >= 0):
+			bar_rects.append(Rect2(x, middle_y - bar_height-1., bar_width, bar_height))
+		else:
+			bar_rects.append(Rect2(x, middle_y+1, bar_width, abs(bar_height)))
 
 func _draw():
 	calculate_bar_positions()
+	
+	draw_line(Vector2(0, size.y/2.), Vector2(size.x, size.y/2.), Color.BLACK,2)
 	
 	# Draw bars
 	for i in range(6):
@@ -96,7 +101,7 @@ func _on_bar_hovered(index: int):
 
 func update_bar_value(index: int, new_value: float):
 	if 0 <= index && index < 6:
-		bar_values[index] = clamp(new_value, 0.0, 1.0)
+		bar_values[index] = clamp(new_value, -1.0, 1.0)
 		calculate_bar_positions()
 		queue_redraw()
 
