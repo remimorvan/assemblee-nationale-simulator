@@ -46,7 +46,6 @@ func show_journal() -> void:
 	tween.parallel().tween_property(self, "rotation_degrees", -7.0, .25)
 	
 func hide_journal() -> void:
-	Player.is_journal_showed = false
 	$"JournalSound".play()
 	if tween:
 		tween.kill()
@@ -56,6 +55,8 @@ func hide_journal() -> void:
 	tween.parallel().tween_property(self, "position", Vector2(1790, 850), .25)
 	tween.parallel().tween_property(self, "scale", Vector2(0.7, 0.7), .25)
 	tween.parallel().tween_property(self, "rotation_degrees", -87.0, .25)
+	await tween.finished
+	Player.is_journal_showed = false
 	
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
