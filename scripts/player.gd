@@ -149,6 +149,14 @@ func trigger_special_event(event: String) -> void:
 				votes[mp.get_final_vote()+1] += 1
 				await mp.do_final_animation(mp.get_final_vote())
 			print("DÉFAITE !")
+		"barrage":
+			put_card_back_in_hand()
+			add_custom_card_to_hand(
+				"Annoncer à la gauche que leur vote vous oblige.",
+				{"lfi": 0.6, "eco": 0.7, "soc": 1.0, "macron": 0.5, "lr": 0.0, "rn": 0.0},
+				{"lfi": 0.2, "eco": 0.2, "soc": 0.2, "macron": 0.2, "lr": 0.0, "rn": 0.0},
+				"random.png"
+			)
 		_:
 			print("TODO special event : " + event)
 	

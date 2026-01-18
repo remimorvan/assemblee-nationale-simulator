@@ -1,5 +1,21 @@
 [
 	{
+		"text": "Demander aux députés de faire barrage contre l'extrême-droite en votant pour vous.",
+		"effects": {
+			"lfi": [0.8, 0.2],
+			"eco": [0.8, 0.2],
+			"soc": [0.8, 0.2],
+			"macron": [1, 0.2],
+			"lr": [0.5, 0.2],
+			"rn": [-0.8, 0.2]
+		},
+		"image_path": "random.png",
+		"quote": "",
+		"special_event": "barrage",
+		"special_event_title": "Barrage contre l'extrême-droite",
+		"special_event_descr": "Lors d'un discours à l'Assemblée, le premier ministre a demandé aux député·e·s de supporter ses réformes pour faire barrage à l'extrême-droite. Très persuasif, le premier ministre a recueilli un large soutien."
+	},
+	{
 		"text": "Proposer une convention citoyenne pour le climat.",
 		"effects": {
 			"lfi": [0.5, 0.2],
@@ -615,6 +631,19 @@
 		"quote": "",
 		"special_event": "groenland",
 		"special_event_title": "Représailles américaines",
-		"special_event_descr": "La réponse du président américain de s'est pas faite attendre après l'envoi de troupes françaises au Groenland : les troupes américaines vont venir apporter la démocratie dans notre pays. Après une réunion d'urgence, l'Assemblée nationale a décidé de remettre le premier ministre aux forces américaines."
+		"special_event_descr": "La réponse du président américain de s'est pas faite attendre après l'envoi de troupes françaises au Groenland : les soldats américains vont venir apporter la démocratie dans notre pays. Après une réunion d'urgence, l'Assemblée nationale a décidé de remettre le premier ministre aux forces américaines."
+	},
+	{
+		"text": "Baisser la TVA pour les transports en commun terrestres",
+		"effects": {
+			"lfi": [0.8, 0.2],
+			"eco": [0.8, 0.2],
+			"soc": [0.8, 0.2],
+			"macron": [-1, 0.1],
+			"lr": [0.8, 0.2],
+			"rn": [0.0, 0.2]
+		},
+		"image_path": "ecology.png",
+		"quote": "https://datan.fr/votes/legislature-15/vote_3603"
 	}
 ]
