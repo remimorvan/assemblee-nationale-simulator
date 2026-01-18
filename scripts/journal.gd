@@ -16,6 +16,22 @@ func update(title: String, desc: String, image_name: String, day: int):
 	else:
 		print("Texture not found: " + image_path)
 
+func update_with_basic(day: int) -> void:
+	var json = JSON.new()
+	var file = FileAccess.open("res://assets/journals.json", FileAccess.READ)
+	var error = json.parse(file.get_as_text())
+	if error == OK:
+		var data_received = json.data
+		if typeof(data_received) == TYPE_ARRAY:
+			var title = data_received[day-1]["title"]
+			var content = data_received[day-1]["content"]
+			var image_name = "random.png"
+			update(title, content, image_name, day)
+		else:
+			print("Unexpected data")
+	else:
+		print("JSON Parse Error: ", json.get_error_message(), " in journals.json at line ", json.get_error_line())
+
 func show_journal() -> void:
 	Player.is_journal_showed = true
 	self.position = get_viewport().get_visible_rect().size/2
