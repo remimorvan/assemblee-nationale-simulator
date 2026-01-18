@@ -43,7 +43,7 @@ func print_hand() -> void:
 		var card = hand[i]
 		var card_size = card.get_node("Sprite2D").texture.get_size()*card.scale.x
 		card.position.x = viewport_size[0]/2.0 + (i - (len(hand)-1)/2.0)*(card_size[0]*1.2)
-		card.position.y = 830 if i == 1 else 860
+		card.position.y = 852 if i == 1 else 872
 		card.rotation_degrees = (i-1)*5
 		card.z_index = i+100
 
@@ -69,6 +69,10 @@ func change_random_card(other_card: int) -> void:
 	last_card_changed = removed_card_pos
 
 func add_card_to_hand(card_pos: int) -> void:
+	if randf() > 0.5:
+		$Deal1.play()
+	else:
+		$Deal2.play()
 	var new_card: Area2D = Deck.get_new_card(has_special_card_in_hand() or declared_special_event_this_turn)
 	add_child(new_card)
 	hand.insert(card_pos, new_card)
@@ -160,6 +164,9 @@ func trigger_special_event(event: String) -> void:
 	
 func trigger_journal() -> void:
 	# Reset present
+	$JournalSound.play()
+	$NewDaySound.attenuation = 4
+	$NewDaySound.play()
 	for mp in get_tree().get_nodes_in_group("MP"):
 		mp.present = true
 		mp.visible = true

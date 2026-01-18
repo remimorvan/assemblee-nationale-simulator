@@ -188,7 +188,6 @@ libraries = {
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 position = Vector2(-0.519999, -55)
-scale = Vector2(1, 1)
 emitting = false
 amount = 1
 texture = ExtResource("12_pu06k")
