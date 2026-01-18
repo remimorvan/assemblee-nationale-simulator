@@ -1,6 +1,6 @@
 extends Node2D
 @onready var Deck: Node2D = $"../Deck"
-@onready var CalendarText: Control = $"../HBoxContainer/VBoxContainer/CalendarLabel"
+@onready var CalendarDay: Control = $"../HBoxContainer/VBoxContainer/TextureRect/CalendarDay"
 @onready var Hemicycle: Control = $"../HBoxContainer/Hemicycle"
 @onready var Journal: Node2D = $"../Journal"
 @export var card: PackedScene
@@ -166,6 +166,7 @@ func trigger_journal() -> void:
 	self.is_journal_showed = true # Prevents clicks
 	$"NewDaySound".attenuation = 4
 	$"NewDaySound".play()
+	CalendarDay.text = "0"+str(get_current_day())
 	await get_tree().create_timer(0.5).timeout
 	# Reset present
 	for mp in get_tree().get_nodes_in_group("MP"):
@@ -193,8 +194,8 @@ func trigger_final_vote() -> void:
 	for mp in get_tree().get_nodes_in_group("MP"):
 		votes[mp.get_final_vote()+1] += 1
 		await mp.do_final_animation(mp.get_final_vote())
-	# votes[0] : approval, votes[1] : abstention, votes[2] : disapproval
-	if (votes[0] >= votes[2]):
+	# votes[0] : disapproval, votes[1] : abstention, votes[2] : approval
+	if (votes[2] >= votes[0]):
 		print("VICTOIRE !")
 	else:
 		print("DÉFAITE !")

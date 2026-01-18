@@ -41,7 +41,7 @@ func show_journal() -> void:
 func hide_journal() -> void:
 	self.scale = Vector2(0.7, 0.7)
 	self.position.x = 1790
-	self.position.y = 830
+	self.position.y = 850
 	self.rotation_degrees = -87
 	Player.is_journal_showed = false
 	$"JournalSound".play()
