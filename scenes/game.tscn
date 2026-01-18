@@ -50,13 +50,12 @@ layout_mode = 2
 [node name="RichTextLabel2" type="RichTextLabel" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 bbcode_enabled = true
-text = "[center][b][color=black][center][font_size=30]Approbation des partis"
+text = "[center][b][color=black][center][font_size=30]Approbation"
 fit_content = true
 
 [node name="Plot" parent="HBoxContainer/VBoxContainer" instance=ExtResource("4_lbhrr")]
 custom_minimum_size = Vector2(100, 200)
 layout_mode = 2
-bar_spacing = 5
 bar_width = 30
 min_bar_height = 20
 
