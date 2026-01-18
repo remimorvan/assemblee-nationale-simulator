@@ -42,9 +42,9 @@ func _ready() -> void:
 
 func change_approval(qty: float) -> void:
 	approval += qty
-	if qty > 0:
+	if qty > .2:
 		$Sprites/AnimationPlayer.queue("happy")
-	else:
+	elif qty < .2:
 		$Sprites/AnimationPlayer.queue("unhappy")
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -61,8 +61,7 @@ func _process(delta: float) -> void:
 	else:
 		$Sprites/head/face_neutral.visible = true
 	
-	# var t = min(sqrt(abs(approval)),3)/3
-	var t = min(abs(approval),9)/9
+	var t = min(sqrt(abs(approval)),sqrt(5))/sqrt(5)
 	var other_color = happy_color
 	if approval < 0:
 		other_color = angry_color
