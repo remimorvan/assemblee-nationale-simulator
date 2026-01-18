@@ -20,7 +20,7 @@ var group_repartition: Array[int] = [
 ]
 var sum_group_repartition: int = 0 # Computed at _init()
 
-var default_approval: Array[float] = [-3.0, -2.5, -1.5, 3.0, 1.0, -2.5]
+var default_approval: Array[float] = [-3.0, -2.5, -1.0, 3.0, 1.0, -2.5]
 
 var party_colors: PackedVector3Array = [
 	Vector3(255., 116., 116.)/256.,

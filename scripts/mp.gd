@@ -6,6 +6,7 @@ var default_shirt_color
 #var affinity: Dictionary[String, float] # like social, french fries, economy
 var approval: float
 var present: bool = true
+const threshold_vote: float = 1.5 # Threshold above which you're sure of your vote
 
 @export var happy_color = Color(0.2,0.8,0.2,1.)
 @export var indifferent_color = Color(1.,1.,1.,1.)
@@ -42,9 +43,9 @@ func _ready() -> void:
 
 func change_approval(qty: float) -> void:
 	approval += qty
-	if qty > .2:
+	if qty > .4:
 		$Sprites/AnimationPlayer.queue("happy")
-	elif qty < .2:
+	elif qty < -.4:
 		$Sprites/AnimationPlayer.queue("unhappy")
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -54,9 +55,9 @@ func _process(delta: float) -> void:
 	$Sprites/head/face_neutral.visible = false
 	$Sprites/head/face_unhappy.visible = false
 	
-	if approval > 2:
+	if approval >= threshold_vote:
 		$Sprites/head/face_happy.visible = true
-	elif approval < -2:
+	elif approval <= -threshold_vote:
 		$Sprites/head/face_unhappy.visible = true
 	else:
 		$Sprites/head/face_neutral.visible = true

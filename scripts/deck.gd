@@ -48,7 +48,7 @@ func _ready() -> void:
 				total_card_effects += card_mean_effect
 			print("Nombre de cartes : " + str(len(all_cards)))
 			print("Effet moyen des cartes : " + str(total_card_effects/len(all_cards)))
-			all_cards.shuffle()
+			#all_cards.shuffle()
 		else:
 			print("Expected array")
 	else:
