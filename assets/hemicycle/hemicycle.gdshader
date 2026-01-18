@@ -2,7 +2,7 @@ shader_type canvas_item;
 const int WIDTH = 19;
 const int HEIGHT = 13;
 const vec2 cycle_center = vec2(0.5,1.7);
-const float yoffset = .15;
+const float yoffset = .1;
 
 uniform int highlighted_color = -1;
 const vec3 party_colors[6] = {
