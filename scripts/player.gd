@@ -125,7 +125,7 @@ func trigger_special_event(event: String) -> void:
 		"convention_citoyenne":
 			put_card_back_in_hand()
 			add_custom_card_to_hand(
-				"Ignorer les propositions de la convention citoyenne sur le climat",
+				"Ignorer les propositions de la convention citoyenne sur le climat.",
 				{"lfi": -1.5, "eco": -2, "soc": -1.5, "macron": 0, "lr": 0, "rn": 0},
 				{"lfi": 0.1, "eco": 0.1, "soc": 0.1, "macron": 0.2, "lr": 0.2, "rn": 0.2},
 				"ecology.png"

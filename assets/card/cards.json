@@ -273,7 +273,7 @@
 			"lfi": [0.8, 0.2],
 			"eco": [-1, 0.1],
 			"soc": [-1, 0.1],
-			"macron": [0.6, 0.2],
+			"macron": [0.6, 0.3],
 			"lr": [1, 0.1],
 			"rn": [0.5, 0.1]
 		},
@@ -506,5 +506,31 @@
 		},
 		"image_path": "sjw.png",
 		"quote": ""
+	},
+	{
+		"text": "Plafonner les marges de la grande distribution sur les denrées alimentaires",
+		"effects": {
+			"lfi": [0.8, 0.2],
+			"eco": [0.8, 0.2],
+			"soc": [0.8, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-0.8, 0.2],
+			"rn": [0, 0.2]
+		},
+		"image_path": "food.png",
+		"quote": "https://datan.fr/votes/legislature-17/vote_1020"
+	},
+	{
+		"text": "Interdire l'alcool à la buvette de l'Assemblée.",
+		"effects": {
+			"lfi": [-0.5, 0.2],
+			"eco": [0, 0.2],
+			"soc": [0, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [-1, 0.1],
+			"rn": [-1, 0.1]
+		},
+		"image_path": "food.png",
+		"quote": "https://www.franceinfo.fr/politique/parlement-francais/assemblee-nationale/assemblee-nationale-la-buvette-suscite-la-polemique_7601648.html"
 	}
 ]
