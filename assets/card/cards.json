@@ -9,7 +9,7 @@
 			"lr": [1, 0.4],
 			"rn": [0.6, 0.2]
 		},
-		"image_path": "basic.png",
+		"image_path": "food.png",
 		"quote": "",
 		"special_event": "indigestion",
 		"special_event_title": "Indigestion à l'Assemblée nationale !",
@@ -25,7 +25,7 @@
 			"lr": [-1, 0.2],
 			"rn": [-0.6, 0.3]
 		},
-		"image_path": "basic.png",
+		"image_path": "money.png",
 		"quote": ""
 	},
 	{
@@ -38,7 +38,7 @@
 			"lr": [0, 0.1],
 			"rn": [0, 0.1]
 		},
-		"image_path": "basic.png",
+		"image_path": "food.png",
 		"quote": ""
 	},
 	{
@@ -51,7 +51,7 @@
 			"lr": [-0.8, 0.2],
 			"rn": [-0.7, 0.4]
 		},
-		"image_path": "basic.png",
+		"image_path": "food.png",
 		"quote": ""
 	},
 	{
@@ -64,7 +64,7 @@
 			"lr": [0.6, 0.3],
 			"rn": [0.6, 0.3]
 		},
-		"image_path": "basic.png",
+		"image_path": "social.png",
 		"quote": ""
 	},
 	{
@@ -77,7 +77,7 @@
 			"lr": [0.6, 0.3],
 			"rn": [0.6, 0.3]
 		},
-		"image_path": "basic.png",
+		"image_path": "money.png",
 		"quote": ""
 	},
 	{
@@ -90,7 +90,7 @@
 			"lr": [1, 0.1],
 			"rn": [0.6, 0.1]
 		},
-		"image_path": "basic.png",
+		"image_path": "safety.png",
 		"quote": "On a une recrudescence de violence… par exemple le vol des portables à l’arraché. Ca n’existait pas avant que les portables existent. - Nadine Morano"
 	},
 	{
@@ -103,7 +103,7 @@
 			"lr": [0, 0.1],
 			"rn": [0, 0.1]
 		},
-		"image_path": "basic.png"
+		"image_path": "random.png"
 	},
 	{
 		"text": "Annoncer à l'Assemblée que ce qui compte ce n’est pas le vote, c’est comment on compte les votes.",
@@ -115,7 +115,7 @@
 			"lr": [-0.2, 0.1],
 			"rn": [0, 0.1]
 		},
-		"image_path": "basic.png",
+		"image_path": "random.png",
 		"quote": "- Staline"
 	},
 	{
@@ -128,7 +128,7 @@
 			"lr": [-0.9, 0.2],
 			"rn": [-0.9, 0.2]
 		},
-		"image_path": "basic.png",
+		"image_path": "sjw.png",
 		"quote": "La démocratie, ce n’est pas la loi de la majorité mais la protection de la minorité - Albert Camus"
 	},
 	{
@@ -141,7 +141,7 @@
 			"lr": [-0.7, 0.3],
 			"rn": [-0.8, 0.3]
 		},
-		"image_path": "basic.png",
+		"image_path": "food.png",
 		"quote": "Amendement du 03/12/2025"
 	},
 	{
@@ -154,7 +154,7 @@
 			"lr": [-0.5, 0.2],
 			"rn": [-0.6, 0.2]
 		},
-		"image_path": "basic.png",
+		"image_path": "social.png",
 		"quote": "Amendement du 12/11/2025"
 	},
 	{
@@ -167,7 +167,7 @@
 			"lr": [-0.6, 0.2],
 			"rn": [0.5, 0.2]
 		},
-		"image_path": "basic.png",
+		"image_path": "money.png",
 		"quote": "Amendement du 31/10/2025, scrutin 3314"
 	},
 	{
@@ -180,7 +180,7 @@
 			"lr": [0.2, 0.1],
 			"rn": [0, 0.1]
 		},
-		"image_path": "basic.png",
+		"image_path": "ecology.png",
 		"quote": ""
 	},
 	{
@@ -193,7 +193,7 @@
 			"lr": [1, 0.2],
 			"rn": [0.6, 0.2]
 		},
-		"image_path": "basic.png",
+		"image_path": "school.png",
 		"quote": "",
 		"special_event": "mediapart",
 		"special_event_title": "Mediapart attaque !",
@@ -209,7 +209,7 @@
 			"lr": [0.8, 0.2],
 			"rn": [0.8, 0.2]
 		},
-		"image_path": "basic.png",
+		"image_path": "social.png",
 		"quote": "Amendement du 25/06/2025"
 	},
 	{
@@ -222,7 +222,7 @@
 			"lr": [1, 0.1],
 			"rn": [0.5, 0.2]
 		},
-		"image_path": "basic.png",
+		"image_path": "ecology.png",
 		"quote": "Amendement du 18/06/2025"
 	},
 	{
@@ -235,7 +235,7 @@
 			"lr": [-0.8, 0.2],
 			"rn": [-0.8, 0.2]
 		},
-		"image_path": "basic.png",
+		"image_path": "money.png",
 		"quote": "Amendement du 18/06/2025"
 	},
 	{
@@ -248,7 +248,7 @@
 			"lr": [-0.8, 0.2],
 			"rn": [0, 0.3]
 		},
-		"image_path": "basic.png",
+		"image_path": "social.png",
 		"quote": "Résolution 05/06/2025 / 29/10/2024"
 	},
 	{
@@ -261,7 +261,7 @@
 			"lr": [1, 0.1],
 			"rn": [0.5, 0.1]
 		},
-		"image_path": "basic.png",
+		"image_path": "ecology.png",
 		"quote": "28/05/2025"
 	},
 	{
@@ -274,7 +274,7 @@
 			"lr": [1, 0.1],
 			"rn": [0, 0.2]
 		},
-		"image_path": "basic.png",
+		"image_path": "money.png",
 		"quote": "- Sarkozy"
 	},
 	{
@@ -287,7 +287,7 @@
 			"lr": [0.7, 0.1],
 			"rn": [0.6, 0.1]
 		},
-		"image_path": "basic.png",
+		"image_path": "random.png",
 		"quote": "Oops"
 	},
 	{
@@ -300,7 +300,7 @@
 			"lr": [0.3, 0.1],
 			"rn": [0, 0.1]
 		},
-		"image_path": "basic.png",
+		"image_path": "random.png",
 		"quote": "Raffarin"
 	},
 	{
@@ -313,7 +313,7 @@
 			"lr": [-0.8, 0.2],
 			"rn": [-0.8, 0.2]
 		},
-		"image_path": "basic.png",
+		"image_path": "social.png",
 		"quote": "Sébastien Delogu"
 	},
 	{
@@ -326,7 +326,7 @@
 			"lr": [0.5, 0.1],
 			"rn": [0.5, 0.1]
 		},
-		"image_path": "basic.png",
+		"image_path": "money.png",
 		"quote": "Bruno Le Maire",
 		"special_event": "deficit",
 		"special_event_title": "Mensonge d'État : dissimulation du déficit !",
@@ -342,7 +342,7 @@
 			"lr": [-1, 0.1],
 			"rn": [-1, 0.1]
 		},
-		"image_path": "basic.png",
+		"image_path": "sjw.png",
 		"quote": ""
 	},
 	{
@@ -355,7 +355,7 @@
 			"lr": [1, 0.2],
 			"rn": [-0.5, 0.3]
 		},
-		"image_path": "basic.png",
+		"image_path": "safety.png",
 		"quote": ""
 	},
 	{
@@ -368,7 +368,7 @@
 			"lr": [0.7, 0.2],
 			"rn": [0, 0.2]
 		},
-		"image_path": "basic.png",
+		"image_path": "sjw.png",
 		"quote": ""
 	},
 	{
@@ -381,7 +381,7 @@
 			"lr": [-0.8, 0.2],
 			"rn": [-0.8, 0.2]
 		},
-		"image_path": "basic.png",
+		"image_path": "school.png",
 		"quote": ""
 	},
 	{
@@ -394,7 +394,7 @@
 			"lr": [0.6, 0.2],
 			"rn": [0.6, 0.2]
 		},
-		"image_path": "basic.png",
+		"image_path": "money.png",
 		"quote": ""
 	},
 	{
@@ -407,7 +407,7 @@
 			"lr": [0.4, 0.2],
 			"rn": [0.4, 0.2]
 		},
-		"image_path": "basic.png",
+		"image_path": "ecology.png",
 		"quote": "",
 		"special_event": "convention_citoyenne",
 		"special_event_title": "Convention citoyenne : les résultats !",
@@ -423,7 +423,7 @@
 			"lr": [-0.7, 0.2],
 			"rn": [-0.7, 0.2]
 		},
-		"image_path": "basic.png",
+		"image_path": "social.png",
 		"quote": ""
 	},
 	{
@@ -436,7 +436,7 @@
 			"lr": [-0.9, 0.1],
 			"rn": [-0.9, 0.1]
 		},
-		"image_path": "basic.png",
+		"image_path": "ecology.png",
 		"quote": ""
 	},
 	{
@@ -449,7 +449,7 @@
 			"lr": [0.7, 0.1],
 			"rn": [0.8, 0.1]
 		},
-		"image_path": "basic.png",
+		"image_path": "ecology.png",
 		"quote": ""
 	},
 	{
@@ -462,10 +462,49 @@
 			"lr": [0.8, 0.2],
 			"rn": [0.8, 0.2]
 		},
-		"image_path": "basic.png",
+		"image_path": "ecology.png",
 		"quote": "",
 		"special_event": "train_strike",
 		"special_event_title": "Grève des cheminots",
 		"special_event_descr": "Suite à l'annonce gouvernemantale sur la baisse de financement des infrastructures ferroviaires, 45% des cheminots se sont déclarés en grève. Une partie des députés ne pourront se rendre à l'Assemblée aujourd'hui : la gauche de l'hémicycle semble particulièrement impactée."
+	},
+	{
+		"text": "Dénoncer le génocide palestinien commis par Israël.",
+		"effects": {
+			"lfi": [1.5, 0.1],
+			"eco": [1.5, 0.1],
+			"soc": [0.8, 0.3],
+			"macron": [-0.8, 0.3],
+			"lr": [-1.5, 0.1],
+			"rn": [-1.5, 0.1]
+		},
+		"image_path": "sjw.png",
+		"quote": ""
+	},
+	{
+		"text": "Autoriser la PMA pour les femmes lesbiennes et aux femmes célibataires.",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [1, 0.1],
+			"soc": [1, 0.1],
+			"macron": [1, 0.1],
+			"lr": [-1, 0.1],
+			"rn": [-1, 0.1]
+		},
+		"image_path": "sjw.png",
+		"quote": ""
+	},
+	{
+		"text": "Autoriser le changement d'état civil libre et gratuit devant un officier d’état civil.",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [1, 0.1],
+			"soc": [1, 0.1],
+			"macron": [-0.6, 0.2],
+			"lr": [-1, 0.1],
+			"rn": [-1, 0.1]
+		},
+		"image_path": "sjw.png",
+		"quote": ""
 	}
 ]
