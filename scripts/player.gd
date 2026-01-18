@@ -1,5 +1,7 @@
 extends Node2D
 @onready var Deck: Node2D = $"../Deck"
+@onready var Journal: Control = $"../HBoxContainer/VBoxContainer/Journal"
+
 
 ## Ici c'est pour mettre les actions du joueur
 
@@ -115,8 +117,9 @@ func trigger_journal() -> void:
 		mp.visible = true
 	if special_event:
 		trigger_special_event(special_event["id"])
-		print(special_event["title"])
-		print(special_event["description"])
+		#print(special_event["title"])
+		#print(special_event["description"])
+		Journal.update(special_event["title"],special_event["description"],"")
 		special_event = null
 		declared_special_event_this_turn = false
 	print("TODO: JOURNAL")

@@ -45,7 +45,7 @@ func cell_to_uv(cellx: float, celly: float) -> Vector2:
 	
 	#var viewport_size: Vector2i = get_viewport().get_visible_rect().size
 	var viewport_size: Vector2i = self.get_size()
-	print(viewport_size)
+	#print(viewport_size)
 	
 	var UV = Vector2(cos(angle), sin(angle)) * r + cycle_center
 	#return UV*100. + viewport_size/2.
