@@ -45,7 +45,7 @@ func cell_to_uv(cellx: float, celly: float) -> Vector2:
 	
 	#var viewport_size: Vector2i = get_viewport().get_visible_rect().size
 	var viewport_size: Vector2i = self.get_size()
-	print(viewport_size)
+	#print(viewport_size)
 	
 	var UV = Vector2(cos(angle), sin(angle)) * r + cycle_center
 	#return UV*100. + viewport_size/2.
@@ -144,9 +144,12 @@ func update_plot():
 	TextStats.bbcode_text = "[color=black][font_size=25]Satisfaits : %s\nIndécis : %s\nInsatisfaits : %s" % compute_number_approvals()
 
 func highlight(index: int):
-	party_colors[index] *= 2
 	var mat: ShaderMaterial = $TextureRect.material
-	mat.set_shader_parameter("party_colors", party_colors)
+	mat.set_shader_parameter("highlighted_color", index)
+
+func unhighlight():
+	var mat: ShaderMaterial = $TextureRect.material
+	mat.set_shader_parameter("highlighted_color", -1)
 
 # Crée et place le MP 
 func new_mp(seat: int) -> int:	# returns number of the political party of mp 

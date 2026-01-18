@@ -78,19 +78,35 @@ func incr_nb_card_played() -> void:
 		transition_between_days = false
 		trigger_journal()
 
-func declare_special_event(event: String) -> void:
-	special_event = event
+func declare_special_event(event: String, event_description: String, event_title: String, image_path: String) -> void:
+	special_event = {"id": event, "description": event_description, "title": event_title, "image": image_path}
 	declared_special_event_this_turn = true
 	
 func trigger_special_event(event: String) -> void:
-	if event == "indigestion":
-		for mp in get_tree().get_nodes_in_group("MP"):
-			var threshold: float = [0.2, 0.2, 0.2, 0.2, 0.65, 0.3][mp.group_id]
-			if rng.randf() < threshold:
-				mp.present = false
-				mp.visible = false
-	else:
-		print("TODO special event : " + event)
+	match event:
+		"indigestion":
+			for mp in get_tree().get_nodes_in_group("MP"):
+				var threshold: float = [0.2, 0.2, 0.2, 0.2, 0.65, 0.4][mp.group_id]
+				if rng.randf() < threshold:
+					mp.present = false
+					mp.visible = false
+		"train_strike":
+			for mp in get_tree().get_nodes_in_group("MP"):
+				var threshold: float = [0.5, 0.5, 0.5, 0.2, 0.1, 0.2][mp.group_id]
+				if rng.randf() < threshold:
+					mp.present = false
+					mp.visible = false
+		"deficit":
+			for mp in get_tree().get_nodes_in_group("MP"):
+				mp.change_approval(-1)
+		"convention_citoyenne":
+			for mp in get_tree().get_nodes_in_group("MP"):
+				var delta: float = [-1, -1, -1, 0, 0, 0][mp.group_id]
+				mp.change_approval(delta)
+		"mediapart":
+			incr_nb_card_played()
+		_:
+			print("TODO special event : " + event)
 	
 func trigger_journal() -> void:
 	# Reset present
@@ -98,7 +114,9 @@ func trigger_journal() -> void:
 		mp.present = true
 		mp.visible = true
 	if special_event:
-		trigger_special_event(special_event)
+		trigger_special_event(special_event["id"])
+		print(special_event["title"])
+		print(special_event["description"])
 		special_event = null
 		declared_special_event_this_turn = false
 	print("TODO: JOURNAL")

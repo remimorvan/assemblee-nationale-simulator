@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://velnx8vw6r6u"]
+[gd_scene load_steps=7 format=3 uid="uid://velnx8vw6r6u"]
 
 [ext_resource type="PackedScene" uid="uid://bf3fndiyasfyq" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://d1voxmvhe7xmt" path="res://scenes/hemicycle.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://didoyh5qajy65" path="res://scenes/journal.tscn" id="3_iywne"]
 [ext_resource type="PackedScene" uid="uid://bqeoj11e5kq1" path="res://scenes/deck.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://bchbmi7q2rb7" path="res://scenes/plot.tscn" id="4_lbhrr"]
 
@@ -21,7 +22,6 @@ layout_mode = 2
 size_flags_vertical = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
-z_index = 100
 custom_minimum_size = Vector2(300, 1080)
 layout_mode = 2
 
@@ -50,14 +50,12 @@ layout_mode = 2
 [node name="RichTextLabel2" type="RichTextLabel" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 bbcode_enabled = true
-text = "[center][b][color=black][center][font_size=30]Approbation des partis"
+text = "[center][b][color=black][center][font_size=30]Approbation"
 fit_content = true
 
 [node name="Plot" parent="HBoxContainer/VBoxContainer" instance=ExtResource("4_lbhrr")]
 custom_minimum_size = Vector2(100, 200)
 layout_mode = 2
-bar_colors = Array[Color]([Color(0.996094, 0.453125, 0.453125, 1), Color(0.230469, 0.636719, 0.535156, 1), Color(0.988281, 0.5, 0.734375, 1), Color(0.949219, 0.726562, 0.175781, 1), Color(0.625, 0.660156, 0.949219, 1), Color(0.636719, 0.410156, 0.3125, 1)])
-bar_spacing = 5
 bar_width = 30
 min_bar_height = 20
 
@@ -76,15 +74,14 @@ layout_mode = 2
 border_color = Color(0.446978, 0.499717, 0.854538, 1)
 border_width = 3.5
 
+[node name="HSeparator3" type="HSeparator" parent="HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Journal" parent="HBoxContainer/VBoxContainer" instance=ExtResource("3_iywne")]
+layout_mode = 2
+
 [node name="Deck" parent="." instance=ExtResource("3_lnu2h")]
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 z_as_relative = false
-
-[node name="Background" type="ColorRect" parent="."]
-visible = false
-z_index = -1
-z_as_relative = false
-offset_right = 1920.0
-offset_bottom = 1080.0
-mouse_filter = 1
