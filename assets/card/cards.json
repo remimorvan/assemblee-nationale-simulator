@@ -11,7 +11,9 @@
 		},
 		"image_path": "basic.png",
 		"quote": "",
-		"special_event": "indigestion"
+		"special_event": "indigestion",
+		"special_event_title": "Indigestion à l'Assemblée nationale !",
+		"special_event_descr": "Après que les portions de frites aient été doublées à la cantine de l'Assemblée, une partie des député·e·s sont absent·e·s à la séance d'aujourd'hui pour indigestion. Les groupes Les Ripoublicains et Travail Fictif, Famille, Pas de Tri sont particulièrement touchés."
 	},
 	{
 		"text": "Proposer la hausse du SMIC à 1700€ net par mois.",
@@ -192,7 +194,10 @@
 			"rn": [0.6, 0.2]
 		},
 		"image_path": "basic.png",
-		"quote": ""
+		"quote": "",
+		"special_event": "mediapart",
+		"special_event_title": "Mediapart attaque !",
+		"special_event_descr": "Mediapart vient de publier un article à charge contre le gouvernement, et son ministre de l'Éducation Nationale dont les enfants sont scolarisés dans le privé. Une partie des discussions de la journée seront consacrées à ce scandale : seulement deux réformes pourront être voteés aujourd'hui."
 	},
 	{
 		"text": "Facilier les expulsions et destructions d'habitats informels à Mayotte.",
@@ -323,7 +328,9 @@
 		},
 		"image_path": "basic.png",
 		"quote": "Bruno Le Maire",
-		"special_event": "deficit"
+		"special_event": "deficit",
+		"special_event_title": "Mensonge d'État : dissimulation du déficit !",
+		"special_event_descr": "Contrairement à ce qui a été annoncé par le ministre de l'Économie, le déficit de cette année ne sera pas de 4,4% mais de 6,1%. Selon nos collègues du Palmidé Attaché, le ministre était au courant de ces estimations. Tollé sur tous les bancs de l'Assemblée."
 	},
 	{
 		"text": "Inclure dans les formations délivrées dans l'enseignement supérieur la lutte contre l'islamophobie",
@@ -402,7 +409,9 @@
 		},
 		"image_path": "basic.png",
 		"quote": "",
-		"special_event": "convention_citoyenne"
+		"special_event": "convention_citoyenne",
+		"special_event_title": "Convention citoyenne : les résultats !",
+		"special_event_descr": "150 volontaires tirés au hasard se sont réunis pour la convention citoyenne. Leurs conclusions n'allant pas dans le sens du gouvernement, celui-ci a décidé d'enterrer leurs propositions. Tollé sur les bancs de la gauche."
 	},
 	{
 		"text": "Augmenter les APL de 10%",
@@ -442,5 +451,21 @@
 		},
 		"image_path": "basic.png",
 		"quote": ""
+	},
+	{
+		"text": "Continuer à laisser les infrastructures ferroviaires décrépir.",
+		"effects": {
+			"lfi": [-0.8, 0.2],
+			"eco": [-1, 0.1],
+			"soc": [-0.8, 0.2],
+			"macron": [0.8, 0.2],
+			"lr": [0.8, 0.2],
+			"rn": [0.8, 0.2]
+		},
+		"image_path": "basic.png",
+		"quote": "",
+		"special_event": "train_strike",
+		"special_event_title": "Grève des cheminots",
+		"special_event_descr": "Suite à l'annonce gouvernemantale sur la baisse de financement des infrastructures ferroviaires, 45% des cheminots se sont déclarés en grève. Une partie des députés ne pourront se rendre à l'Assemblée aujourd'hui : la gauche de l'hémicycle semble particulièrement impactée."
 	}
 ]

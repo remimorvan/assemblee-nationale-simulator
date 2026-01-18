@@ -28,8 +28,18 @@ func _ready() -> void:
 					effects_mean[party] = effects[party][0]
 					effects_std[party] = effects[party][1]
 				var image_path = data_card["image_path"]
-				var special_event = data_card["special_event"] if "special_event" in data_card else null
-				new_card.setup(text, effects_mean, effects_std, image_path, special_event)
+				var special_event
+				var special_event_title
+				var special_event_description
+				if "special_event" in data_card:
+					special_event = data_card["special_event"]
+					special_event_title = data_card["special_event_title"]
+					special_event_description = data_card["special_event_descr"]
+				else:
+					special_event = null
+					special_event_title = null
+					special_event_description = null
+				new_card.setup(text, effects_mean, effects_std, image_path, special_event, special_event_title, special_event_description)
 				all_cards.append(new_card)
 				var card_mean_effect: float = 0.0
 				for group_id in range(len(Hemicycle.group_repartition)):

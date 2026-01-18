@@ -42,9 +42,9 @@ func _ready() -> void:
 
 func change_approval(qty: float) -> void:
 	approval += qty
-	if qty > 0:
+	if qty > .2:
 		$Sprites/AnimationPlayer.queue("happy")
-	else:
+	elif qty < .2:
 		$Sprites/AnimationPlayer.queue("unhappy")
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
