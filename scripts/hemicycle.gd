@@ -10,7 +10,7 @@ extends AspectRatioContainer
 var width: int = 19
 var height: int = 13
 
-const yoffset = 0.15
+const yoffset = 0.1
 
 var group_repartition: Array[int] = [
 	81,
