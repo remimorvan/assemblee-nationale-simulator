@@ -1,55 +1,100 @@
-[gd_scene load_steps=3 format=3 uid="uid://didoyh5qajy65"]
+[gd_scene load_steps=11 format=3 uid="uid://cpdinrv8yds4b"]
 
-[ext_resource type="Script" uid="uid://cluw0womslnip" path="res://scripts/journal.gd" id="1_shkwb"]
+[ext_resource type="Texture2D" uid="uid://bwcleh6chxn0h" path="res://assets/card/illustrations/random.png" id="1_ll4rq"]
+[ext_resource type="FontFile" uid="uid://usk4ucaxtgwp" path="res://assets/card/Monicacomic.ttf" id="2_ha22r"]
+[ext_resource type="FontFile" uid="uid://0pyo548st5e1" path="res://assets/card/BadComic-Regular.ttf" id="3_hlh6y"]
+[ext_resource type="AudioStream" uid="uid://cl3byex3m3brk" path="res://assets/sounds/JDSherbert - Tabletop Games SFX Pack - Paper Flip - 1.mp3" id="3_t4w66"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_5bwne"]
+[sub_resource type="GDScript" id="GDScript_qysr8"]
+script/source = "extends Node2D
 
-[node name="Journal" type="Control"]
-z_index = 1000
-z_as_relative = false
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("1_shkwb")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-clip_contents = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-bbcode_enabled = true
-text = "[center][color=black][font_size=25][b]1er jour
-[/b]Description"
-fit_content = true
 
-[node name="Background" type="TextureRect" parent="."]
-z_index = -1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("PlaceholderTexture2D_5bwne")
-expand_mode = 5
+func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	pass # Replace with function body.
+"
 
-[node name="Image" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -40.0
-offset_right = 20.0
-grow_horizontal = 2
-grow_vertical = 0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t4w66"]
+size = Vector2(594.421, 418.561)
+
+[sub_resource type="Gradient" id="Gradient_iyd0d"]
+colors = PackedColorArray(0.929412, 0.882353, 0.901961, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_41jfq"]
+gradient = SubResource("Gradient_iyd0d")
+fill_from = Vector2(0.600427, 0.944444)
+fill_to = Vector2(0.307692, 0.162393)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fiay6"]
+line_spacing = 0.0
+font = ExtResource("2_ha22r")
+font_size = 36
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qqwlt"]
+line_spacing = 2.0
+font = ExtResource("3_hlh6y")
+font_size = 19
+font_color = Color(0, 0, 0, 1)
+
+[node name="JournalLarge" type="Area2D"]
+process_mode = 3
+rotation = -0.122173
+script = SubResource("GDScript_qysr8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.55715, -0.435379)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_t4w66")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -297.0
+offset_top = -210.0
+offset_right = 298.0
+offset_bottom = 209.0
+texture = SubResource("GradientTexture2D_41jfq")
+
+[node name="image" type="TextureRect" parent="."]
+offset_left = -258.027
+offset_top = -15.5615
+offset_right = 21.9732
+offset_bottom = 224.438
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_ll4rq")
+
+[node name="title" type="Label" parent="."]
+offset_left = -280.737
+offset_top = -191.642
+offset_right = 289.263
+offset_bottom = -102.642
+text = "Cinq jours jusqu'au
+vote du budget !"
+label_settings = SubResource("LabelSettings_fiay6")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="content" type="Label" parent="."]
+offset_left = -61.0
+offset_top = -92.0
+offset_right = 278.0
+offset_bottom = 204.0
+text = "Le premier ministre va soumettre le projet de budget au vote de l'Assemblée dans cinq jours. Sa mission, d'ici là, est de gagner suffisamment en popularité pour avoir une majorité."
+label_settings = SubResource("LabelSettings_qqwlt")
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="date" type="Label" parent="."]
+offset_left = -256.426
+offset_top = -77.8306
+offset_right = -107.426
+offset_bottom = -52.8306
+text = "01 janvier 2026"
+label_settings = SubResource("LabelSettings_qqwlt")
+horizontal_alignment = 2
+autowrap_mode = 3
+
+[node name="JournalSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_t4w66")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
