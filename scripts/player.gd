@@ -1,6 +1,7 @@
 extends Node2D
 @onready var Deck: Node2D = $"../Deck"
 @onready var Journal: Control = $"../HBoxContainer/VBoxContainer/Journal"
+@onready var CalendarText: Control = $"../HBoxContainer/VBoxContainer/CalendarLabel"
 @onready var Hemicycle: Control = $"../HBoxContainer/Hemicycle"
 @export var card: PackedScene
 
@@ -143,6 +144,8 @@ func trigger_journal() -> void:
 		mp.present = true
 		mp.visible = true
 	Hemicycle.update_plot()
+	CalendarText.bbcode_text = "[center][b][color=black][center][font_size=80]0%s[/font_size]
+[font_size=30]janvier 2026"%str(get_current_day())
 	if special_event:
 		Journal.update(special_event["title"],special_event["description"],"")
 		trigger_special_event(special_event["id"])
