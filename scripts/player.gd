@@ -122,6 +122,12 @@ func trigger_special_event(event: String) -> void:
 		"deficit":
 			for mp in get_tree().get_nodes_in_group("MP"):
 				mp.change_approval(-1)
+		"collumbus_day":
+			for mp in get_tree().get_nodes_in_group("MP"):
+				var threshold: float = [0.0, 0.0, 0.3, 0.6, 0.1, 0.0][mp.group_id]
+				if rng.randf() < threshold:
+					mp.present = false
+					mp.visible = false
 		"convention_citoyenne":
 			put_card_back_in_hand()
 			add_custom_card_to_hand(
