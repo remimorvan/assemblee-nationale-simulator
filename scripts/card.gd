@@ -46,8 +46,22 @@ func setup(_text: String, _effect_mean: Dictionary[String, float], _effect_std: 
 		$Image.texture = load(image_path)
 	else:
 		print("Texture not found: " + image_path)
-
 	
+	for pol_group in PoliticalGroup:
+		var val = effect_mean[pol_group]
+		var logo = self.find_child(pol_group)
+		var plus1 = logo.find_child("plus1")
+		var plus2 = logo.find_child("plus2")
+		var minus1 = logo.find_child("minus1")
+		var minus2 = logo.find_child("minus2")
+		if val >= 0.3:
+			plus1.visible = true
+			if val >= 0.7:
+				plus2.visible = true
+		if val <= -0.3:
+			minus1.visible = true
+			if val <= -0.7:
+				minus2.visible = true
 	
 # Returns the effect (delta on MP's approval's rate) of the card based on
 # an MP's political group.

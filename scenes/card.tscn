@@ -41,7 +41,7 @@ shader_parameter/inset = 0.0
 size = Vector2(498, 648)
 
 [sub_resource type="LabelSettings" id="LabelSettings_6u4wf"]
-font = ExtResource("16_54seb")
+font = ExtResource("18_3ydx5")
 font_size = 32
 font_color = Color(0, 0, 0, 1)
 

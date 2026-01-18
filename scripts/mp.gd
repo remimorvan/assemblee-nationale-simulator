@@ -43,12 +43,19 @@ func _ready() -> void:
 	rng.randomize()
 	change_approval(0.0)
 
+func animation_happy():
+	$Sprites/AnimationPlayer.queue("happy")
+	
+	
+func animation_unhappy():
+	$Sprites/AnimationPlayer.queue("unhappy")
+
 func change_approval(qty: float) -> void:
 	approval += qty
 	if qty > .4:
-		$Sprites/AnimationPlayer.queue("happy")
+		animation_happy()
 	elif qty < -.4:
-		$Sprites/AnimationPlayer.queue("unhappy")
+		animation_unhappy()
 	# Change appearance
 	$Sprites/head/face_happy.visible = false
 	$Sprites/head/face_neutral.visible = false
@@ -88,11 +95,11 @@ func do_final_animation(vote: int) -> void:
 	$Sprites/head/face_unhappy.visible = false
 	var new_color = indifferent_color
 	if vote == 1:
-		$Sprites/AnimationPlayer.queue("happy")
+		animation_happy()
 		$Sprites/head/face_happy.visible = true
 		new_color = happy_color
 	elif vote == -1:
-		$Sprites/AnimationPlayer.queue("unhappy")
+		animation_unhappy()
 		$Sprites/head/face_unhappy.visible = true
 		new_color = angry_color
 	else:
