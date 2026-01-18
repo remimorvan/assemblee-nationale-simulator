@@ -78,6 +78,8 @@ func _on_gui_input(event: InputEvent):
 			
 			if hovered_index != -1:
 				_on_bar_hovered(hovered_index)
+			else: 
+				Hemicycle.unhighlight()
 	
 func _on_mouse_entered():
 	pass
@@ -85,12 +87,12 @@ func _on_mouse_entered():
 func _on_mouse_exited():
 	if hovered_index != -1:
 		hovered_index = -1
+		Hemicycle.unhighlight();
 		queue_redraw()
 
 func _on_bar_hovered(index: int):
-	print("Bar %d hovered! Value: %.2f" % [index, bar_values[index]])
+	# print("Bar %d hovered! Value: %.2f" % [index, bar_values[index]])
 	Hemicycle.highlight(index);
-	# TODO: highlight the political group
 
 func update_bar_value(index: int, new_value: float):
 	if 0 <= index && index < 6:
