@@ -532,5 +532,57 @@
 		},
 		"image_path": "food.png",
 		"quote": "https://www.franceinfo.fr/politique/parlement-francais/assemblee-nationale/assemblee-nationale-la-buvette-suscite-la-polemique_7601648.html"
+	},
+	{
+		"text": "Supprimer l'avantage fiscal pour les intermittents du spectacle.",
+		"effects": {
+			"lfi": [-0.8, 0.2],
+			"eco": [-0.8, 0.2],
+			"soc": [-0.8, 0.2],
+			"macron": [-0.8, 0.2],
+			"lr": [0.6, 0.3],
+			"rn": [1, 0.1]
+		},
+		"image_path": "money.png",
+		"quote": "https://datan.fr/votes/legislature-17/vote_31"
+	},
+	{
+		"text": "Instaurer la taxe Zucman sur les patrimoines supérieurs à 100 millions d'euros.",
+		"effects": {
+			"lfi": [1.1, 0.2],
+			"eco": [1.1, 0.2],
+			"soc": [1.1, 0.2],
+			"macron": [-1, 0.3],
+			"lr": [-1, 0.1],
+			"rn": [-1, 0.1]
+		},
+		"image_path": "money.png",
+		"quote": "https://datan.fr/votes/legislature-17/vote_3300"
+	},
+	{
+		"text": "Interdir le démarchage téléphonique.",
+		"effects": {
+			"lfi": [0.6, 0.2],
+			"eco": [0.6, 0.2],
+			"soc": [0.6, 0.2],
+			"macron": [0.6, 0.3],
+			"lr": [0.6, 0.1],
+			"rn": [0.6, 0.1]
+		},
+		"image_path": "random.png",
+		"quote": "https://datan.fr/votes/legislature-17/vote_898"
+	},
+	{
+		"text": "Créer une taxe sur les super‑profits des entreprises pétrolières et des concessionnaires d'autoroutes.",
+		"effects": {
+			"lfi": [1, 0.1],
+			"eco": [1, 0.1],
+			"soc": [1, 0.1],
+			"macron": [-1, 0.2],
+			"lr": [-0.6, 0.25],
+			"rn": [0.6, 0.25]
+		},
+		"image_path": "money.png",
+		"quote": "https://datan.fr/votes/legislature-16/vote_105"
 	}
 ]
