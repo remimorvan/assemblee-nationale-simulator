@@ -1,5 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://cpdinrv8yds4b"]
 
+[ext_resource type="Texture2D" uid="uid://bwcleh6chxn0h" path="res://assets/card/illustrations/random.png" id="1_ll4rq"]
 [ext_resource type="FontFile" uid="uid://usk4ucaxtgwp" path="res://assets/card/Monicacomic.ttf" id="2_ha22r"]
 [ext_resource type="FontFile" uid="uid://0pyo548st5e1" path="res://assets/card/BadComic-Regular.ttf" id="3_hlh6y"]
 [ext_resource type="AudioStream" uid="uid://cl3byex3m3brk" path="res://assets/sounds/JDSherbert - Tabletop Games SFX Pack - Paper Flip - 1.mp3" id="3_t4w66"]
@@ -23,8 +24,6 @@ colors = PackedColorArray(0.929412, 0.882353, 0.901961, 1, 1, 1, 1, 1)
 gradient = SubResource("Gradient_iyd0d")
 fill_from = Vector2(0.600427, 0.944444)
 fill_to = Vector2(0.307692, 0.162393)
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_ovxar"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fiay6"]
 line_spacing = 0.0
@@ -56,11 +55,12 @@ offset_bottom = 209.0
 texture = SubResource("GradientTexture2D_41jfq")
 
 [node name="image" type="TextureRect" parent="."]
-offset_left = -271.417
-offset_top = -13.1757
-offset_right = -84.7503
-offset_bottom = 146.824
-texture = SubResource("ViewportTexture_ovxar")
+offset_left = -258.027
+offset_top = -15.5615
+offset_right = 21.9732
+offset_bottom = 224.438
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_ll4rq")
 
 [node name="title" type="Label" parent="."]
 offset_left = -280.737
