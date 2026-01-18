@@ -14,6 +14,7 @@ var special_event_description # Same
 var rng: RandomNumberGenerator
 var hovered: bool
 var tween: Tween
+var old_z_index = -1
 
 var PoliticalGroup: Array[String] = ["lfi", "eco", "soc", "macron", "lr", "rn"]
 
@@ -56,21 +57,28 @@ func get_approval_change(political_group: String) -> float:
 	return rng.randfn(effect_mean[political_group], effect_std[political_group]) 
 
 func _on_mouse_entered() -> void:
+	# put in front
+	old_z_index = self.z_index
+	self.z_index = 1000
+	
 	hovered = true
 	if tween:
 		tween.kill()
 	tween = create_tween()
 	tween.set_trans(Tween.TRANS_CUBIC)
 	tween.set_ease(Tween.EASE_OUT)
-	tween.parallel().tween_property(self, "scale", Vector2(1.2,1.2), .25)
+	tween.parallel().tween_property(self, "scale", Vector2(1.,1.), .25)
 
 func _on_mouse_exited() -> void:
+	# restore z_index
+	self.z_index = old_z_index
+	
 	hovered = false
 	if tween:
 		tween.kill()
 	tween = create_tween()
 	tween.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CIRC)
-	tween.parallel().tween_property(self, "scale", Vector2(1.,1.), .25)
+	tween.parallel().tween_property(self, "scale", Vector2(.7,.7), .25)
 	
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:

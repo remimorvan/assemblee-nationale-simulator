@@ -41,9 +41,9 @@ func print_hand() -> void:
 	var viewport_size: Vector2i = $"../HBoxContainer/Hemicycle".get_size()
 	for i in range(len(hand)):
 		var card = hand[i]
-		var card_size = card.get_node("Sprite2D").texture.get_size()
-		card.position.x = viewport_size[0]/2.0 + (i - (len(hand)-1)/2.0)*(card_size[0]*1.05)
-		card.position.y = 1000
+		var card_size = card.get_node("Sprite2D").texture.get_size()*card.scale.x
+		card.position.x = viewport_size[0]/2.0 + (i - (len(hand)-1)/2.0)*(card_size[0]*1.2)
+		card.position.y = 830
 		card.rotation_degrees = (i-1)*5
 		card.z_index = i+100
 
