@@ -41,6 +41,7 @@ func set_shirt_color(clr):
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	rng.randomize()
+	change_approval(0.0)
 
 func change_approval(qty: float) -> void:
 	approval += qty
@@ -48,26 +49,7 @@ func change_approval(qty: float) -> void:
 		$Sprites/AnimationPlayer.queue("happy")
 	elif qty < -.4:
 		$Sprites/AnimationPlayer.queue("unhappy")
-
-func get_final_vote() -> int:
-	"""Returns the final vote (+1 for approval, -1 disapproval, 0 for abstention)
-	of the MP. If its approval is higher than a threshold, the vote is deterministic,
-	otheriwe we add some randomness."""
-	if approval >= threshold_vote:
-		return 1
-	elif approval <= - threshold_vote:
-		return -1
-	var new_approval: float = approval + rng.randfn(0,0.75)
-	if approval >= threshold_vote - 0.5:
-		return 1
-	elif approval <= - threshold_vote + 0.5:
-		return -1
-	else:
-		return 0
-		
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	# TODO : Update MP's head after player played a card, not at every frame !
+	# Change appearance
 	$Sprites/head/face_happy.visible = false
 	$Sprites/head/face_neutral.visible = false
 	$Sprites/head/face_unhappy.visible = false
@@ -84,3 +66,41 @@ func _process(delta: float) -> void:
 	if approval < 0:
 		other_color = angry_color
 	$Sprites/head.modulate = other_color*t+indifferent_color*(1-t)
+
+func get_final_vote() -> int:
+	"""Returns the final vote (+1 for approval, -1 disapproval, 0 for abstention)
+	of the MP. If its approval is higher than a threshold, the vote is deterministic,
+	otheriwe we add some randomness."""
+	if approval >= threshold_vote:
+		return 1
+	elif approval <= - threshold_vote:
+		return -1
+	var new_approval: float = approval + rng.randfn(0,0.75)
+	if approval >= threshold_vote - 0.5:
+		return 1
+	elif approval <= - threshold_vote + 0.5:
+		return -1
+	return 0
+
+func do_final_animation(vote: int) -> void:
+	$Sprites/head/face_happy.visible = false
+	$Sprites/head/face_neutral.visible = false
+	$Sprites/head/face_unhappy.visible = false
+	var new_color = indifferent_color
+	if vote == 1:
+		$Sprites/AnimationPlayer.queue("happy")
+		$Sprites/head/face_happy.visible = true
+		new_color = happy_color
+	elif vote == -1:
+		$Sprites/AnimationPlayer.queue("unhappy")
+		$Sprites/head/face_unhappy.visible = true
+		new_color = angry_color
+	else:
+		$Sprites/head/face_neutral.visible = true
+	$Sprites/head.modulate = new_color
+	await get_tree().create_timer(0.02).timeout
+		
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	# TODO : Update MP's head after player played a card, not at every frame !
+	pass
