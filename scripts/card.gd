@@ -115,8 +115,18 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 			Player.incr_nb_card_played()
 			
 			Hemicycle.update_plot()
+			if old_position_y == null: 
+				old_position_y = self.position.y
+			if tween:
+				tween.kill()
+			tween = create_tween()
+			tween.set_trans(Tween.TRANS_CUBIC)
+			tween.set_ease(Tween.EASE_OUT)
+			tween.parallel().tween_property(self, "position:y", old_position_y-250, .5)
+			tween.parallel().tween_property(self, "scale", Vector2(1.2, 1.2), .5)
+			await tween.finished
 			
 			# Remove card from hand
 			var card_pos: int = Player.remove_card_from_hand(self)
 			Player.add_card_to_hand(card_pos)
-			Player.change_random_card(card_pos)
+			await Player.change_random_card(card_pos)

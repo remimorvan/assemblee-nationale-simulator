@@ -16,6 +16,7 @@ var declared_special_event_this_turn: bool = false
 const nb_days_before_vote: int = 6
 var last_card_changed: int = 0
 var is_journal_showed: bool = true
+var tween: Tween
 
 func has_special_card_in_hand() -> bool:
 	for card in hand:
@@ -64,6 +65,13 @@ func change_random_card(other_card: int) -> void:
 	var arr = [0,1,2]
 	arr.pop_at(other_card)
 	removed_card_pos = arr[removed_card_pos]
+	if tween:
+		tween.kill()
+	tween = create_tween()
+	tween.set_trans(Tween.TRANS_CUBIC)
+	tween.set_ease(Tween.EASE_OUT)
+	tween.parallel().tween_property(hand[removed_card_pos], "scale", Vector2(0, 0), 0.5)
+	await tween.finished
 	remove_card_from_hand(hand[removed_card_pos])
 	add_card_to_hand(removed_card_pos)
 	last_card_changed = removed_card_pos
