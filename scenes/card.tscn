@@ -1,23 +1,23 @@
 [gd_scene load_steps=23 format=3 uid="uid://b7jidntt07fi4"]
 
 [ext_resource type="Script" uid="uid://ddn50b8k2q78u" path="res://scripts/card.gd" id="1_d81rb"]
-[ext_resource type="Texture2D" uid="uid://cvxibmrjc5ly3" path="res://assets/card/card_mockup.png" id="2_6u4wf"]
+[ext_resource type="Texture2D" uid="uid://bpgwpo35t1t1b" path="res://assets/card/card_mockup.png" id="2_6u4wf"]
 [ext_resource type="Shader" uid="uid://cdf3y6rge0qjs" path="res://assets/shader/card.gdshader" id="2_xjciw"]
-[ext_resource type="Texture2D" uid="uid://bfv1ubu5a6adk" path="res://assets/card/logos/lfi_back.png" id="3_42b55"]
-[ext_resource type="Texture2D" uid="uid://cmds766v1s54w" path="res://assets/card/logos/lfi_line.png" id="4_xjciw"]
-[ext_resource type="Texture2D" uid="uid://cfk324721xw5c" path="res://assets/card/logos/eco_back.png" id="5_54seb"]
-[ext_resource type="Texture2D" uid="uid://br2ter30dgmlv" path="res://assets/card/plus.png" id="6_3ydx5"]
-[ext_resource type="Texture2D" uid="uid://choeclexwsube" path="res://assets/card/logos/eco_line.png" id="6_v23hl"]
-[ext_resource type="Texture2D" uid="uid://d0yjitx7m5ewh" path="res://assets/card/logos/soc_back.png" id="7_3ydx5"]
-[ext_resource type="Texture2D" uid="uid://c2o2eil8miklg" path="res://assets/card/minus.png" id="7_xuy1i"]
-[ext_resource type="Texture2D" uid="uid://c6ysdgphhnm8a" path="res://assets/card/logos/soc_line.png" id="8_xuy1i"]
-[ext_resource type="Texture2D" uid="uid://dsn4ljun4v183" path="res://assets/card/logos/macron_back.png" id="9_rywyy"]
-[ext_resource type="Texture2D" uid="uid://4ovupkayo2h7" path="res://assets/card/logos/macron_line.png" id="10_le4ky"]
-[ext_resource type="Texture2D" uid="uid://laff0i5vdt6f" path="res://assets/card/logos/lr_back.png" id="11_125j1"]
-[ext_resource type="Texture2D" uid="uid://dvsad4nsywnwg" path="res://assets/card/logos/lr_line.png" id="12_b834i"]
-[ext_resource type="Texture2D" uid="uid://djphcib3846dy" path="res://assets/card/logos/facho_back.png" id="13_07urr"]
-[ext_resource type="Texture2D" uid="uid://ggp34647sin6" path="res://assets/card/logos/facho_line.png" id="14_l85n3"]
-[ext_resource type="FontFile" uid="uid://0pyo548st5e1" path="res://assets/card/BadComic-Regular.ttf" id="16_54seb"]
+[ext_resource type="Texture2D" uid="uid://o7q6j4sxiami" path="res://assets/card/logos/lfi_back.png" id="3_42b55"]
+[ext_resource type="Texture2D" uid="uid://c2wefqcb2f2ua" path="res://assets/card/logos/lfi_line.png" id="4_xjciw"]
+[ext_resource type="Texture2D" uid="uid://2givsr6ka0vp" path="res://assets/card/logos/eco_back.png" id="5_54seb"]
+[ext_resource type="Texture2D" uid="uid://c3eyjoheexyle" path="res://assets/card/plus.png" id="6_3ydx5"]
+[ext_resource type="Texture2D" uid="uid://b3164qe0r4g80" path="res://assets/card/logos/eco_line.png" id="6_v23hl"]
+[ext_resource type="Texture2D" uid="uid://dsidf2e6fuk3" path="res://assets/card/logos/soc_back.png" id="7_3ydx5"]
+[ext_resource type="Texture2D" uid="uid://bprjg4nljtncb" path="res://assets/card/minus.png" id="7_xuy1i"]
+[ext_resource type="Texture2D" uid="uid://qoop8klbndld" path="res://assets/card/logos/soc_line.png" id="8_xuy1i"]
+[ext_resource type="Texture2D" uid="uid://bjlncmprlb7fb" path="res://assets/card/logos/macron_back.png" id="9_rywyy"]
+[ext_resource type="Texture2D" uid="uid://ds85be2vbh1kq" path="res://assets/card/logos/macron_line.png" id="10_le4ky"]
+[ext_resource type="Texture2D" uid="uid://do0vreksar2wb" path="res://assets/card/logos/lr_back.png" id="11_125j1"]
+[ext_resource type="Texture2D" uid="uid://0kxsunno8eb3" path="res://assets/card/logos/lr_line.png" id="12_b834i"]
+[ext_resource type="Texture2D" uid="uid://cm5thuavdro24" path="res://assets/card/logos/facho_back.png" id="13_07urr"]
+[ext_resource type="Texture2D" uid="uid://r81rgy07crw3" path="res://assets/card/logos/facho_line.png" id="14_l85n3"]
+[ext_resource type="FontFile" uid="uid://cewqm3af8k8sr" path="res://assets/card/BadComic-Regular.ttf" id="16_54seb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_54seb"]
 resource_local_to_scene = true
@@ -56,10 +56,10 @@ material = SubResource("ShaderMaterial_54seb")
 texture = ExtResource("2_6u4wf")
 
 [node name="MarginContainer" type="MarginContainer" parent="Sprite2D"]
-offset_left = -242.0
-offset_top = -315.0
-offset_right = 84.0
-offset_bottom = 2022.0
+offset_left = -224.0
+offset_top = -294.0
+offset_right = 113.0
+offset_bottom = 1906.0
 scale = Vector2(0.27, 0.27)
 
 [node name="Logos" type="VBoxContainer" parent="Sprite2D/MarginContainer"]
@@ -310,8 +310,8 @@ visible = false
 shape = SubResource("RectangleShape2D_6u4wf")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -123.0
-offset_top = -70.0
+offset_left = -103.0
+offset_top = -29.0
 offset_right = 217.0
 offset_bottom = 284.0
 label_settings = SubResource("LabelSettings_6u4wf")
@@ -323,12 +323,12 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -94.0
-offset_top = -309.0
-offset_right = 186.0
-offset_bottom = -69.0
+offset_left = -91.4286
+offset_top = -285.714
+offset_right = 188.571
+offset_bottom = -45.7143
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

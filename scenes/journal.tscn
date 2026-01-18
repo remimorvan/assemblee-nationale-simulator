@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://cpdinrv8yds4b"]
+[gd_scene load_steps=10 format=3 uid="uid://didoyh5qajy65"]
 
-[ext_resource type="Texture2D" uid="uid://bwcleh6chxn0h" path="res://assets/card/illustrations/random.png" id="1_ll4rq"]
-[ext_resource type="FontFile" uid="uid://usk4ucaxtgwp" path="res://assets/card/Monicacomic.ttf" id="2_ha22r"]
-[ext_resource type="FontFile" uid="uid://0pyo548st5e1" path="res://assets/card/BadComic-Regular.ttf" id="3_hlh6y"]
-[ext_resource type="AudioStream" uid="uid://cl3byex3m3brk" path="res://assets/sounds/JDSherbert - Tabletop Games SFX Pack - Paper Flip - 1.mp3" id="3_t4w66"]
+[ext_resource type="Texture2D" uid="uid://ocewkypq0kcd" path="res://assets/journal.png" id="1_ih0ao"]
+[ext_resource type="Texture2D" uid="uid://diyjxm0wjvjgb" path="res://assets/card/illustrations/random.png" id="1_ll4rq"]
+[ext_resource type="FontFile" uid="uid://c4v45pul7umvp" path="res://assets/card/Monicacomic.ttf" id="2_ha22r"]
+[ext_resource type="FontFile" uid="uid://cewqm3af8k8sr" path="res://assets/card/BadComic-Regular.ttf" id="3_hlh6y"]
+[ext_resource type="AudioStream" uid="uid://ca6pcf1v8qdkf" path="res://assets/sounds/JDSherbert - Tabletop Games SFX Pack - Paper Flip - 1.mp3" id="3_t4w66"]
 
 [sub_resource type="GDScript" id="GDScript_qysr8"]
 script/source = "extends Node2D
@@ -16,14 +17,6 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t4w66"]
 size = Vector2(594.421, 418.561)
-
-[sub_resource type="Gradient" id="Gradient_iyd0d"]
-colors = PackedColorArray(0.929412, 0.882353, 0.901961, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_41jfq"]
-gradient = SubResource("Gradient_iyd0d")
-fill_from = Vector2(0.600427, 0.944444)
-fill_to = Vector2(0.307692, 0.162393)
 
 [sub_resource type="LabelSettings" id="LabelSettings_fiay6"]
 line_spacing = 0.0
@@ -44,7 +37,6 @@ script = SubResource("GDScript_qysr8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.55715, -0.435379)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_t4w66")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -52,7 +44,7 @@ offset_left = -297.0
 offset_top = -210.0
 offset_right = 298.0
 offset_bottom = 209.0
-texture = SubResource("GradientTexture2D_41jfq")
+texture = ExtResource("1_ih0ao")
 
 [node name="image" type="TextureRect" parent="."]
 offset_left = -258.027
