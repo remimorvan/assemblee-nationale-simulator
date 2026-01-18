@@ -584,5 +584,37 @@
 		},
 		"image_path": "money.png",
 		"quote": "https://datan.fr/votes/legislature-16/vote_105"
+	},
+	{
+		"text": "Rendre hommage aux ministres des gouvernements précédents.",
+		"effects": {
+			"lfi": [0.0, 0.2],
+			"eco": [0.0, 0.2],
+			"soc": [0.0, 0.2],
+			"macron": [0.8, 0.2],
+			"lr": [0.6, 0.2],
+			"rn": [0.0, 0.2]
+		},
+		"image_path": "random.png",
+		"quote": "",
+		"special_event": "collumbus_day",
+		"special_event_title": "Gérard Collumbus Day",
+		"special_event_descr": "Pour rendre hommage à Gérard Collumbus, une grande journée de festivités ont été organisées dans sa ville natale de Lugdunum par le gouvernement. De nombreux·euses député·e·s du parti En Pause devraient s'y rendre."
+	},
+	{
+		"text": "Envoyer des soldats français au Groenland pour le protéger de la menace impérialiste du « plus grand allié de l'UE » ?!",
+		"effects": {
+			"lfi": [0.6, 0.2],
+			"eco": [0.6, 0.2],
+			"soc": [0.7, 0.2],
+			"macron": [0.8, 0.2],
+			"lr": [0.6, 0.2],
+			"rn": [0.6, 0.2]
+		},
+		"image_path": "safety.png",
+		"quote": "",
+		"special_event": "groenland",
+		"special_event_title": "Représailles américaines",
+		"special_event_descr": "La réponse du président américain de s'est pas faite attendre après l'envoi de troupes françaises au Groenland : les troupes américaines vont venir apporter la démocratie dans notre pays. Après une réunion d'urgence, l'Assemblée nationale a décidé de remettre le premier ministre aux forces américaines."
 	}
 ]

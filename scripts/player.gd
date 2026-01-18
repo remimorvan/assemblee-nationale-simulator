@@ -14,7 +14,7 @@ var transition_between_days: bool = false
 var rng = RandomNumberGenerator.new() 
 var special_event # string or null
 var declared_special_event_this_turn: bool = false
-const nb_days_before_vote: int = 5
+const nb_days_before_vote: int = 6
 var last_card_changed: int = 0
 
 func has_special_card_in_hand() -> bool:
@@ -124,6 +124,12 @@ func trigger_special_event(event: String) -> void:
 		"deficit":
 			for mp in get_tree().get_nodes_in_group("MP"):
 				mp.change_approval(-1)
+		"collumbus_day":
+			for mp in get_tree().get_nodes_in_group("MP"):
+				var threshold: float = [0.0, 0.0, 0.3, 0.6, 0.1, 0.0][mp.group_id]
+				if rng.randf() < threshold:
+					mp.present = false
+					mp.visible = false
 		"convention_citoyenne":
 			put_card_back_in_hand()
 			add_custom_card_to_hand(
@@ -137,6 +143,14 @@ func trigger_special_event(event: String) -> void:
 				mp.change_approval(delta)
 		"mediapart":
 			incr_nb_card_played()
+		"groenland":
+			for mp in get_tree().get_nodes_in_group("MP"):
+				mp.change_approval(-100)
+			var votes: Array[int] = [0, 0, 0];
+			for mp in get_tree().get_nodes_in_group("MP"):
+				votes[mp.get_final_vote()+1] += 1
+				await mp.do_final_animation(mp.get_final_vote())
+			print("DÉFAITE !")
 		_:
 			print("TODO special event : " + event)
 	
@@ -153,4 +167,14 @@ func trigger_journal() -> void:
 		trigger_special_event(special_event["id"])
 		special_event = null
 		declared_special_event_this_turn = false
-	print("TODO: JOURNAL")
+		Hemicycle.update_plot()
+	if get_current_day() == nb_days_before_vote:
+		var votes: Array[int] = [0, 0, 0];
+		for mp in get_tree().get_nodes_in_group("MP"):
+			votes[mp.get_final_vote()+1] += 1
+			await mp.do_final_animation(mp.get_final_vote())
+		# votes[0] : approval, votes[1] : abstention, votes[2] : disapproval
+		if (votes[0] >= votes[2]):
+			print("VICTOIRE !")
+		else:
+			print("DÉFAITE !")
