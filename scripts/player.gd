@@ -16,6 +16,7 @@ var special_event # string or null
 var declared_special_event_this_turn: bool = false
 const nb_days_before_vote: int = 6
 var last_card_changed: int = 0
+var is_journal_showed: bool = true
 
 func has_special_card_in_hand() -> bool:
 	for card in hand:
@@ -164,9 +165,9 @@ func trigger_special_event(event: String) -> void:
 	
 func trigger_journal() -> void:
 	# Reset present
-	$JournalSound.play()
-	$NewDaySound.attenuation = 4
-	$NewDaySound.play()
+	$"NewDaySound".attenuation = 4
+	$"NewDaySound".play()
+	await get_tree().create_timer(0.5).timeout
 	for mp in get_tree().get_nodes_in_group("MP"):
 		mp.present = true
 		mp.visible = true
@@ -176,7 +177,7 @@ func trigger_journal() -> void:
 	if special_event:
 		Journal.update(special_event["title"],special_event["description"],"")
 		JournalLarge.update(special_event["title"],special_event["description"],special_event["image"],get_current_day())
-		JournalLarge.visible = true
+		JournalLarge.show_journal()
 		trigger_special_event(special_event["id"])
 		special_event = null
 		declared_special_event_this_turn = false

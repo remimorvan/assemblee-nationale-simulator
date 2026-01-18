@@ -72,46 +72,49 @@ func get_approval_change(political_group: String) -> float:
 	return rng.randfn(effect_mean[political_group], effect_std[political_group]) 
 
 func _on_mouse_entered() -> void:
-	# put in front
-	old_z_index = self.z_index
-	if old_position_y == null: 
-		old_position_y = self.position.y
-	self.z_index = 1000
-	
-	hovered = true
-	if tween:
-		tween.kill()
-	tween = create_tween()
-	tween.set_trans(Tween.TRANS_CUBIC)
-	tween.set_ease(Tween.EASE_OUT)
-	tween.parallel().tween_property(self, "scale", Vector2(1.,1.), .25)
-	tween.parallel().tween_property(self, "position:y", old_position_y-100, .25)
+	if not Player.is_journal_showed:
+		# put in front
+		old_z_index = self.z_index
+		if old_position_y == null: 
+			old_position_y = self.position.y
+		self.z_index = 1000
+		
+		hovered = true
+		if tween:
+			tween.kill()
+		tween = create_tween()
+		tween.set_trans(Tween.TRANS_CUBIC)
+		tween.set_ease(Tween.EASE_OUT)
+		tween.parallel().tween_property(self, "scale", Vector2(1.,1.), .25)
+		tween.parallel().tween_property(self, "position:y", old_position_y-100, .25)
 
 func _on_mouse_exited() -> void:
-	# restore z_index
-	self.z_index = old_z_index
-	
-	hovered = false
-	if tween:
-		tween.kill()
-	tween = create_tween()
-	tween.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CIRC)
-	tween.parallel().tween_property(self, "scale", Vector2(.7,.7), .25)
-	tween.parallel().tween_property(self, "position:y", old_position_y, .25)
+	if not Player.is_journal_showed:
+		# restore z_index
+		self.z_index = old_z_index
+		
+		hovered = false
+		if tween:
+			tween.kill()
+		tween = create_tween()
+		tween.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CIRC)
+		tween.parallel().tween_property(self, "scale", Vector2(.7,.7), .25)
+		tween.parallel().tween_property(self, "position:y", old_position_y, .25)
 	
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
-		for mp in get_tree().get_nodes_in_group("MP"):
-			if mp.present:
-				mp.change_approval(get_approval_change(PoliticalGroup[mp.group_id]))
-		if special_event:
-			Player.declare_special_event(special_event, special_event_description, special_event_title, image_path)
-		Player.incr_nb_card_played()
-		
-		Hemicycle.update_plot()
-		
-		# Remove card from hand
-		var card_pos: int = Player.remove_card_from_hand(self)
-		Player.add_card_to_hand(card_pos)
-		Player.change_random_card(card_pos)
+	if not Player.is_journal_showed:
+		if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
+			for mp in get_tree().get_nodes_in_group("MP"):
+				if mp.present:
+					mp.change_approval(get_approval_change(PoliticalGroup[mp.group_id]))
+			if special_event:
+				Player.declare_special_event(special_event, special_event_description, special_event_title, image_path)
+			Player.incr_nb_card_played()
+			
+			Hemicycle.update_plot()
+			
+			# Remove card from hand
+			var card_pos: int = Player.remove_card_from_hand(self)
+			Player.add_card_to_hand(card_pos)
+			Player.change_random_card(card_pos)
