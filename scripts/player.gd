@@ -157,6 +157,7 @@ func trigger_journal() -> void:
 		trigger_special_event(special_event["id"])
 		special_event = null
 		declared_special_event_this_turn = false
+		Hemicycle.update_plot()
 	if get_current_day() == nb_days_before_vote:
 		var votes: Array[int] = [0, 0, 0];
 		for mp in get_tree().get_nodes_in_group("MP"):
