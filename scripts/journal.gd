@@ -24,7 +24,7 @@ func update_with_basic(day: int) -> void:
 		if typeof(data_received) == TYPE_ARRAY:
 			var title = data_received[day-1]["title"]
 			var content = data_received[day-1]["content"]
-			var image_name = "random.png"
+			var image_name = "res://assets/card/illustrations/random.png"
 			update(title, content, image_name, day)
 		else:
 			print("Unexpected data")
