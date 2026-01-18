@@ -73,6 +73,8 @@ func get_approval_change(political_group: String) -> float:
 
 func _on_mouse_entered() -> void:
 	if not Player.is_journal_showed:
+		$HoverSound.play()
+	
 		# put in front
 		old_z_index = self.z_index
 		if old_position_y == null: 

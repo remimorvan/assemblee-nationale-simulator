@@ -88,5 +88,6 @@ autowrap_mode = 3
 
 [node name="JournalSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_t4w66")
+volume_db = -5.616
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

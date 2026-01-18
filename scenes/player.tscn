@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bf3fndiyasfyq"]
+[gd_scene load_steps=8 format=3 uid="uid://bf3fndiyasfyq"]
 
 [ext_resource type="Script" uid="uid://cxd4eq1rg0n2d" path="res://scripts/player.gd" id="1_3vyb7"]
 [ext_resource type="PackedScene" uid="uid://b7jidntt07fi4" path="res://scenes/card.tscn" id="2_g2els"]
@@ -14,9 +14,19 @@ card = ExtResource("2_g2els")
 
 [node name="Deal1" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_qlg0r")
+volume_db = -5.571
 
 [node name="Deal2" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_tuyoq")
+volume_db = -5.571
 
 [node name="NewDaySound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_tuyoq")
+
+[node name="WinSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_fjrip")
+volume_db = 5.0
+
+[node name="LoseSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_smehm")
+volume_db = 5.0
