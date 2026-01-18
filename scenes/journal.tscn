@@ -55,10 +55,10 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_ll4rq")
 
 [node name="title" type="Label" parent="."]
-offset_left = -280.737
-offset_top = -191.642
-offset_right = 289.263
-offset_bottom = -102.642
+offset_left = -259.0
+offset_top = -187.0
+offset_right = 232.0
+offset_bottom = -103.0
 text = "Cinq jours jusqu'au
 vote du budget !"
 label_settings = SubResource("LabelSettings_fiay6")
