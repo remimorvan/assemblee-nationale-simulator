@@ -43,8 +43,7 @@ func setup(_text: String, _effect_mean: Dictionary[String, float], _effect_std: 
 	var CardLabel = $"Label"
 	CardLabel.text = text
 	if ResourceLoader.exists(image_path):
-		#$Image.texture = load(image_path)
-		print("TODO")
+		$Image.texture = load(image_path)
 	else:
 		print("Texture not found: " + image_path)
 	
