@@ -179,8 +179,8 @@ func new_mp(seat: int) -> int:	# returns number of the political party of mp
 	else:
 		mp.position = cell_to_uv(float(y) + 0.5, float(x) + 0.5)
 	#mp.position = cell_to_uv(float(y) + 0.5,float(x) + 0.5)
-	mp.scale.x = 0.7
-	mp.scale.y = 0.7
+	mp.scale.x = 0.6
+	mp.scale.y = 0.6
 	
 	return group_id
 	# et pour suprimer :
