@@ -1,23 +1,23 @@
 [gd_scene load_steps=23 format=3 uid="uid://b7jidntt07fi4"]
 
 [ext_resource type="Script" uid="uid://ddn50b8k2q78u" path="res://scripts/card.gd" id="1_d81rb"]
-[ext_resource type="Texture2D" uid="uid://bpgwpo35t1t1b" path="res://assets/card/card_mockup.png" id="2_6u4wf"]
+[ext_resource type="Texture2D" uid="uid://dmccpgsxbcxdg" path="res://assets/card/card_mockup.png" id="2_6u4wf"]
 [ext_resource type="Shader" uid="uid://cdf3y6rge0qjs" path="res://assets/shader/card.gdshader" id="2_xjciw"]
-[ext_resource type="Texture2D" uid="uid://o7q6j4sxiami" path="res://assets/card/logos/lfi_back.png" id="3_42b55"]
-[ext_resource type="Texture2D" uid="uid://c2wefqcb2f2ua" path="res://assets/card/logos/lfi_line.png" id="4_xjciw"]
-[ext_resource type="Texture2D" uid="uid://2givsr6ka0vp" path="res://assets/card/logos/eco_back.png" id="5_54seb"]
-[ext_resource type="Texture2D" uid="uid://c3eyjoheexyle" path="res://assets/card/plus.png" id="6_3ydx5"]
-[ext_resource type="Texture2D" uid="uid://b3164qe0r4g80" path="res://assets/card/logos/eco_line.png" id="6_v23hl"]
-[ext_resource type="Texture2D" uid="uid://dsidf2e6fuk3" path="res://assets/card/logos/soc_back.png" id="7_3ydx5"]
-[ext_resource type="Texture2D" uid="uid://bprjg4nljtncb" path="res://assets/card/minus.png" id="7_xuy1i"]
-[ext_resource type="Texture2D" uid="uid://qoop8klbndld" path="res://assets/card/logos/soc_line.png" id="8_xuy1i"]
-[ext_resource type="Texture2D" uid="uid://bjlncmprlb7fb" path="res://assets/card/logos/macron_back.png" id="9_rywyy"]
-[ext_resource type="Texture2D" uid="uid://ds85be2vbh1kq" path="res://assets/card/logos/macron_line.png" id="10_le4ky"]
-[ext_resource type="Texture2D" uid="uid://do0vreksar2wb" path="res://assets/card/logos/lr_back.png" id="11_125j1"]
-[ext_resource type="Texture2D" uid="uid://0kxsunno8eb3" path="res://assets/card/logos/lr_line.png" id="12_b834i"]
-[ext_resource type="Texture2D" uid="uid://cm5thuavdro24" path="res://assets/card/logos/facho_back.png" id="13_07urr"]
-[ext_resource type="Texture2D" uid="uid://r81rgy07crw3" path="res://assets/card/logos/facho_line.png" id="14_l85n3"]
-[ext_resource type="FontFile" uid="uid://cewqm3af8k8sr" path="res://assets/card/BadComic-Regular.ttf" id="16_54seb"]
+[ext_resource type="Texture2D" uid="uid://ixf4p0ltgjmg" path="res://assets/card/logos/lfi_back.png" id="3_42b55"]
+[ext_resource type="Texture2D" uid="uid://d3o7aasw3i1q4" path="res://assets/card/logos/lfi_line.png" id="4_xjciw"]
+[ext_resource type="Texture2D" uid="uid://cc4yddk7esw3c" path="res://assets/card/logos/eco_back.png" id="5_54seb"]
+[ext_resource type="Texture2D" uid="uid://csmk8br1nwa6g" path="res://assets/card/plus.png" id="6_3ydx5"]
+[ext_resource type="Texture2D" uid="uid://b44ican76mjdh" path="res://assets/card/logos/eco_line.png" id="6_v23hl"]
+[ext_resource type="Texture2D" uid="uid://ctlaib2j778p3" path="res://assets/card/logos/soc_back.png" id="7_3ydx5"]
+[ext_resource type="Texture2D" uid="uid://uxwefk3v6i6n" path="res://assets/card/minus.png" id="7_xuy1i"]
+[ext_resource type="Texture2D" uid="uid://bpufl3yrfw0wq" path="res://assets/card/logos/soc_line.png" id="8_xuy1i"]
+[ext_resource type="Texture2D" uid="uid://l37t3hvexhkd" path="res://assets/card/logos/macron_back.png" id="9_rywyy"]
+[ext_resource type="Texture2D" uid="uid://djyp5wpr4c0p3" path="res://assets/card/logos/macron_line.png" id="10_le4ky"]
+[ext_resource type="Texture2D" uid="uid://bl1kc2vappia3" path="res://assets/card/logos/lr_back.png" id="11_125j1"]
+[ext_resource type="Texture2D" uid="uid://dnadrrcp5ix6d" path="res://assets/card/logos/lr_line.png" id="12_b834i"]
+[ext_resource type="Texture2D" uid="uid://donf4a7r825i3" path="res://assets/card/logos/facho_back.png" id="13_07urr"]
+[ext_resource type="Texture2D" uid="uid://cm2evyhf53cxp" path="res://assets/card/logos/facho_line.png" id="14_l85n3"]
+[ext_resource type="FontFile" uid="uid://ci1ffpjq1k6tn" path="res://assets/card/BadComic-Regular.ttf" id="16_54seb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_54seb"]
 resource_local_to_scene = true
@@ -310,11 +310,24 @@ shape = SubResource("RectangleShape2D_6u4wf")
 
 [node name="Label" type="Label" parent="."]
 offset_left = -123.0
-offset_top = -298.0
+offset_top = -70.0
 offset_right = 217.0
-offset_bottom = 38.0
+offset_bottom = 284.0
 label_settings = SubResource("LabelSettings_6u4wf")
 autowrap_mode = 2
+
+[node name="Image" type="TextureRect" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -94.0
+offset_top = -309.0
+offset_right = 186.0
+offset_bottom = -69.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
