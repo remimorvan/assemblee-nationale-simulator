@@ -333,7 +333,7 @@ grow_vertical = 2
 
 [node name="HoverSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("19_xuy1i")
-volume_db = -14.857
+volume_db = -5.571
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

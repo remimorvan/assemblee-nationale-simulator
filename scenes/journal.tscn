@@ -1,9 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://cpdinrv8yds4b"]
+[gd_scene load_steps=11 format=3 uid="uid://didoyh5qajy65"]
 
-[ext_resource type="Texture2D" uid="uid://bwcleh6chxn0h" path="res://assets/card/illustrations/random.png" id="1_ll4rq"]
-[ext_resource type="FontFile" uid="uid://usk4ucaxtgwp" path="res://assets/card/Monicacomic.ttf" id="2_ha22r"]
-[ext_resource type="FontFile" uid="uid://0pyo548st5e1" path="res://assets/card/BadComic-Regular.ttf" id="3_hlh6y"]
-[ext_resource type="AudioStream" uid="uid://cl3byex3m3brk" path="res://assets/sounds/JDSherbert - Tabletop Games SFX Pack - Paper Flip - 1.mp3" id="3_t4w66"]
+[ext_resource type="Texture2D" uid="uid://cm3iya3xuhoku" path="res://assets/card/illustrations/random.png" id="1_ll4rq"]
+[ext_resource type="FontFile" uid="uid://foful8cuop6y" path="res://assets/card/Monicacomic.ttf" id="2_ha22r"]
+[ext_resource type="FontFile" uid="uid://ci1ffpjq1k6tn" path="res://assets/card/BadComic-Regular.ttf" id="3_hlh6y"]
+[ext_resource type="AudioStream" uid="uid://b0dwe3bvfdf0o" path="res://assets/sounds/JDSherbert - Tabletop Games SFX Pack - Paper Flip - 1.mp3" id="3_t4w66"]
 
 [sub_resource type="GDScript" id="GDScript_qysr8"]
 script/source = "extends Node2D
@@ -44,7 +44,6 @@ script = SubResource("GDScript_qysr8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.55715, -0.435379)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_t4w66")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -96,5 +95,6 @@ autowrap_mode = 3
 
 [node name="JournalSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_t4w66")
+volume_db = -5.616
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
