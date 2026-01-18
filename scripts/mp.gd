@@ -45,7 +45,7 @@ func _ready() -> void:
 
 func animation_happy():
 	$Sprites/AnimationPlayer.queue("happy")
-	
+	$CPUParticles2D.restart()
 	
 func animation_unhappy():
 	$Sprites/AnimationPlayer.queue("unhappy")
