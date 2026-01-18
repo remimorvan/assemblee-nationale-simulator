@@ -1,6 +1,7 @@
 extends Node2D
 @onready var Deck: Node2D = $"../Deck"
 @onready var Journal: Control = $"../HBoxContainer/VBoxContainer/Journal"
+@onready var Hemicycle: Control = $"../HBoxContainer/Hemicycle"
 
 
 ## Ici c'est pour mettre les actions du joueur
@@ -115,6 +116,7 @@ func trigger_journal() -> void:
 	for mp in get_tree().get_nodes_in_group("MP"):
 		mp.present = true
 		mp.visible = true
+	Hemicycle.update_plot()
 	if special_event:
 		trigger_special_event(special_event["id"])
 		#print(special_event["title"])
