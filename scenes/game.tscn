@@ -25,14 +25,14 @@ size_flags_vertical = 0
 custom_minimum_size = Vector2(300, 1080)
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/VBoxContainer"]
+[node name="CalendarLabel" type="RichTextLabel" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 bbcode_enabled = true
 text = "[center][b][color=black][center][font_size=80]01[/font_size]
 [font_size=30]janvier 2026"
 fit_content = true
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer/RichTextLabel"]
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer/CalendarLabel"]
 z_index = -1
 layout_mode = 1
 anchors_preset = 15
