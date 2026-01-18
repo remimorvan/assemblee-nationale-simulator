@@ -165,7 +165,7 @@ func trigger_special_event(event: String) -> void:
 func trigger_journal() -> void:
 	# Reset present
 	$JournalSound.play()
-	$NewDaySound.attenuation = 5
+	$NewDaySound.attenuation = 4
 	$NewDaySound.play()
 	for mp in get_tree().get_nodes_in_group("MP"):
 		mp.present = true
