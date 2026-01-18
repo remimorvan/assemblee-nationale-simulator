@@ -83,9 +83,20 @@ func declare_special_event(event: String) -> void:
 	declared_special_event_this_turn = true
 	
 func trigger_special_event(event: String) -> void:
-	print("Special event : " + event)
+	if event == "indigestion":
+		for mp in get_tree().get_nodes_in_group("MP"):
+			var threshold: float = [0.2, 0.2, 0.2, 0.2, 0.65, 0.3][mp.group_id]
+			if rng.randf() < threshold:
+				mp.present = false
+				mp.visible = false
+	else:
+		print("TODO special event : " + event)
 	
 func trigger_journal() -> void:
+	# Reset present
+	for mp in get_tree().get_nodes_in_group("MP"):
+		mp.present = true
+		mp.visible = true
 	if special_event:
 		trigger_special_event(special_event)
 		special_event = null

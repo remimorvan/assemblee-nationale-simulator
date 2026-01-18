@@ -9,15 +9,21 @@ shader = ExtResource("3_8igwf")
 shader_parameter/highlighted_color = -1
 shader_parameter/party_values = PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 
-[node name="Hemicycle" type="Node2D"]
+[node name="Hemicycle" type="AspectRatioContainer"]
+ratio = 1.8
 script = ExtResource("1_22fab")
 mp_scene = ExtResource("2_8igwf")
 desk_color = Color(0.6646, 0.455872, 0.433702, 1)
 
+[node name="Background" type="ColorRect" parent="."]
+z_index = -1
+z_as_relative = false
+layout_mode = 2
+mouse_filter = 1
+
 [node name="TextureRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_hw2pa")
-offset_right = 1920.0
-offset_bottom = 1080.0
+layout_mode = 2
 mouse_filter = 1
 color = Color(1, 1, 1, 0)
 metadata/_edit_lock_ = true

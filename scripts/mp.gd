@@ -2,8 +2,10 @@ extends Node2D
 
 var seat_id: int # Seat number
 var group_id: int # Polotical group number
+var default_shirt_color
 #var affinity: Dictionary[String, float] # like social, french fries, economy
 var approval: float
+var present: bool = true
 
 @export var happy_color = Color(0.2,0.8,0.2,1.)
 @export var indifferent_color = Color(1.,1.,1.,1.)
@@ -25,9 +27,15 @@ func setup(_seat_id: int, _group_id: int, _approval: float) -> void:
 	seat_id = _seat_id
 	group_id = _group_id
 	approval = _approval
-	var body_color = party_colors[group_id]
-	$Sprites/body.modulate = Color(body_color.x, body_color.y, body_color.z, 0.5)+Color(0.1,0.1,0.1,0.1);
+	default_shirt_color = party_colors[group_id]
+	set_shirt_color(default_shirt_color)
 
+func set_shirt_color(clr):
+	# Apply change only on the back's shirt sprites.
+	for sprite in find_children("shirt_*"):
+		# Self modulate instead of modulate so the outlines stay black.
+		sprite.self_modulate = Color(clr.x, clr.y, clr.z, 0.5)+Color(0.1,0.1,0.1,0.1);
+		
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -41,6 +49,7 @@ func change_approval(qty: float) -> void:
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	# TODO : Update MP's head after player played a card, not at every frame !
 	$Sprites/head/face_happy.visible = false
 	$Sprites/head/face_neutral.visible = false
 	$Sprites/head/face_unhappy.visible = false
