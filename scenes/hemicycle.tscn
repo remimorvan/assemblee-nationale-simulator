@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://d1voxmvhe7xmt"]
+[gd_scene load_steps=5 format=3 uid="uid://d1voxmvhe7xmt"]
 
 [ext_resource type="Script" uid="uid://ca4vviiiv0rox" path="res://scripts/hemicycle.gd" id="1_22fab"]
 [ext_resource type="PackedScene" uid="uid://cuemgi5ynsxra" path="res://scenes/mp.tscn" id="2_8igwf"]
 [ext_resource type="Shader" uid="uid://dssfkivsy2mxu" path="res://assets/hemicycle/hemicycle.gdshader" id="3_8igwf"]
-[ext_resource type="Texture2D" uid="uid://cmapdig36yep5" path="res://assets/hemycicle.png" id="3_hw2pa"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hw2pa"]
 shader = ExtResource("3_8igwf")
@@ -16,11 +15,11 @@ script = ExtResource("1_22fab")
 mp_scene = ExtResource("2_8igwf")
 desk_color = Color(0.6646, 0.455872, 0.433702, 1)
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="ColorRect" parent="."]
 z_index = -1
 z_as_relative = false
 layout_mode = 2
-texture = ExtResource("3_hw2pa")
+mouse_filter = 1
 
 [node name="TextureRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_hw2pa")

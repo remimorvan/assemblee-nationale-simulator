@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://didoyh5qajy65"]
 
-[ext_resource type="Texture2D" uid="uid://ocewkypq0kcd" path="res://assets/journal.png" id="1_ih0ao"]
-[ext_resource type="Texture2D" uid="uid://diyjxm0wjvjgb" path="res://assets/card/illustrations/random.png" id="1_ll4rq"]
-[ext_resource type="FontFile" uid="uid://c4v45pul7umvp" path="res://assets/card/Monicacomic.ttf" id="2_ha22r"]
-[ext_resource type="FontFile" uid="uid://cewqm3af8k8sr" path="res://assets/card/BadComic-Regular.ttf" id="3_hlh6y"]
-[ext_resource type="AudioStream" uid="uid://ca6pcf1v8qdkf" path="res://assets/sounds/JDSherbert - Tabletop Games SFX Pack - Paper Flip - 1.mp3" id="3_t4w66"]
+[ext_resource type="Texture2D" uid="uid://50ewm1fuccmx" path="res://assets/journal.png" id="1_ih0ao"]
+[ext_resource type="Texture2D" uid="uid://bwcleh6chxn0h" path="res://assets/card/illustrations/random.png" id="1_ll4rq"]
+[ext_resource type="FontFile" uid="uid://usk4ucaxtgwp" path="res://assets/card/Monicacomic.ttf" id="2_ha22r"]
+[ext_resource type="FontFile" uid="uid://0pyo548st5e1" path="res://assets/card/BadComic-Regular.ttf" id="3_hlh6y"]
+[ext_resource type="AudioStream" uid="uid://cl3byex3m3brk" path="res://assets/sounds/JDSherbert - Tabletop Games SFX Pack - Paper Flip - 1.mp3" id="3_t4w66"]
 
 [sub_resource type="GDScript" id="GDScript_qysr8"]
 script/source = "extends Node2D
