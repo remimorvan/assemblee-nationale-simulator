@@ -116,10 +116,11 @@ func compute_group_approvals() -> Array[float]:
 	var res: Array[float] = [0., 0., 0., 0., 0., 0.]
 	var size: Array[int] = [0, 0, 0, 0, 0, 0]
 	for mp in get_tree().get_nodes_in_group("MP"):
+		if not mp.present:
+			continue
 		var pol_group = mp.group_id
 		size[pol_group] += 1
-		if mp.approval >= 0:
-			res[pol_group] += 1.
+		res[pol_group] += clamp(mp.approval/2., -1.0, 1.0)
 	for i in range(6):
 		res[i] /= float(size[i])
 	return res
@@ -129,6 +130,8 @@ func compute_group_approvals() -> Array[float]:
 func compute_number_approvals() -> Array[int]:
 	var res: Array[int] = [0,0,0]
 	for mp in get_tree().get_nodes_in_group("MP"):
+		if not mp.present:
+			continue
 		if mp.approval > 1:
 			res[0] += 1
 		elif mp.approval < -1:
@@ -179,8 +182,8 @@ func new_mp(seat: int) -> int:	# returns number of the political party of mp
 	else:
 		mp.position = cell_to_uv(float(y) + 0.5, float(x) + 0.5)
 	#mp.position = cell_to_uv(float(y) + 0.5,float(x) + 0.5)
-	mp.scale.x = 0.7
-	mp.scale.y = 0.7
+	mp.scale.x = 0.6
+	mp.scale.y = 0.6
 	
 	return group_id
 	# et pour suprimer :
