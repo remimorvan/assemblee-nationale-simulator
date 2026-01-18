@@ -1,16 +1,17 @@
-[gd_scene load_steps=16 format=3 uid="uid://cuemgi5ynsxra"]
+[gd_scene load_steps=18 format=3 uid="uid://cuemgi5ynsxra"]
 
 [ext_resource type="Script" uid="uid://bmafpymoftg2i" path="res://scripts/mp.gd" id="1_ct13o"]
-[ext_resource type="Texture2D" uid="uid://dxexwku2uudid" path="res://assets/MP/MP_body_back.png" id="2_j8m2g"]
-[ext_resource type="Texture2D" uid="uid://d200mm6wj6a2g" path="res://assets/MP/MP_head.png" id="3_fvh1l"]
-[ext_resource type="Texture2D" uid="uid://b76kajw6n283x" path="res://assets/MP/MP_body_line.png" id="3_pu06k"]
-[ext_resource type="Texture2D" uid="uid://bsd2ep8d27gs4" path="res://assets/MP/MP_face_2.png" id="4_5chnr"]
-[ext_resource type="Texture2D" uid="uid://i3h41donjvdr" path="res://assets/MP/MP_arm_2_back.png" id="4_fvuhw"]
-[ext_resource type="Texture2D" uid="uid://tuinqhstkx1r" path="res://assets/MP/MP_arm_2_line.png" id="5_b5mkm"]
-[ext_resource type="Texture2D" uid="uid://bwhr3ycsbf35c" path="res://assets/MP/MP_face_1.png" id="5_qn7e5"]
-[ext_resource type="Texture2D" uid="uid://cs10gh3k4ls22" path="res://assets/MP/MP_face_0.png" id="6_adhds"]
-[ext_resource type="Texture2D" uid="uid://di1rtl2isbcn0" path="res://assets/MP/MP_arm_1_back.png" id="6_bcrho"]
-[ext_resource type="Texture2D" uid="uid://bhtwuxaegdgdm" path="res://assets/MP/MP_arm_1_line.png" id="7_cuwxu"]
+[ext_resource type="Texture2D" uid="uid://ct4br5cgtvoam" path="res://assets/MP/MP_body_back.png" id="2_j8m2g"]
+[ext_resource type="Texture2D" uid="uid://bowiloglvbap4" path="res://assets/MP/MP_head.png" id="3_fvh1l"]
+[ext_resource type="Texture2D" uid="uid://bo1pdk307lyph" path="res://assets/MP/MP_body_line.png" id="3_pu06k"]
+[ext_resource type="Texture2D" uid="uid://c4nbshxnubr6y" path="res://assets/MP/MP_face_2.png" id="4_5chnr"]
+[ext_resource type="Texture2D" uid="uid://c1iin7xfe41vs" path="res://assets/MP/MP_arm_2_back.png" id="4_fvuhw"]
+[ext_resource type="Texture2D" uid="uid://jbuv0m05dint" path="res://assets/MP/MP_arm_2_line.png" id="5_b5mkm"]
+[ext_resource type="Texture2D" uid="uid://bhl7rac0prdxh" path="res://assets/MP/MP_face_1.png" id="5_qn7e5"]
+[ext_resource type="Texture2D" uid="uid://5ls1tss1gclc" path="res://assets/MP/MP_face_0.png" id="6_adhds"]
+[ext_resource type="Texture2D" uid="uid://bbjrr2ov6u44s" path="res://assets/MP/MP_arm_1_back.png" id="6_bcrho"]
+[ext_resource type="Texture2D" uid="uid://dn035icju2rkn" path="res://assets/MP/MP_arm_1_line.png" id="7_cuwxu"]
+[ext_resource type="Texture2D" uid="uid://oih31xjlprmi" path="res://assets/MP/particle_plus.png" id="12_pu06k"]
 
 [sub_resource type="Animation" id="Animation_j8m2g"]
 length = 0.001
@@ -135,6 +136,9 @@ _data = {
 &"unhappy": SubResource("Animation_fvuhw")
 }
 
+[sub_resource type="Gradient" id="Gradient_pu06k"]
+colors = PackedColorArray(0, 0.717647, 0, 1, 1, 1, 1, 0)
+
 [node name="MP" type="Node2D" groups=["MP"]]
 script = ExtResource("1_ct13o")
 
@@ -181,3 +185,20 @@ texture = ExtResource("5_qn7e5")
 libraries = {
 &"": SubResource("AnimationLibrary_b5mkm")
 }
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(-0.519999, -55)
+scale = Vector2(1, 1)
+emitting = false
+amount = 1
+texture = ExtResource("12_pu06k")
+lifetime = 2.0
+one_shot = true
+explosiveness = 0.25
+local_coords = true
+direction = Vector2(0, -1)
+spread = 20.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 237.8
+initial_velocity_max = 237.8
+color_ramp = SubResource("Gradient_pu06k")
