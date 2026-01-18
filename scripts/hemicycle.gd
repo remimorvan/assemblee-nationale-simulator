@@ -10,6 +10,8 @@ extends AspectRatioContainer
 var width: int = 19
 var height: int = 13
 
+const yoffset = 0.15
+
 var group_repartition: Array[int] = [
 	81,
 	47,
@@ -75,15 +77,17 @@ func _ready() -> void:
 				point = cell_to_uv(float(j)+0.5, float(i) + bar_height)
 			else:
 				point = cell_to_uv(float(j), float(i) + bar_height)
+			point -= Vector2(0., yoffset*size.y)
 			line.add_point(point)
 			
 		# last bar
 		var point: Vector2
 		if (i % 2 == 1):
-			point = cell_to_uv(float(width)+0.5, float(i) + bar_height)
+			point = cell_to_uv(float(width)+0.5, float(i) + bar_height + yoffset)
 		else:
-			point = cell_to_uv(float(width), float(i) + bar_height)
-		line.add_point(point)
+			point = cell_to_uv(float(width), float(i) + bar_height + yoffset)
+		point -= Vector2(0., yoffset*size.y)
+		line.add_point(point)	
 
 		line.default_color = desk_color
 		line.width = 14.0
@@ -171,7 +175,7 @@ func new_mp(seat: int) -> int:	# returns number of the political party of mp
 	# ajoute le mp dans l'arbre. (nécessaire pour qu'il soit dans le jeu
 	add_child(mp)
 	
-	mp.z_index = 2*(height-x);
+	mp.z_index = 2*(height-x)
 	
 	var viewport_size: Vector2i = get_viewport().get_visible_rect().size
 	var center = Vector2(viewport_size)/2.
@@ -181,6 +185,8 @@ func new_mp(seat: int) -> int:	# returns number of the political party of mp
 		mp.position = cell_to_uv(y+1, float(x)+0.5)
 	else:
 		mp.position = cell_to_uv(float(y) + 0.5, float(x) + 0.5)
+	mp.position -= Vector2(0., yoffset*size.y)
+		
 	#mp.position = cell_to_uv(float(y) + 0.5,float(x) + 0.5)
 	mp.scale.x = 0.6
 	mp.scale.y = 0.6

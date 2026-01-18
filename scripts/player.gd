@@ -38,12 +38,14 @@ func _process(delta: float) -> void:
 
 func print_hand() -> void:
 	var card_nb: int = 0;
-	var viewport_size: Vector2i = get_viewport().get_visible_rect().size
-	for card in hand:
-		var card_size = card.get_node("Sprite2D").texture.get_size()
-		card.position.x = viewport_size[0]/2.0 + (card_nb - (len(hand)-1)/2.0)*(card_size[0]*1.2)
-		card.position.y = 1000 
-		card_nb+=1
+	var viewport_size: Vector2i = $"../HBoxContainer/Hemicycle".get_size()
+	for i in range(len(hand)):
+		var card = hand[i]
+		var card_size = card.get_node("Sprite2D").texture.get_size()*card.scale.x
+		card.position.x = viewport_size[0]/2.0 + (i - (len(hand)-1)/2.0)*(card_size[0]*1.2)
+		card.position.y = 830
+		card.rotation_degrees = (i-1)*5
+		card.z_index = i+100
 
 func remove_card_from_hand(card: Area2D) -> int:
 	var card_nb: int = 0
@@ -122,10 +124,16 @@ func trigger_special_event(event: String) -> void:
 		"deficit":
 			for mp in get_tree().get_nodes_in_group("MP"):
 				mp.change_approval(-1)
+		"collumbus_day":
+			for mp in get_tree().get_nodes_in_group("MP"):
+				var threshold: float = [0.0, 0.0, 0.3, 0.6, 0.1, 0.0][mp.group_id]
+				if rng.randf() < threshold:
+					mp.present = false
+					mp.visible = false
 		"convention_citoyenne":
 			put_card_back_in_hand()
 			add_custom_card_to_hand(
-				"Ignorer les propositions de la convention citoyenne sur le climat.",
+				"Ignorer les propositions de la convention citoyenne sur le climat",
 				{"lfi": -1.5, "eco": -2, "soc": -1.5, "macron": 0, "lr": 0, "rn": 0},
 				{"lfi": 0.1, "eco": 0.1, "soc": 0.1, "macron": 0.2, "lr": 0.2, "rn": 0.2},
 				"ecology.png"
@@ -135,6 +143,22 @@ func trigger_special_event(event: String) -> void:
 				mp.change_approval(delta)
 		"mediapart":
 			incr_nb_card_played()
+		"groenland":
+			for mp in get_tree().get_nodes_in_group("MP"):
+				mp.change_approval(-100)
+			var votes: Array[int] = [0, 0, 0];
+			for mp in get_tree().get_nodes_in_group("MP"):
+				votes[mp.get_final_vote()+1] += 1
+				await mp.do_final_animation(mp.get_final_vote())
+			print("DÉFAITE !")
+		"barrage":
+			put_card_back_in_hand()
+			add_custom_card_to_hand(
+				"Annoncer à la gauche que leur vote vous oblige.",
+				{"lfi": 0.6, "eco": 0.7, "soc": 1.0, "macron": 0.5, "lr": 0.0, "rn": 0.0},
+				{"lfi": 0.2, "eco": 0.2, "soc": 0.2, "macron": 0.2, "lr": 0.0, "rn": 0.0},
+				"random.png"
+			)
 		_:
 			print("TODO special event : " + event)
 	
@@ -151,6 +175,7 @@ func trigger_journal() -> void:
 		trigger_special_event(special_event["id"])
 		special_event = null
 		declared_special_event_this_turn = false
+		Hemicycle.update_plot()
 	if get_current_day() == nb_days_before_vote:
 		var votes: Array[int] = [0, 0, 0];
 		for mp in get_tree().get_nodes_in_group("MP"):
