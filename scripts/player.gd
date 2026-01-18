@@ -141,6 +141,14 @@ func trigger_special_event(event: String) -> void:
 				mp.change_approval(delta)
 		"mediapart":
 			incr_nb_card_played()
+		"groenland":
+			for mp in get_tree().get_nodes_in_group("MP"):
+				mp.change_approval(-100)
+			var votes: Array[int] = [0, 0, 0];
+			for mp in get_tree().get_nodes_in_group("MP"):
+				votes[mp.get_final_vote()+1] += 1
+				await mp.do_final_animation(mp.get_final_vote())
+			print("DÉFAITE !")
 		_:
 			print("TODO special event : " + event)
 	
