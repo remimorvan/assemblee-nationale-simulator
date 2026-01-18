@@ -1,11 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://cuemgi5ynsxra"]
+[gd_scene load_steps=16 format=3 uid="uid://cuemgi5ynsxra"]
 
 [ext_resource type="Script" uid="uid://bmafpymoftg2i" path="res://scripts/mp.gd" id="1_ct13o"]
-[ext_resource type="Texture2D" uid="uid://bg4jav1xk1e42" path="res://assets/MP/MP_body.png" id="2_0tc44"]
-[ext_resource type="Texture2D" uid="uid://cmd3lulfuitlo" path="res://assets/MP/MP_head.png" id="3_fvh1l"]
-[ext_resource type="Texture2D" uid="uid://chww6mvugwfct" path="res://assets/MP/MP_face_2.png" id="4_5chnr"]
-[ext_resource type="Texture2D" uid="uid://bndx3xk0a5lc" path="res://assets/MP/MP_face_1.png" id="5_qn7e5"]
-[ext_resource type="Texture2D" uid="uid://lhh6wjkmx3kw" path="res://assets/MP/MP_face_0.png" id="6_adhds"]
+[ext_resource type="Texture2D" uid="uid://dxexwku2uudid" path="res://assets/MP/MP_body_back.png" id="2_j8m2g"]
+[ext_resource type="Texture2D" uid="uid://d200mm6wj6a2g" path="res://assets/MP/MP_head.png" id="3_fvh1l"]
+[ext_resource type="Texture2D" uid="uid://b76kajw6n283x" path="res://assets/MP/MP_body_line.png" id="3_pu06k"]
+[ext_resource type="Texture2D" uid="uid://bsd2ep8d27gs4" path="res://assets/MP/MP_face_2.png" id="4_5chnr"]
+[ext_resource type="Texture2D" uid="uid://i3h41donjvdr" path="res://assets/MP/MP_arm_2_back.png" id="4_fvuhw"]
+[ext_resource type="Texture2D" uid="uid://tuinqhstkx1r" path="res://assets/MP/MP_arm_2_line.png" id="5_b5mkm"]
+[ext_resource type="Texture2D" uid="uid://bwhr3ycsbf35c" path="res://assets/MP/MP_face_1.png" id="5_qn7e5"]
+[ext_resource type="Texture2D" uid="uid://cs10gh3k4ls22" path="res://assets/MP/MP_face_0.png" id="6_adhds"]
+[ext_resource type="Texture2D" uid="uid://di1rtl2isbcn0" path="res://assets/MP/MP_arm_1_back.png" id="6_bcrho"]
+[ext_resource type="Texture2D" uid="uid://bhtwuxaegdgdm" path="res://assets/MP/MP_arm_1_line.png" id="7_cuwxu"]
 
 [sub_resource type="Animation" id="Animation_j8m2g"]
 length = 0.001
@@ -24,7 +29,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("body:skew")
+tracks/1/path = NodePath("shirt_body:skew")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -36,7 +41,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("body:scale")
+tracks/2/path = NodePath("shirt_body:scale")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -87,7 +92,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("body:scale")
+tracks/1/path = NodePath("shirt_body:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -137,9 +142,24 @@ script = ExtResource("1_ct13o")
 position = Vector2(0, -55)
 scale = Vector2(0.519999, 0.519999)
 
-[node name="body" type="Sprite2D" parent="Sprites"]
+[node name="shirt_body" type="Sprite2D" parent="Sprites"]
 position = Vector2(3.84616, 107.693)
-texture = ExtResource("2_0tc44")
+texture = ExtResource("2_j8m2g")
+
+[node name="body_outline" type="Sprite2D" parent="Sprites/shirt_body"]
+texture = ExtResource("3_pu06k")
+
+[node name="shirt_left_arm" type="Sprite2D" parent="Sprites/shirt_body"]
+texture = ExtResource("4_fvuhw")
+
+[node name="outline" type="Sprite2D" parent="Sprites/shirt_body/shirt_left_arm"]
+texture = ExtResource("5_b5mkm")
+
+[node name="shirt_right_arm" type="Sprite2D" parent="Sprites/shirt_body"]
+texture = ExtResource("6_bcrho")
+
+[node name="outline" type="Sprite2D" parent="Sprites/shirt_body/shirt_right_arm"]
+texture = ExtResource("7_cuwxu")
 
 [node name="head" type="Sprite2D" parent="Sprites"]
 position = Vector2(-1, 0)

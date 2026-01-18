@@ -1,9 +1,11 @@
-extends Node2D
+extends AspectRatioContainer
 
 @export var mp_scene:PackedScene # Utile pour instancier des MP
 @export var desk_color:Color
+
 @onready var Plot: Control = $"../VBoxContainer/Plot"
 @onready var TextStats: Control = $"../VBoxContainer/TextStats"
+@onready var Background =$Background
 
 var width: int = 19
 var height: int = 13
@@ -41,7 +43,9 @@ func cell_to_uv(cellx: float, celly: float) -> Vector2:
 	var r = (projectedy + 2.) * 0.5
 	var angle = ((projectedx*0.1 + 0.2) * 2. - 1.) * PI
 	
-	var viewport_size: Vector2i = get_viewport().get_visible_rect().size
+	#var viewport_size: Vector2i = get_viewport().get_visible_rect().size
+	var viewport_size: Vector2i = self.get_size()
+	print(viewport_size)
 	
 	var UV = Vector2(cos(angle), sin(angle)) * r + cycle_center
 	#return UV*100. + viewport_size/2.

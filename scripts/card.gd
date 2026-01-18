@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var Player: Node2D = $"../../Player"
 @onready var Deck: Node2D = $"../../Deck"
-@onready var Hemicycle: Node2D = $"../../Hemicycle"
+@onready var Hemicycle: AspectRatioContainer = $"../../HBoxContainer/Hemicycle"
 
 var text: String # Text of the card
 var effect_mean: Dictionary[String, float] # political group -> mean effect

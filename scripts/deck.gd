@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var card:PackedScene # Utile pour instancier des MP
-@onready var Hemicycle: Node2D = $"../Hemicycle"
+@onready var Hemicycle: AspectRatioContainer = $"../HBoxContainer/Hemicycle"
 
 var all_cards: Array[Node2D] = []
 var PoliticalGroup: Array[String] = ["lfi", "eco", "soc", "macron", "lr", "rn"]
