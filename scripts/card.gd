@@ -72,6 +72,9 @@ func get_approval_change(political_group: String) -> float:
 	return rng.randfn(effect_mean[political_group], effect_std[political_group]) 
 
 func _on_mouse_entered() -> void:
+	print("hey")
+	$HoverSound.play()
+	
 	# put in front
 	old_z_index = self.z_index
 	if old_position_y == null: 
