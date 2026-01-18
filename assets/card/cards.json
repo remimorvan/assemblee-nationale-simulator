@@ -1,5 +1,21 @@
 [
 	{
+		"text": "Proposer une convention citoyenne pour le climat.",
+		"effects": {
+			"lfi": [0.5, 0.2],
+			"eco": [0.5, 0.2],
+			"soc": [0.5, 0.4],
+			"macron": [1, 0.1],
+			"lr": [0.4, 0.2],
+			"rn": [0.4, 0.2]
+		},
+		"image_path": "ecology.png",
+		"quote": "",
+		"special_event": "convention_citoyenne",
+		"special_event_title": "Convention citoyenne : les résultats !",
+		"special_event_descr": "150 volontaires tirés au hasard se sont réunis pour la convention citoyenne. Leurs conclusions sont unanimes et ambitieuses : limiter l'usage individuel de la voiture, rendre obligatoire la rénovation énergétique des bâtiments à moyenne terme, réglementer les méthodes de pèche, etc. Euphorie sur les bancs de la gauche… mais le premier ministre suivra-t-il les propositions de la convention ?"
+	},
+	{
 		"text": "Doubler les portions de frites à la cantine de l'Assemblée.",
 		"effects": {
 			"lfi": [0.4, 0.4],
@@ -291,7 +307,7 @@
 		"quote": "Oops"
 	},
 	{
-		"text": "Constater en France que les veuves vivent plus longtemps que leurs maris",
+		"text": "Constater en France que les veuves vivent plus longtemps que leurs maris.",
 		"effects": {
 			"lfi": [0, 0.1],
 			"eco": [0, 0.1],
@@ -396,22 +412,6 @@
 		},
 		"image_path": "money.png",
 		"quote": ""
-	},
-	{
-		"text": "Proposer une convention citoyenne pour le climat.",
-		"effects": {
-			"lfi": [0.5, 0.2],
-			"eco": [0.5, 0.2],
-			"soc": [0.5, 0.4],
-			"macron": [1, 0.1],
-			"lr": [0.4, 0.2],
-			"rn": [0.4, 0.2]
-		},
-		"image_path": "ecology.png",
-		"quote": "",
-		"special_event": "convention_citoyenne",
-		"special_event_title": "Convention citoyenne : les résultats !",
-		"special_event_descr": "150 volontaires tirés au hasard se sont réunis pour la convention citoyenne. Leurs conclusions n'allant pas dans le sens du gouvernement, celui-ci a décidé d'enterrer leurs propositions. Tollé sur les bancs de la gauche."
 	},
 	{
 		"text": "Augmenter les APL de 10%",

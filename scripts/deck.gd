@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var card:PackedScene # Utile pour instancier des MP
+@export var card: PackedScene # Utile pour instancier des MP
 @onready var Hemicycle: AspectRatioContainer = $"../HBoxContainer/Hemicycle"
 
 var all_cards: Array[Node2D] = []

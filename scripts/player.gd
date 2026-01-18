@@ -2,6 +2,7 @@ extends Node2D
 @onready var Deck: Node2D = $"../Deck"
 @onready var Journal: Control = $"../HBoxContainer/VBoxContainer/Journal"
 @onready var Hemicycle: Control = $"../HBoxContainer/Hemicycle"
+@export var card: PackedScene
 
 
 ## Ici c'est pour mettre les actions du joueur
@@ -12,6 +13,8 @@ var transition_between_days: bool = false
 var rng = RandomNumberGenerator.new() 
 var special_event # string or null
 var declared_special_event_this_turn: bool = false
+const nb_days_before_vote: int = 5
+var last_card_changed: int = 0
 
 func has_special_card_in_hand() -> bool:
 	for card in hand:
@@ -49,6 +52,7 @@ func remove_card_from_hand(card: Area2D) -> int:
 			break
 		card_nb += 1
 	remove_child(card)
+	last_card_changed = card_nb
 	return card_nb
 
 func change_random_card(other_card: int) -> void:
@@ -59,11 +63,26 @@ func change_random_card(other_card: int) -> void:
 	removed_card_pos = arr[removed_card_pos]
 	remove_card_from_hand(hand[removed_card_pos])
 	add_card_to_hand(removed_card_pos)
+	last_card_changed = removed_card_pos
 
 func add_card_to_hand(card_pos: int) -> void:
 	var new_card: Area2D = Deck.get_new_card(has_special_card_in_hand() or declared_special_event_this_turn)
 	add_child(new_card)
 	hand.insert(card_pos, new_card)
+	print_hand()
+	last_card_changed = card_pos
+
+func put_card_back_in_hand() -> void:
+	var old_card = hand.pop_at(last_card_changed)
+	Deck.all_cards.insert(0, old_card)
+	remove_child(old_card)
+	print_hand()
+
+func add_custom_card_to_hand(text: String, effects_mean: Dictionary[String, float], effects_std: Dictionary[String, float], image_path: String) -> void:
+	var new_card = card.instantiate()
+	new_card.setup(text, effects_mean, effects_std, image_path, null, null, null)
+	hand.insert(last_card_changed, new_card)
+	add_child(new_card)
 	print_hand()
 
 func get_current_day() -> int:
@@ -103,8 +122,15 @@ func trigger_special_event(event: String) -> void:
 			for mp in get_tree().get_nodes_in_group("MP"):
 				mp.change_approval(-1)
 		"convention_citoyenne":
+			put_card_back_in_hand()
+			add_custom_card_to_hand(
+				"Ignorer les propositions de la convention citoyenne sur le climat",
+				{"lfi": -1.5, "eco": -2, "soc": -1.5, "macron": 0, "lr": 0, "rn": 0},
+				{"lfi": 0.1, "eco": 0.1, "soc": 0.1, "macron": 0.2, "lr": 0.2, "rn": 0.2},
+				"ecology.png"
+			)
 			for mp in get_tree().get_nodes_in_group("MP"):
-				var delta: float = [-1, -1, -1, 0, 0, 0][mp.group_id]
+				var delta: float = [1, 1, 1, 0, 0, 0][mp.group_id]
 				mp.change_approval(delta)
 		"mediapart":
 			incr_nb_card_played()
@@ -118,10 +144,8 @@ func trigger_journal() -> void:
 		mp.visible = true
 	Hemicycle.update_plot()
 	if special_event:
-		trigger_special_event(special_event["id"])
-		#print(special_event["title"])
-		#print(special_event["description"])
 		Journal.update(special_event["title"],special_event["description"],"")
+		trigger_special_event(special_event["id"])
 		special_event = null
 		declared_special_event_this_turn = false
 	print("TODO: JOURNAL")
