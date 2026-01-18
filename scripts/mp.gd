@@ -34,7 +34,7 @@ func set_shirt_color(clr):
 	# Apply change only on the back's shirt sprites.
 	for sprite in find_children("shirt_*"):
 		# Self modulate instead of modulate so the outlines stay black.
-		sprite.self_modulate = Color(clr.x, clr.y, clr.z, 0.5)+Color(0.1,0.1,0.1,0.1);
+		sprite.self_modulate = Color(clr.x, clr.y, clr.z, 1.).lightened(0.55);
 		
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -48,260 +48,84 @@ script = ExtResource("1_d81rb")
 
 [node name="Sprite2D" type="Sprite2D" parent="." groups=["card_asset"]]
 material = SubResource("ShaderMaterial_54seb")
-position = Vector2(91, 0)
 texture = ExtResource("2_6u4wf")
 
-[node name="MarginContainer" type="MarginContainer" parent="Sprite2D"]
-offset_left = -246.0
-offset_top = -318.0
-offset_right = 106.0
-offset_bottom = 2042.0
+[node name="Logos" type="VBoxContainer" parent="Sprite2D"]
+offset_left = -236.0
+offset_top = -310.0
+offset_right = 34.0
+offset_bottom = 1971.0
 scale = Vector2(0.27, 0.27)
 
-[node name="Logos" type="VBoxContainer" parent="Sprite2D/MarginContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-
-[node name="lfi" type="HBoxContainer" parent="Sprite2D/MarginContainer/Logos"]
-layout_mode = 2
-size_flags_vertical = 6
-
-[node name="lfi" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/lfi" groups=["card_asset"]]
+[node name="lfi" type="TextureRect" parent="Sprite2D/Logos" groups=["card_asset"]]
 material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 2
-size_flags_vertical = 6
 texture = ExtResource("3_42b55")
-stretch_mode = 2
 
-[node name="lfi" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/lfi/lfi" groups=["card_asset"]]
+[node name="lfi" type="TextureRect" parent="Sprite2D/Logos/lfi" groups=["card_asset"]]
 material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 0
 texture = ExtResource("4_xjciw")
 
-[node name="PlusMinus" type="VBoxContainer" parent="Sprite2D/MarginContainer/Logos/lfi"]
-layout_mode = 2
-
-[node name="plus1" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/lfi/PlusMinus"]
-layout_mode = 2
-texture = ExtResource("6_3ydx5")
-
-[node name="plus2" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/lfi/PlusMinus"]
-visible = false
-layout_mode = 2
-texture = ExtResource("6_3ydx5")
-
-[node name="minus1" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/lfi/PlusMinus"]
-visible = false
-layout_mode = 2
-texture = ExtResource("7_xuy1i")
-
-[node name="minus2" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/lfi/PlusMinus"]
-visible = false
-layout_mode = 2
-texture = ExtResource("7_xuy1i")
-
-[node name="eco" type="HBoxContainer" parent="Sprite2D/MarginContainer/Logos"]
-layout_mode = 2
-size_flags_vertical = 6
-
-[node name="eco" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/eco" groups=["card_asset"]]
+[node name="eco" type="TextureRect" parent="Sprite2D/Logos" groups=["card_asset"]]
 material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 2
-size_flags_vertical = 6
 texture = ExtResource("5_54seb")
-stretch_mode = 2
 
-[node name="eco" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/eco/eco" groups=["card_asset"]]
+[node name="eco" type="TextureRect" parent="Sprite2D/Logos/eco" groups=["card_asset"]]
 material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 0
 texture = ExtResource("6_v23hl")
 
-[node name="PlusMinus" type="VBoxContainer" parent="Sprite2D/MarginContainer/Logos/eco"]
-layout_mode = 2
-
-[node name="plus1" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/eco/PlusMinus"]
-visible = false
-layout_mode = 2
-texture = ExtResource("6_3ydx5")
-
-[node name="plus2" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/eco/PlusMinus"]
-visible = false
-layout_mode = 2
-texture = ExtResource("6_3ydx5")
-
-[node name="minus1" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/eco/PlusMinus"]
-visible = false
-layout_mode = 2
-texture = ExtResource("7_xuy1i")
-
-[node name="minus2" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/eco/PlusMinus"]
-visible = false
-layout_mode = 2
-texture = ExtResource("7_xuy1i")
-
-[node name="soc" type="HBoxContainer" parent="Sprite2D/MarginContainer/Logos"]
-layout_mode = 2
-size_flags_vertical = 6
-
-[node name="soc" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/soc" groups=["card_asset"]]
+[node name="soc" type="TextureRect" parent="Sprite2D/Logos" groups=["card_asset"]]
 material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 2
-size_flags_vertical = 6
 texture = ExtResource("7_3ydx5")
-stretch_mode = 2
 
-[node name="soc" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/soc/soc" groups=["card_asset"]]
+[node name="soc" type="TextureRect" parent="Sprite2D/Logos/soc" groups=["card_asset"]]
 material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 0
 texture = ExtResource("8_xuy1i")
 
-[node name="PlusMinus" type="VBoxContainer" parent="Sprite2D/MarginContainer/Logos/soc"]
-layout_mode = 2
-
-[node name="plus1" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/soc/PlusMinus"]
-visible = false
-layout_mode = 2
-texture = ExtResource("6_3ydx5")
-
-[node name="plus2" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/soc/PlusMinus"]
-visible = false
-layout_mode = 2
-texture = ExtResource("6_3ydx5")
-
-[node name="minus1" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/soc/PlusMinus"]
-layout_mode = 2
-texture = ExtResource("7_xuy1i")
-
-[node name="minus2" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/soc/PlusMinus"]
-layout_mode = 2
-texture = ExtResource("7_xuy1i")
-
-[node name="macron" type="HBoxContainer" parent="Sprite2D/MarginContainer/Logos"]
-layout_mode = 2
-size_flags_vertical = 6
-
-[node name="macron" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/macron" groups=["card_asset"]]
+[node name="macron" type="TextureRect" parent="Sprite2D/Logos" groups=["card_asset"]]
 material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 2
-size_flags_vertical = 6
 texture = ExtResource("9_rywyy")
-stretch_mode = 2
 
-[node name="macron" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/macron/macron" groups=["card_asset"]]
+[node name="macron" type="TextureRect" parent="Sprite2D/Logos/macron" groups=["card_asset"]]
 material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 0
 texture = ExtResource("10_le4ky")
 
-[node name="PlusMinus" type="VBoxContainer" parent="Sprite2D/MarginContainer/Logos/macron"]
-layout_mode = 2
-
-[node name="plus1" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/macron/PlusMinus"]
-visible = false
-layout_mode = 2
-texture = ExtResource("6_3ydx5")
-
-[node name="plus2" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/macron/PlusMinus"]
-visible = false
-layout_mode = 2
-texture = ExtResource("6_3ydx5")
-
-[node name="minus1" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/macron/PlusMinus"]
-visible = false
-layout_mode = 2
-texture = ExtResource("7_xuy1i")
-
-[node name="minus2" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/macron/PlusMinus"]
-visible = false
-layout_mode = 2
-texture = ExtResource("7_xuy1i")
-
-[node name="lr" type="HBoxContainer" parent="Sprite2D/MarginContainer/Logos"]
-layout_mode = 2
-size_flags_vertical = 6
-
-[node name="lr" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/lr" groups=["card_asset"]]
+[node name="lr" type="TextureRect" parent="Sprite2D/Logos" groups=["card_asset"]]
 material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 2
-size_flags_vertical = 6
 texture = ExtResource("11_125j1")
-stretch_mode = 2
 
-[node name="lr" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/lr/lr" groups=["card_asset"]]
+[node name="lr" type="TextureRect" parent="Sprite2D/Logos/lr" groups=["card_asset"]]
 material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 0
 texture = ExtResource("12_b834i")
 
-[node name="PlusMinus" type="VBoxContainer" parent="Sprite2D/MarginContainer/Logos/lr"]
-layout_mode = 2
-
-[node name="plus1" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/lr/PlusMinus"]
-visible = false
-layout_mode = 2
-texture = ExtResource("6_3ydx5")
-
-[node name="plus2" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/lr/PlusMinus"]
-visible = false
-layout_mode = 2
-texture = ExtResource("6_3ydx5")
-
-[node name="minus1" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/lr/PlusMinus"]
-visible = false
-layout_mode = 2
-texture = ExtResource("7_xuy1i")
-
-[node name="minus2" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/lr/PlusMinus"]
-visible = false
-layout_mode = 2
-texture = ExtResource("7_xuy1i")
-
-[node name="fachos" type="HBoxContainer" parent="Sprite2D/MarginContainer/Logos"]
-layout_mode = 2
-size_flags_vertical = 6
-
-[node name="fachos" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/fachos" groups=["card_asset"]]
+[node name="fachos" type="TextureRect" parent="Sprite2D/Logos" groups=["card_asset"]]
 material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 2
-size_flags_vertical = 6
 texture = ExtResource("13_07urr")
-stretch_mode = 2
 
-[node name="fachos" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/fachos/fachos" groups=["card_asset"]]
+[node name="fachos" type="TextureRect" parent="Sprite2D/Logos/fachos" groups=["card_asset"]]
 material = SubResource("ShaderMaterial_xjciw")
 layout_mode = 0
 texture = ExtResource("14_l85n3")
-
-[node name="PlusMinus" type="VBoxContainer" parent="Sprite2D/MarginContainer/Logos/fachos"]
-layout_mode = 2
-
-[node name="plus1" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/fachos/PlusMinus"]
-visible = false
-layout_mode = 2
-texture = ExtResource("6_3ydx5")
-
-[node name="plus2" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/fachos/PlusMinus"]
-visible = false
-layout_mode = 2
-texture = ExtResource("6_3ydx5")
-
-[node name="minus1" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/fachos/PlusMinus"]
-visible = false
-layout_mode = 2
-texture = ExtResource("7_xuy1i")
-
-[node name="minus2" type="TextureRect" parent="Sprite2D/MarginContainer/Logos/fachos/PlusMinus"]
-visible = false
-layout_mode = 2
-texture = ExtResource("7_xuy1i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource("RectangleShape2D_6u4wf")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -29.0
-offset_top = -300.0
-offset_right = 311.0
-offset_bottom = 36.0
+offset_left = -123.0
+offset_top = -298.0
+offset_right = 217.0
+offset_bottom = 38.0
 label_settings = SubResource("LabelSettings_6u4wf")
 autowrap_mode = 2
 
