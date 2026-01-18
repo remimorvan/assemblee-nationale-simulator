@@ -69,6 +69,10 @@ func change_random_card(other_card: int) -> void:
 	last_card_changed = removed_card_pos
 
 func add_card_to_hand(card_pos: int) -> void:
+	if randf() > 0.5:
+		$Deal1.play()
+	else:
+		$Deal2.play()
 	var new_card: Area2D = Deck.get_new_card(has_special_card_in_hand() or declared_special_event_this_turn)
 	add_child(new_card)
 	hand.insert(card_pos, new_card)
@@ -160,6 +164,9 @@ func trigger_special_event(event: String) -> void:
 	
 func trigger_journal() -> void:
 	# Reset present
+	$JournalSound.play()
+	$NewDaySound.attenuation = 5
+	$NewDaySound.play()
 	for mp in get_tree().get_nodes_in_group("MP"):
 		mp.present = true
 		mp.visible = true

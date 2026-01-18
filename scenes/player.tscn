@@ -1,10 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://bf3fndiyasfyq"]
+[gd_scene load_steps=7 format=3 uid="uid://bf3fndiyasfyq"]
 
 [ext_resource type="Script" uid="uid://cxd4eq1rg0n2d" path="res://scripts/player.gd" id="1_3vyb7"]
 [ext_resource type="PackedScene" uid="uid://b7jidntt07fi4" path="res://scenes/card.tscn" id="2_g2els"]
+[ext_resource type="AudioStream" uid="uid://dm16q62k0fb33" path="res://assets/sounds/JDSherbert - Tabletop Games SFX Pack - Deck Deal - 1.mp3" id="3_qlg0r"]
+[ext_resource type="AudioStream" uid="uid://btdnh5s7xeksj" path="res://assets/sounds/JDSherbert - Tabletop Games SFX Pack - Deck Deal - 2.mp3" id="4_tuyoq"]
+[ext_resource type="AudioStream" uid="uid://b0dwe3bvfdf0o" path="res://assets/sounds/JDSherbert - Tabletop Games SFX Pack - Paper Flip - 1.mp3" id="5_fjrip"]
+[ext_resource type="AudioStream" uid="uid://cpngwixgr5ne6" path="res://assets/sounds/rooster-crowing-364473.mp3" id="6_tuyoq"]
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_3vyb7")
 card = ExtResource("2_g2els")
 
 [node name="Hand" type="Node2D" parent="."]
+
+[node name="Deal1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_qlg0r")
+
+[node name="Deal2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_tuyoq")
+
+[node name="JournalSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_fjrip")
+
+[node name="NewDaySound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_tuyoq")
