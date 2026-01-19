@@ -1,6 +1,6 @@
 extends Node2D
 @onready var Deck: Node2D = $"../Deck"
-@onready var CalendarDay: Control = $"../HBoxContainer/VBoxContainer/TextureRect/CalendarDay"
+@onready var CalendarDay: Control = $"../HBoxContainer/PanelContainer/VBoxContainer/TextureRect/CalendarDay"
 @onready var Hemicycle: Control = $"../HBoxContainer/Hemicycle"
 @onready var Journal: Node2D = $"../Journal"
 @export var card: PackedScene
@@ -16,6 +16,8 @@ var declared_special_event_this_turn: bool = false
 const nb_days_before_vote: int = 6
 var last_card_changed: int = 0
 var is_journal_showed: bool = true
+
+var hand_tween:Tween
 
 func has_special_card_in_hand() -> bool:
 	for card in hand:
@@ -164,7 +166,8 @@ func trigger_special_event(event: String) -> void:
 			print("TODO special event : " + event)
 	
 func trigger_journal() -> void:
-	self.is_journal_showed = true # Prevents clicks
+	#self.is_journal_showed = true # Prevents clicks
+	
 	$"NewDaySound".attenuation = 4
 	$"NewDaySound".play()
 	CalendarDay.text = "0"+str(get_current_day())
@@ -181,8 +184,8 @@ func trigger_journal() -> void:
 		Journal.update_with_basic(get_current_day())
 	Journal.show_journal()
 	if special_event:
-		while is_journal_showed:
-			await get_tree().create_timer(0.05).timeout
+		#while is_journal_showed:
+		#	await get_tree().create_timer(0.05).timeout
 		trigger_special_event(special_event["id"])
 		special_event = null
 		declared_special_event_this_turn = false
@@ -191,6 +194,10 @@ func trigger_journal() -> void:
 		trigger_final_vote()
 
 func trigger_final_vote() -> void:
+	
+	# Attendre que le journal soit rangé avant de faire le décompte
+	await Journal.journal_hide
+	
 	var votes: Array[int] = [0, 0, 0];
 	for mp in get_tree().get_nodes_in_group("MP"):
 		votes[mp.get_final_vote()+1] += 1
@@ -209,3 +216,21 @@ func defeat():
 func victory():
 	$WinSound.play()
 	
+
+
+func _on_journal_journal_hide() -> void:
+	# si c'est le jour du décompte, on ne réaffiche pas les cartes
+	if get_current_day() == nb_days_before_vote:
+		pass
+	else:
+		if hand_tween:
+			hand_tween.kill()
+		hand_tween = create_tween()
+		hand_tween.tween_property(self, "position:y",0., 0.3)
+
+
+func _on_journal_journal_show() -> void:
+	if hand_tween:
+		hand_tween.kill()
+	hand_tween = create_tween()
+	hand_tween.tween_property(self, "position:y",650., 0.3)

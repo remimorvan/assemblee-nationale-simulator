@@ -16,7 +16,7 @@ class_name Histogram
 @export var hover_scale = 1.1
 @export var hover_color_brightness = 1.3
 @export var min_bar_height = 10
-@onready var Hemicycle: AspectRatioContainer = $"../../Hemicycle"
+@onready var Hemicycle: AspectRatioContainer = $"../../../Hemicycle"
 
 var bar_rects: Array[Rect2] = []
 var hovered_index: int = -1

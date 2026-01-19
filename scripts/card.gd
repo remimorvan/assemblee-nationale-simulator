@@ -72,7 +72,7 @@ func get_approval_change(political_group: String) -> float:
 	return rng.randfn(effect_mean[political_group], effect_std[political_group]) 
 
 func _on_mouse_entered() -> void:
-	if not Player.is_journal_showed:
+	if not Player.is_journal_showed or true:
 		$HoverSound.play()
 	
 		# put in front
@@ -91,7 +91,7 @@ func _on_mouse_entered() -> void:
 		tween.parallel().tween_property(self, "position:y", old_position_y-100, .25)
 
 func _on_mouse_exited() -> void:
-	if not Player.is_journal_showed:
+	if not Player.is_journal_showed or true:
 		# restore z_index
 		self.z_index = old_z_index
 		
@@ -105,7 +105,7 @@ func _on_mouse_exited() -> void:
 	
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if not Player.is_journal_showed:
+	if not Player.is_journal_showed or true:
 		if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
 			for mp in get_tree().get_nodes_in_group("MP"):
 				if mp.present:

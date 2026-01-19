@@ -7,6 +7,9 @@ extends Area2D
 @onready var Player: Node2D = $"../Player"
 
 var tween: Tween
+signal journal_show
+signal journal_hide
+var show = true
 
 func update(title: String, desc: String, image_name: String, day: int):
 	Title.text = title
@@ -34,7 +37,10 @@ func update_with_basic(day: int) -> void:
 		print("JSON Parse Error: ", json.get_error_message(), " in journals.json at line ", json.get_error_line())
 
 func show_journal() -> void:
-	Player.is_journal_showed = true
+	#Player.is_journal_showed = true
+	journal_show.emit()
+	await Player.hand_tween.finished
+	show = true
 	$"JournalSound".play()
 	if tween:
 		tween.kill()
@@ -46,7 +52,9 @@ func show_journal() -> void:
 	tween.parallel().tween_property(self, "rotation_degrees", -7.0, .25)
 	
 func hide_journal() -> void:
-	Player.is_journal_showed = false
+	#Player.is_journal_showed = false
+	show = false
+	journal_hide.emit()
 	$"JournalSound".play()
 	if tween:
 		tween.kill()
@@ -56,10 +64,16 @@ func hide_journal() -> void:
 	tween.parallel().tween_property(self, "position", Vector2(1790, 850), .25)
 	tween.parallel().tween_property(self, "scale", Vector2(0.7, 0.7), .25)
 	tween.parallel().tween_property(self, "rotation_degrees", -87.0, .25)
+	await tween.finished
+	journal_hide.emit()
 	
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
-		if Player.is_journal_showed:
+		#if Player.is_journal_showed:
+		if show:
+			
 			hide_journal()
+			
 		else:
+			
 			show_journal()

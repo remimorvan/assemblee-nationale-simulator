@@ -30,19 +30,9 @@ offset_right = 1620.0
 offset_bottom = 1080.0
 texture = ExtResource("1_u5sy4")
 
-[node name="Menu" type="TextureRect" parent="."]
-z_index = -1
-offset_left = 1620.0
-offset_right = 1920.0
-offset_bottom = 1080.0
-texture = ExtResource("2_vtaks")
-
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_left = 2.0
-offset_top = 6.0
-offset_right = 1926.0
-offset_bottom = 1086.0
-size_flags_horizontal = 3
+offset_right = 2704.0
+offset_bottom = 1080.0
 size_flags_vertical = 3
 
 [node name="Hemicycle" parent="HBoxContainer" instance=ExtResource("2_yqjtg")]
@@ -50,16 +40,28 @@ custom_minimum_size = Vector2(1620, 900)
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(300, 1080)
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
+[node name="Menu" type="TextureRect" parent="HBoxContainer/PanelContainer"]
+z_index = -1
+custom_minimum_size = Vector2(300, 1080)
+layout_mode = 2
+texture = ExtResource("2_vtaks")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/PanelContainer"]
+custom_minimum_size = Vector2(300, 1080)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/PanelContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
+tooltip_text = "Jours restants"
 texture = ExtResource("4_kvpfn")
 
-[node name="CalendarDay" type="Label" parent="HBoxContainer/VBoxContainer/TextureRect"]
+[node name="CalendarDay" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect"]
 layout_mode = 2
 offset_left = -2.0
 offset_top = 29.0
@@ -69,7 +71,7 @@ text = "01"
 label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 
-[node name="CalendarMonth" type="Label" parent="HBoxContainer/VBoxContainer/TextureRect"]
+[node name="CalendarMonth" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect"]
 layout_mode = 2
 offset_left = -1.0
 offset_top = 123.0
@@ -79,38 +81,38 @@ text = "janvier 2026"
 label_settings = SubResource("LabelSettings_vtaks")
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="HBoxContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/PanelContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="HBoxContainer/VBoxContainer"]
+[node name="RichTextLabel2" type="RichTextLabel" parent="HBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 bbcode_enabled = true
 text = "[center][b][color=black][center][font_size=30]Approbation"
 fit_content = true
 
-[node name="Plot" parent="HBoxContainer/VBoxContainer" instance=ExtResource("4_lbhrr")]
+[node name="Plot" parent="HBoxContainer/PanelContainer/VBoxContainer" instance=ExtResource("4_lbhrr")]
 custom_minimum_size = Vector2(100, 200)
 layout_mode = 2
 bar_width = 30
 min_bar_height = 20
 
-[node name="HSeparator2" type="HSeparator" parent="HBoxContainer/VBoxContainer"]
+[node name="HSeparator2" type="HSeparator" parent="HBoxContainer/PanelContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 
-[node name="TextStats" type="RichTextLabel" parent="HBoxContainer/VBoxContainer"]
+[node name="TextStats" type="RichTextLabel" parent="HBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 bbcode_enabled = true
 text = "Test"
 fit_content = true
 
-[node name="ReferenceRect" type="ReferenceRect" parent="HBoxContainer/VBoxContainer"]
+[node name="ReferenceRect" type="ReferenceRect" parent="HBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 border_color = Color(0.446978, 0.499717, 0.854538, 1)
 border_width = 3.5
 
-[node name="HSeparator3" type="HSeparator" parent="HBoxContainer/VBoxContainer"]
+[node name="HSeparator3" type="HSeparator" parent="HBoxContainer/PanelContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 
@@ -124,3 +126,6 @@ z_index = 4096
 position = Vector2(960, 540)
 scale = Vector2(2.3, 2.3)
 script = ExtResource("7_u5sy4")
+
+[connection signal="journal_hide" from="Journal" to="Player" method="_on_journal_journal_hide"]
+[connection signal="journal_show" from="Journal" to="Player" method="_on_journal_journal_show"]

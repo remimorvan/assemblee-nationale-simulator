@@ -3,8 +3,8 @@ extends AspectRatioContainer
 @export var mp_scene:PackedScene # Utile pour instancier des MP
 @export var desk_color:Color
 
-@onready var Plot: Control = $"../VBoxContainer/Plot"
-@onready var TextStats: Control = $"../VBoxContainer/TextStats"
+@onready var Plot: Control = $"../PanelContainer/VBoxContainer/Plot"
+@onready var TextStats: Control = $"../PanelContainer/VBoxContainer/TextStats"
 @onready var Background =$Background
 
 var width: int = 19
