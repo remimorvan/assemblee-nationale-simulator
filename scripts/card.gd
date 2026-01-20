@@ -105,28 +105,28 @@ func _on_mouse_exited() -> void:
 	
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if not Player.is_journal_showed or true:
-		if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
-			for mp in get_tree().get_nodes_in_group("MP"):
-				if mp.present:
-					mp.change_approval(get_approval_change(PoliticalGroup[mp.group_id]))
-			if special_event:
-				Player.declare_special_event(special_event, special_event_description, special_event_title, image_path)
-			Player.incr_nb_card_played()
-			
-			Hemicycle.update_plot()
-			if old_position_y == null: 
-				old_position_y = self.position.y
-			if tween:
-				tween.kill()
-			tween = create_tween()
-			tween.set_trans(Tween.TRANS_CUBIC)
-			tween.set_ease(Tween.EASE_OUT)
-			tween.parallel().tween_property(self, "position:y", old_position_y-250, .5)
-			tween.parallel().tween_property(self, "scale", Vector2(1.2, 1.2), .5)
-			await tween.finished
-			
-			# Remove card from hand
-			var card_pos: int = Player.remove_card_from_hand(self)
-			Player.add_card_to_hand(card_pos)
-			await Player.change_random_card(card_pos)
+	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
+		
+		for mp in get_tree().get_nodes_in_group("MP"):
+			if mp.present:
+				mp.change_approval(get_approval_change(PoliticalGroup[mp.group_id]))
+		if special_event:
+			Player.declare_special_event(special_event, special_event_description, special_event_title, image_path)
+		Hemicycle.update_plot()
+		
+		if old_position_y == null: 
+			old_position_y = self.position.y
+		if tween:
+			tween.kill()
+		tween = create_tween()
+		tween.set_trans(Tween.TRANS_CUBIC)
+		tween.set_ease(Tween.EASE_OUT)
+		tween.parallel().tween_property(self, "position:y", old_position_y-250, .5)
+		tween.parallel().tween_property(self, "scale", Vector2(1.2, 1.2), .5)
+		await tween.finished
+		
+		Player.incr_nb_card_played()
+		# Remove card from hand
+		var card_pos: int = Player.remove_card_from_hand(self)
+		Player.add_card_to_hand(card_pos)
+		await Player.change_random_card(card_pos)

@@ -192,5 +192,3 @@ func new_mp(seat: int) -> int:	# returns number of the political party of mp
 	mp.scale.y = 0.6
 	
 	return group_id
-	# et pour suprimer :
-	#mp.queue_free()

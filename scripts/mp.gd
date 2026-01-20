@@ -109,5 +109,4 @@ func do_final_animation(vote: int) -> void:
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	# TODO : Update MP's head after player played a card, not at every frame !
 	pass

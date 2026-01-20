@@ -28,6 +28,10 @@ func has_special_card_in_hand() -> bool:
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	# "hide" the player below the screen until the journal is closed
+	# See _on_journal_hide() in player.gd
+	position.y = 650.
+	
 	rng.randomize()
 	for i in range(3):
 		var card: Area2D = Deck.get_new_card(has_special_card_in_hand() or declared_special_event_this_turn)
@@ -72,21 +76,34 @@ func change_random_card(other_card: int) -> void:
 	tween = create_tween()
 	tween.set_trans(Tween.TRANS_CUBIC)
 	tween.set_ease(Tween.EASE_OUT)
-	tween.parallel().tween_property(hand[removed_card_pos], "scale", Vector2(0, 0), 0.5)
+	#tween.parallel().tween_property(hand[removed_card_pos], "scale", Vector2(0, 0), 0.5)
+	tween.parallel().tween_property(hand[removed_card_pos], "position:y",hand[removed_card_pos].position.y + 650., 0.5)
 	await tween.finished
 	remove_card_from_hand(hand[removed_card_pos])
 	add_card_to_hand(removed_card_pos)
 	last_card_changed = removed_card_pos
 
 func add_card_to_hand(card_pos: int) -> void:
+	
+	var new_card: Area2D = Deck.get_new_card(has_special_card_in_hand() or declared_special_event_this_turn)
+	add_child(new_card)
+	hand.insert(card_pos, new_card)
+	
+	# Hide the new card when calculating its position
+	hand[card_pos].visible = false
+	print_hand()
+	# Store its x position
+	var new_card_pos_x = hand[card_pos].position.x
+	# Make it appears from the left side of the screen
+	hand[card_pos].position.x = -310.
+	hand[card_pos].visible = true
 	if randf() > 0.5:
 		$Deal1.play()
 	else:
 		$Deal2.play()
-	var new_card: Area2D = Deck.get_new_card(has_special_card_in_hand() or declared_special_event_this_turn)
-	add_child(new_card)
-	hand.insert(card_pos, new_card)
-	print_hand()
+	var tween_card = create_tween()
+	tween_card.tween_property(hand[card_pos], "position:x", new_card_pos_x, 0.3)
+	
 	last_card_changed = card_pos
 
 func put_card_back_in_hand() -> void:
