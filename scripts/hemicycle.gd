@@ -172,7 +172,7 @@ func update_plot():
 	var approvals: Array[float] = compute_group_approvals()
 	for i in range(6):
 		Plot.update_bar_value(i, approvals[i])
-	TextStats.bbcode_text = "[color=black][font_size=25]Satisfaits : %s\nIndécis : %s\nInsatisfaits : %s" % compute_number_approvals()
+	TextStats.bbcode_text = "[color=black][font_size=25]  Satisfaits : %s\n  Indécis : %s\n  Insatisfaits : %s" % compute_number_approvals()
 	var group_size = compute_group_nbs()
 	for i in range(6):
 		var tooltip = get_tree().get_current_scene().find_child("Tooltip%s" % [i+1])
