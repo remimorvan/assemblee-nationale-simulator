@@ -1,6 +1,7 @@
 extends Node2D
 @onready var Deck: Node2D = $"../Deck"
 @onready var CalendarDay: Control = $"../HBoxContainer/PanelContainer/VBoxContainer/TextureRect/CalendarDay"
+@onready var CalendarRect:Control = $"../HBoxContainer/PanelContainer/VBoxContainer/TextureRect"
 @onready var Hemicycle: Control = $"../HBoxContainer/Hemicycle"
 @onready var Journal: Node2D = $"../Journal"
 @export var card: PackedScene
@@ -16,8 +17,9 @@ var declared_special_event_this_turn: bool = false
 const nb_days_before_vote: int = 6
 var last_card_changed: int = 0
 var is_journal_showed: bool = true
-var tween: Tween
+var lock:bool = false # Prevent player from playing an unbounded number of card
 
+var tween: Tween
 var hand_tween:Tween
 
 func has_special_card_in_hand() -> bool:
@@ -196,6 +198,7 @@ func trigger_journal() -> void:
 	$"NewDaySound".attenuation = 4
 	$"NewDaySound".play()
 	CalendarDay.text = "0"+str(get_current_day())
+	CalendarRect.tooltip_text = str(nb_days_before_vote - get_current_day())+" jours restants"
 	await get_tree().create_timer(0.5).timeout
 	# Reset present
 	for mp in get_tree().get_nodes_in_group("MP"):
@@ -226,6 +229,7 @@ func trigger_final_vote() -> void:
 	var votes: Array[int] = [0, 0, 0];
 	for mp in get_tree().get_nodes_in_group("MP"):
 		votes[mp.get_final_vote()+1] += 1
+		var current_score = votes[2] - votes[0]
 		await mp.do_final_animation(mp.get_final_vote())
 	# votes[0] : disapproval, votes[1] : abstention, votes[2] : approval
 	if (votes[2] >= votes[0]):

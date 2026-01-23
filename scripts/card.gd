@@ -72,16 +72,16 @@ func get_approval_change(political_group: String) -> float:
 	return rng.randfn(effect_mean[political_group], effect_std[political_group]) 
 
 func _on_mouse_entered() -> void:
-	if not Player.is_journal_showed or true:
+	# put in front
+	old_z_index = self.z_index
+	if old_position_y == null: 
+		old_position_y = self.position.y
+	if (not Player.is_journal_showed or true) and !Player.lock:
 		$HoverSound.play()
 	
-		# put in front
-		old_z_index = self.z_index
-		if old_position_y == null: 
-			old_position_y = self.position.y
 		self.z_index = 1000
 		
-		hovered = true
+		#hovered = true
 		if tween:
 			tween.kill()
 		tween = create_tween()
@@ -91,11 +91,11 @@ func _on_mouse_entered() -> void:
 		tween.parallel().tween_property(self, "position:y", old_position_y-100, .25)
 
 func _on_mouse_exited() -> void:
-	if not Player.is_journal_showed or true:
+	if (not Player.is_journal_showed or true) and !Player.lock:
 		# restore z_index
 		self.z_index = old_z_index
 		
-		hovered = false
+		#hovered = false
 		if tween:
 			tween.kill()
 		tween = create_tween()
@@ -105,8 +105,8 @@ func _on_mouse_exited() -> void:
 	
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
-		
+	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT and !Player.lock:
+		Player.lock = true
 		for mp in get_tree().get_nodes_in_group("MP"):
 			if mp.present:
 				mp.change_approval(get_approval_change(PoliticalGroup[mp.group_id]))
@@ -130,3 +130,4 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		var card_pos: int = Player.remove_card_from_hand(self)
 		Player.add_card_to_hand(card_pos)
 		await Player.change_random_card(card_pos)
+		Player.lock = false

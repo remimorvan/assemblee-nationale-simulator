@@ -56,6 +56,7 @@ func cell_to_uv(cellx: float, celly: float) -> Vector2:
 func _init() -> void:
 	for n in group_repartition:
 		sum_group_repartition += n
+	#print(sum_group_repartition)
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
