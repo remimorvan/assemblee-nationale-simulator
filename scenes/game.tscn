@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://didoyh5qajy65" path="res://scenes/journal.tscn" id="6_p57ef"]
 [ext_resource type="Script" uid="uid://dmafeh1bsc5qf" path="res://scripts/journal.gd" id="7_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dsxn86n1h3qci" path="res://scenes/tooltip.tscn" id="11_kvpfn"]
-[ext_resource type="PackedScene" uid="uid://c7h6xomjcf1ka" path="res://scenes/looser_screen.tscn" id="12_kvuet"]
+[ext_resource type="PackedScene" uid="uid://bv7bhg0nf7wkc" path="res://scenes/looser_screen.tscn" id="12_kvuet"]
 [ext_resource type="PackedScene" uid="uid://bqyuueqc4507j" path="res://scenes/victory_screen.tscn" id="13_trtic"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0tnpc"]

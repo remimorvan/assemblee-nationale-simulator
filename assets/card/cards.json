@@ -203,7 +203,7 @@
 		"quote": "Amendement du 31/10/2025, scrutin 3314"
 	},
 	{
-		"text": "Sacrifier les intérêts de la France pour négocier le maintien de la liaison aérienne Orly-Pau",
+		"text": "Sacrifier les intérêts de la France pour négocier le maintien de la liaison aérienne Orly-Pau.",
 		"effects": {
 			"lfi": [-0.68, 0.2],
 			"eco": [-0.72, 0.2],
@@ -365,7 +365,7 @@
 		"special_event_descr": "Contrairement à ce qui a été annoncé par le ministre de l'Économie, le déficit de cette année ne sera pas de 4,4% mais de 6,1%. Selon nos collègues du Palmidé Attaché, le ministre était au courant de ces estimations. [b]Tollé sur tous les bancs de l'Assemblée.[/b]"
 	},
 	{
-		"text": "Inclure dans les formations délivrées dans l'enseignement supérieur la lutte contre l'islamophobie",
+		"text": "Inclure dans les formations délivrées dans l'enseignement supérieur la lutte contre l'islamophobie.",
 		"effects": {
 			"lfi": [0.5, 0.3],
 			"eco": [0.5, 0.3],
@@ -417,7 +417,7 @@
 		"quote": ""
 	},
 	{
-		"text": "Augmenter la taxe sur les GAFAM",
+		"text": "Augmenter la taxe sur les GAFAM.",
 		"effects": {
 			"lfi": [0.59, 0.2],
 			"eco": [0.59, 0.2],
@@ -430,7 +430,7 @@
 		"quote": ""
 	},
 	{
-		"text": "Augmenter les APL de 10%",
+		"text": "Augmenter les APL de 10%.",
 		"effects": {
 			"lfi": [0.59, 0.2],
 			"eco": [0.59, 0.2],
@@ -524,7 +524,7 @@
 		"quote": ""
 	},
 	{
-		"text": "Plafonner les marges de la grande distribution sur les denrées alimentaires",
+		"text": "Plafonner les marges de la grande distribution sur les denrées alimentaires.",
 		"effects": {
 			"lfi": [0.59, 0.2],
 			"eco": [0.59, 0.2],
@@ -634,7 +634,7 @@
 		"special_event_descr": "La réponse du président américain de s'est pas faite attendre après l'envoi de troupes françaises au Groenland : les soldats américains vont venir apporter la démocratie dans notre pays. Après une réunion d'urgence, [b]l'Assemblée nationale a décidé de remettre le premier ministre aux forces américaines.[/b]"
 	},
 	{
-		"text": "Baisser la TVA pour les transports en commun terrestres",
+		"text": "Baisser la TVA pour les transports en commun terrestres.",
 		"effects": {
 			"lfi": [0.59, 0.2],
 			"eco": [0.59, 0.2],
