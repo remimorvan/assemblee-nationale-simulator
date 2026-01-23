@@ -2,14 +2,13 @@
 
 [ext_resource type="Script" uid="uid://cxd4eq1rg0n2d" path="res://scripts/player.gd" id="1_3vyb7"]
 [ext_resource type="PackedScene" uid="uid://b7jidntt07fi4" path="res://scenes/card.tscn" id="2_g2els"]
-[ext_resource type="AudioStream" uid="uid://c4eqi82w64s5k" path="res://assets/sounds/JDSherbert - Tabletop Games SFX Pack - Deck Deal - 1.mp3" id="3_qlg0r"]
-[ext_resource type="AudioStream" uid="uid://bhg3jxb7toavs" path="res://assets/sounds/JDSherbert - Tabletop Games SFX Pack - Deck Deal - 2.mp3" id="4_tuyoq"]
-[ext_resource type="AudioStream" uid="uid://c3iy82xas48ev" path="res://assets/sounds/win.mp3" id="6_fjrip"]
-[ext_resource type="AudioStream" uid="uid://dabej1jj3klh2" path="res://assets/sounds/rooster-crowing-364473.mp3" id="6_tuyoq"]
-[ext_resource type="AudioStream" uid="uid://cc4i2a23am7ys" path="res://assets/sounds/lose.mp3" id="7_smehm"]
+[ext_resource type="AudioStream" uid="uid://dm16q62k0fb33" path="res://assets/sounds/JDSherbert - Tabletop Games SFX Pack - Deck Deal - 1.mp3" id="3_qlg0r"]
+[ext_resource type="AudioStream" uid="uid://btdnh5s7xeksj" path="res://assets/sounds/JDSherbert - Tabletop Games SFX Pack - Deck Deal - 2.mp3" id="4_tuyoq"]
+[ext_resource type="AudioStream" uid="uid://b2ta8y7agqk76" path="res://assets/sounds/win.mp3" id="6_fjrip"]
+[ext_resource type="AudioStream" uid="uid://cpngwixgr5ne6" path="res://assets/sounds/rooster-crowing-364473.mp3" id="6_tuyoq"]
+[ext_resource type="AudioStream" uid="uid://csqb02ngqmiow" path="res://assets/sounds/lose.mp3" id="7_smehm"]
 
 [node name="Player" type="Node2D"]
-rotation = 0.261799
 script = ExtResource("1_3vyb7")
 card = ExtResource("2_g2els")
 
