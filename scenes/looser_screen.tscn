@@ -1,15 +1,19 @@
-[gd_scene load_steps=9 format=3 uid="uid://c7h6xomjcf1ka"]
+[gd_scene load_steps=12 format=3 uid="uid://bv7bhg0nf7wkc"]
 
-[ext_resource type="Texture2D" uid="uid://bwxh3cox8bvnc" path="res://assets/screens/back_loser_screen.png" id="1_eta0r"]
-[ext_resource type="Texture2D" uid="uid://c4cct683dyfx7" path="res://assets/screens/cloud_1.png" id="2_q85na"]
-[ext_resource type="Texture2D" uid="uid://bbjsy82siem8k" path="res://assets/screens/could_2.png" id="3_os4vx"]
-[ext_resource type="Texture2D" uid="uid://c6mu4ygjh3l7b" path="res://assets/screens/cloud_4.png" id="4_v6sr7"]
-[ext_resource type="Texture2D" uid="uid://lxiwund2iy08" path="res://assets/screens/cloud_3.png" id="5_kd064"]
-[ext_resource type="Texture2D" uid="uid://2o5drcbv3jqr" path="res://assets/screens/loser_loser_screen.png" id="6_mp25u"]
-[ext_resource type="Texture2D" uid="uid://vs0rtgmbllda" path="res://assets/screens/smiley_loser_screen.png" id="7_hdatr"]
-[ext_resource type="Texture2D" uid="uid://deihfdbkyfq7h" path="res://assets/screens/loser_screen_model.png" id="8_ifv47"]
+[ext_resource type="Texture2D" uid="uid://qlsaafic0n2k" path="res://assets/screens/back_loser_screen.png" id="1_eta0r"]
+[ext_resource type="Script" uid="uid://dbsy57m7wc4js" path="res://scripts/looser_screen.gd" id="1_v6sr7"]
+[ext_resource type="Texture2D" uid="uid://c22wkkecr8lte" path="res://assets/screens/cloud_1.png" id="2_q85na"]
+[ext_resource type="Texture2D" uid="uid://b2evduj2gwl13" path="res://assets/screens/could_2.png" id="3_os4vx"]
+[ext_resource type="Texture2D" uid="uid://cjlsb52830auc" path="res://assets/screens/cloud_4.png" id="4_v6sr7"]
+[ext_resource type="Texture2D" uid="uid://bwf811gcmfi1g" path="res://assets/screens/cloud_3.png" id="5_kd064"]
+[ext_resource type="Texture2D" uid="uid://dkv0qwbwh0ij4" path="res://assets/screens/loser_loser_screen.png" id="6_mp25u"]
+[ext_resource type="Texture2D" uid="uid://bgh6kqy7whjr7" path="res://assets/screens/smiley_loser_screen.png" id="7_hdatr"]
+[ext_resource type="Texture2D" uid="uid://drl48itg3oxi" path="res://assets/screens/loser_screen_model.png" id="8_ifv47"]
+[ext_resource type="Texture2D" uid="uid://q6tlt2c2737k" path="res://assets/hemicycle/tool_tip_plot.png" id="9_os4vx"]
+[ext_resource type="FontFile" uid="uid://usk4ucaxtgwp" path="res://assets/card/Monicacomic.ttf" id="10_v6sr7"]
 
 [node name="LooserScreen" type="Node2D"]
+script = ExtResource("1_v6sr7")
 
 [node name="Box" type="Sprite2D" parent="."]
 self_modulate = Color(0.481072, 0.486534, 0.634145, 1)
@@ -60,9 +64,9 @@ metadata/_edit_lock_ = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 offset_left = -318.0
-offset_top = -125.0
+offset_top = -173.0
 offset_right = 318.0
-offset_bottom = 119.0
+offset_bottom = 71.0
 theme_override_colors/default_color = Color(0.979055, 0.937732, 0.761748, 1)
 theme_override_font_sizes/normal_font_size = 40
 theme_override_font_sizes/bold_font_size = 52
@@ -70,3 +74,25 @@ bbcode_enabled = true
 text = "[b]Perdu ![/b]
 Essaie encore, tu ne vas quand même pas utiliser le 49-3 comme un looser…"
 horizontal_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -125.0
+offset_top = 121.0
+offset_right = 125.0
+offset_bottom = 221.0
+texture_normal = ExtResource("9_os4vx")
+
+[node name="Label" type="Label" parent="TextureButton"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 30.0
+offset_right = 235.0
+offset_bottom = 68.0
+theme_override_colors/font_color = Color(0.113049, 0.113049, 0.113049, 1)
+theme_override_fonts/font = ExtResource("10_v6sr7")
+theme_override_font_sizes/font_size = 29
+text = "Retour au menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
