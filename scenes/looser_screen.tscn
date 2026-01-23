@@ -1,13 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://bv7bhg0nf7wkc"]
+[gd_scene load_steps=9 format=3 uid="uid://c7h6xomjcf1ka"]
 
-[ext_resource type="Texture2D" uid="uid://cb4jfw26uf7e4" path="res://assets/screens/back_loser_screen.png" id="1_eta0r"]
-[ext_resource type="Texture2D" uid="uid://blpt51hcr5kfw" path="res://assets/screens/cloud_1.png" id="2_q85na"]
-[ext_resource type="Texture2D" uid="uid://b14nv3dxlb52" path="res://assets/screens/could_2.png" id="3_os4vx"]
-[ext_resource type="Texture2D" uid="uid://nkihaiji7fqq" path="res://assets/screens/cloud_4.png" id="4_v6sr7"]
-[ext_resource type="Texture2D" uid="uid://bwnqm8qsxrfok" path="res://assets/screens/cloud_3.png" id="5_kd064"]
-[ext_resource type="Texture2D" uid="uid://dyywnjjoamckq" path="res://assets/screens/loser_loser_screen.png" id="6_mp25u"]
-[ext_resource type="Texture2D" uid="uid://cj4b47mpdrehx" path="res://assets/screens/smiley_loser_screen.png" id="7_hdatr"]
-[ext_resource type="Texture2D" uid="uid://cvlqt1xhy8qiw" path="res://assets/screens/loser_screen_model.png" id="8_ifv47"]
+[ext_resource type="Texture2D" uid="uid://bwxh3cox8bvnc" path="res://assets/screens/back_loser_screen.png" id="1_eta0r"]
+[ext_resource type="Texture2D" uid="uid://c4cct683dyfx7" path="res://assets/screens/cloud_1.png" id="2_q85na"]
+[ext_resource type="Texture2D" uid="uid://bbjsy82siem8k" path="res://assets/screens/could_2.png" id="3_os4vx"]
+[ext_resource type="Texture2D" uid="uid://c6mu4ygjh3l7b" path="res://assets/screens/cloud_4.png" id="4_v6sr7"]
+[ext_resource type="Texture2D" uid="uid://lxiwund2iy08" path="res://assets/screens/cloud_3.png" id="5_kd064"]
+[ext_resource type="Texture2D" uid="uid://2o5drcbv3jqr" path="res://assets/screens/loser_loser_screen.png" id="6_mp25u"]
+[ext_resource type="Texture2D" uid="uid://vs0rtgmbllda" path="res://assets/screens/smiley_loser_screen.png" id="7_hdatr"]
+[ext_resource type="Texture2D" uid="uid://deihfdbkyfq7h" path="res://assets/screens/loser_screen_model.png" id="8_ifv47"]
 
 [node name="LooserScreen" type="Sprite2D"]
 self_modulate = Color(0.481072, 0.486534, 0.634145, 1)

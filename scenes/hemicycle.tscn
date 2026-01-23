@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://ca4vviiiv0rox" path="res://scripts/hemicycle.gd" id="1_22fab"]
 [ext_resource type="PackedScene" uid="uid://cuemgi5ynsxra" path="res://scenes/mp.tscn" id="2_8igwf"]
 [ext_resource type="Shader" uid="uid://dssfkivsy2mxu" path="res://assets/hemicycle/hemicycle.gdshader" id="3_8igwf"]
-[ext_resource type="Texture2D" uid="uid://cmapdig36yep5" path="res://assets/hemycicle.png" id="3_hw2pa"]
+[ext_resource type="Texture2D" uid="uid://cuqfq5eew8oaf" path="res://assets/hemycicle.png" id="3_hw2pa"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hw2pa"]
 shader = ExtResource("3_8igwf")

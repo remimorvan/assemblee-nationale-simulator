@@ -103,6 +103,20 @@ func _ready() -> void:
 	mat.set_shader_parameter("party_values", party_array)
 	mat.set_shader_parameter("party_colors", party_colors)
 	
+	# init tooltip
+	const PoliticalGroup: Array[String] = ["lfi", "eco", "soc", "macron", "lr", "facho"]
+	const PoliticalGroupName = ["La France Pas Contente", "Les Sans Conservateurs",
+		"Les Sauces D'Aime", "En Pause", "Les Ripoublicains", "Travail Fictif, Famille, Pas de Tri"]
+	for i in range(6):
+		var tooltip = get_tree().get_current_scene().find_child("Tooltip%s" % [i+1])
+		tooltip.visible = false
+	
+	for i in range(6):
+		var tooltip = get_tree().get_current_scene().find_child("Tooltip%s" % [i+1])
+		var image_path = "res://assets/card/logos/%s_back.png" % [PoliticalGroup[i]]
+		var image2_path = "res://assets/card/logos/%s_line.png" % [PoliticalGroup[i]]
+		var party_name = PoliticalGroupName[i]
+		tooltip.setup(party_name, image_path, image2_path)
 	update_plot()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -145,19 +159,38 @@ func compute_number_approvals() -> Array[int]:
 			res[1] += 1
 	return res
 	
+func compute_group_nbs() -> Array[int]:
+	var size: Array[int] = [0, 0, 0, 0, 0, 0]
+	for mp in get_tree().get_nodes_in_group("MP"):
+		if not mp.present:
+			continue
+		var pol_group = mp.group_id
+		size[pol_group] += 1
+	return size
+	
 func update_plot():
 	var approvals: Array[float] = compute_group_approvals()
 	for i in range(6):
 		Plot.update_bar_value(i, approvals[i])
 	TextStats.bbcode_text = "[color=black][font_size=25]Satisfaits : %s\nIndécis : %s\nInsatisfaits : %s" % compute_number_approvals()
+	var group_size = compute_group_nbs()
+	for i in range(6):
+		var tooltip = get_tree().get_current_scene().find_child("Tooltip%s" % [i+1])
+		tooltip.update(group_size[i])
 
 func highlight(index: int):
 	var mat: ShaderMaterial = $TextureRect.material
 	mat.set_shader_parameter("highlighted_color", index)
+	var tooltip = get_tree().get_current_scene().find_child("Tooltip%s" % [index+1])
+	tooltip.visible = true
 
 func unhighlight():
 	var mat: ShaderMaterial = $TextureRect.material
 	mat.set_shader_parameter("highlighted_color", -1)
+	for i in range(6):
+		var tooltip = get_tree().get_current_scene().find_child("Tooltip%s" % [i+1])
+		tooltip.visible = false
+
 
 # Crée et place le MP 
 func new_mp(seat: int) -> int:	# returns number of the political party of mp 

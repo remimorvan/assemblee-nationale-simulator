@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsxn86n1h3qci"]
+
+[ext_resource type="Script" uid="uid://cwc2jj5tjg4k3" path="res://scripts/tooltip.gd" id="1_75wrl"]
+[ext_resource type="Texture2D" uid="uid://dxqt3r6feuyjb" path="res://assets/hemicycle/tool_tip_plot.png" id="2_vy6iq"]
+[ext_resource type="Texture2D" uid="uid://cc4yddk7esw3c" path="res://assets/card/logos/eco_back.png" id="3_vy6iq"]
+[ext_resource type="Texture2D" uid="uid://b44ican76mjdh" path="res://assets/card/logos/eco_line.png" id="4_wnlnb"]
+
+[node name="Tooltip" type="Node2D"]
+z_index = 1000
+z_as_relative = false
+script = ExtResource("1_75wrl")
+
+[node name="Image" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_vy6iq")
+
+[node name="Text" type="RichTextLabel" parent="."]
+custom_minimum_size = Vector2(200, 0)
+offset_left = 45.0
+offset_top = 7.0
+offset_right = 245.0
+offset_bottom = 90.0
+bbcode_enabled = true
+text = "[color=black][font_size=40]Nom parti
+[font_size=20]15 députés"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PartyImage" type="TextureRect" parent="."]
+offset_left = -9.0
+offset_top = 17.0
+offset_right = 54.0
+offset_bottom = 80.0
+texture = ExtResource("3_vy6iq")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="PartyImageBlack" type="TextureRect" parent="."]
+offset_left = -9.0
+offset_top = 17.0
+offset_right = 54.0
+offset_bottom = 80.0
+texture = ExtResource("4_wnlnb")
+expand_mode = 1
+stretch_mode = 4
