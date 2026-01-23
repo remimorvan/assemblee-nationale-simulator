@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://8odn30sfqxiy"]
 
 [ext_resource type="Script" uid="uid://cmec1vfokbkpo" path="res://scripts/begin_screen.gd" id="1_16y60"]
-[ext_resource type="FontFile" uid="uid://ci1ffpjq1k6tn" path="res://assets/card/BadComic-Regular.ttf" id="2_4wclw"]
-[ext_resource type="Texture2D" uid="uid://lbq7ebe8f30l" path="res://assets/screens/welcome_screen.png" id="2_ijkya"]
-[ext_resource type="Texture2D" uid="uid://dxqt3r6feuyjb" path="res://assets/hemicycle/tool_tip_plot.png" id="3_qscsx"]
-[ext_resource type="FontFile" uid="uid://foful8cuop6y" path="res://assets/card/Monicacomic.ttf" id="4_4b3jc"]
+[ext_resource type="FontFile" uid="uid://0pyo548st5e1" path="res://assets/card/BadComic-Regular.ttf" id="2_4wclw"]
+[ext_resource type="Texture2D" uid="uid://bjw50pvbcxvwy" path="res://assets/screens/welcome_screen.png" id="2_ijkya"]
+[ext_resource type="Texture2D" uid="uid://q6tlt2c2737k" path="res://assets/hemicycle/tool_tip_plot.png" id="3_qscsx"]
+[ext_resource type="FontFile" uid="uid://usk4ucaxtgwp" path="res://assets/card/Monicacomic.ttf" id="4_4b3jc"]
 
 [node name="BeginScreen" type="Control"]
 layout_mode = 3
@@ -59,22 +59,21 @@ anchors_preset = -1
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -12.0
-offset_top = 158.0
-offset_right = -12.0
-offset_bottom = 544.0
+offset_left = 383.0
+offset_top = 185.0
+offset_right = -387.0
+offset_bottom = 571.0
 grow_horizontal = 2
 theme_override_fonts/normal_font = ExtResource("2_4wclw")
 bbcode_enabled = true
-text = "[color=black][font_size=34][b]
+text = "[color=black][font_size=30][b]
 Programmation :[/b] Rémi, Taïssir, Timothé
 [b]Graphismes :[/b] Taïssir
-[b]Musique et shaders:[/b] Timothé
+[b]Musique et shaders :[/b] Timothé
+[b]Écriture des cartes :[/b] Rémi [font_size=26](sources : @votes_assemblee_nationale (Insta) et www.datan.fr)[font_size=30]
 [b]SFX :[/b] Tabletop Games Sound Effect Pack by JDSherbert
 [b]Compagnie :[/b] Alexandre, Claire et Timothée
-[b]Sources :[/b] @votes_assemblee_nationale (Insta) et www.datan.fr
 Merci au z-index d'avoir été un acteur de premier plan dans notre jeu."
 fit_content = true
-horizontal_alignment = 1
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
