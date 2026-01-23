@@ -1,9 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://8odn30sfqxiy"]
 
 [ext_resource type="Script" uid="uid://cmec1vfokbkpo" path="res://scripts/begin_screen.gd" id="1_16y60"]
-[ext_resource type="FontFile" uid="uid://0pyo548st5e1" path="res://assets/card/BadComic-Regular.ttf" id="2_4wclw"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_cg7kj"]
+[ext_resource type="FontFile" uid="uid://cewqm3af8k8sr" path="res://assets/card/BadComic-Regular.ttf" id="2_4wclw"]
+[ext_resource type="Texture2D" uid="uid://dewako0nrpi8p" path="res://assets/screens/welcome_screen.png" id="2_ijkya"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_16y60"]
 
@@ -23,7 +22,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("PlaceholderTexture2D_cg7kj")
+texture = ExtResource("2_ijkya")
 
 [node name="TextureButton" type="TextureButton" parent="."]
 custom_minimum_size = Vector2(500, 100)
@@ -47,8 +46,10 @@ anchors_preset = -1
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_top = 45.0
-offset_bottom = 110.0
+offset_left = -12.0
+offset_top = 98.0
+offset_right = -12.0
+offset_bottom = 532.0
 grow_horizontal = 2
 theme_override_fonts/normal_font = ExtResource("2_4wclw")
 bbcode_enabled = true
