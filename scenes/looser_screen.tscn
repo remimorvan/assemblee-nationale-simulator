@@ -9,7 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://vs0rtgmbllda" path="res://assets/screens/smiley_loser_screen.png" id="7_hdatr"]
 [ext_resource type="Texture2D" uid="uid://deihfdbkyfq7h" path="res://assets/screens/loser_screen_model.png" id="8_ifv47"]
 
-[node name="LooserScreen" type="Sprite2D"]
+[node name="LooserScreen" type="Node2D"]
+
+[node name="Box" type="Sprite2D" parent="."]
 self_modulate = Color(0.481072, 0.486534, 0.634145, 1)
 texture = ExtResource("1_eta0r")
 
@@ -21,18 +23,18 @@ texture = ExtResource("2_q85na")
 position = Vector2(280, -483)
 texture = ExtResource("3_os4vx")
 
-[node name="Cloud5" type="Sprite2D" parent="."]
-position = Vector2(51, -532)
-rotation = 0.0174793
-texture = ExtResource("3_os4vx")
+[node name="Cloud3" type="Sprite2D" parent="."]
+position = Vector2(154, -389)
+texture = ExtResource("5_kd064")
 
 [node name="Cloud4" type="Sprite2D" parent="."]
 position = Vector2(-89, -367)
 texture = ExtResource("4_v6sr7")
 
-[node name="Cloud3" type="Sprite2D" parent="."]
-position = Vector2(154, -389)
-texture = ExtResource("5_kd064")
+[node name="Cloud5" type="Sprite2D" parent="."]
+position = Vector2(51, -532)
+rotation = 0.0174793
+texture = ExtResource("3_os4vx")
 
 [node name="looser" type="Sprite2D" parent="."]
 position = Vector2(-12, -408)
@@ -55,3 +57,16 @@ modulate = Color(1, 1, 1, 0.447059)
 position = Vector2(1, -102)
 texture = ExtResource("8_ifv47")
 metadata/_edit_lock_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -318.0
+offset_top = -125.0
+offset_right = 318.0
+offset_bottom = 119.0
+theme_override_colors/default_color = Color(0.979055, 0.937732, 0.761748, 1)
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 52
+bbcode_enabled = true
+text = "[b]Perdu ![/b]
+Essaie encore, tu ne vas quand même pas utiliser le 49-3 comme un looser…"
+horizontal_alignment = 1

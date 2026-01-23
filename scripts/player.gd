@@ -235,11 +235,27 @@ func trigger_final_vote() -> void:
 		defeat()
 
 func defeat():
-	print("DÉFAITE !")
+	$"../DefeatScreen".visible = true
+	$"../DefeatScreen".position.y = -600
+	var tween = create_tween()
+	tween.set_trans(Tween.TRANS_ELASTIC)
+	tween.set_ease(Tween.EASE_IN_OUT)
+	tween.tween_property($"../DefeatScreen", "position:y", 640, 1)
+	for obj in ["Cloud", "Cloud2", "Cloud3", "Cloud4", "Cloud5"]:
+		var localtween = create_tween()
+		localtween.set_trans(Tween.TRANS_ELASTIC)
+		localtween.set_ease(Tween.EASE_IN_OUT)
+		get_node("../DefeatScreen/"+obj).offset.y = -150
+		localtween.tween_property(get_node("../DefeatScreen/"+obj), "offset:y", 0, randf_range(1.4, 1.8))
 	$LoseSound.play()
 
 func victory():
-	print("VICTOIRE !")
+	$"../VictoryScreen".visible = true
+	$"../VictoryScreen".scale = Vector2(0, 0)
+	var tween = create_tween()
+	tween.set_trans(Tween.TRANS_BOUNCE)
+	tween.set_ease(Tween.EASE_OUT)
+	tween.tween_property($"../VictoryScreen", "scale", Vector2(1,1), 1)
 	$WinSound.play()
 	
 

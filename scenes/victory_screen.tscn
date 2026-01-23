@@ -31,11 +31,20 @@ position = Vector2(-451, 35)
 texture = ExtResource("3_ll51u")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = -323.0
-offset_top = -151.0
-offset_right = 384.0
-offset_bottom = 42.0
+offset_left = -319.0
+offset_top = -107.0
+offset_right = 317.0
+offset_bottom = 104.0
 theme_override_colors/default_color = Color(0.229305, 0.194945, 0.0397207, 1)
-theme_override_font_sizes/normal_font_size = 71
-text = "bravo
-"
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 52
+bbcode_enabled = true
+text = "[b]Félicitations, le budget 2026 a été adopté ! [/b]
+Rendez-vous l'année prochaine…"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -1384.0
+offset_top = -886.0
+offset_right = 1393.0
+offset_bottom = 835.0

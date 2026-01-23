@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://velnx8vw6r6u"]
+[gd_scene load_steps=16 format=3 uid="uid://velnx8vw6r6u"]
 
 [ext_resource type="Texture2D" uid="uid://bnwl4udh588u" path="res://assets/parquet.png" id="1_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://bf3fndiyasfyq" path="res://scenes/player.tscn" id="1_uwrxv"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://didoyh5qajy65" path="res://scenes/journal.tscn" id="6_p57ef"]
 [ext_resource type="Script" uid="uid://dmafeh1bsc5qf" path="res://scripts/journal.gd" id="7_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dsxn86n1h3qci" path="res://scenes/tooltip.tscn" id="11_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://c7h6xomjcf1ka" path="res://scenes/looser_screen.tscn" id="12_kvuet"]
+[ext_resource type="PackedScene" uid="uid://bqyuueqc4507j" path="res://scenes/victory_screen.tscn" id="13_trtic"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0tnpc"]
 font = ExtResource("5_vtaks")
@@ -148,6 +150,16 @@ position = Vector2(908, 566)
 
 [node name="Tooltip6" parent="." instance=ExtResource("11_kvpfn")]
 position = Vector2(1370, 527)
+
+[node name="DefeatScreen" parent="." instance=ExtResource("12_kvuet")]
+visible = false
+z_index = 4096
+position = Vector2(810, 640)
+
+[node name="VictoryScreen" parent="." instance=ExtResource("13_trtic")]
+visible = false
+z_index = 4096
+position = Vector2(810, 640)
 
 [connection signal="journal_hide" from="Journal" to="Player" method="_on_journal_journal_hide"]
 [connection signal="journal_show" from="Journal" to="Player" method="_on_journal_journal_show"]
