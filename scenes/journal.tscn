@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://didoyh5qajy65"]
+[gd_scene load_steps=12 format=3 uid="uid://didoyh5qajy65"]
 
 [ext_resource type="Texture2D" uid="uid://ocewkypq0kcd" path="res://assets/journal.png" id="1_ih0ao"]
 [ext_resource type="Texture2D" uid="uid://diyjxm0wjvjgb" path="res://assets/card/illustrations/random.png" id="1_ll4rq"]
 [ext_resource type="FontFile" uid="uid://c4v45pul7umvp" path="res://assets/card/Monicacomic.ttf" id="2_ha22r"]
-[ext_resource type="FontFile" uid="uid://cewqm3af8k8sr" path="res://assets/card/BadComic-Regular.ttf" id="3_hlh6y"]
 [ext_resource type="AudioStream" uid="uid://ca6pcf1v8qdkf" path="res://assets/sounds/JDSherbert - Tabletop Games SFX Pack - Paper Flip - 1.mp3" id="3_t4w66"]
+[ext_resource type="FontFile" uid="uid://gq1623p3ggk" path="res://assets/journal/OldNewspaperTypes.ttf" id="4_hlfw0"]
+[ext_resource type="FontFile" uid="uid://cmcbgvty2c2x3" path="res://assets/journal/Timeless.ttf" id="5_84c5g"]
+[ext_resource type="FontFile" uid="uid://cgldh0jd5hw8e" path="res://assets/journal/Timeless-Bold.ttf" id="6_u1uw5"]
 
 [sub_resource type="GDScript" id="GDScript_qysr8"]
 script/source = "extends Node2D
@@ -26,9 +28,9 @@ font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_qqwlt"]
 line_spacing = 2.0
-font = ExtResource("3_hlh6y")
+font = ExtResource("4_hlfw0")
 font_size = 19
-font_color = Color(0, 0, 0, 1)
+font_color = Color(0.117647, 0.137255, 0.223529, 1)
 
 [node name="JournalLarge" type="Area2D"]
 process_mode = 3
@@ -54,7 +56,8 @@ offset_bottom = 224.438
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_ll4rq")
 
-[node name="title" type="Label" parent="."]
+[node name="title1" type="Label" parent="."]
+visible = false
 offset_left = -259.0
 offset_top = -187.0
 offset_right = 232.0
@@ -66,7 +69,22 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="content" type="Label" parent="."]
+[node name="title" type="RichTextLabel" parent="."]
+offset_left = -259.0
+offset_top = -187.0
+offset_right = 232.0
+offset_bottom = -103.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.117647, 0.137255, 0.223529, 1)
+theme_override_fonts/normal_font = ExtResource("4_hlfw0")
+theme_override_font_sizes/normal_font_size = 31
+text = "Cinq jours jusqu'au
+vote du budget !"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="content2" type="Label" parent="."]
+visible = false
 offset_left = -61.0
 offset_top = -92.0
 offset_right = 278.0
@@ -75,6 +93,21 @@ text = "Le premier ministre va soumettre le projet de budget au vote de l'Assemb
 label_settings = SubResource("LabelSettings_qqwlt")
 vertical_alignment = 1
 autowrap_mode = 3
+
+[node name="content" type="RichTextLabel" parent="."]
+offset_left = -61.0
+offset_top = -34.0
+offset_right = 264.0
+offset_bottom = 204.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.117647, 0.137255, 0.223529, 1)
+theme_override_fonts/normal_font = ExtResource("5_84c5g")
+theme_override_fonts/bold_font = ExtResource("6_u1uw5")
+theme_override_font_sizes/normal_font_size = 22
+theme_override_font_sizes/bold_font_size = 22
+bbcode_enabled = true
+text = "Le premier ministre va soumettre le projet de budget au vote de l'Assemblée dans cinq jours. 
+[b]Sa mission, d'ici là, est de gagner suffisamment en popularité pour avoir une majorité.[/b]"
 
 [node name="date" type="Label" parent="."]
 offset_left = -256.426

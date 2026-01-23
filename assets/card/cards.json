@@ -13,7 +13,7 @@
 		"quote": "",
 		"special_event": "barrage",
 		"special_event_title": "Barrage contre l'extrême-droite",
-		"special_event_descr": "Lors d'un discours à l'Assemblée, le premier ministre a demandé aux député·e·s de supporter ses réformes pour faire barrage à l'extrême-droite. Très persuasif, le premier ministre a recueilli un large soutien."
+		"special_event_descr": "Lors d'un discours à l'Assemblée, le premier ministre a demandé aux député·e·s de supporter ses réformes pour faire barrage à l'extrême-droite. [b]Très persuasif, le premier ministre a recueilli un large soutien.[/b]"
 	},
 	{
 		"text": "Proposer une convention citoyenne pour le climat.",
@@ -29,7 +29,7 @@
 		"quote": "",
 		"special_event": "convention_citoyenne",
 		"special_event_title": "Convention citoyenne : les résultats !",
-		"special_event_descr": "150 volontaires tirés au hasard se sont réunis pour la convention citoyenne. Leurs conclusions sont unanimes et ambitieuses : limiter l'usage individuel de la voiture, rendre obligatoire la rénovation énergétique des bâtiments à moyenne terme, réglementer les méthodes de pèche, etc. Euphorie sur les bancs de la gauche… mais le premier ministre suivra-t-il les propositions de la convention ?"
+		"special_event_descr": "150 volontaires tirés au hasard se sont réunis pour la convention citoyenne. Leurs conclusions sont unanimes et ambitieuses : limiter l'usage individuel de la voiture, rendre obligatoire la rénovation énergétique des bâtiments à moyenne terme, réglementer les méthodes de pèche, etc. Euphorie sur les bancs de la gauche… [b]mais le premier ministre suivra-t-il les propositions de la convention ?[/b]"
 	},
 	{
 		"text": "Doubler les portions de frites à la cantine de l'Assemblée.",
@@ -45,7 +45,7 @@
 		"quote": "",
 		"special_event": "indigestion",
 		"special_event_title": "Indigestion à l'Assemblée nationale !",
-		"special_event_descr": "Après que les portions de frites aient été doublées à la cantine de l'Assemblée, une partie des député·e·s sont absent·e·s à la séance d'aujourd'hui pour indigestion. Les groupes Les Ripoublicains et Travail Fictif, Famille, Pas de Tri sont particulièrement touchés."
+		"special_event_descr": "Après que les portions de frites aient été doublées à la cantine de l'Assemblée, [b]une partie des député·e·s sont absent·e·s à la séance d'aujourd'hui[/b] pour indigestion. Les groupes Les Ripoublicains et Travail Fictif, Famille, Pas de Tri sont particulièrement touchés."
 	},
 	{
 		"text": "Proposer la hausse du SMIC à 1700€ net par mois.",
@@ -229,7 +229,7 @@
 		"quote": "",
 		"special_event": "mediapart",
 		"special_event_title": "Mediapart attaque !",
-		"special_event_descr": "Mediapart vient de publier un article à charge contre le gouvernement, et son ministre de l'Éducation Nationale dont les enfants sont scolarisés dans le privé. Une partie des discussions de la journée seront consacrées à ce scandale : seulement deux réformes pourront être voteés aujourd'hui."
+		"special_event_descr": "Mediapart vient de publier un article à charge contre le gouvernement, et son ministre de l'Éducation Nationale dont les enfants sont scolarisés dans le privé. Une partie des discussions de la journée seront consacrées à ce scandale : [b]seulement deux réformes pourront être voteés aujourd'hui.[/b]"
 	},
 	{
 		"text": "Facilier les expulsions et destructions d'habitats informels à Mayotte.",
@@ -362,7 +362,7 @@
 		"quote": "Bruno Le Maire",
 		"special_event": "deficit",
 		"special_event_title": "Mensonge d'État : dissimulation du déficit !",
-		"special_event_descr": "Contrairement à ce qui a été annoncé par le ministre de l'Économie, le déficit de cette année ne sera pas de 4,4% mais de 6,1%. Selon nos collègues du Palmidé Attaché, le ministre était au courant de ces estimations. Tollé sur tous les bancs de l'Assemblée."
+		"special_event_descr": "Contrairement à ce qui a été annoncé par le ministre de l'Économie, le déficit de cette année ne sera pas de 4,4% mais de 6,1%. Selon nos collègues du Palmidé Attaché, le ministre était au courant de ces estimations. [b]Tollé sur tous les bancs de l'Assemblée.[/b]"
 	},
 	{
 		"text": "Inclure dans les formations délivrées dans l'enseignement supérieur la lutte contre l'islamophobie",
@@ -482,7 +482,7 @@
 		"quote": "",
 		"special_event": "train_strike",
 		"special_event_title": "Grève des cheminots",
-		"special_event_descr": "Suite à l'annonce gouvernemantale sur la baisse de financement des infrastructures ferroviaires, 45% des cheminots se sont déclarés en grève. Une partie des députés ne pourront se rendre à l'Assemblée aujourd'hui : la gauche de l'hémicycle semble particulièrement impactée."
+		"special_event_descr": "Suite à l'annonce gouvernemantale sur la baisse de financement des infrastructures ferroviaires, 45% des cheminots se sont déclarés en grève. [b]Une partie des députés ne pourront se rendre à l'Assemblée aujourd'hui :[/b] la gauche de l'hémicycle semble particulièrement impactée."
 	},
 	{
 		"text": "Dénoncer le génocide palestinien commis par Israël.",
@@ -615,7 +615,7 @@
 		"quote": "",
 		"special_event": "collumbus_day",
 		"special_event_title": "Gérard Collumbus Day",
-		"special_event_descr": "Pour rendre hommage à Gérard Collumbus, une grande journée de festivités ont été organisées dans sa ville natale de Lugdunum par le gouvernement. De nombreux·euses député·e·s du parti En Pause devraient s'y rendre."
+		"special_event_descr": "Pour rendre hommage à Gérard Collumbus, une grande journée de festivités ont été organisées dans sa ville natale de Lugdunum par le gouvernement. [b]De nombreux·euses député·e·s du parti En Pause devraient s'y rendre.[/b]"
 	},
 	{
 		"text": "Envoyer des soldats français au Groenland pour le protéger de la menace impérialiste du « plus grand allié de l'UE » ?!",
@@ -631,7 +631,7 @@
 		"quote": "",
 		"special_event": "groenland",
 		"special_event_title": "Représailles américaines",
-		"special_event_descr": "La réponse du président américain de s'est pas faite attendre après l'envoi de troupes françaises au Groenland : les soldats américains vont venir apporter la démocratie dans notre pays. Après une réunion d'urgence, l'Assemblée nationale a décidé de remettre le premier ministre aux forces américaines."
+		"special_event_descr": "La réponse du président américain de s'est pas faite attendre après l'envoi de troupes françaises au Groenland : les soldats américains vont venir apporter la démocratie dans notre pays. Après une réunion d'urgence, [b]l'Assemblée nationale a décidé de remettre le premier ministre aux forces américaines.[/b]"
 	},
 	{
 		"text": "Baisser la TVA pour les transports en commun terrestres",

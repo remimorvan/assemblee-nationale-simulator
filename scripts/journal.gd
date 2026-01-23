@@ -1,7 +1,7 @@
 extends Area2D
 
-@onready var Title: Label = $title
-@onready var Content: Label = $content
+@onready var Title: RichTextLabel = $title
+@onready var Content: RichTextLabel = $content
 @onready var Date: Label = $date
 @onready var Illustration: TextureRect = $image
 @onready var Player: Node2D = $"../Player"

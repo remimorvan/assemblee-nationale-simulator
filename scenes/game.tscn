@@ -2,24 +2,24 @@
 
 [ext_resource type="Texture2D" uid="uid://v4oxve83qvf3" path="res://assets/parquet.png" id="1_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://bf3fndiyasfyq" path="res://scenes/player.tscn" id="1_uwrxv"]
-[ext_resource type="FontFile" uid="uid://c4v45pul7umvp" path="res://assets/card/Monicacomic.ttf" id="2_u5sy4"]
 [ext_resource type="Texture2D" uid="uid://cx2elgtpe0k4a" path="res://assets/side_bar.png" id="2_vtaks"]
 [ext_resource type="PackedScene" uid="uid://d1voxmvhe7xmt" path="res://scenes/hemicycle.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://bqeoj11e5kq1" path="res://scenes/deck.tscn" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://bh2tfsobb10oe" path="res://assets/calendar.png" id="4_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://bchbmi7q2rb7" path="res://scenes/plot.tscn" id="4_lbhrr"]
+[ext_resource type="FontFile" uid="uid://gq1623p3ggk" path="res://assets/journal/OldNewspaperTypes.ttf" id="5_vtaks"]
 [ext_resource type="PackedScene" uid="uid://didoyh5qajy65" path="res://scenes/journal.tscn" id="6_p57ef"]
 [ext_resource type="Script" uid="uid://dmafeh1bsc5qf" path="res://scripts/journal.gd" id="7_u5sy4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0tnpc"]
-font = ExtResource("2_u5sy4")
+font = ExtResource("5_vtaks")
 font_size = 90
-font_color = Color(0, 0, 0, 1)
+font_color = Color(0.626072, 0.233212, 0.224301, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_vtaks"]
-font = ExtResource("2_u5sy4")
+font = ExtResource("5_vtaks")
 font_size = 30
-font_color = Color(0, 0, 0, 1)
+font_color = Color(0.467402, 0.160049, 0.154783, 1)
 
 [node name="Game" type="Node2D"]
 
@@ -63,20 +63,20 @@ texture = ExtResource("4_kvpfn")
 
 [node name="CalendarDay" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect"]
 layout_mode = 2
-offset_left = -2.0
-offset_top = 29.0
-offset_right = 298.0
-offset_bottom = 131.0
+offset_left = -6.0
+offset_top = 18.0
+offset_right = 294.0
+offset_bottom = 130.0
 text = "01"
 label_settings = SubResource("LabelSettings_0tnpc")
 horizontal_alignment = 1
 
 [node name="CalendarMonth" type="Label" parent="HBoxContainer/PanelContainer/VBoxContainer/TextureRect"]
 layout_mode = 2
-offset_left = -1.0
-offset_top = 123.0
-offset_right = 299.0
-offset_bottom = 158.0
+offset_left = -11.0
+offset_top = 109.0
+offset_right = 289.0
+offset_bottom = 147.0
 text = "janvier 2026"
 label_settings = SubResource("LabelSettings_vtaks")
 horizontal_alignment = 1
