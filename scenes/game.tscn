@@ -126,7 +126,6 @@ layout_mode = 2
 z_as_relative = false
 
 [node name="Journal" parent="." instance=ExtResource("6_p57ef")]
-visible = false
 z_index = 4096
 position = Vector2(960, 540)
 scale = Vector2(2.3, 2.3)
