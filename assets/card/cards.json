@@ -284,7 +284,7 @@
 		"quote": "Résolution 05/06/2025 / 29/10/2024"
 	},
 	{
-		"text": "Supprimer les zones à faible émissions.",
+		"text": "Supprimer les zones à faibles émissions.",
 		"effects": {
 			"lfi": [0.59, 0.2],
 			"eco": [-0.95, 0.1],
