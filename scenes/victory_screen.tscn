@@ -1,9 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://bqyuueqc4507j"]
+[gd_scene load_steps=10 format=3 uid="uid://bqyuueqc4507j"]
 
-[ext_resource type="Texture2D" uid="uid://4lxap5anqigv" path="res://assets/screens/back_victory_screen.png" id="1_pfcnd"]
-[ext_resource type="Texture2D" uid="uid://c1pgvwem7lxhj" path="res://assets/screens/couranne_victory_screen.png" id="2_rixwf"]
-[ext_resource type="Texture2D" uid="uid://crigu5suatwof" path="res://assets/screens/winner_victory_screen.png" id="3_ll51u"]
+[ext_resource type="Texture2D" uid="uid://duus2demjoa58" path="res://assets/screens/back_victory_screen.png" id="1_pfcnd"]
+[ext_resource type="Texture2D" uid="uid://dh0lthykngd84" path="res://assets/screens/couranne_victory_screen.png" id="2_rixwf"]
+[ext_resource type="Script" uid="uid://b5oj80njmvurw" path="res://scripts/victory_screen.gd" id="2_wbi6c"]
+[ext_resource type="Texture2D" uid="uid://hc6hlb1sqtdc" path="res://assets/screens/winner_victory_screen.png" id="3_ll51u"]
 [ext_resource type="Shader" uid="uid://d1vrrbx7pcmol" path="res://assets/shader/victory_screen.gdshader" id="4_rixwf"]
+[ext_resource type="Texture2D" uid="uid://q6tlt2c2737k" path="res://assets/hemicycle/tool_tip_plot.png" id="6_u4hde"]
+[ext_resource type="FontFile" uid="uid://usk4ucaxtgwp" path="res://assets/card/Monicacomic.ttf" id="7_66hvp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ll51u"]
 shader = ExtResource("4_rixwf")
@@ -12,6 +15,7 @@ shader = ExtResource("4_rixwf")
 
 [node name="VictoryScreen" type="Sprite2D"]
 texture = ExtResource("1_pfcnd")
+script = ExtResource("2_wbi6c")
 
 [node name="RaysShader" type="TextureRect" parent="."]
 z_index = -1
@@ -31,10 +35,10 @@ position = Vector2(-451, 35)
 texture = ExtResource("3_ll51u")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = -319.0
-offset_top = -107.0
-offset_right = 317.0
-offset_bottom = 104.0
+offset_left = -320.0
+offset_top = -158.0
+offset_right = 316.0
+offset_bottom = 53.0
 theme_override_colors/default_color = Color(0.229305, 0.194945, 0.0397207, 1)
 theme_override_font_sizes/normal_font_size = 40
 theme_override_font_sizes/bold_font_size = 52
@@ -43,8 +47,24 @@ text = "[b]Félicitations, le budget 2026 a été adopté ! [/b]
 Rendez-vous l'année prochaine…"
 horizontal_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -1384.0
-offset_top = -886.0
-offset_right = 1393.0
-offset_bottom = 835.0
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = -125.0
+offset_top = 73.0
+offset_right = 125.0
+offset_bottom = 173.0
+texture_normal = ExtResource("6_u4hde")
+
+[node name="Label" type="Label" parent="TextureButton"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 30.0
+offset_right = 235.0
+offset_bottom = 68.0
+theme_override_colors/font_color = Color(0.113049, 0.113049, 0.113049, 1)
+theme_override_fonts/font = ExtResource("7_66hvp")
+theme_override_font_sizes/font_size = 29
+text = "Retour au menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

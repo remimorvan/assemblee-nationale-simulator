@@ -1,20 +1,20 @@
-[gd_scene load_steps=16 format=3 uid="uid://tb7b1unm0bvy"]
+[gd_scene load_steps=16 format=3 uid="uid://ca3nlpcpboj4o"]
 
-[ext_resource type="Texture2D" uid="uid://dn57qtfjyrsrp" path="res://assets/screens/tuto_1.png" id="1_5prr2"]
-[ext_resource type="FontFile" uid="uid://c4v45pul7umvp" path="res://assets/card/Monicacomic.ttf" id="2_ajqh8"]
-[ext_resource type="Texture2D" uid="uid://c2wc4q8vdpnfs" path="res://assets/screens/tuto_2.png" id="3_jqtmp"]
-[ext_resource type="Texture2D" uid="uid://du7agybkjgde1" path="res://assets/screens/tuto_3.png" id="4_k74gq"]
-[ext_resource type="Texture2D" uid="uid://o7q6j4sxiami" path="res://assets/card/logos/lfi_back.png" id="5_x0wu6"]
-[ext_resource type="Texture2D" uid="uid://c2wefqcb2f2ua" path="res://assets/card/logos/lfi_line.png" id="6_abwub"]
-[ext_resource type="Texture2D" uid="uid://2givsr6ka0vp" path="res://assets/card/logos/eco_back.png" id="7_eq5qt"]
-[ext_resource type="Texture2D" uid="uid://b3164qe0r4g80" path="res://assets/card/logos/eco_line.png" id="8_lel0c"]
-[ext_resource type="Texture2D" uid="uid://dsidf2e6fuk3" path="res://assets/card/logos/soc_back.png" id="9_gtyl0"]
-[ext_resource type="Texture2D" uid="uid://qoop8klbndld" path="res://assets/card/logos/soc_line.png" id="10_ab0hi"]
-[ext_resource type="Texture2D" uid="uid://do0vreksar2wb" path="res://assets/card/logos/lr_back.png" id="11_l0dty"]
-[ext_resource type="Texture2D" uid="uid://0kxsunno8eb3" path="res://assets/card/logos/lr_line.png" id="12_qj1xn"]
-[ext_resource type="Texture2D" uid="uid://cm5thuavdro24" path="res://assets/card/logos/facho_back.png" id="13_mwl6t"]
-[ext_resource type="Texture2D" uid="uid://r81rgy07crw3" path="res://assets/card/logos/facho_line.png" id="14_q614t"]
-[ext_resource type="Texture2D" uid="uid://co1rg1ppy2c3l" path="res://assets/hemicycle/tool_tip_plot.png" id="15_jqtmp"]
+[ext_resource type="Texture2D" uid="uid://847am71ye135" path="res://assets/screens/tuto_1.png" id="1_5prr2"]
+[ext_resource type="FontFile" uid="uid://foful8cuop6y" path="res://assets/card/Monicacomic.ttf" id="2_ajqh8"]
+[ext_resource type="Texture2D" uid="uid://csr2swquxa5gm" path="res://assets/screens/tuto_2.png" id="3_jqtmp"]
+[ext_resource type="Texture2D" uid="uid://bgvr7lj1trrhc" path="res://assets/screens/tuto_3.png" id="4_k74gq"]
+[ext_resource type="Texture2D" uid="uid://ixf4p0ltgjmg" path="res://assets/card/logos/lfi_back.png" id="5_x0wu6"]
+[ext_resource type="Texture2D" uid="uid://d3o7aasw3i1q4" path="res://assets/card/logos/lfi_line.png" id="6_abwub"]
+[ext_resource type="Texture2D" uid="uid://cc4yddk7esw3c" path="res://assets/card/logos/eco_back.png" id="7_eq5qt"]
+[ext_resource type="Texture2D" uid="uid://b44ican76mjdh" path="res://assets/card/logos/eco_line.png" id="8_lel0c"]
+[ext_resource type="Texture2D" uid="uid://ctlaib2j778p3" path="res://assets/card/logos/soc_back.png" id="9_gtyl0"]
+[ext_resource type="Texture2D" uid="uid://bpufl3yrfw0wq" path="res://assets/card/logos/soc_line.png" id="10_ab0hi"]
+[ext_resource type="Texture2D" uid="uid://bl1kc2vappia3" path="res://assets/card/logos/lr_back.png" id="11_l0dty"]
+[ext_resource type="Texture2D" uid="uid://dnadrrcp5ix6d" path="res://assets/card/logos/lr_line.png" id="12_qj1xn"]
+[ext_resource type="Texture2D" uid="uid://donf4a7r825i3" path="res://assets/card/logos/facho_back.png" id="13_mwl6t"]
+[ext_resource type="Texture2D" uid="uid://cm2evyhf53cxp" path="res://assets/card/logos/facho_line.png" id="14_q614t"]
+[ext_resource type="Texture2D" uid="uid://dxqt3r6feuyjb" path="res://assets/hemicycle/tool_tip_plot.png" id="15_jqtmp"]
 
 [node name="OverlayTutoriel" type="ColorRect"]
 anchors_preset = 15
@@ -44,6 +44,7 @@ theme_override_font_sizes/normal_font_size = 30
 text = "Chaque jour, soumet 3 propositions aux député.es"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="tuto1"]
+layout_mode = 0
 offset_left = 33.0
 offset_top = 465.0
 offset_right = 474.0
@@ -63,6 +64,7 @@ offset_bottom = 976.0
 texture = ExtResource("3_jqtmp")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="tuto2"]
+layout_mode = 0
 offset_left = 31.0
 offset_top = 30.0
 offset_right = 474.0
@@ -73,6 +75,7 @@ theme_override_font_sizes/normal_font_size = 30
 text = "Pour parvenir à faire accepter le budget, assure-toi de gagner le soutient des député.es !"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="tuto2"]
+layout_mode = 0
 offset_left = 167.0
 offset_top = 404.0
 offset_right = 426.0
@@ -84,6 +87,7 @@ text = "Une proposition bien choisie permet de faire pencher la balance en ta fa
 "
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="tuto2"]
+layout_mode = 0
 offset_left = 191.0
 offset_top = 539.0
 offset_right = 418.0
@@ -142,6 +146,7 @@ texture = ExtResource("13_mwl6t")
 texture = ExtResource("14_q614t")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="tuto3"]
+layout_mode = 0
 offset_left = 33.0
 offset_top = 150.0
 offset_right = 476.0
@@ -152,6 +157,7 @@ theme_override_font_sizes/normal_font_size = 30
 text = "Garde un oeil sur les opinions des différents partis en consultant l'histogramme"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="tuto3"]
+layout_mode = 0
 offset_left = 344.0
 offset_top = 378.0
 offset_right = 585.0
@@ -162,6 +168,7 @@ theme_override_font_sizes/normal_font_size = 24
 text = "En jeu, passe ta souris pour + d'info sur un parti"
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="tuto3"]
+layout_mode = 0
 offset_left = 233.0
 offset_top = 677.0
 offset_right = 467.0
