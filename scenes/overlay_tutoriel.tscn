@@ -1,29 +1,30 @@
-[gd_scene load_steps=17 format=3 uid="uid://bk4d6b6oku44a"]
+[gd_scene load_steps=17 format=3 uid="uid://ca3nlpcpboj4o"]
 
-[ext_resource type="Texture2D" uid="uid://847am71ye135" path="res://assets/screens/tuto_1.png" id="1_5prr2"]
+[ext_resource type="Texture2D" uid="uid://dn57qtfjyrsrp" path="res://assets/screens/tuto_1.png" id="1_5prr2"]
 [ext_resource type="Script" uid="uid://idci7tx2ujya" path="res://scripts/overlay_tutoriel.gd" id="1_k74gq"]
-[ext_resource type="FontFile" uid="uid://foful8cuop6y" path="res://assets/card/Monicacomic.ttf" id="2_ajqh8"]
-[ext_resource type="Texture2D" uid="uid://csr2swquxa5gm" path="res://assets/screens/tuto_2.png" id="3_jqtmp"]
-[ext_resource type="Texture2D" uid="uid://bgvr7lj1trrhc" path="res://assets/screens/tuto_3.png" id="4_k74gq"]
-[ext_resource type="Texture2D" uid="uid://ixf4p0ltgjmg" path="res://assets/card/logos/lfi_back.png" id="5_x0wu6"]
-[ext_resource type="Texture2D" uid="uid://d3o7aasw3i1q4" path="res://assets/card/logos/lfi_line.png" id="6_abwub"]
-[ext_resource type="Texture2D" uid="uid://cc4yddk7esw3c" path="res://assets/card/logos/eco_back.png" id="7_eq5qt"]
-[ext_resource type="Texture2D" uid="uid://b44ican76mjdh" path="res://assets/card/logos/eco_line.png" id="8_lel0c"]
-[ext_resource type="Texture2D" uid="uid://ctlaib2j778p3" path="res://assets/card/logos/soc_back.png" id="9_gtyl0"]
-[ext_resource type="Texture2D" uid="uid://bpufl3yrfw0wq" path="res://assets/card/logos/soc_line.png" id="10_ab0hi"]
-[ext_resource type="Texture2D" uid="uid://bl1kc2vappia3" path="res://assets/card/logos/lr_back.png" id="11_l0dty"]
-[ext_resource type="Texture2D" uid="uid://dnadrrcp5ix6d" path="res://assets/card/logos/lr_line.png" id="12_qj1xn"]
-[ext_resource type="Texture2D" uid="uid://donf4a7r825i3" path="res://assets/card/logos/facho_back.png" id="13_mwl6t"]
-[ext_resource type="Texture2D" uid="uid://cm2evyhf53cxp" path="res://assets/card/logos/facho_line.png" id="14_q614t"]
-[ext_resource type="Texture2D" uid="uid://dxqt3r6feuyjb" path="res://assets/hemicycle/tool_tip_plot.png" id="15_jqtmp"]
+[ext_resource type="FontFile" uid="uid://c4v45pul7umvp" path="res://assets/card/Monicacomic.ttf" id="2_ajqh8"]
+[ext_resource type="Texture2D" uid="uid://c2wc4q8vdpnfs" path="res://assets/screens/tuto_2.png" id="3_jqtmp"]
+[ext_resource type="Texture2D" uid="uid://du7agybkjgde1" path="res://assets/screens/tuto_3.png" id="4_k74gq"]
+[ext_resource type="Texture2D" uid="uid://o7q6j4sxiami" path="res://assets/card/logos/lfi_back.png" id="5_x0wu6"]
+[ext_resource type="Texture2D" uid="uid://c2wefqcb2f2ua" path="res://assets/card/logos/lfi_line.png" id="6_abwub"]
+[ext_resource type="Texture2D" uid="uid://2givsr6ka0vp" path="res://assets/card/logos/eco_back.png" id="7_eq5qt"]
+[ext_resource type="Texture2D" uid="uid://b3164qe0r4g80" path="res://assets/card/logos/eco_line.png" id="8_lel0c"]
+[ext_resource type="Texture2D" uid="uid://dsidf2e6fuk3" path="res://assets/card/logos/soc_back.png" id="9_gtyl0"]
+[ext_resource type="Texture2D" uid="uid://qoop8klbndld" path="res://assets/card/logos/soc_line.png" id="10_ab0hi"]
+[ext_resource type="Texture2D" uid="uid://do0vreksar2wb" path="res://assets/card/logos/lr_back.png" id="11_l0dty"]
+[ext_resource type="Texture2D" uid="uid://0kxsunno8eb3" path="res://assets/card/logos/lr_line.png" id="12_qj1xn"]
+[ext_resource type="Texture2D" uid="uid://cm5thuavdro24" path="res://assets/card/logos/facho_back.png" id="13_mwl6t"]
+[ext_resource type="Texture2D" uid="uid://r81rgy07crw3" path="res://assets/card/logos/facho_line.png" id="14_q614t"]
+[ext_resource type="Texture2D" uid="uid://co1rg1ppy2c3l" path="res://assets/hemicycle/tool_tip_plot.png" id="15_jqtmp"]
 
 [node name="OverlayTutoriel" type="ColorRect"]
+top_level = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 1
+mouse_force_pass_scroll_events = false
 color = Color(0.441581, 0.436516, 0.449572, 0.576471)
 script = ExtResource("1_k74gq")
 
@@ -197,6 +198,7 @@ offset_left = 1604.0
 offset_top = 901.0
 offset_right = 1850.0
 offset_bottom = 992.0
+mouse_filter = 2
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("2_ajqh8")
 theme_override_font_sizes/normal_font_size = 60

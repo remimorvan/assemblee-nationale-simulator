@@ -18,6 +18,7 @@ const nb_days_before_vote: int = 6
 var last_card_changed: int = 0
 var is_journal_showed: bool = true
 var lock: bool = false # Prevent player from playing an unbounded number of card
+var game_pause:bool = false
 var has_lost: bool = false
 
 var tween: Tween

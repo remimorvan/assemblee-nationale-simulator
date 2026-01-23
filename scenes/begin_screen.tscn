@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://8odn30sfqxiy"]
 
 [ext_resource type="Script" uid="uid://cmec1vfokbkpo" path="res://scripts/begin_screen.gd" id="1_16y60"]
-[ext_resource type="FontFile" uid="uid://ci1ffpjq1k6tn" path="res://assets/card/BadComic-Regular.ttf" id="2_4wclw"]
-[ext_resource type="Texture2D" uid="uid://lbq7ebe8f30l" path="res://assets/screens/welcome_screen.png" id="2_ijkya"]
-[ext_resource type="Texture2D" uid="uid://dxqt3r6feuyjb" path="res://assets/hemicycle/tool_tip_plot.png" id="3_qscsx"]
-[ext_resource type="FontFile" uid="uid://foful8cuop6y" path="res://assets/card/Monicacomic.ttf" id="4_4b3jc"]
+[ext_resource type="FontFile" uid="uid://cewqm3af8k8sr" path="res://assets/card/BadComic-Regular.ttf" id="2_4wclw"]
+[ext_resource type="Texture2D" uid="uid://dewako0nrpi8p" path="res://assets/screens/welcome_screen.png" id="2_ijkya"]
+[ext_resource type="Texture2D" uid="uid://co1rg1ppy2c3l" path="res://assets/hemicycle/tool_tip_plot.png" id="3_qscsx"]
+[ext_resource type="FontFile" uid="uid://c4v45pul7umvp" path="res://assets/card/Monicacomic.ttf" id="4_4b3jc"]
 
 [node name="BeginScreen" type="Control"]
 layout_mode = 3
