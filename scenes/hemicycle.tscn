@@ -32,21 +32,20 @@ color = Color(1, 1, 1, 0)
 metadata/_edit_lock_ = true
 
 [node name="TextureButton" type="TextureButton" parent="."]
+clip_contents = true
 custom_minimum_size = Vector2(250, 100)
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
 texture_normal = ExtResource("5_w8skp")
 texture_pressed = ExtResource("5_w8skp")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="TextureButton"]
 clip_contents = false
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.133
-anchor_bottom = 0.084
-offset_left = 48.0
-offset_top = 23.0
-offset_right = -7.46001
-offset_bottom = 2.39999
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -54,5 +53,7 @@ theme_override_fonts/normal_font = ExtResource("6_2g8u3")
 bbcode_enabled = true
 text = "[color=black][font_size=40]Tutoriel"
 fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
