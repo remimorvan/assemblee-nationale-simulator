@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://ca3nlpcpboj4o"]
+[gd_scene load_steps=17 format=3 uid="uid://ca3nlpcpboj4o"]
 
 [ext_resource type="Texture2D" uid="uid://847am71ye135" path="res://assets/screens/tuto_1.png" id="1_5prr2"]
+[ext_resource type="Script" uid="uid://idci7tx2ujya" path="res://scripts/overlay_tutoriel.gd" id="1_k74gq"]
 [ext_resource type="FontFile" uid="uid://foful8cuop6y" path="res://assets/card/Monicacomic.ttf" id="2_ajqh8"]
 [ext_resource type="Texture2D" uid="uid://csr2swquxa5gm" path="res://assets/screens/tuto_2.png" id="3_jqtmp"]
 [ext_resource type="Texture2D" uid="uid://bgvr7lj1trrhc" path="res://assets/screens/tuto_3.png" id="4_k74gq"]
@@ -22,7 +23,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 color = Color(0.441581, 0.436516, 0.449572, 0.576471)
+script = ExtResource("1_k74gq")
 
 [node name="tuto1" type="TextureRect" parent="."]
 layout_mode = 0
@@ -200,3 +203,5 @@ theme_override_font_sizes/normal_font_size = 60
 text = "Jouer"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

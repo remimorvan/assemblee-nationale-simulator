@@ -226,3 +226,8 @@ func new_mp(seat: int) -> int:	# returns number of the political party of mp
 	mp.scale.y = 0.6
 	
 	return group_id
+
+
+func _on_texture_button_pressed() -> void:
+	var overlay = get_tree().get_current_scene().find_child("OverlayTutoriel")
+	overlay.visible = true

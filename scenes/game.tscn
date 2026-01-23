@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://velnx8vw6r6u"]
+[gd_scene load_steps=17 format=3 uid="uid://velnx8vw6r6u"]
 
 [ext_resource type="Texture2D" uid="uid://bnwl4udh588u" path="res://assets/parquet.png" id="1_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://bf3fndiyasfyq" path="res://scenes/player.tscn" id="1_uwrxv"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bchbmi7q2rb7" path="res://scenes/plot.tscn" id="4_lbhrr"]
 [ext_resource type="FontFile" uid="uid://cx51c8m6e6abp" path="res://assets/journal/OldNewspaperTypes.ttf" id="5_vtaks"]
 [ext_resource type="PackedScene" uid="uid://didoyh5qajy65" path="res://scenes/journal.tscn" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://ca3nlpcpboj4o" path="res://scenes/overlay_tutoriel.tscn" id="7_trtic"]
 [ext_resource type="Script" uid="uid://dmafeh1bsc5qf" path="res://scripts/journal.gd" id="7_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dsxn86n1h3qci" path="res://scenes/tooltip.tscn" id="11_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://c7h6xomjcf1ka" path="res://scenes/looser_screen.tscn" id="12_kvuet"]
@@ -122,13 +123,17 @@ visible = false
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 
+[node name="OverlayTutoriel" parent="." instance=ExtResource("7_trtic")]
+visible = false
+z_index = 1200
+
 [node name="Deck" parent="." instance=ExtResource("3_lnu2h")]
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 z_as_relative = false
 
 [node name="Journal" parent="." instance=ExtResource("6_p57ef")]
-z_index = 4096
+z_index = 1100
 position = Vector2(960, 540)
 scale = Vector2(2.3, 2.3)
 script = ExtResource("7_u5sy4")
