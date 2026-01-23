@@ -14,7 +14,7 @@ var total_nb_card_played: int = 0
 var rng = RandomNumberGenerator.new() 
 var special_event # string or null
 var declared_special_event_this_turn: bool = false
-const nb_days_before_vote: int = 2
+const nb_days_before_vote: int = 6
 var last_card_changed: int = 0
 var is_journal_showed: bool = true
 var lock: bool = false # Prevent player from playing an unbounded number of card
