@@ -12,7 +12,7 @@
 [ext_resource type="Script" uid="uid://dmafeh1bsc5qf" path="res://scripts/journal.gd" id="7_u5sy4"]
 [ext_resource type="PackedScene" path="res://scenes/tooltip.tscn" id="11_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://bv7bhg0nf7wkc" path="res://scenes/looser_screen.tscn" id="12_kvuet"]
-[ext_resource type="PackedScene" uid="uid://dgxt5g36omeof" path="res://scenes/victory_screen.tscn" id="13_trtic"]
+[ext_resource type="PackedScene" uid="uid://bqyuueqc4507j" path="res://scenes/victory_screen.tscn" id="13_trtic"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_0tnpc"]
 font = ExtResource("5_vtaks")
