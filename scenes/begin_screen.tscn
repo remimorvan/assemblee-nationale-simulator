@@ -50,8 +50,8 @@ grow_horizontal = 2
 bbcode_enabled = true
 text = "[color=black][font_size=40][b]Crédits:
 Programmation :[/b] Rémi, Taïssir, Timothé
-[b]Art :[/b] Taïssir
-[b]Musique :[/b] Timothé
+[b]Graphismes :[/b] Taïssir
+[b]Musique et shaders:[/b] Timothé
 [b]SFX :[/b] Tabletop Games Sound Effect Pack by JDSherbert
 [b]Compagnie :[/b] Alexandre, Claire et Timothée"
 fit_content = true
