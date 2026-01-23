@@ -1,15 +1,17 @@
-[gd_scene load_steps=9 format=3 uid="uid://c7h6xomjcf1ka"]
+[gd_scene load_steps=9 format=3 uid="uid://bv7bhg0nf7wkc"]
 
-[ext_resource type="Texture2D" uid="uid://bwxh3cox8bvnc" path="res://assets/screens/back_loser_screen.png" id="1_eta0r"]
-[ext_resource type="Texture2D" uid="uid://c4cct683dyfx7" path="res://assets/screens/cloud_1.png" id="2_q85na"]
-[ext_resource type="Texture2D" uid="uid://bbjsy82siem8k" path="res://assets/screens/could_2.png" id="3_os4vx"]
-[ext_resource type="Texture2D" uid="uid://c6mu4ygjh3l7b" path="res://assets/screens/cloud_4.png" id="4_v6sr7"]
-[ext_resource type="Texture2D" uid="uid://lxiwund2iy08" path="res://assets/screens/cloud_3.png" id="5_kd064"]
-[ext_resource type="Texture2D" uid="uid://2o5drcbv3jqr" path="res://assets/screens/loser_loser_screen.png" id="6_mp25u"]
-[ext_resource type="Texture2D" uid="uid://vs0rtgmbllda" path="res://assets/screens/smiley_loser_screen.png" id="7_hdatr"]
-[ext_resource type="Texture2D" uid="uid://deihfdbkyfq7h" path="res://assets/screens/loser_screen_model.png" id="8_ifv47"]
+[ext_resource type="Texture2D" uid="uid://qlsaafic0n2k" path="res://assets/screens/back_loser_screen.png" id="1_eta0r"]
+[ext_resource type="Texture2D" uid="uid://c22wkkecr8lte" path="res://assets/screens/cloud_1.png" id="2_q85na"]
+[ext_resource type="Texture2D" uid="uid://b2evduj2gwl13" path="res://assets/screens/could_2.png" id="3_os4vx"]
+[ext_resource type="Texture2D" uid="uid://cjlsb52830auc" path="res://assets/screens/cloud_4.png" id="4_v6sr7"]
+[ext_resource type="Texture2D" uid="uid://bwf811gcmfi1g" path="res://assets/screens/cloud_3.png" id="5_kd064"]
+[ext_resource type="Texture2D" uid="uid://dkv0qwbwh0ij4" path="res://assets/screens/loser_loser_screen.png" id="6_mp25u"]
+[ext_resource type="Texture2D" uid="uid://bgh6kqy7whjr7" path="res://assets/screens/smiley_loser_screen.png" id="7_hdatr"]
+[ext_resource type="Texture2D" uid="uid://drl48itg3oxi" path="res://assets/screens/loser_screen_model.png" id="8_ifv47"]
 
-[node name="LooserScreen" type="Sprite2D"]
+[node name="LooserScreen" type="Node2D"]
+
+[node name="Box" type="Sprite2D" parent="."]
 self_modulate = Color(0.481072, 0.486534, 0.634145, 1)
 texture = ExtResource("1_eta0r")
 
@@ -21,18 +23,20 @@ texture = ExtResource("2_q85na")
 position = Vector2(280, -483)
 texture = ExtResource("3_os4vx")
 
-[node name="Cloud5" type="Sprite2D" parent="."]
-position = Vector2(51, -532)
-rotation = 0.0174793
-texture = ExtResource("3_os4vx")
+[node name="Cloud3" type="Sprite2D" parent="."]
+position = Vector2(154, -389)
+scale = Vector2(1, 1)
+texture = ExtResource("5_kd064")
 
 [node name="Cloud4" type="Sprite2D" parent="."]
 position = Vector2(-89, -367)
 texture = ExtResource("4_v6sr7")
 
-[node name="Cloud3" type="Sprite2D" parent="."]
-position = Vector2(154, -389)
-texture = ExtResource("5_kd064")
+[node name="Cloud5" type="Sprite2D" parent="."]
+position = Vector2(51, -532)
+rotation = 0.0174793
+scale = Vector2(1, 1)
+texture = ExtResource("3_os4vx")
 
 [node name="looser" type="Sprite2D" parent="."]
 position = Vector2(-12, -408)
@@ -55,3 +59,16 @@ modulate = Color(1, 1, 1, 0.447059)
 position = Vector2(1, -102)
 texture = ExtResource("8_ifv47")
 metadata/_edit_lock_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -318.0
+offset_top = -125.0
+offset_right = 318.0
+offset_bottom = 119.0
+theme_override_colors/default_color = Color(0.979055, 0.937732, 0.761748, 1)
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 52
+bbcode_enabled = true
+text = "[b]Perdu ![/b]
+Essaie encore, tu ne vas quand même pas utiliser le 49-3 comme un looser…"
+horizontal_alignment = 1
