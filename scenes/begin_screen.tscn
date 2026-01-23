@@ -1,10 +1,28 @@
-[gd_scene load_steps=6 format=3 uid="uid://8odn30sfqxiy"]
+[gd_scene load_steps=15 format=3 uid="uid://8odn30sfqxiy"]
 
 [ext_resource type="Script" uid="uid://cmec1vfokbkpo" path="res://scripts/begin_screen.gd" id="1_16y60"]
-[ext_resource type="FontFile" uid="uid://0pyo548st5e1" path="res://assets/card/BadComic-Regular.ttf" id="2_4wclw"]
-[ext_resource type="Texture2D" uid="uid://bjw50pvbcxvwy" path="res://assets/screens/welcome_screen.png" id="2_ijkya"]
-[ext_resource type="Texture2D" uid="uid://q6tlt2c2737k" path="res://assets/hemicycle/tool_tip_plot.png" id="3_qscsx"]
-[ext_resource type="FontFile" uid="uid://usk4ucaxtgwp" path="res://assets/card/Monicacomic.ttf" id="4_4b3jc"]
+[ext_resource type="FontFile" uid="uid://ci1ffpjq1k6tn" path="res://assets/card/BadComic-Regular.ttf" id="2_4wclw"]
+[ext_resource type="Texture2D" uid="uid://lbq7ebe8f30l" path="res://assets/screens/welcome_screen.png" id="2_ijkya"]
+[ext_resource type="Texture2D" uid="uid://dxqt3r6feuyjb" path="res://assets/hemicycle/tool_tip_plot.png" id="3_qscsx"]
+[ext_resource type="FontFile" uid="uid://foful8cuop6y" path="res://assets/card/Monicacomic.ttf" id="4_4b3jc"]
+[ext_resource type="Shader" uid="uid://c6owjic8d8tp4" path="res://assets/shader/begin_screen.gdshader" id="6_4b3jc"]
+[ext_resource type="Texture2D" uid="uid://cc4yddk7esw3c" path="res://assets/card/logos/eco_back.png" id="7_ir6vu"]
+[ext_resource type="Texture2D" uid="uid://donf4a7r825i3" path="res://assets/card/logos/facho_back.png" id="8_sgq2x"]
+[ext_resource type="Texture2D" uid="uid://ixf4p0ltgjmg" path="res://assets/card/logos/lfi_back.png" id="9_nkqk5"]
+[ext_resource type="Texture2D" uid="uid://bl1kc2vappia3" path="res://assets/card/logos/lr_back.png" id="10_0mxn5"]
+[ext_resource type="Texture2D" uid="uid://l37t3hvexhkd" path="res://assets/card/logos/macron_back.png" id="11_qbnq2"]
+[ext_resource type="Texture2D" uid="uid://ctlaib2j778p3" path="res://assets/card/logos/soc_back.png" id="12_tdy7d"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h8c4i"]
+shader = ExtResource("6_4b3jc")
+shader_parameter/tex1 = ExtResource("7_ir6vu")
+shader_parameter/tex2 = ExtResource("8_sgq2x")
+shader_parameter/tex3 = ExtResource("9_nkqk5")
+shader_parameter/tex4 = ExtResource("10_0mxn5")
+shader_parameter/tex5 = ExtResource("11_qbnq2")
+shader_parameter/tex6 = ExtResource("12_tdy7d")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_qscsx"]
 
 [node name="BeginScreen" type="Control"]
 layout_mode = 3
@@ -23,6 +41,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_ijkya")
+
+[node name="Shader" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_h8c4i")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -808.0
+offset_top = 232.0
+offset_right = 298.0
+offset_bottom = 854.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.329867
+texture = SubResource("CanvasTexture_qscsx")
 
 [node name="TextureButton" type="TextureButton" parent="."]
 custom_minimum_size = Vector2(500, 100)
