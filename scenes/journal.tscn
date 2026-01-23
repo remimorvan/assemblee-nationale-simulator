@@ -49,10 +49,10 @@ offset_bottom = 209.0
 texture = ExtResource("1_ih0ao")
 
 [node name="image" type="TextureRect" parent="."]
-offset_left = -258.027
-offset_top = -15.5615
-offset_right = 21.9732
-offset_bottom = 224.438
+offset_left = -258.95
+offset_top = -40.8627
+offset_right = 21.05
+offset_bottom = 199.137
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_ll4rq")
 
@@ -95,10 +95,10 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="content" type="RichTextLabel" parent="."]
-offset_left = -61.0
-offset_top = -34.0
-offset_right = 264.0
-offset_bottom = 204.0
+offset_left = -69.0
+offset_top = -73.0
+offset_right = 259.0
+offset_bottom = 188.0
 mouse_filter = 2
 theme_override_colors/default_color = Color(0.117647, 0.137255, 0.223529, 1)
 theme_override_fonts/normal_font = ExtResource("5_84c5g")
@@ -110,10 +110,10 @@ text = "Le premier ministre va soumettre le projet de budget au vote de l'Assemb
 [b]Sa mission, d'ici là, est de gagner suffisamment en popularité pour avoir une majorité.[/b]"
 
 [node name="date" type="Label" parent="."]
-offset_left = -256.426
-offset_top = -77.8306
-offset_right = -107.426
-offset_bottom = -52.8306
+offset_left = -255.921
+offset_top = -73.7386
+offset_right = -106.921
+offset_bottom = -48.7386
 text = "01 janvier 2026"
 label_settings = SubResource("LabelSettings_qqwlt")
 horizontal_alignment = 2

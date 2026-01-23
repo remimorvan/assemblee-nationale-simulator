@@ -76,7 +76,7 @@ func _on_mouse_entered() -> void:
 	old_z_index = self.z_index
 	if old_position_y == null: 
 		old_position_y = self.position.y
-	if (not Player.is_journal_showed or true) and !Player.lock:
+	if !Player.lock:
 		$HoverSound.play()
 	
 		self.z_index = 1000
@@ -91,7 +91,7 @@ func _on_mouse_entered() -> void:
 		tween.parallel().tween_property(self, "position:y", old_position_y-100, .25)
 
 func _on_mouse_exited() -> void:
-	if (not Player.is_journal_showed or true) and !Player.lock:
+	if !Player.lock:
 		# restore z_index
 		self.z_index = old_z_index
 		
