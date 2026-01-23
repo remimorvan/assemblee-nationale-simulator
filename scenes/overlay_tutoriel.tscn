@@ -24,7 +24,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 color = Color(0.441581, 0.436516, 0.449572, 0.576471)
+script = ExtResource("1_k74gq")
 
 [node name="tuto1" type="TextureRect" parent="."]
 layout_mode = 0
@@ -219,3 +221,5 @@ theme_override_font_sizes/normal_font_size = 60
 text = "Jouer"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://bqyuueqc4507j"]
 
-[ext_resource type="Texture2D" uid="uid://duus2demjoa58" path="res://assets/screens/back_victory_screen.png" id="1_pfcnd"]
-[ext_resource type="Texture2D" uid="uid://dh0lthykngd84" path="res://assets/screens/couranne_victory_screen.png" id="2_rixwf"]
-[ext_resource type="Script" uid="uid://b5oj80njmvurw" path="res://scripts/victory_screen.gd" id="2_wbi6c"]
-[ext_resource type="Texture2D" uid="uid://hc6hlb1sqtdc" path="res://assets/screens/winner_victory_screen.png" id="3_ll51u"]
+[ext_resource type="Texture2D" uid="uid://4lxap5anqigv" path="res://assets/screens/back_victory_screen.png" id="1_pfcnd"]
+[ext_resource type="Texture2D" uid="uid://c1pgvwem7lxhj" path="res://assets/screens/couranne_victory_screen.png" id="2_rixwf"]
+[ext_resource type="Script" path="res://scripts/victory_screen.gd" id="2_wbi6c"]
+[ext_resource type="Texture2D" uid="uid://crigu5suatwof" path="res://assets/screens/winner_victory_screen.png" id="3_ll51u"]
 [ext_resource type="Shader" uid="uid://d1vrrbx7pcmol" path="res://assets/shader/victory_screen.gdshader" id="4_rixwf"]
-[ext_resource type="Texture2D" uid="uid://q6tlt2c2737k" path="res://assets/hemicycle/tool_tip_plot.png" id="6_u4hde"]
-[ext_resource type="FontFile" uid="uid://usk4ucaxtgwp" path="res://assets/card/Monicacomic.ttf" id="7_66hvp"]
+[ext_resource type="Texture2D" uid="uid://dxqt3r6feuyjb" path="res://assets/hemicycle/tool_tip_plot.png" id="6_u4hde"]
+[ext_resource type="FontFile" uid="uid://foful8cuop6y" path="res://assets/card/Monicacomic.ttf" id="7_66hvp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ll51u"]
 shader = ExtResource("4_rixwf")

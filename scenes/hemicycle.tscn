@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://d1voxmvhe7xmt"]
+[gd_scene load_steps=8 format=3 uid="uid://d1voxmvhe7xmt"]
 
 [ext_resource type="Script" uid="uid://ca4vviiiv0rox" path="res://scripts/hemicycle.gd" id="1_22fab"]
 [ext_resource type="PackedScene" uid="uid://cuemgi5ynsxra" path="res://scenes/mp.tscn" id="2_8igwf"]
 [ext_resource type="Shader" uid="uid://dssfkivsy2mxu" path="res://assets/hemicycle/hemicycle.gdshader" id="3_8igwf"]
-[ext_resource type="Texture2D" uid="uid://dyct375ju1kt8" path="res://assets/hemycicle.png" id="3_hw2pa"]
+[ext_resource type="Texture2D" uid="uid://cuqfq5eew8oaf" path="res://assets/hemycicle.png" id="3_hw2pa"]
+[ext_resource type="Texture2D" uid="uid://dxqt3r6feuyjb" path="res://assets/hemicycle/tool_tip_plot.png" id="5_w8skp"]
+[ext_resource type="FontFile" uid="uid://ci1ffpjq1k6tn" path="res://assets/card/BadComic-Regular.ttf" id="6_2g8u3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hw2pa"]
 shader = ExtResource("3_8igwf")
@@ -28,3 +30,29 @@ layout_mode = 2
 mouse_filter = 1
 color = Color(1, 1, 1, 0)
 metadata/_edit_lock_ = true
+
+[node name="TextureButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(250, 100)
+layout_mode = 2
+texture_normal = ExtResource("5_w8skp")
+texture_pressed = ExtResource("5_w8skp")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureButton"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.133
+anchor_bottom = 0.084
+offset_left = 48.0
+offset_top = 23.0
+offset_right = -7.46001
+offset_bottom = 2.39999
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("6_2g8u3")
+bbcode_enabled = true
+text = "[color=black][font_size=40]Tutoriel"
+fit_content = true
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
