@@ -25,7 +25,6 @@ texture = ExtResource("3_os4vx")
 
 [node name="Cloud3" type="Sprite2D" parent="."]
 position = Vector2(154, -389)
-scale = Vector2(1, 1)
 texture = ExtResource("5_kd064")
 
 [node name="Cloud4" type="Sprite2D" parent="."]
@@ -35,7 +34,6 @@ texture = ExtResource("4_v6sr7")
 [node name="Cloud5" type="Sprite2D" parent="."]
 position = Vector2(51, -532)
 rotation = 0.0174793
-scale = Vector2(1, 1)
 texture = ExtResource("3_os4vx")
 
 [node name="looser" type="Sprite2D" parent="."]
