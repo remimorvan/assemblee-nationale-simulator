@@ -55,13 +55,13 @@ func setup(_text: String, _effect_mean: Dictionary[String, float], _effect_std: 
 		var plus2 = logo.find_child("plus2")
 		var minus1 = logo.find_child("minus1")
 		var minus2 = logo.find_child("minus2")
-		if val >= 0.3:
+		if val >= 0.25:
 			plus1.visible = true
-			if val >= 0.7:
+			if val >= 0.5:
 				plus2.visible = true
-		if val <= -0.3:
+		if val <= -0.25:
 			minus1.visible = true
-			if val <= -0.7:
+			if val <= -0.5:
 				minus2.visible = true
 	
 # Returns the effect (delta on MP's approval's rate) of the card based on
@@ -76,7 +76,7 @@ func _on_mouse_entered() -> void:
 	old_z_index = self.z_index
 	if old_position_y == null: 
 		old_position_y = self.position.y
-	if (not Player.is_journal_showed or true) and !Player.lock:
+	if !Player.lock:
 		$HoverSound.play()
 	
 		self.z_index = 1000
@@ -91,7 +91,7 @@ func _on_mouse_entered() -> void:
 		tween.parallel().tween_property(self, "position:y", old_position_y-100, .25)
 
 func _on_mouse_exited() -> void:
-	if (not Player.is_journal_showed or true) and !Player.lock:
+	if !Player.lock:
 		# restore z_index
 		self.z_index = old_z_index
 		

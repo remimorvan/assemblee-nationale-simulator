@@ -15,6 +15,15 @@ func update(title: String, desc: String, image_name: String, day: int):
 	Title.text = title
 	Content.text = desc
 	Date.text = str(day)+" janvier 2026"
+	var size: int = 19
+	if len(desc) < 270:
+		size = 22
+	elif len(desc) < 300:
+		size = 21
+	elif len(desc) < 330:
+		size = 20
+	Content.set("theme_override_font_sizes/normal_font_size", size)
+	Content.set("theme_override_font_sizes/bold_font_size", size) 
 	if ResourceLoader.exists(image_name):
 		Illustration.texture = load(image_name)
 	else:
@@ -71,9 +80,6 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
 		#if Player.is_journal_showed:
 		if show:
-			
 			hide_journal()
-			
 		else:
-			
 			show_journal()

@@ -2,12 +2,12 @@
 	{
 		"text": "Demander aux députés de faire barrage contre l'extrême-droite en votant pour vous.",
 		"effects": {
-			"lfi": [0.8, 0.2],
-			"eco": [0.8, 0.2],
-			"soc": [0.8, 0.2],
-			"macron": [1, 0.2],
-			"lr": [0.5, 0.2],
-			"rn": [-0.8, 0.2]
+			"lfi": [0.5, 0.2],
+			"eco": [0.5, 0.2],
+			"soc": [0.5, 0.2],
+			"macron": [0.65, 0.2],
+			"lr": [0.31, 0.2],
+			"rn": [-0.77, 0.2]
 		},
 		"image_path": "random.png",
 		"quote": "",
@@ -18,12 +18,12 @@
 	{
 		"text": "Proposer une convention citoyenne pour le climat.",
 		"effects": {
-			"lfi": [0.5, 0.2],
-			"eco": [0.5, 0.2],
-			"soc": [0.5, 0.4],
-			"macron": [1, 0.1],
-			"lr": [0.4, 0.2],
-			"rn": [0.4, 0.2]
+			"lfi": [0.31, 0.2],
+			"eco": [0.31, 0.2],
+			"soc": [0.31, 0.4],
+			"macron": [0.65, 0.1],
+			"lr": [0.23, 0.2],
+			"rn": [0.23, 0.2]
 		},
 		"image_path": "ecology.png",
 		"quote": "",
@@ -34,28 +34,28 @@
 	{
 		"text": "Doubler les portions de frites à la cantine de l'Assemblée.",
 		"effects": {
-			"lfi": [0.4, 0.4],
-			"eco": [0.3, 0.3],
-			"soc": [0.5, 0.4],
-			"macron": [0.6, 0.3],
-			"lr": [1, 0.4],
-			"rn": [0.6, 0.2]
+			"lfi": [0.23, 0.4],
+			"eco": [0.15, 0.3],
+			"soc": [0.31, 0.4],
+			"macron": [0.35, 0.3],
+			"lr": [0.65, 0.4],
+			"rn": [0.35, 0.2]
 		},
 		"image_path": "food.png",
 		"quote": "",
 		"special_event": "indigestion",
 		"special_event_title": "Indigestion à l'Assemblée nationale !",
-		"special_event_descr": "Après que les portions de frites aient été doublées à la cantine de l'Assemblée, [b]une partie des député·e·s sont absent·e·s à la séance d'aujourd'hui[/b] pour indigestion. Les groupes Les Ripoublicains et Travail Fictif, Famille, Pas de Tri sont particulièrement touchés."
+		"special_event_descr": "Après que les portions de frites ont été doublées à la cantine de l'Assemblée, [b]une partie des député·e·s sont absent·e·s à la séance d'aujourd'hui[/b] pour indigestion. Les groupes Les Ripoublicains et Travail Fictif, Famille, Pas de Tri sont particulièrement touchés."
 	},
 	{
 		"text": "Proposer la hausse du SMIC à 1700€ net par mois.",
 		"effects": {
-			"lfi": [1, 0.1],
-			"eco": [0.9, 0.1],
-			"soc": [0.8, 0.2],
-			"macron": [-1, 0.2],
-			"lr": [-1, 0.2],
-			"rn": [-0.6, 0.3]
+			"lfi": [0.77, 0.1],
+			"eco": [0.68, 0.1],
+			"soc": [0.59, 0.2],
+			"macron": [-1.04, 0.2],
+			"lr": [-0.95, 0.2],
+			"rn": [-0.59, 0.3]
 		},
 		"image_path": "money.png",
 		"quote": ""
@@ -63,12 +63,12 @@
 	{
 		"text": "Encourager la consommation de cordons bleus par les adultes.",
 		"effects": {
-			"lfi": [0, 0.1],
-			"eco": [0, 0.1],
-			"soc": [0, 0.1],
-			"macron": [1, 0.2],
-			"lr": [0, 0.1],
-			"rn": [0, 0.1]
+			"lfi": [-0.05, 0.1],
+			"eco": [-0.05, 0.1],
+			"soc": [-0.05, 0.1],
+			"macron": [0.77, 0.2],
+			"lr": [-0.05, 0.1],
+			"rn": [-0.05, 0.1]
 		},
 		"image_path": "food.png",
 		"quote": ""
@@ -76,12 +76,12 @@
 	{
 		"text": "Proposer une option végétarienne à la cantine de l'Assemblée.",
 		"effects": {
-			"lfi": [0.7, 0.2],
-			"eco": [1, 0.1],
-			"soc": [0.8, 0.2],
-			"macron": [0.5, 0.3],
-			"lr": [-0.8, 0.2],
-			"rn": [-0.7, 0.4]
+			"lfi": [0.5, 0.2],
+			"eco": [0.77, 0.1],
+			"soc": [0.59, 0.2],
+			"macron": [0.36, 0.3],
+			"lr": [-0.77, 0.2],
+			"rn": [-0.68, 0.4]
 		},
 		"image_path": "food.png",
 		"quote": ""
@@ -89,12 +89,12 @@
 	{
 		"text": "Ignorer le problème du mal-logement.",
 		"effects": {
-			"lfi": [-1, 0.2],
-			"eco": [-1, 0.2],
-			"soc": [-1, 0.2],
-			"macron": [0.7, 0.3],
-			"lr": [0.6, 0.3],
-			"rn": [0.6, 0.3]
+			"lfi": [-0.95, 0.2],
+			"eco": [-0.95, 0.2],
+			"soc": [-0.95, 0.2],
+			"macron": [0.5, 0.3],
+			"lr": [0.41, 0.3],
+			"rn": [0.41, 0.3]
 		},
 		"image_path": "social.png",
 		"quote": ""
@@ -102,12 +102,12 @@
 	{
 		"text": "Alléger la fiscalité des revenus issus des capitaux.",
 		"effects": {
-			"lfi": [-1, 0.2],
-			"eco": [-1, 0.2],
-			"soc": [-1, 0.2],
-			"macron": [0.7, 0.3],
-			"lr": [0.6, 0.3],
-			"rn": [0.6, 0.3]
+			"lfi": [-0.95, 0.2],
+			"eco": [-0.95, 0.2],
+			"soc": [-0.95, 0.2],
+			"macron": [0.5, 0.3],
+			"lr": [0.41, 0.3],
+			"rn": [0.41, 0.3]
 		},
 		"image_path": "money.png",
 		"quote": ""
@@ -115,12 +115,12 @@
 	{
 		"text": "Proposer l'interdiction de la possession de téléphones portables pour lutter contre la recrudescence de vol de portables à l'arraché.",
 		"effects": {
-			"lfi": [-1, 0.2],
-			"eco": [-1, 0.2],
-			"soc": [-1, 0.2],
-			"macron": [0, 0.1],
-			"lr": [1, 0.1],
-			"rn": [0.6, 0.1]
+			"lfi": [-0.95, 0.2],
+			"eco": [-0.95, 0.2],
+			"soc": [-0.95, 0.2],
+			"macron": [-0.05, 0.1],
+			"lr": [0.77, 0.1],
+			"rn": [0.41, 0.1]
 		},
 		"image_path": "safety.png",
 		"quote": "On a une recrudescence de violence… par exemple le vol des portables à l’arraché. Ca n’existait pas avant que les portables existent. - Nadine Morano"
@@ -128,24 +128,24 @@
 	{
 		"text": "Annoncer à l'Assemblée que vous avez un coeur qui bat à sa cadence et qui est le votre. Vous n'avez pas le monopole du coeur !",
 		"effects": {
-			"lfi": [-0.2, 0.1],
-			"eco": [-0.2, 0.1],
-			"soc": [-0.3, 0.1],
-			"macron": [0.4, 0.1],
-			"lr": [0, 0.1],
-			"rn": [0, 0.1]
+			"lfi": [-0.23, 0.1],
+			"eco": [-0.23, 0.1],
+			"soc": [-0.32, 0.1],
+			"macron": [0.27, 0.1],
+			"lr": [-0.05, 0.1],
+			"rn": [-0.05, 0.1]
 		},
 		"image_path": "random.png"
 	},
 	{
 		"text": "Annoncer à l'Assemblée que ce qui compte ce n’est pas le vote, c’est comment on compte les votes.",
 		"effects": {
-			"lfi": [1, 0.1],
-			"eco": [-0.2, 0.1],
-			"soc": [-0.2, 0.1],
-			"macron": [-0.2, 0.1],
-			"lr": [-0.2, 0.1],
-			"rn": [0, 0.1]
+			"lfi": [0.77, 0.1],
+			"eco": [-0.23, 0.1],
+			"soc": [-0.23, 0.1],
+			"macron": [-0.23, 0.1],
+			"lr": [-0.23, 0.1],
+			"rn": [-0.05, 0.1]
 		},
 		"image_path": "random.png",
 		"quote": "- Staline"
@@ -153,12 +153,12 @@
 	{
 		"text": "Déclarer que la démocratie ce n’est pas la loi de la majorité mais la protection de la minorité.",
 		"effects": {
-			"lfi": [0.7, 0.2],
-			"eco": [0.9, 0.2],
-			"soc": [0.8, 0.2],
-			"macron": [0, 0.2],
-			"lr": [-0.9, 0.2],
-			"rn": [-0.9, 0.2]
+			"lfi": [0.5, 0.2],
+			"eco": [0.68, 0.2],
+			"soc": [0.59, 0.2],
+			"macron": [-0.14, 0.2],
+			"lr": [-0.85, 0.2],
+			"rn": [-0.85, 0.2]
 		},
 		"image_path": "sjw.png",
 		"quote": "La démocratie, ce n’est pas la loi de la majorité mais la protection de la minorité - Albert Camus"
@@ -166,12 +166,12 @@
 	{
 		"text": "Rendre obligatoire l'affichage du Nutri-Score.",
 		"effects": {
-			"lfi": [0.7, 0.2],
-			"eco": [0.7, 0.2],
-			"soc": [0.7, 0.2],
-			"macron": [0, 0.3],
-			"lr": [-0.7, 0.3],
-			"rn": [-0.8, 0.3]
+			"lfi": [0.5, 0.2],
+			"eco": [0.5, 0.2],
+			"soc": [0.5, 0.2],
+			"macron": [-0.14, 0.3],
+			"lr": [-0.68, 0.3],
+			"rn": [-0.77, 0.3]
 		},
 		"image_path": "food.png",
 		"quote": "Amendement du 03/12/2025"
@@ -179,12 +179,12 @@
 	{
 		"text": "Geler l'ensemble des prestations sociales.",
 		"effects": {
-			"lfi": [-0.9, 0.3],
-			"eco": [-0.9, 0.3],
-			"soc": [-0.9, 0.3],
-			"macron": [0.7, 0.2],
+			"lfi": [-0.85, 0.3],
+			"eco": [-0.85, 0.3],
+			"soc": [-0.85, 0.3],
+			"macron": [0.5, 0.2],
 			"lr": [-0.5, 0.2],
-			"rn": [-0.6, 0.2]
+			"rn": [-0.59, 0.2]
 		},
 		"image_path": "social.png",
 		"quote": "Amendement du 12/11/2025"
@@ -192,12 +192,12 @@
 	{
 		"text": "Changer l'impôt sur la fortune immobilière en impôt sur la fortune improductive.",
 		"effects": {
-			"lfi": [-0.8, 0.2],
+			"lfi": [-0.77, 0.2],
 			"eco": [-0.5, 0.2],
-			"soc": [0.7, 0.2],
-			"macron": [0, 0.3],
-			"lr": [-0.6, 0.2],
-			"rn": [0.5, 0.2]
+			"soc": [0.5, 0.2],
+			"macron": [-0.05, 0.3],
+			"lr": [-0.59, 0.2],
+			"rn": [0.36, 0.2]
 		},
 		"image_path": "money.png",
 		"quote": "Amendement du 31/10/2025, scrutin 3314"
@@ -205,12 +205,12 @@
 	{
 		"text": "Sacrifier les intérêts de la France pour négocier le maintien de la liaison aérienne Orly-Pau",
 		"effects": {
-			"lfi": [-0.7, 0.2],
-			"eco": [-0.7, 0.2],
-			"soc": [-0.7, 0.2],
-			"macron": [0.6, 0.4],
-			"lr": [0.2, 0.1],
-			"rn": [0, 0.1]
+			"lfi": [-0.68, 0.2],
+			"eco": [-0.72, 0.2],
+			"soc": [-0.68, 0.2],
+			"macron": [0.41, 0.4],
+			"lr": [0.09, 0.1],
+			"rn": [-0.05, 0.1]
 		},
 		"image_path": "ecology.png",
 		"quote": ""
@@ -218,12 +218,12 @@
 	{
 		"text": "Nommer un ministre de l'Éducation Nationale dont les enfants sont scolarisés dans le privé.",
 		"effects": {
-			"lfi": [-0.8, 0.2],
-			"eco": [-0.8, 0.2],
+			"lfi": [-0.77, 0.2],
+			"eco": [-0.77, 0.2],
 			"soc": [-0.5, 0.2],
-			"macron": [0, 0.2],
-			"lr": [1, 0.2],
-			"rn": [0.6, 0.2]
+			"macron": [-0.05, 0.2],
+			"lr": [0.77, 0.2],
+			"rn": [0.41, 0.2]
 		},
 		"image_path": "school.png",
 		"quote": "",
@@ -234,12 +234,12 @@
 	{
 		"text": "Facilier les expulsions et destructions d'habitats informels à Mayotte.",
 		"effects": {
-			"lfi": [-0.8, 0.2],
-			"eco": [-0.8, 0.2],
-			"soc": [0, 0.2],
-			"macron": [0.8, 0.2],
-			"lr": [0.8, 0.2],
-			"rn": [0.8, 0.2]
+			"lfi": [-0.77, 0.2],
+			"eco": [-0.77, 0.2],
+			"soc": [-0.05, 0.2],
+			"macron": [0.59, 0.2],
+			"lr": [0.59, 0.2],
+			"rn": [0.59, 0.2]
 		},
 		"image_path": "social.png",
 		"quote": "Amendement du 25/06/2025"
@@ -247,12 +247,12 @@
 	{
 		"text": "Relancer massivement la construction de nouvelles centrales nucléaires.",
 		"effects": {
-			"lfi": [-0.8, 0.2],
-			"eco": [-1, 0.1],
+			"lfi": [-0.77, 0.2],
+			"eco": [-0.95, 0.1],
 			"soc": [-0.5, 0.3],
-			"macron": [1, 0.1],
-			"lr": [1, 0.1],
-			"rn": [0.5, 0.2]
+			"macron": [0.77, 0.1],
+			"lr": [0.77, 0.1],
+			"rn": [0.36, 0.2]
 		},
 		"image_path": "ecology.png",
 		"quote": "Amendement du 18/06/2025"
@@ -260,12 +260,12 @@
 	{
 		"text": "Reconnaître et rembourser les dettes d'anciennes colonies.",
 		"effects": {
-			"lfi": [0.8, 0.2],
-			"eco": [0.8, 0.2],
-			"soc": [0.8, 0.2],
-			"macron": [0.8, 0.2],
-			"lr": [-0.8, 0.2],
-			"rn": [-0.8, 0.2]
+			"lfi": [0.59, 0.2],
+			"eco": [0.59, 0.2],
+			"soc": [0.59, 0.2],
+			"macron": [0.59, 0.2],
+			"lr": [-0.77, 0.2],
+			"rn": [-0.77, 0.2]
 		},
 		"image_path": "money.png",
 		"quote": "Amendement du 18/06/2025"
@@ -273,12 +273,12 @@
 	{
 		"text": "Abroger la réforme des retraites.",
 		"effects": {
-			"lfi": [1, 0.1],
-			"eco": [1, 0.1],
-			"soc": [1, 0.1],
-			"macron": [-1, 0.1],
-			"lr": [-0.8, 0.2],
-			"rn": [0, 0.3]
+			"lfi": [0.77, 0.1],
+			"eco": [0.77, 0.1],
+			"soc": [0.77, 0.1],
+			"macron": [-1.04, 0.1],
+			"lr": [-0.77, 0.2],
+			"rn": [-0.05, 0.3]
 		},
 		"image_path": "social.png",
 		"quote": "Résolution 05/06/2025 / 29/10/2024"
@@ -286,12 +286,12 @@
 	{
 		"text": "Supprimer les zones à faible émissions.",
 		"effects": {
-			"lfi": [0.8, 0.2],
-			"eco": [-1, 0.1],
-			"soc": [-1, 0.1],
-			"macron": [0.6, 0.3],
-			"lr": [1, 0.1],
-			"rn": [0.5, 0.1]
+			"lfi": [0.59, 0.2],
+			"eco": [-0.95, 0.1],
+			"soc": [-0.95, 0.1],
+			"macron": [0.41, 0.3],
+			"lr": [0.77, 0.1],
+			"rn": [0.36, 0.1]
 		},
 		"image_path": "ecology.png",
 		"quote": "28/05/2025"
@@ -299,12 +299,12 @@
 	{
 		"text": "Annoncer qu'il faut travailler plus pour gagner plus.",
 		"effects": {
-			"lfi": [-1, 0.1],
-			"eco": [-0.7, 0.2],
-			"soc": [-0.7, 0.2],
-			"macron": [0.7, 0.2],
-			"lr": [1, 0.1],
-			"rn": [0, 0.2]
+			"lfi": [-0.95, 0.1],
+			"eco": [-0.68, 0.2],
+			"soc": [-0.68, 0.2],
+			"macron": [0.5, 0.2],
+			"lr": [0.77, 0.1],
+			"rn": [-0.05, 0.2]
 		},
 		"image_path": "money.png",
 		"quote": "- Sarkozy"
@@ -312,12 +312,12 @@
 	{
 		"text": "Donner une interview dans un média d'extrême-droite détenu par le milliardaire Mincent Billoré.",
 		"effects": {
-			"lfi": [-0.8, 0.2],
-			"eco": [-1, 0.2],
-			"soc": [-1, 0.2],
-			"macron": [0.7, 0.3],
-			"lr": [0.7, 0.1],
-			"rn": [0.6, 0.1]
+			"lfi": [-0.77, 0.2],
+			"eco": [-0.95, 0.2],
+			"soc": [-0.95, 0.2],
+			"macron": [0.5, 0.3],
+			"lr": [0.5, 0.1],
+			"rn": [0.41, 0.1]
 		},
 		"image_path": "random.png",
 		"quote": "Oops"
@@ -325,12 +325,12 @@
 	{
 		"text": "Constater en France que les veuves vivent plus longtemps que leurs maris.",
 		"effects": {
-			"lfi": [0, 0.1],
-			"eco": [0, 0.1],
-			"soc": [0, 0.1],
-			"macron": [0, 0.1],
-			"lr": [0.3, 0.1],
-			"rn": [0, 0.1]
+			"lfi": [-0.05, 0.1],
+			"eco": [-0.05, 0.1],
+			"soc": [-0.05, 0.1],
+			"macron": [-0.05, 0.1],
+			"lr": [0.18, 0.1],
+			"rn": [-0.05, 0.1]
 		},
 		"image_path": "random.png",
 		"quote": "Raffarin"
@@ -338,12 +338,12 @@
 	{
 		"text": "Construire plus de logements sociaux pour loger ceux qui sont expulsés de leurs logements sociaux.",
 		"effects": {
-			"lfi": [1, 0.1],
-			"eco": [0.8, 0.2],
-			"soc": [0.8, 0.2],
-			"macron": [0, 0.3],
-			"lr": [-0.8, 0.2],
-			"rn": [-0.8, 0.2]
+			"lfi": [0.77, 0.1],
+			"eco": [0.59, 0.2],
+			"soc": [0.59, 0.2],
+			"macron": [-0.14, 0.3],
+			"lr": [-0.77, 0.2],
+			"rn": [-0.77, 0.2]
 		},
 		"image_path": "social.png",
 		"quote": "Sébastien Delogu"
@@ -351,12 +351,12 @@
 	{
 		"text": "Mentir et annoncer un déficit à 4,4% du PIB quand il est en réalité de 6,1%.",
 		"effects": {
-			"lfi": [0.5, 0.1],
-			"eco": [0.5, 0.1],
-			"soc": [0.5, 0.1],
-			"macron": [1, 0.1],
-			"lr": [0.5, 0.1],
-			"rn": [0.5, 0.1]
+			"lfi": [0.31, 0.1],
+			"eco": [0.31, 0.1],
+			"soc": [0.31, 0.1],
+			"macron": [0.65, 0.1],
+			"lr": [0.31, 0.1],
+			"rn": [0.31, 0.1]
 		},
 		"image_path": "money.png",
 		"quote": "Bruno Le Maire",
@@ -367,12 +367,12 @@
 	{
 		"text": "Inclure dans les formations délivrées dans l'enseignement supérieur la lutte contre l'islamophobie",
 		"effects": {
-			"lfi": [0.7, 0.3],
-			"eco": [0.7, 0.3],
-			"soc": [0.7, 0.3],
-			"macron": [-0.7, 0.3],
-			"lr": [-1, 0.1],
-			"rn": [-1, 0.1]
+			"lfi": [0.5, 0.3],
+			"eco": [0.5, 0.3],
+			"soc": [0.5, 0.3],
+			"macron": [-0.77, 0.3],
+			"lr": [-0.95, 0.1],
+			"rn": [-0.95, 0.1]
 		},
 		"image_path": "sjw.png",
 		"quote": ""
@@ -380,11 +380,11 @@
 	{
 		"text": "Mettre en place une backdoor dans les messageries cryptées.",
 		"effects": {
-			"lfi": [-0.8, 0.2],
-			"eco": [-0.8, 0.2],
-			"soc": [-0.8, 0.2],
-			"macron": [0, 0.3],
-			"lr": [1, 0.2],
+			"lfi": [-0.77, 0.2],
+			"eco": [-0.77, 0.2],
+			"soc": [-0.77, 0.2],
+			"macron": [-0.05, 0.3],
+			"lr": [0.77, 0.2],
 			"rn": [-0.5, 0.3]
 		},
 		"image_path": "safety.png",
@@ -393,12 +393,12 @@
 	{
 		"text": "Appeler l'Union européenne à renforcer le soutien à l'Ukraine.",
 		"effects": {
-			"lfi": [-0.8, 0.2],
-			"eco": [0.7, 0.2],
-			"soc": [0.7, 0.2],
-			"macron": [1, 0.1],
-			"lr": [0.7, 0.2],
-			"rn": [0, 0.2]
+			"lfi": [-0.77, 0.2],
+			"eco": [0.5, 0.2],
+			"soc": [0.5, 0.2],
+			"macron": [0.77, 0.1],
+			"lr": [0.5, 0.2],
+			"rn": [-0.05, 0.2]
 		},
 		"image_path": "sjw.png",
 		"quote": ""
@@ -406,12 +406,12 @@
 	{
 		"text": "Allonger la durée du congé salarié en cas de maladie grave de son enfant.",
 		"effects": {
-			"lfi": [0.8, 0.2],
-			"eco": [0.8, 0.2],
-			"soc": [0.8, 0.2],
-			"macron": [-0.6, 0.2],
-			"lr": [-0.8, 0.2],
-			"rn": [-0.8, 0.2]
+			"lfi": [0.59, 0.2],
+			"eco": [0.59, 0.2],
+			"soc": [0.59, 0.2],
+			"macron": [-0.68, 0.2],
+			"lr": [-0.77, 0.2],
+			"rn": [-0.77, 0.2]
 		},
 		"image_path": "school.png",
 		"quote": ""
@@ -419,12 +419,12 @@
 	{
 		"text": "Augmenter la taxe sur les GAFAM",
 		"effects": {
-			"lfi": [0.8, 0.2],
-			"eco": [0.8, 0.2],
-			"soc": [0.8, 0.2],
-			"macron": [-1, 0.1],
-			"lr": [0.6, 0.2],
-			"rn": [0.6, 0.2]
+			"lfi": [0.59, 0.2],
+			"eco": [0.59, 0.2],
+			"soc": [0.59, 0.2],
+			"macron": [-1.04, 0.1],
+			"lr": [0.41, 0.2],
+			"rn": [0.41, 0.2]
 		},
 		"image_path": "money.png",
 		"quote": ""
@@ -432,12 +432,12 @@
 	{
 		"text": "Augmenter les APL de 10%",
 		"effects": {
-			"lfi": [0.8, 0.2],
-			"eco": [0.8, 0.2],
-			"soc": [0.8, 0.2],
-			"macron": [-0.8, 0.2],
-			"lr": [-0.7, 0.2],
-			"rn": [-0.7, 0.2]
+			"lfi": [0.59, 0.2],
+			"eco": [0.59, 0.2],
+			"soc": [0.59, 0.2],
+			"macron": [-0.85, 0.2],
+			"lr": [-0.68, 0.2],
+			"rn": [-0.68, 0.2]
 		},
 		"image_path": "social.png",
 		"quote": ""
@@ -445,12 +445,12 @@
 	{
 		"text": "Adopter un moratoire sur les méga-bassines.",
 		"effects": {
-			"lfi": [1, 0.1],
-			"eco": [1, 0.1],
-			"soc": [0.9, 0.1],
-			"macron": [-0.8, 0.2],
-			"lr": [-0.9, 0.1],
-			"rn": [-0.9, 0.1]
+			"lfi": [0.77, 0.1],
+			"eco": [0.77, 0.1],
+			"soc": [0.68, 0.1],
+			"macron": [-0.85, 0.2],
+			"lr": [-0.85, 0.1],
+			"rn": [-0.85, 0.1]
 		},
 		"image_path": "ecology.png",
 		"quote": ""
@@ -458,12 +458,12 @@
 	{
 		"text": "Réautoriser un insecticide néonicotinoïde.",
 		"effects": {
-			"lfi": [-0.9, 0.1],
-			"eco": [-0.8, 0.1],
-			"soc": [-0.7, 0.1],
-			"macron": [0.9, 0.2],
-			"lr": [0.7, 0.1],
-			"rn": [0.8, 0.1]
+			"lfi": [-0.85, 0.1],
+			"eco": [-0.77, 0.1],
+			"soc": [-0.68, 0.1],
+			"macron": [0.68, 0.2],
+			"lr": [0.5, 0.1],
+			"rn": [0.59, 0.1]
 		},
 		"image_path": "ecology.png",
 		"quote": ""
@@ -471,12 +471,12 @@
 	{
 		"text": "Continuer à laisser les infrastructures ferroviaires décrépir.",
 		"effects": {
-			"lfi": [-0.8, 0.2],
-			"eco": [-1, 0.1],
-			"soc": [-0.8, 0.2],
-			"macron": [0.8, 0.2],
-			"lr": [0.8, 0.2],
-			"rn": [0.8, 0.2]
+			"lfi": [-0.77, 0.2],
+			"eco": [-0.95, 0.1],
+			"soc": [-0.77, 0.2],
+			"macron": [0.59, 0.2],
+			"lr": [0.59, 0.2],
+			"rn": [0.59, 0.2]
 		},
 		"image_path": "ecology.png",
 		"quote": "",
@@ -487,12 +487,12 @@
 	{
 		"text": "Dénoncer le génocide palestinien commis par Israël.",
 		"effects": {
-			"lfi": [1.5, 0.1],
-			"eco": [1.5, 0.1],
-			"soc": [0.8, 0.3],
-			"macron": [-0.8, 0.3],
-			"lr": [-1.5, 0.1],
-			"rn": [-1.5, 0.1]
+			"lfi": [1.22, 0.1],
+			"eco": [1.22, 0.1],
+			"soc": [0.59, 0.3],
+			"macron": [-0.85, 0.3],
+			"lr": [-1.4, 0.1],
+			"rn": [-1.4, 0.1]
 		},
 		"image_path": "sjw.png",
 		"quote": ""
@@ -500,12 +500,12 @@
 	{
 		"text": "Autoriser la PMA pour les femmes lesbiennes et aux femmes célibataires.",
 		"effects": {
-			"lfi": [1, 0.1],
-			"eco": [1, 0.1],
-			"soc": [1, 0.1],
-			"macron": [1, 0.1],
-			"lr": [-1, 0.1],
-			"rn": [-1, 0.1]
+			"lfi": [0.77, 0.1],
+			"eco": [0.77, 0.1],
+			"soc": [0.77, 0.1],
+			"macron": [0.77, 0.1],
+			"lr": [-0.95, 0.1],
+			"rn": [-0.95, 0.1]
 		},
 		"image_path": "sjw.png",
 		"quote": ""
@@ -513,12 +513,12 @@
 	{
 		"text": "Autoriser le changement d'état civil libre et gratuit devant un officier d’état civil.",
 		"effects": {
-			"lfi": [1, 0.1],
-			"eco": [1, 0.1],
-			"soc": [1, 0.1],
-			"macron": [-0.6, 0.2],
-			"lr": [-1, 0.1],
-			"rn": [-1, 0.1]
+			"lfi": [0.77, 0.1],
+			"eco": [0.77, 0.1],
+			"soc": [0.77, 0.1],
+			"macron": [-0.68, 0.2],
+			"lr": [-0.95, 0.1],
+			"rn": [-0.95, 0.1]
 		},
 		"image_path": "sjw.png",
 		"quote": ""
@@ -526,12 +526,12 @@
 	{
 		"text": "Plafonner les marges de la grande distribution sur les denrées alimentaires",
 		"effects": {
-			"lfi": [0.8, 0.2],
-			"eco": [0.8, 0.2],
-			"soc": [0.8, 0.2],
-			"macron": [-0.8, 0.2],
-			"lr": [-0.8, 0.2],
-			"rn": [0, 0.2]
+			"lfi": [0.59, 0.2],
+			"eco": [0.59, 0.2],
+			"soc": [0.59, 0.2],
+			"macron": [-0.85, 0.2],
+			"lr": [-0.77, 0.2],
+			"rn": [-0.05, 0.2]
 		},
 		"image_path": "food.png",
 		"quote": "https://datan.fr/votes/legislature-17/vote_1020"
@@ -540,11 +540,11 @@
 		"text": "Interdire l'alcool à la buvette de l'Assemblée.",
 		"effects": {
 			"lfi": [-0.5, 0.2],
-			"eco": [0, 0.2],
-			"soc": [0, 0.2],
-			"macron": [-0.8, 0.2],
-			"lr": [-1, 0.1],
-			"rn": [-1, 0.1]
+			"eco": [-0.05, 0.2],
+			"soc": [-0.05, 0.2],
+			"macron": [-0.77, 0.2],
+			"lr": [-0.95, 0.1],
+			"rn": [-0.95, 0.1]
 		},
 		"image_path": "food.png",
 		"quote": "https://www.franceinfo.fr/politique/parlement-francais/assemblee-nationale/assemblee-nationale-la-buvette-suscite-la-polemique_7601648.html"
@@ -552,12 +552,12 @@
 	{
 		"text": "Supprimer l'avantage fiscal pour les intermittents du spectacle.",
 		"effects": {
-			"lfi": [-0.8, 0.2],
-			"eco": [-0.8, 0.2],
-			"soc": [-0.8, 0.2],
-			"macron": [-0.8, 0.2],
-			"lr": [0.6, 0.3],
-			"rn": [1, 0.1]
+			"lfi": [-0.77, 0.2],
+			"eco": [-0.77, 0.2],
+			"soc": [-0.77, 0.2],
+			"macron": [-0.77, 0.2],
+			"lr": [0.41, 0.3],
+			"rn": [0.77, 0.1]
 		},
 		"image_path": "money.png",
 		"quote": "https://datan.fr/votes/legislature-17/vote_31"
@@ -565,12 +565,12 @@
 	{
 		"text": "Instaurer la taxe Zucman sur les patrimoines supérieurs à 100 millions d'euros.",
 		"effects": {
-			"lfi": [1.1, 0.2],
-			"eco": [1.1, 0.2],
-			"soc": [1.1, 0.2],
-			"macron": [-1, 0.3],
-			"lr": [-1, 0.1],
-			"rn": [-1, 0.1]
+			"lfi": [0.85, 0.2],
+			"eco": [0.85, 0.2],
+			"soc": [0.85, 0.2],
+			"macron": [-1.04, 0.3],
+			"lr": [-0.95, 0.1],
+			"rn": [-0.95, 0.1]
 		},
 		"image_path": "money.png",
 		"quote": "https://datan.fr/votes/legislature-17/vote_3300"
@@ -578,12 +578,12 @@
 	{
 		"text": "Interdir le démarchage téléphonique.",
 		"effects": {
-			"lfi": [0.6, 0.2],
-			"eco": [0.6, 0.2],
-			"soc": [0.6, 0.2],
-			"macron": [0.6, 0.3],
-			"lr": [0.6, 0.1],
-			"rn": [0.6, 0.1]
+			"lfi": [0.35, 0.2],
+			"eco": [0.35, 0.2],
+			"soc": [0.35, 0.2],
+			"macron": [0.35, 0.3],
+			"lr": [0.35, 0.1],
+			"rn": [0.35, 0.1]
 		},
 		"image_path": "safety.png",
 		"quote": "https://datan.fr/votes/legislature-17/vote_898"
@@ -591,12 +591,12 @@
 	{
 		"text": "Créer une taxe sur les super‑profits des entreprises pétrolières et des concessionnaires d'autoroutes.",
 		"effects": {
-			"lfi": [1, 0.1],
-			"eco": [1, 0.1],
-			"soc": [1, 0.1],
-			"macron": [-1, 0.2],
-			"lr": [-0.6, 0.25],
-			"rn": [0.6, 0.25]
+			"lfi": [0.77, 0.1],
+			"eco": [0.77, 0.1],
+			"soc": [0.77, 0.1],
+			"macron": [-1.04, 0.2],
+			"lr": [-0.59, 0.25],
+			"rn": [0.41, 0.25]
 		},
 		"image_path": "money.png",
 		"quote": "https://datan.fr/votes/legislature-16/vote_105"
@@ -604,12 +604,12 @@
 	{
 		"text": "Rendre hommage aux ministres des gouvernements précédents.",
 		"effects": {
-			"lfi": [0.0, 0.2],
-			"eco": [0.0, 0.2],
-			"soc": [0.0, 0.2],
-			"macron": [0.8, 0.2],
-			"lr": [0.6, 0.2],
-			"rn": [0.0, 0.2]
+			"lfi": [-0.05, 0.2],
+			"eco": [-0.05, 0.2],
+			"soc": [-0.05, 0.2],
+			"macron": [0.59, 0.2],
+			"lr": [0.41, 0.2],
+			"rn": [-0.05, 0.2]
 		},
 		"image_path": "random.png",
 		"quote": "",
@@ -620,12 +620,12 @@
 	{
 		"text": "Envoyer des soldats français au Groenland pour le protéger de la menace impérialiste du « plus grand allié de l'UE » ?!",
 		"effects": {
-			"lfi": [0.6, 0.2],
-			"eco": [0.6, 0.2],
-			"soc": [0.7, 0.2],
-			"macron": [0.8, 0.2],
-			"lr": [0.6, 0.2],
-			"rn": [0.6, 0.2]
+			"lfi": [0.35, 0.2],
+			"eco": [0.35, 0.2],
+			"soc": [0.42, 0.2],
+			"macron": [0.5, 0.2],
+			"lr": [0.35, 0.2],
+			"rn": [0.35, 0.2]
 		},
 		"image_path": "safety.png",
 		"quote": "",
@@ -636,12 +636,12 @@
 	{
 		"text": "Baisser la TVA pour les transports en commun terrestres",
 		"effects": {
-			"lfi": [0.8, 0.2],
-			"eco": [0.8, 0.2],
-			"soc": [0.8, 0.2],
-			"macron": [-1, 0.1],
-			"lr": [0.8, 0.2],
-			"rn": [0.0, 0.2]
+			"lfi": [0.59, 0.2],
+			"eco": [0.59, 0.2],
+			"soc": [0.59, 0.2],
+			"macron": [-1.04, 0.1],
+			"lr": [0.59, 0.2],
+			"rn": [-0.05, 0.2]
 		},
 		"image_path": "ecology.png",
 		"quote": "https://datan.fr/votes/legislature-15/vote_3603"

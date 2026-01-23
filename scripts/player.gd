@@ -17,7 +17,8 @@ var declared_special_event_this_turn: bool = false
 const nb_days_before_vote: int = 6
 var last_card_changed: int = 0
 var is_journal_showed: bool = true
-var lock:bool = false # Prevent player from playing an unbounded number of card
+var lock: bool = false # Prevent player from playing an unbounded number of card
+var has_lost: bool = false
 
 var tween: Tween
 var hand_tween:Tween
@@ -173,6 +174,7 @@ func trigger_special_event(event: String) -> void:
 		"mediapart":
 			incr_nb_card_played()
 		"groenland":
+			has_lost = true
 			for mp in get_tree().get_nodes_in_group("MP"):
 				mp.change_approval(-100)
 			var votes: Array[int] = [0, 0, 0];
@@ -180,7 +182,6 @@ func trigger_special_event(event: String) -> void:
 				votes[mp.get_final_vote()+1] += 1
 				await mp.do_final_animation(mp.get_final_vote())
 			defeat()
-			print("DÉFAITE !")
 		"barrage":
 			put_card_back_in_hand()
 			add_custom_card_to_hand(
@@ -234,22 +235,22 @@ func trigger_final_vote() -> void:
 	# votes[0] : disapproval, votes[1] : abstention, votes[2] : approval
 	if (votes[2] >= votes[0]):
 		victory()
-		print("VICTOIRE !")
 	else:
 		defeat()
-		print("DÉFAITE !")
 
 func defeat():
+	print("DÉFAITE !")
 	$LoseSound.play()
 
 func victory():
+	print("VICTOIRE !")
 	$WinSound.play()
 	
 
 
 func _on_journal_journal_hide() -> void:
 	# si c'est le jour du décompte, on ne réaffiche pas les cartes
-	if get_current_day() == nb_days_before_vote:
+	if get_current_day() == nb_days_before_vote or has_lost:
 		pass
 	else:
 		if hand_tween:

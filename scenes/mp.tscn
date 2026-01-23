@@ -1,17 +1,17 @@
 [gd_scene load_steps=18 format=3 uid="uid://cuemgi5ynsxra"]
 
 [ext_resource type="Script" uid="uid://bmafpymoftg2i" path="res://scripts/mp.gd" id="1_ct13o"]
-[ext_resource type="Texture2D" uid="uid://ct4br5cgtvoam" path="res://assets/MP/MP_body_back.png" id="2_j8m2g"]
-[ext_resource type="Texture2D" uid="uid://bowiloglvbap4" path="res://assets/MP/MP_head.png" id="3_fvh1l"]
-[ext_resource type="Texture2D" uid="uid://bo1pdk307lyph" path="res://assets/MP/MP_body_line.png" id="3_pu06k"]
-[ext_resource type="Texture2D" uid="uid://c4nbshxnubr6y" path="res://assets/MP/MP_face_2.png" id="4_5chnr"]
-[ext_resource type="Texture2D" uid="uid://c1iin7xfe41vs" path="res://assets/MP/MP_arm_2_back.png" id="4_fvuhw"]
-[ext_resource type="Texture2D" uid="uid://jbuv0m05dint" path="res://assets/MP/MP_arm_2_line.png" id="5_b5mkm"]
-[ext_resource type="Texture2D" uid="uid://bhl7rac0prdxh" path="res://assets/MP/MP_face_1.png" id="5_qn7e5"]
-[ext_resource type="Texture2D" uid="uid://5ls1tss1gclc" path="res://assets/MP/MP_face_0.png" id="6_adhds"]
-[ext_resource type="Texture2D" uid="uid://bbjrr2ov6u44s" path="res://assets/MP/MP_arm_1_back.png" id="6_bcrho"]
-[ext_resource type="Texture2D" uid="uid://dn035icju2rkn" path="res://assets/MP/MP_arm_1_line.png" id="7_cuwxu"]
-[ext_resource type="Texture2D" uid="uid://oih31xjlprmi" path="res://assets/MP/particle_plus.png" id="12_pu06k"]
+[ext_resource type="Texture2D" uid="uid://ddj6cf8jfwidi" path="res://assets/MP/MP_body_back.png" id="2_j8m2g"]
+[ext_resource type="Texture2D" uid="uid://cmd3lulfuitlo" path="res://assets/MP/MP_head.png" id="3_fvh1l"]
+[ext_resource type="Texture2D" uid="uid://cu2ar7sg10sl8" path="res://assets/MP/MP_body_line.png" id="3_pu06k"]
+[ext_resource type="Texture2D" uid="uid://chww6mvugwfct" path="res://assets/MP/MP_face_2.png" id="4_5chnr"]
+[ext_resource type="Texture2D" uid="uid://c0kly42id4bdd" path="res://assets/MP/MP_arm_2_back.png" id="4_fvuhw"]
+[ext_resource type="Texture2D" uid="uid://b24gw47gqwewm" path="res://assets/MP/MP_arm_2_line.png" id="5_b5mkm"]
+[ext_resource type="Texture2D" uid="uid://bndx3xk0a5lc" path="res://assets/MP/MP_face_1.png" id="5_qn7e5"]
+[ext_resource type="Texture2D" uid="uid://lhh6wjkmx3kw" path="res://assets/MP/MP_face_0.png" id="6_adhds"]
+[ext_resource type="Texture2D" uid="uid://0tk01dvh4cvs" path="res://assets/MP/MP_arm_1_back.png" id="6_bcrho"]
+[ext_resource type="Texture2D" uid="uid://bxdno4getbtcy" path="res://assets/MP/MP_arm_1_line.png" id="7_cuwxu"]
+[ext_resource type="Texture2D" uid="uid://bmcgt82hedo3u" path="res://assets/MP/particle_plus.png" id="12_pu06k"]
 
 [sub_resource type="Animation" id="Animation_j8m2g"]
 length = 0.001
@@ -147,10 +147,10 @@ tracks/2/path = NodePath(".:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.333333, 0.533333, 0.833333, 0.99),
-"transitions": PackedFloat32Array(1, 1, 1, 0.329877, 1),
+"times": PackedFloat32Array(0, 0.333333, 0.833333, 0.99),
+"transitions": PackedFloat32Array(1, 1, 0.329877, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(0.495892, 0.0529042, 0.119917, 1), Color(0, 0, 0, 1), Color(0.495892, 0.0529042, 0.119917, 1), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 1), Color(0.719908, 0.10198, 0.192907, 1), Color(0.780981, 0.121145, 0.158076, 1), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_b5mkm"]
