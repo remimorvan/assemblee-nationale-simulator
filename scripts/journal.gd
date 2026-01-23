@@ -77,7 +77,7 @@ func hide_journal() -> void:
 	journal_hide.emit()
 	
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
+	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT and !Player.game_pause:
 		#if Player.is_journal_showed:
 		if show:
 			hide_journal()

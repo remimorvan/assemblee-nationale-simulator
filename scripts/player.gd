@@ -18,6 +18,7 @@ const nb_days_before_vote: int = 6
 var last_card_changed: int = 0
 var is_journal_showed: bool = true
 var lock: bool = false # Prevent player from playing an unbounded number of card
+var game_pause:bool = false
 var has_lost: bool = false
 
 var tween: Tween
@@ -181,8 +182,8 @@ func trigger_special_event(event: String) -> void:
 		"barrage":
 			put_card_back_in_hand()
 			add_custom_card_to_hand(
-				"Annoncer à la gauche que leur vote vous oblige.",
-				{"lfi": 0.6, "eco": 0.7, "soc": 1.0, "macron": 0.5, "lr": 0.0, "rn": 0.0},
+				"Annoncer à la gauche que leur vote vous oblige (mais ne rien changer à votre politique).",
+				{"lfi": -0.5, "eco": -0.5, "soc": -0.5, "macron": 0.5, "lr": 0.0, "rn": 0.0},
 				{"lfi": 0.2, "eco": 0.2, "soc": 0.2, "macron": 0.2, "lr": 0.0, "rn": 0.0},
 				"random.png"
 			)

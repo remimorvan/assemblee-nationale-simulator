@@ -76,7 +76,7 @@ func _on_mouse_entered() -> void:
 	old_z_index = self.z_index
 	if old_position_y == null: 
 		old_position_y = self.position.y
-	if !Player.lock:
+	if !Player.lock and !Player.game_pause:
 		$HoverSound.play()
 	
 		self.z_index = 1000
@@ -91,7 +91,7 @@ func _on_mouse_entered() -> void:
 		tween.parallel().tween_property(self, "position:y", old_position_y-100, .25)
 
 func _on_mouse_exited() -> void:
-	if !Player.lock:
+	if !Player.lock and !Player.game_pause:
 		# restore z_index
 		self.z_index = old_z_index
 		
@@ -105,7 +105,7 @@ func _on_mouse_exited() -> void:
 	
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT and !Player.lock:
+	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT and !Player.lock and !Player.game_pause:
 		Player.lock = true
 		for mp in get_tree().get_nodes_in_group("MP"):
 			if mp.present:

@@ -3,6 +3,7 @@ extends AspectRatioContainer
 @export var mp_scene:PackedScene # Utile pour instancier des MP
 @export var desk_color:Color
 
+@onready var player = $"../../Player"
 @onready var Plot: Control = $"../PanelContainer/VBoxContainer/Plot"
 @onready var TextStats: Control = $"../PanelContainer/VBoxContainer/TextStats"
 @onready var Background =$Background
@@ -231,3 +232,5 @@ func new_mp(seat: int) -> int:	# returns number of the political party of mp
 func _on_texture_button_pressed() -> void:
 	var overlay = get_tree().get_current_scene().find_child("OverlayTutoriel")
 	overlay.visible = true
+	
+	player.game_pause = true
